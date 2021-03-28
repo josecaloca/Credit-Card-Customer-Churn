@@ -1,0 +1,40 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+Exported Attributes for TRAIN Port
+(maximum 500 observations printed)
+
+                                  Measurement
+Variable Name         Role           Level       Creator    Label
+
+BL_DEFAULT            REJECTED     INTERVAL      Neural     Best Loss: default              
+CL_DEFAULT            REJECTED     INTERVAL      Neural     Computed Loss: default          
+D_DEFAULT             REJECTED     NOMINAL       Neural     Decision: default               
+EL_DEFAULT            REJECTED     INTERVAL      Neural     Expected Loss: default          
+F_default             REJECTED     NOMINAL       Neural     From: default                   
+GRP_acc_status        INPUT        ORDINAL       BINNING    Grouped: acc_status             
+GRP_credit_history    INPUT        ORDINAL       BINNING    Grouped: credit_history         
+GRP_duration          INPUT        ORDINAL       BINNING    Grouped: duration               
+GRP_pourpose          INPUT        ORDINAL       BINNING    Grouped: pourpose               
+GRP_savings           INPUT        ORDINAL       BINNING    Grouped: savings                
+I_default             TARGET       NOMINAL       Neural     Into: default                   
+P_default0            REJECTED     INTERVAL      Neural     Predicted: default=0            
+P_default1            REJECTED     INTERVAL      Neural     Predicted: default=1            
+R_default0            REJECTED     INTERVAL      Neural     Residual: default=0             
+R_default1            REJECTED     INTERVAL      Neural     Residual: default=1             
+U_default             REJECTED     NOMINAL       Neural     Unnormalized Into: default      
+_WARN_                REJECTED     NOMINAL       Neural     Warnings                        
+_dataobs_             ID           INTERVAL      Part       Observation Number              
+acc_status            REJECTED     NOMINAL                  acc_status                      
+age                   REJECTED     INTERVAL                 age                             
+credit_history        REJECTED     NOMINAL                  credit_history                  
+default               REJECTED     BINARY                   default                         
+duration              REJECTED     INTERVAL                 duration                        
+employment            REJECTED     NOMINAL                  employment                      
+instalment            REJECTED     NOMINAL                  instalment                      
+job                   REJECTED     NOMINAL                  job                             
+other_instalments     REJECTED     NOMINAL                  other_instalments               
+personal_status       REJECTED     NOMINAL                  personal_status                 
+pourpose              REJECTED     NOMINAL                  pourpose                        
+residence             REJECTED     NOMINAL                  residence                       
+savings               REJECTED     NOMINAL                  savings                         

@@ -1,0 +1,151 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+Variable Importance
+
+                                          Number of
+                                          Splitting
+Variable Name        Label                  Rules           Importance
+
+acc_status           acc_status               3                 1.0000
+duration             duration                 1                 0.5254
+savings              savings                  1                 0.4790
+other_instalments    other_instalments        1                 0.3800
+employment           employment               1                 0.2974
+job                  job                      1                 0.2885
+pourpose             pourpose                 1                 0.2774
+ 
+                                                                                                                                                                                                                                                                
+ 
+Tree Leaf Report
+
+                                 Training
+Node               Training       Percent
+ Id     Depth    Observations        1
+
+  4       2           215          0.34  
+ 21       4           174          0.04  
+ 10       3           140          0.63  
+ 27       6            50          0.08  
+  6       2            41          0.37  
+ 14       3            36          0.22  
+ 19       4            16          0.06  
+ 26       6            13          0.46  
+ 18       4             9          0.44  
+ 24       5             6          0.67  
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Fit Statistics
+
+Target=default Target Label=default
+
+   Fit
+Statistics    Statistics Label                Train       Test
+
+ _NOBS_       Sum of Frequencies             700.00    300.000
+ _MISC_       Misclassification Rate           0.25      0.273
+ _MAX_        Maximum Absolute Error           0.96      0.960
+ _SSE_        Sum of Squared Errors          229.51    108.027
+ _ASE_        Average Squared Error            0.16      0.180
+ _RASE_       Root Average Squared Error       0.40      0.424
+ _DIV_        Divisor for ASE               1400.00    600.000
+ _DFT_        Total Degrees of Freedom       700.00       .   
+ _ALOSS_      Average Loss for default         0.46      0.547
+ _LOSS_       Total Loss for default         322.00    164.000
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Classification Table
+
+Data Role=TRAIN Target Variable=default Target Label=default
+
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+
+  0          0         78.7004       88.9796        436         62.2857 
+  1          0         21.2996       56.1905        118         16.8571 
+  0          1         36.9863       11.0204         54          7.7143 
+  1          1         63.0137       43.8095         92         13.1429 
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Decision Table
+
+Data Role=TRAIN Target Variable=default Target Label=default
+
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+
+  0          0         95.0000       46.5306        228         32.5714 
+  1          0          5.0000        5.7143         12          1.7143 
+  0          1         56.9565       53.4694        262         37.4286 
+  1          1         43.0435       94.2857        198         28.2857 
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Event Classification Table
+
+Data Role=TRAIN Target=default Target Label=default
+
+  False       True        False       True
+Negative    Negative    Positive    Positive
+
+   118         436         54          92   
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Assessment Score Rankings
+
+Data Role=TRAIN Target Variable=default Target Label=default
+
+                                                                                           Mean
+                               Cumulative        %       Cumulative      Number of      Posterior
+Depth       Gain      Lift        Lift       Response    % Response    Observations    Probability
+
+   5     111.701    2.11701      2.11701      63.5102      63.5102          35           0.63510  
+  10     110.612    2.09524      2.10612      62.8571      63.1837          35           0.62857  
+  15     110.249    2.09524      2.10249      62.8571      63.0748          35           0.62857  
+  20     110.068    2.09524      2.10068      62.8571      63.0204          35           0.62857  
+  25      99.164    1.55547      1.99164      46.6640      59.7491          35           0.46664  
+  30      86.253    1.21701      1.86253      36.5102      55.8760          35           0.36510  
+  35      75.814    1.13178      1.75814      33.9535      52.7442          35           0.33953  
+  40      67.984    1.13178      1.67984      33.9535      50.3953          35           0.33953  
+  45      61.895    1.13178      1.61895      33.9535      48.5685          35           0.33953  
+  50      57.023    1.13178      1.57023      33.9535      47.1070          35           0.33953  
+  55      53.037    1.13178      1.53037      33.9535      45.9112          35           0.33953  
+  60      49.716    1.13178      1.49716      33.9535      44.9147          35           0.33953  
+  65      44.241    0.78543      1.44241      23.5629      43.2723          35           0.23563  
+  70      36.327    0.33439      1.36327      10.0317      40.8980          35           0.10032  
+  75      28.849    0.24167      1.28849       7.2500      38.6548          35           0.07250  
+  80      21.648    0.13622      1.21648       4.0866      36.4943          35           0.04087  
+  85      15.281    0.13410      1.15281       4.0230      34.5842          35           0.04023  
+  90       9.621    0.13410      1.09621       4.0230      32.8863          35           0.04023  
+  95       4.557    0.13410      1.04557       4.0230      31.3672          35           0.04023  
+ 100       0.000    0.13410      1.00000       4.0230      30.0000          35           0.04023  
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Assessment Score Distribution
+
+Data Role=TRAIN Target Variable=default Target Label=default
+
+ Posterior     Number                     Mean
+Probability      of      Number of     Posterior
+   Range       Events    Nonevents    Probability    Percentage
+
+ 0.65-0.70        4           2         0.66667         0.8571 
+ 0.60-0.65       88          52         0.62857        20.0000 
+ 0.45-0.50        6           7         0.46154         1.8571 
+ 0.40-0.45        4           5         0.44444         1.2857 
+ 0.35-0.40       15          26         0.36585         5.8571 
+ 0.30-0.35       73         142         0.33953        30.7143 
+ 0.20-0.25        8          28         0.22222         5.1429 
+ 0.05-0.10        5          61         0.07576         9.4286 
+ 0.00-0.05        7         167         0.04023        24.8571 

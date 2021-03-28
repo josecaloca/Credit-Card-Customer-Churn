@@ -1,0 +1,45 @@
+*------------------------------------------------------------*
+ Node = 3
+*------------------------------------------------------------*
+if Grouped: DEBTINC >= 2 or MISSING
+then 
+ Tree Node Identifier   = 3
+ Number of Observations = 2364
+ Predicted: BAD=1 = 0.09
+ Predicted: BAD=0 = 0.91
+ 
+*------------------------------------------------------------*
+ Node = 5
+*------------------------------------------------------------*
+if Grouped: DELINQ >= 5
+AND Grouped: DEBTINC <= 1
+then 
+ Tree Node Identifier   = 5
+ Number of Observations = 85
+ Predicted: BAD=1 = 0.96
+ Predicted: BAD=0 = 0.04
+ 
+*------------------------------------------------------------*
+ Node = 8
+*------------------------------------------------------------*
+if Grouped: DELINQ <= 4 or MISSING
+AND Grouped: DEBTINC <= 1
+AND Grouped: CLAGE <= 3 or MISSING
+then 
+ Tree Node Identifier   = 8
+ Number of Observations = 339
+ Predicted: BAD=1 = 0.68
+ Predicted: BAD=0 = 0.32
+ 
+*------------------------------------------------------------*
+ Node = 9
+*------------------------------------------------------------*
+if Grouped: DELINQ <= 4 or MISSING
+AND Grouped: DEBTINC <= 1
+AND Grouped: CLAGE >= 4
+then 
+ Tree Node Identifier   = 9
+ Number of Observations = 191
+ Predicted: BAD=1 = 0.38
+ Predicted: BAD=0 = 0.62
+ 

@@ -1,0 +1,110 @@
+*------------------------------------------------------------*
+Usuario:                Jose Caloca
+Fecha:                07 de marzo de 2021
+Hora:                13H58
+*------------------------------------------------------------*
+* Salida de entrenamiento
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Resumen de variables
+ 
+          Nivel de     Número de
+ Rol       medida     ocurrencias
+ 
+INPUT     BINARY           1
+INPUT     INTERVAL         7
+INPUT     NOMINAL          4
+TARGET    BINARY           1
+ 
+ 
+ 
+ 
+Eventos del modelo
+ 
+                                 Número
+                    Nivel de       de
+Target    Evento     medida     niveles      Orden       Etiqueta
+ 
+ BAD        1        BINARY        2       Descending
+ 
+ 
+ 
+ 
+Variables predichas y de decisión
+ 
+Tipo         Variable    Etiqueta
+ 
+TARGET        BAD
+PREDICTED     P_BAD1     Predicted: BAD=1
+RESIDUAL      R_BAD1     Residual: BAD=1
+PREDICTED     P_BAD0     Predicted: BAD=0
+RESIDUAL      R_BAD0     Residual: BAD=0
+FROM          F_BAD      From: BAD
+INTO          I_BAD      Into: BAD
+ 
+ 
+ 
+ 
+ 
+The DMSPLIT Procedure
+ 
+       Effect Summary
+ 
+              Node     Total
+               1st     Times
+Effect       Split     Split
+ 
+DELINQ           1         2
+DEBTINC          3        11
+CLAGE            4         2
+NINQ             6         1
+JOB             10         1
+MORTDUE         12         1
+VALUE           13         1
+REASON          20         1
+DEROG           22         1
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+-------------------------------------------------------------------
+Resumen de Selección de variable para el entrenamiento
+-------------------------------------------------------------------
+ 
+ 
+Nombre del target: BAD
+Nivel del target: BINARY
+Modelo de selección de la variable: Chi-cuadrado
+ 
+Número total de inputs: 12
+Número total de inputs utilizados: 12
+Número total de inputs no utilizados: 0
+Número total de inputs rechazados: 3
+ 
+Porcentaje máximo ausente: 50
+NOTE: el porcentaje ausente máximo no ha rechazado ninguna variable
+ 
+Nivel de clase máximo: 100
+NOTE: el nivel de clase máximo no ha rechazado ninguna variable
+
+
+*------------------------------------------------------------*
+* Salida de puntuación
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Salida del informe
+*------------------------------------------------------------*

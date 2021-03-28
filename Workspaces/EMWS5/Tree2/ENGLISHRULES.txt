@@ -1,0 +1,137 @@
+*------------------------------------------------------------*
+ Node = 2
+*------------------------------------------------------------*
+if Grouped: acc_status <= 2
+then 
+ Tree Node Identifier   = 2
+ Number of Observations = 278
+ Predicted: I_default=1 = 0.01
+ Predicted: I_default=0 = 0.99
+ 
+*------------------------------------------------------------*
+ Node = 11
+*------------------------------------------------------------*
+if Grouped: duration <= 4 or MISSING
+AND Grouped: credit_history >= 5
+AND Grouped: acc_status >= 3 or MISSING
+then 
+ Tree Node Identifier   = 11
+ Number of Observations = 20
+ Predicted: I_default=1 = 0.80
+ Predicted: I_default=0 = 0.20
+ 
+*------------------------------------------------------------*
+ Node = 13
+*------------------------------------------------------------*
+if Grouped: savings >= 3
+AND Grouped: duration >= 5
+AND Grouped: acc_status >= 3 or MISSING
+then 
+ Tree Node Identifier   = 13
+ Number of Observations = 63
+ Predicted: I_default=1 = 0.33
+ Predicted: I_default=0 = 0.67
+ 
+*------------------------------------------------------------*
+ Node = 16
+*------------------------------------------------------------*
+if Grouped: duration <= 4 or MISSING
+AND Grouped: credit_history <= 4 or MISSING
+AND Grouped: acc_status >= 3 AND Grouped: acc_status <= 3
+then 
+ Tree Node Identifier   = 16
+ Number of Observations = 101
+ Predicted: I_default=1 = 0.12
+ Predicted: I_default=0 = 0.88
+ 
+*------------------------------------------------------------*
+ Node = 20
+*------------------------------------------------------------*
+if Grouped: pourpose <= 6 or MISSING
+AND Grouped: duration <= 4 or MISSING
+AND Grouped: credit_history <= 4 or MISSING
+AND Grouped: acc_status >= 4 or MISSING
+then 
+ Tree Node Identifier   = 20
+ Number of Observations = 109
+ Predicted: I_default=1 = 0.22
+ Predicted: I_default=0 = 0.78
+ 
+*------------------------------------------------------------*
+ Node = 21
+*------------------------------------------------------------*
+if Grouped: pourpose >= 7
+AND Grouped: duration <= 4 or MISSING
+AND Grouped: credit_history <= 4 or MISSING
+AND Grouped: acc_status >= 4 or MISSING
+then 
+ Tree Node Identifier   = 21
+ Number of Observations = 12
+ Predicted: I_default=1 = 0.75
+ Predicted: I_default=0 = 0.25
+ 
+*------------------------------------------------------------*
+ Node = 23
+*------------------------------------------------------------*
+if Grouped: savings <= 2 or MISSING
+AND Grouped: pourpose <= 5 or MISSING
+AND Grouped: duration >= 5
+AND Grouped: acc_status >= 4 or MISSING
+then 
+ Tree Node Identifier   = 23
+ Number of Observations = 54
+ Predicted: I_default=1 = 0.89
+ Predicted: I_default=0 = 0.11
+ 
+*------------------------------------------------------------*
+ Node = 24
+*------------------------------------------------------------*
+if Grouped: savings <= 2 or MISSING
+AND Grouped: pourpose >= 6 AND Grouped: pourpose <= 6 or MISSING
+AND Grouped: duration >= 5
+AND Grouped: acc_status >= 3 or MISSING
+then 
+ Tree Node Identifier   = 24
+ Number of Observations = 16
+ Predicted: I_default=1 = 0.13
+ Predicted: I_default=0 = 0.88
+ 
+*------------------------------------------------------------*
+ Node = 25
+*------------------------------------------------------------*
+if Grouped: savings <= 2 or MISSING
+AND Grouped: pourpose >= 7
+AND Grouped: duration >= 5
+AND Grouped: acc_status >= 3 or MISSING
+then 
+ Tree Node Identifier   = 25
+ Number of Observations = 15
+ Predicted: I_default=1 = 0.93
+ Predicted: I_default=0 = 0.07
+ 
+*------------------------------------------------------------*
+ Node = 28
+*------------------------------------------------------------*
+if Grouped: savings <= 2 or MISSING
+AND Grouped: pourpose <= 2
+AND Grouped: duration >= 5
+AND Grouped: acc_status >= 3 AND Grouped: acc_status <= 3
+then 
+ Tree Node Identifier   = 28
+ Number of Observations = 9
+ Predicted: I_default=1 = 0.11
+ Predicted: I_default=0 = 0.89
+ 
+*------------------------------------------------------------*
+ Node = 29
+*------------------------------------------------------------*
+if Grouped: savings <= 2 or MISSING
+AND Grouped: pourpose <= 5 AND Grouped: pourpose >= 3 or MISSING
+AND Grouped: duration >= 5
+AND Grouped: acc_status >= 3 AND Grouped: acc_status <= 3
+then 
+ Tree Node Identifier   = 29
+ Number of Observations = 23
+ Predicted: I_default=1 = 0.83
+ Predicted: I_default=0 = 0.17
+ 

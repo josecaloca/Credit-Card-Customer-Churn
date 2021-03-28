@@ -1,0 +1,73 @@
+*------------------------------------------------------------*
+User:                Jose Caloca
+Date:                28 March 2021
+Time:                17:58:42
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+ Role        Level         Count
+ 
+INPUT      BINARY             3
+INPUT      INTERVAL           3
+INPUT      NOMINAL           14
+TARGET     BINARY             1
+ 
+ 
+ 
+ 
+Partition Summary
+ 
+                               Number of
+Type         Data Set        Observations
+ 
+DATA     EMWS5.Ids_DATA          1000
+TRAIN    EMWS5.Part_TRAIN         700
+TEST     EMWS5.Part_TEST          300
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Summary Statistics for Class Targets
+ 
+Data=DATA
+ 
+            Numeric    Formatted    Frequency
+Variable     Value       Value        Count      Percent     Label
+ 
+default        0           0           700          70      default
+default        1           1           300          30      default
+ 
+ 
+Data=TEST
+ 
+            Numeric    Formatted    Frequency
+Variable     Value       Value        Count      Percent     Label
+ 
+default        0           0           210          70      default
+default        1           1            90          30      default
+ 
+ 
+Data=TRAIN
+ 
+            Numeric    Formatted    Frequency
+Variable     Value       Value        Count      Percent     Label
+ 
+default        0           0           490          70      default
+default        1           1           210          30      default

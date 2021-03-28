@@ -1,0 +1,11 @@
+*;
+* IMPUTE VARIABLE: REASON;
+*;
+length IMP_REASON $7;
+label IMP_REASON = 'Imputed REASON';
+IMP_REASON = REASON;
+IF REASON eq '' THEN DO;
+_random_ = DMRAN(12345);
+if _random_ <= 0.68679775280898 then IMP_REASON = 'DebtCon';
+else IMP_REASON = 'HomeImp';
+END;

@@ -1,0 +1,121 @@
+*------------------------------------------------------------*
+ Node = 5
+*------------------------------------------------------------*
+if VALUE >= 303749 or MISSING
+AND DEBTINC < 44.7337
+then 
+ Tree Node Identifier   = 5
+ Number of Observations = 20
+ Predicted: BAD=1 = 0.85
+ Predicted: BAD=0 = 0.15
+ 
+*------------------------------------------------------------*
+ Node = 7
+*------------------------------------------------------------*
+if DELINQ IS ONE OF: 2, 1, 6, 3, 4, 5 or MISSING
+AND DEBTINC >= 44.7337 or MISSING
+then 
+ Tree Node Identifier   = 7
+ Number of Observations = 285
+ Predicted: BAD=1 = 0.78
+ Predicted: BAD=0 = 0.22
+ 
+*------------------------------------------------------------*
+ Node = 8
+*------------------------------------------------------------*
+if VALUE < 303749
+AND DELINQ IS ONE OF: 7
+AND DEBTINC < 44.7337
+then 
+ Tree Node Identifier   = 8
+ Number of Observations = 5
+ Predicted: BAD=1 = 1.00
+ Predicted: BAD=0 = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 13
+*------------------------------------------------------------*
+if DEROG IS ONE OF: 2, 1 or MISSING
+AND DELINQ IS ONE OF: 0
+AND DEBTINC >= 44.7337 or MISSING
+then 
+ Tree Node Identifier   = 13
+ Number of Observations = 68
+ Predicted: BAD=1 = 0.78
+ Predicted: BAD=0 = 0.22
+ 
+*------------------------------------------------------------*
+ Node = 17
+*------------------------------------------------------------*
+if VALUE < 303749
+AND DELINQ IS ONE OF: 0 or MISSING
+AND DEBTINC < 44.7337
+then 
+ Tree Node Identifier   = 17
+ Number of Observations = 1954
+ Predicted: BAD=1 = 0.05
+ Predicted: BAD=0 = 0.95
+ 
+*------------------------------------------------------------*
+ Node = 18
+*------------------------------------------------------------*
+if VALUE < 76239 or MISSING
+AND DEROG IS ONE OF: 0
+AND DELINQ IS ONE OF: 0
+AND DEBTINC >= 44.7337 or MISSING
+then 
+ Tree Node Identifier   = 18
+ Number of Observations = 134
+ Predicted: BAD=1 = 0.63
+ Predicted: BAD=0 = 0.37
+ 
+*------------------------------------------------------------*
+ Node = 22
+*------------------------------------------------------------*
+if VALUE < 303749
+AND DELINQ IS ONE OF: 2, 1, 3, 4
+AND DEBTINC < 9.5345
+then 
+ Tree Node Identifier   = 22
+ Number of Observations = 5
+ Predicted: BAD=1 = 1.00
+ Predicted: BAD=0 = 0.00
+ 
+*------------------------------------------------------------*
+ Node = 23
+*------------------------------------------------------------*
+if VALUE < 303749
+AND DELINQ IS ONE OF: 2, 1, 3, 4
+AND DEBTINC < 44.7337 AND DEBTINC >= 9.5345 or MISSING
+then 
+ Tree Node Identifier   = 23
+ Number of Observations = 338
+ Predicted: BAD=1 = 0.14
+ Predicted: BAD=0 = 0.86
+ 
+*------------------------------------------------------------*
+ Node = 26
+*------------------------------------------------------------*
+if VALUE >= 76239
+AND DEROG IS ONE OF: 0
+AND DELINQ IS ONE OF: 0
+AND DEBTINC >= 44.7337
+then 
+ Tree Node Identifier   = 26
+ Number of Observations = 11
+ Predicted: BAD=1 = 0.91
+ Predicted: BAD=0 = 0.09
+ 
+*------------------------------------------------------------*
+ Node = 27
+*------------------------------------------------------------*
+if VALUE >= 76239
+AND DEROG IS ONE OF: 0
+AND DELINQ IS ONE OF: 0
+AND DEBTINC equals Missing
+then 
+ Tree Node Identifier   = 27
+ Number of Observations = 159
+ Predicted: BAD=1 = 0.34
+ Predicted: BAD=0 = 0.66
+ 

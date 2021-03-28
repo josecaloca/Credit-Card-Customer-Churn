@@ -1,0 +1,140 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Fit Statistics
+
+Target=default Target Label=default
+
+   Fit
+Statistics    Statistics Label                     Train       Test
+
+ _DFT_        Total Degrees of Freedom            700.00       .   
+ _DFE_        Degrees of Freedom for Error        624.00       .   
+ _DFM_        Model Degrees of Freedom             76.00       .   
+ _NW_         Number of Estimated Weights          76.00       .   
+ _AIC_        Akaike's Information Criterion      741.15       .   
+ _SBC_        Schwarz's Bayesian Criterion       1087.03       .   
+ _ASE_        Average Squared Error                 0.14      0.188
+ _MAX_        Maximum Absolute Error                0.98      1.000
+ _DIV_        Divisor for ASE                    1400.00    600.000
+ _NOBS_       Sum of Frequencies                  700.00    300.000
+ _RASE_       Root Average Squared Error            0.37      0.434
+ _SSE_        Sum of Squared Errors               193.32    112.779
+ _SUMW_       Sum of Case Weights Times Freq     1400.00    600.000
+ _FPE_        Final Prediction Error                0.17       .   
+ _MSE_        Mean Squared Error                    0.15      0.188
+ _RFPE_       Root Final Prediction Error           0.41       .   
+ _RMSE_       Root Mean Squared Error               0.39      0.434
+ _AVERR_      Average Error Function                0.42      0.651
+ _ERR_        Error Function                      589.15    390.302
+ _MISC_       Misclassification Rate                0.20      0.270
+ _WRONG_      Number of Wrong Classifications     140.00     81.000
+ _LOSS_       Total Loss for default              283.00    175.000
+ _ALOSS_      Average Loss for default              0.40      0.583
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Classification Table
+
+Data Role=TRAIN Target Variable=default Target Label=default
+
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+
+  0          0         83.0189       89.7959        440         62.8571 
+  1          0         16.9811       42.8571         90         12.8571 
+  0          1         29.4118       10.2041         50          7.1429 
+  1          1         70.5882       57.1429        120         17.1429 
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Decision Table
+
+Data Role=TRAIN Target Variable=default Target Label=default
+
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+
+  0          0         94.7195       58.5714        287         41.0000 
+  1          0          5.2805        7.6190         16          2.2857 
+  0          1         51.1335       41.4286        203         29.0000 
+  1          1         48.8665       92.3810        194         27.7143 
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Event Classification Table
+
+Data Role=TRAIN Target=default Target Label=default
+
+  False       True        False       True
+Negative    Negative    Positive    Positive
+
+   90          440         50          120  
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Assessment Score Rankings
+
+Data Role=TRAIN Target Variable=default Target Label=default
+
+                                                                                           Mean
+                               Cumulative        %       Cumulative      Number of      Posterior
+Depth       Gain      Lift        Lift       Response    % Response    Observations    Probability
+
+   5     204.762    3.04762      3.04762      91.4286      91.4286          35           0.88641  
+  10     171.429    2.38095      2.71429      71.4286      81.4286          35           0.76219  
+  15     163.492    2.47619      2.63492      74.2857      79.0476          35           0.68838  
+  20     145.238    1.90476      2.45238      57.1429      73.5714          35           0.58815  
+  25     132.381    1.80952      2.32381      54.2857      69.7143          35           0.52544  
+  30     113.492    1.19048      2.13492      35.7143      64.0476          35           0.45289  
+  35      98.639    1.09524      1.98639      32.8571      59.5918          35           0.39412  
+  40      91.667    1.42857      1.91667      42.8571      57.5000          35           0.33553  
+  45      84.127    1.23810      1.84127      37.1429      55.2381          35           0.29148  
+  50      75.000    0.92857      1.75000      27.8571      52.5000          35           0.24796  
+  55      65.368    0.69048      1.65368      20.7143      49.6104          35           0.20055  
+  60      55.556    0.47619      1.55556      14.2857      46.6667          35           0.15745  
+  65      45.788    0.28571      1.45788       8.5714      43.7363          35           0.13311  
+  70      38.776    0.47619      1.38776      14.2857      41.6327          35           0.11498  
+  75      30.794    0.19048      1.30794       5.7143      39.2381          35           0.08234  
+  80      23.214    0.09524      1.23214       2.8571      36.9643          35           0.05898  
+  85      16.527    0.09524      1.16527       2.8571      34.9580          35           0.03947  
+  90      11.111    0.19048      1.11111       5.7143      33.3333          35           0.02791  
+  95       5.263    0.00000      1.05263       0.0000      31.5789          35           0.00566  
+ 100       0.000    0.00000      1.00000       0.0000      30.0000          35           0.00042  
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Assessment Score Distribution
+
+Data Role=TRAIN Target Variable=default Target Label=default
+
+ Posterior     Number                     Mean
+Probability      of      Number of     Posterior
+   Range       Events    Nonevents    Probability    Percentage
+
+ 0.95-1.00       13           0         0.96806         1.8571 
+ 0.90-0.95        5           0         0.93520         0.7143 
+ 0.85-0.90        2           0         0.88355         0.2857 
+ 0.80-0.85        8           1         0.81338         1.2857 
+ 0.75-0.80       25          11         0.76781         5.1429 
+ 0.70-0.75       16           4         0.72717         2.8571 
+ 0.65-0.70       10           2         0.68209         1.7143 
+ 0.60-0.65       10           5         0.62849         2.1429 
+ 0.55-0.60       16          15         0.57731         4.4286 
+ 0.50-0.55       15          12         0.52768         3.8571 
+ 0.45-0.50        9          13         0.47398         3.1429 
+ 0.40-0.45       14          19         0.42594         4.7143 
+ 0.35-0.40        3          19         0.37940         3.1429 
+ 0.30-0.35       21          26         0.32588         6.7143 
+ 0.25-0.30       10          27         0.27353         5.2857 
+ 0.20-0.25       10          23         0.22573         4.7143 
+ 0.15-0.20        7          36         0.18039         6.1429 
+ 0.10-0.15       10          69         0.12795        11.2857 
+ 0.05-0.10        4          74         0.07106        11.1429 
+ 0.00-0.05        2         134         0.01733        19.4286 

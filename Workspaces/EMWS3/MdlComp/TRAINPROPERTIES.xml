@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6"
+ ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01"
+ AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" intervalViyaCriteria="DEFAULT"
+ classViyaCriteria="DEFAULT" SelectionTable="TRAIN" SelectionCriteria="_MISC_" SelectionDepth="10"
+ NumberofBins="20" RecomputeAssess="N" TargetName="BAD" ModelId="Boost" ModelDescription="Incremento gradiente"
+ ModelCriteria="Train: Misclassification Rate" ForceRun="N" RunAction="Train" Component="ModelCompare"
+ RawCreateTime="1931289728.3" CreateTime="13MAR2021:21:22:08" RunId="2bd238e7-0806-4d6a-bc0e-e54204653c58"
+ StatisticUsed="_MISC_" TargetLabel="" RawLastTimeRun="1931356280.9" RawRunTime="11.636999846"
+ LastTimeRun="14MAR2021:15:51:21" RunTime="0 Hr. 0 Min. 11.64 Sec.">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES/>
+</_ROOT_>

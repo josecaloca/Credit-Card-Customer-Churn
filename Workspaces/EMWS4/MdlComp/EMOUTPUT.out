@@ -1,0 +1,284 @@
+*------------------------------------------------------------*
+User:                Jose Caloca
+Date:                16 March 2021
+Time:                00:11:15
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+ Role        Level         Count
+ 
+TARGET      BINARY           1
+ 
+ 
+ 
+ 
+ 
+                                                                                     BINNED_KS_
+                                                            _KS_PROB_                   PROB_
+Obs    TARGET    TARGETLABEL    _AUR_    _GINI_      KS       CUTOFF     _KS_BIN_      CUTOFF
+ 
+ 1      BAD                      0.7       0.4     0.355      0.122        0.351        0.249
+ 
+ 
+ 
+ 
+ 
+                                                               _VKS_              _VBINNED_
+                                                               PROB_     _VKS_     KS_PROB_
+Obs    TARGET    TARGETLABEL    _VAUR_    _VGINI_     VKS     CUTOFF_     BIN_     CUTOFF_
+ 
+ 1      BAD                      0.709     0.417     0.382     0.122     0.375      0.185
+ 
+ 
+ 
+ 
+ 
+                                                               _TKS_              _TBINNED_
+                                                               PROB_     _TKS_     KS_PROB_
+Obs    TARGET    TARGETLABEL    _TAUR_    _TGINI_     TKS     CUTOFF_     BIN_     CUTOFF_
+ 
+ 1      BAD                      0.713     0.425     0.391     0.122     0.383      0.249
+ 
+ 
+ 
+ 
+ 
+                                                                                     BINNED_KS_
+                                                            _KS_PROB_                   PROB_
+Obs    TARGET    TARGETLABEL    _AUR_    _GINI_      KS       CUTOFF     _KS_BIN_      CUTOFF
+ 
+ 1      BAD                     0.733     0.467    0.401      0.208        0.401        0.261
+ 
+ 
+ 
+ 
+ 
+                                                               _VKS_              _VBINNED_
+                                                               PROB_     _VKS_     KS_PROB_
+Obs    TARGET    TARGETLABEL    _VAUR_    _VGINI_     VKS     CUTOFF_     BIN_     CUTOFF_
+ 
+ 1      BAD                      0.726     0.451     0.372     0.163     0.366      0.215
+ 
+ 
+ 
+ 
+ 
+                                                               _TKS_              _TBINNED_
+                                                               PROB_     _TKS_     KS_PROB_
+Obs    TARGET    TARGETLABEL    _TAUR_    _TGINI_     TKS     CUTOFF_     BIN_     CUTOFF_
+ 
+ 1      BAD                      0.715      0.43     0.397     0.163     0.393      0.212
+ 
+ 
+ 
+ 
+ 
+                                                                                     BINNED_KS_
+                                                            _KS_PROB_                   PROB_
+Obs    TARGET    TARGETLABEL    _AUR_    _GINI_      KS       CUTOFF     _KS_BIN_      CUTOFF
+ 
+ 1      BAD                     0.745     0.489    0.466      0.102        0.459        0.24
+ 
+ 
+ 
+ 
+ 
+                                                              _VKS_              _VBINNED_
+                                                              PROB_     _VKS_     KS_PROB_
+Obs    TARGET    TARGETLABEL    _VAUR_    _VGINI_     VKS    CUTOFF_     BIN_     CUTOFF_
+ 
+ 1      BAD                      0.711     0.422     0.39     0.102     0.383      0.377
+ 
+ 
+ 
+ 
+ 
+                                                              _TKS_              _TBINNED_
+                                                              PROB_     _TKS_     KS_PROB_
+Obs    TARGET    TARGETLABEL    _TAUR_    _TGINI_     TKS    CUTOFF_     BIN_     CUTOFF_
+ 
+ 1      BAD                      0.714     0.428     0.41     0.102     0.397       0.24
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fit Statistics
+Model Selection based on Test: Gain (_TGAIN_)
+ 
+                                                   Train:                          Valid:
+                                                  Average          Train:         Average          Valid:
+Selected    Model        Model          Test:     Squared    Misclassification    Squared    Misclassification
+ Model      Node      Description        Gain      Error            Rate           Error            Rate
+ 
+   Y        Reg2     Regression all    210.862    0.13081         0.17221         0.13460         0.17338
+            Tree     Decision Tree     202.267    0.12568         0.17019         0.13626         0.18624
+            Reg      Regression        185.875    0.13452         0.17892         0.13670         0.18736
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fit Statistics Table
+Target: BAD
+ 
+Data Role=Train
+ 
+Statistics                                                           Reg2       Tree        Reg
+ 
+Train: Bin-Based Two-Way Kolmogorov-Smirnov Probability Cutoff       0.26       0.24       0.25
+Train: Kolmogorov-Smirnov Statistic                                  0.40       0.47       0.36
+Train: Akaike's Information Criterion                             2539.15        .      2597.62
+Train: Average Loss for BAD                                          0.57       0.50       0.60
+Train: Average Squared Error                                         0.13       0.13       0.13
+Train: Roc Index                                                     0.73       0.75       0.70
+Train: Average Error Function                                        0.42        .         0.43
+Train: Cumulative Percent Captured Response                         31.58      31.41      30.24
+Train: Percent Captured Response                                    13.39      14.85      13.16
+Selection Criterion: Test: Gain                                    210.86     202.27     185.88
+Train: Degrees of Freedom for Error                               2970.00        .      2974.00
+Train: Model Degrees of Freedom                                      9.00        .         5.00
+Train: Total Degrees of Freedom                                   2979.00    2979.00    2979.00
+Train: Divisor for ASE                                            5958.00    5958.00    5958.00
+Train: Error Function                                             2521.15        .      2587.62
+Train: Final Prediction Error                                        0.13        .         0.13
+Train: Gain                                                        215.65     214.02     202.35
+Train: Gini Coefficient                                              0.47       0.49       0.40
+Train: Bin-Based Two-Way Kolmogorov-Smirnov Statistic                0.40       0.46       0.35
+Train: Kolmogorov-Smirnov Probability Cutoff                         0.21       0.10       0.12
+Train: Cumulative Lift                                               3.16       3.14       3.02
+Train: Lift                                                          2.68       2.97       2.63
+Train: Total Loss for BAD                                         1691.00    1501.00    1800.00
+Train: Maximum Absolute Error                                        0.90       0.90       0.88
+Train: Misclassification Rate                                        0.17       0.17       0.18
+Train: Mean Square Error                                             0.13        .         0.13
+Train: Sum of Frequencies                                         2979.00    2979.00    2979.00
+Train: Number of Estimate Weights                                    9.00        .         5.00
+Train: Root Average Sum of Squares                                   0.36       0.35       0.37
+Train: Cumulative Percent Response                                  62.94      62.61      60.29
+Train: Percent Response                                             53.40      59.19      52.47
+Train: Root Final Prediction Error                                   0.36        .         0.37
+Train: Root Mean Squared Error                                       0.36        .         0.37
+Train: Schwarz's Bayesian Criterion                               2593.14        .      2627.62
+Train: Sum of Squared Errors                                       779.34     748.82     801.46
+Train: Sum of Case Weights Times Freq                             5958.00        .      5958.00
+ 
+ 
+Data Role=Valid
+ 
+Statistics                                                           Reg2       Tree        Reg
+ 
+Valid: Kolmogorov-Smirnov Statistic                                  0.37       0.39       0.38
+Valid: Average Loss for BAD                                          0.58       0.57       0.57
+Valid: Average Squared Error                                         0.13       0.14       0.14
+Valid: Roc Index                                                     0.73       0.71       0.71
+Valid: Average Error Function                                        0.43        .         0.44
+Valid: Bin-Based Two-Way Kolmogorov-Smirnov Probability Cutoff       0.22       0.38       0.19
+Valid: Cumulative Percent Captured Response                         31.02      29.86      28.47
+Valid: Percent Captured Response                                    13.23      13.50      11.43
+Valid: Divisor for VASE                                           3576.00    3576.00    3576.00
+Valid: Error Function                                             1546.42        .      1564.91
+Valid: Gain                                                        209.81     198.26     184.35
+Valid: Gini Coefficient                                              0.45       0.42       0.42
+Valid: Bin-Based Two-Way Kolmogorov-Smirnov Statistic                0.37       0.38       0.38
+Valid: Kolmogorov-Smirnov Probability Cutoff                         0.16       0.10       0.12
+Valid: Cumulative Lift                                               3.10       2.98       2.84
+Valid: Lift                                                          2.66       2.71       2.30
+Valid: Total Loss for BAD                                         1032.00    1025.00    1028.00
+Valid: Maximum Absolute Error                                        0.90       0.90       0.88
+Valid: Misclassification Rate                                        0.17       0.19       0.19
+Valid: Mean Square Error                                             0.13        .         0.14
+Valid: Sum of Frequencies                                         1788.00    1788.00    1788.00
+Valid: Root Average Squared Error                                    0.37       0.37       0.37
+Valid: Cumulative Percent Response                                  61.86      59.55      56.77
+Valid: Percent Response                                             53.06      54.14      45.83
+Valid: Root Mean Square Error                                        0.37        .         0.37
+Valid: Sum of Square Errors                                        481.32     487.25     488.84
+Valid: Sum of Case Weights Times Freq                             3576.00        .      3576.00
+ 
+ 
+Data Role=Test
+ 
+Statistics                                                           Reg2       Tree        Reg
+ 
+Test:  Kolmogorov-Smirnov Statistic                                  0.40       0.41       0.39
+Test: Average Loss for BAD                                           0.56       0.56       0.57
+Test: Average Squared Error                                          0.13       0.13       0.13
+Test:  Roc Index                                                     0.72       0.71       0.71
+Test: Average Error Function                                         0.43        .         0.43
+Test:  Bin-Based Two-Way Kolmogorov-Smirnov Probability Cutoff       0.21       0.24       0.25
+Test: Cumulative Percent Captured Response                          31.27      30.40      28.76
+Test: Percent Captured Response                                     12.29      14.21      11.56
+Test: Divisor for TASE                                            2386.00    2386.00    2386.00
+Test: Error Function                                              1019.22        .      1022.19
+Test: Gain                                                         210.86     202.27     185.88
+Test:  Gini Coefficient                                              0.43       0.43       0.43
+Test:  Bin-Based Two-Way Kolmogorov-Smirnov Statistic                0.39       0.40       0.38
+Test:  Kolmogorov-Smirnov Probability Cutoff                         0.16       0.10       0.12
+Test: Cumulative Lift                                                3.11       3.02       2.86
+Test: Lift                                                           2.44       2.83       2.30
+Test: Total Loss for BAD                                           664.00     668.00     681.00
+Test: Maximum Absolute Error                                         0.90       0.90       0.88
+Test: Misclassification Rate                                         0.17       0.19       0.19
+Test: Lower 95% Conf. Limit for TMISC                                0.15        .         0.16
+Test: Upper 95% Conf. Limit for TMISC                                0.19        .         0.21
+Test: Mean Square Error                                              0.13        .         0.13
+Test: Sum of Frequencies                                          1193.00    1193.00    1193.00
+Test: Root Average Squared Error                                     0.36       0.37       0.36
+Test: Cumulative Percent Response                                   62.02      60.30      57.03
+Test: Percent Response                                              48.75      56.38      45.86
+Test: Root Mean Square Error                                         0.36        .         0.36
+Test: Sum of Square Errors                                         314.32     318.37     316.73
+Test: Sum of Case Weights Times Freq                              2386.00    2386.00    2386.00
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Event Classification Table
+Model Selection based on Test: Gain (_TGAIN_)
+ 
+Model        Model         Data                  Target      False       True        False       True
+Node      Description      Role        Target    Label     Negative    Negative    Positive    Positive
+ 
+Reg      Regression        TRAIN        BAD                   415        2267         118         179
+Reg      Regression        VALIDATE     BAD                   243        1339          92         114
+Reg2     Regression all    TRAIN        BAD                   444        2316          69         150
+Reg2     Regression all    VALIDATE     BAD                   250        1371          60         107
+Tree     Decision Tree     TRAIN        BAD                   352        2230         155         242
+Tree     Decision Tree     VALIDATE     BAD                   212        1310         121         145
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*

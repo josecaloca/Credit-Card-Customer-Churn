@@ -1,0 +1,122 @@
+*------------------------------------------------------------*
+ Node = 4
+*------------------------------------------------------------*
+if duration < 22.5 or MISSING
+AND acc_status IS ONE OF: A11, A12 or MISSING
+then 
+ Tree Node Identifier   = 4
+ Number of Observations = 215
+ Predicted: default=1 = 0.34
+ Predicted: default=0 = 0.66
+ 
+*------------------------------------------------------------*
+ Node = 6
+*------------------------------------------------------------*
+if other_instalments IS ONE OF: A141
+AND acc_status IS ONE OF: A14, A13
+then 
+ Tree Node Identifier   = 6
+ Number of Observations = 41
+ Predicted: default=1 = 0.37
+ Predicted: default=0 = 0.63
+ 
+*------------------------------------------------------------*
+ Node = 10
+*------------------------------------------------------------*
+if savings IS ONE OF: A61, A63, A62 or MISSING
+AND duration >= 22.5
+AND acc_status IS ONE OF: A11, A12 or MISSING
+then 
+ Tree Node Identifier   = 10
+ Number of Observations = 140
+ Predicted: default=1 = 0.63
+ Predicted: default=0 = 0.37
+ 
+*------------------------------------------------------------*
+ Node = 14
+*------------------------------------------------------------*
+if other_instalments IS ONE OF: A143, A142 or MISSING
+AND acc_status IS ONE OF: A13
+then 
+ Tree Node Identifier   = 14
+ Number of Observations = 36
+ Predicted: default=1 = 0.22
+ Predicted: default=0 = 0.78
+ 
+*------------------------------------------------------------*
+ Node = 18
+*------------------------------------------------------------*
+if savings IS ONE OF: A65, A64
+AND duration >= 22.5
+AND acc_status IS ONE OF: A11
+then 
+ Tree Node Identifier   = 18
+ Number of Observations = 9
+ Predicted: default=1 = 0.44
+ Predicted: default=0 = 0.56
+ 
+*------------------------------------------------------------*
+ Node = 19
+*------------------------------------------------------------*
+if savings IS ONE OF: A65, A64
+AND duration >= 22.5
+AND acc_status IS ONE OF: A12 or MISSING
+then 
+ Tree Node Identifier   = 19
+ Number of Observations = 16
+ Predicted: default=1 = 0.06
+ Predicted: default=0 = 0.94
+ 
+*------------------------------------------------------------*
+ Node = 21
+*------------------------------------------------------------*
+if pourpose IS ONE OF: A43, A40, A41, A46
+AND other_instalments IS ONE OF: A143, A142 or MISSING
+AND acc_status IS ONE OF: A14 or MISSING
+then 
+ Tree Node Identifier   = 21
+ Number of Observations = 174
+ Predicted: default=1 = 0.04
+ Predicted: default=0 = 0.96
+ 
+*------------------------------------------------------------*
+ Node = 24
+*------------------------------------------------------------*
+if pourpose IS ONE OF: A42, A49 or MISSING
+AND other_instalments IS ONE OF: A143, A142 or MISSING
+AND job IS ONE OF: A174
+AND acc_status IS ONE OF: A14 or MISSING
+then 
+ Tree Node Identifier   = 24
+ Number of Observations = 6
+ Predicted: default=1 = 0.67
+ Predicted: default=0 = 0.33
+ 
+*------------------------------------------------------------*
+ Node = 26
+*------------------------------------------------------------*
+if pourpose IS ONE OF: A42, A49 or MISSING
+AND other_instalments IS ONE OF: A143, A142 or MISSING
+AND job IS ONE OF: A172, A173 or MISSING
+AND employment IS ONE OF: A72
+AND acc_status IS ONE OF: A14 or MISSING
+then 
+ Tree Node Identifier   = 26
+ Number of Observations = 13
+ Predicted: default=1 = 0.46
+ Predicted: default=0 = 0.54
+ 
+*------------------------------------------------------------*
+ Node = 27
+*------------------------------------------------------------*
+if pourpose IS ONE OF: A42, A49 or MISSING
+AND other_instalments IS ONE OF: A143, A142 or MISSING
+AND job IS ONE OF: A172, A173 or MISSING
+AND employment IS ONE OF: A74, A75, A73 or MISSING
+AND acc_status IS ONE OF: A14 or MISSING
+then 
+ Tree Node Identifier   = 27
+ Number of Observations = 50
+ Predicted: default=1 = 0.08
+ Predicted: default=0 = 0.92
+ 

@@ -1,0 +1,72 @@
+*------------------------------------------------------------*
+ Node = 3
+*------------------------------------------------------------*
+if Imputed DELINQ IS ONE OF: 2, 6, 3, 4, 5, 7 or MISSING
+then 
+ Tree Node Identifier   = 3
+ Number of Observations = 272
+ Predicted: BAD=1 = 0.59
+ Predicted: BAD=0 = 0.41
+ 
+*------------------------------------------------------------*
+ Node = 5
+*------------------------------------------------------------*
+if Imputed DELINQ IS ONE OF: 0, 1
+AND Imputed DEBTINC >= 44.7337
+then 
+ Tree Node Identifier   = 5
+ Number of Observations = 74
+ Predicted: BAD=1 = 0.73
+ Predicted: BAD=0 = 0.27
+ 
+*------------------------------------------------------------*
+ Node = 9
+*------------------------------------------------------------*
+if Imputed DEROG IS ONE OF: 3, 2, 1, 4, 5 or MISSING
+AND Imputed DELINQ IS ONE OF: 0, 1
+AND Imputed DEBTINC < 44.7337 or MISSING
+then 
+ Tree Node Identifier   = 9
+ Number of Observations = 257
+ Predicted: BAD=1 = 0.38
+ Predicted: BAD=0 = 0.62
+ 
+*------------------------------------------------------------*
+ Node = 16
+*------------------------------------------------------------*
+if Imputed NINQ IS ONE OF: 5, 6 or MISSING
+AND Imputed DEROG IS ONE OF: 0
+AND Imputed DELINQ IS ONE OF: 0, 1
+AND Imputed DEBTINC < 44.7337 or MISSING
+then 
+ Tree Node Identifier   = 16
+ Number of Observations = 51
+ Predicted: BAD=1 = 0.53
+ Predicted: BAD=0 = 0.47
+ 
+*------------------------------------------------------------*
+ Node = 22
+*------------------------------------------------------------*
+if Imputed NINQ IS ONE OF: 1, 0, 2, 3, 4, 8, 7, 11
+AND Imputed DEROG IS ONE OF: 0
+AND Imputed DELINQ IS ONE OF: 0, 1
+AND Imputed DEBTINC < 12.5702
+then 
+ Tree Node Identifier   = 22
+ Number of Observations = 55
+ Predicted: BAD=1 = 0.44
+ Predicted: BAD=0 = 0.56
+ 
+*------------------------------------------------------------*
+ Node = 23
+*------------------------------------------------------------*
+if Imputed NINQ IS ONE OF: 1, 0, 2, 3, 4, 8, 7, 11
+AND Imputed DEROG IS ONE OF: 0
+AND Imputed DELINQ IS ONE OF: 0, 1
+AND Imputed DEBTINC < 44.7337 AND Imputed DEBTINC >= 12.5702 or MISSING
+then 
+ Tree Node Identifier   = 23
+ Number of Observations = 2270
+ Predicted: BAD=1 = 0.10
+ Predicted: BAD=0 = 0.90
+ 

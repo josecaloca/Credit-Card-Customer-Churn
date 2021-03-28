@@ -1,0 +1,591 @@
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "28 March 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "17:58:42" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Report Log";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Report Log
+Date:                28 March 2021
+Time:                17:58:42
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O2KPN70T "C:\Jose\DM_ang\Workspaces\EMWS5\Part\EMREPORT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O2KPN70T new;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    data WORK.M3FHJG3B;
+MPRINT(EM_DIAGRAM):   set WORK.M3FHJG3B;
+MPRINT(EM_DIAGRAM):   where(ROLE = "TARGET" or ROLE = "FREQ");
+MPRINT(EM_DIAGRAM):   run;
+28524      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+28525      * Part: Computing statistics for class target variables;
+MPRINT(EM_DIAGRAM):   * Part: Computing statistics for class target variables;
+28526      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+28527      ods listing close;
+MPRINT(EM_DIAGRAM):   ods listing close;
+28528      ods output onewayfreqs=WORK.TEMPFREQ;
+MPRINT(EM_DIAGRAM):   ods output onewayfreqs=WORK.TEMPFREQ;
+28529      proc freq data = EMWS5.Ids_DATA order=formatted addnames;
+NOTE: Data file JOSE.GERMAN.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+MPRINT(EM_DIAGRAM):   proc freq data = EMWS5.Ids_DATA order=formatted addnames;
+28530      table default / missing;
+MPRINT(EM_DIAGRAM):   table default / missing;
+28531      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: View EMWS5.IDS_DATA.VIEW used (Total process time):
+      real time           0.03 seconds
+      cpu time            0.01 seconds
+      
+NOTE: There were 1000 observations read from the data set JOSE.GERMAN.
+NOTE: The data set WORK.TEMPFREQ has 2 observations and 8 variables.
+NOTE: There were 1000 observations read from the data set EMWS5.IDS_DATA.
+NOTE: PROCEDURE FREQ used (Total process time):
+      real time           0.05 seconds
+      cpu time            0.03 seconds
+      
+
+MPRINT(EM_DIAGRAM):   quit;
+28532      quit;
+28533      ods listing;
+MPRINT(EM_DIAGRAM):   ods listing;
+28534      data WORK.Part_BAR(keep=_VARIABLE_ TYPE COUNT PERCENT _X_ _XLABEL_);
+MPRINT(EM_DIAGRAM):    data WORK.Part_BAR(keep=_VARIABLE_ TYPE COUNT PERCENT _X_ _XLABEL_);
+28535      label _VARIABLE_ = "%sysfunc(sasmsg(sashelp.dmine, rpt_variable_vlabel, NOQUOTE))" Type = "%sysfunc(sasmsg(sashelp.dmine, rpt_type_vlabel,         NOQUOTE))" _X_ = "%sysfunc(sasmsg(sashelp.dmine, rpt_numValue_vlabel, NOQUOTE))" _XLABEL_ =
+28536         "%sysfunc(sasmsg(sashelp.dmine, rpt_fmtValue_vlabel ,    NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel,        NOQUOTE))" PERCENT = "%sysfunc(sasmsg(sashelp.dmine, rpt_percent_vlabel,      NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label _VARIABLE_ = "Variable" Type = "Type" _X_ = "Numeric Value" _XLABEL_ = "Formatted Value" COUNT = "Frequency Count" PERCENT = "Percent";
+28537      dsid = open("WORK.TEMPFREQ");
+MPRINT(EM_DIAGRAM):   dsid = open("WORK.TEMPFREQ");
+28538      varnum = varnum(dsid, 'VARIABLE');
+MPRINT(EM_DIAGRAM):   varnum = varnum(dsid, 'VARIABLE');
+28539      freqnum = varnum(dsid, 'FREQUENCY');
+MPRINT(EM_DIAGRAM):   freqnum = varnum(dsid, 'FREQUENCY');
+28540      pvarnum = varnum(dsid, 'PERCENT');
+MPRINT(EM_DIAGRAM):   pvarnum = varnum(dsid, 'PERCENT');
+28541      typenum = varnum(dsid, '_TYPE_');
+MPRINT(EM_DIAGRAM):   typenum = varnum(dsid, '_TYPE_');
+28542      length _VARIABLE_ $32 TYPE $1 _XLABEL_ $32;
+MPRINT(EM_DIAGRAM):   length _VARIABLE_ $32 TYPE $1 _XLABEL_ $32;
+28543      do while(^fetch(dsid));
+MPRINT(EM_DIAGRAM):   do while(^fetch(dsid));
+28544      _VARIABLE_ = strip(getvarc(dsid, varnum));
+MPRINT(EM_DIAGRAM):   _VARIABLE_ = strip(getvarc(dsid, varnum));
+28545      count = getvarn(dsid, freqnum);
+MPRINT(EM_DIAGRAM):   count = getvarn(dsid, freqnum);
+28546      percent= getvarn(dsid, pvarnum);
+MPRINT(EM_DIAGRAM):   percent= getvarn(dsid, pvarnum);
+28547      vvarnum = varnum(dsid, _VARIABLE_);
+MPRINT(EM_DIAGRAM):   vvarnum = varnum(dsid, _VARIABLE_);
+28548      type = vartype(dsid, vvarnum);
+MPRINT(EM_DIAGRAM):   type = vartype(dsid, vvarnum);
+28549      fvarnum = varnum(dsid, 'F_'!!substr(_VARIABLE_, 1, 30));
+MPRINT(EM_DIAGRAM):   fvarnum = varnum(dsid, 'F_'!!substr(_VARIABLE_, 1, 30));
+28550      _XLABEL_ = left(getvarc(dsid, fvarnum));
+MPRINT(EM_DIAGRAM):   _XLABEL_ = left(getvarc(dsid, fvarnum));
+28551      _X_ = .;
+MPRINT(EM_DIAGRAM):   _X_ = .;
+28552      if TYPE eq 'N' then _X_ = getvarn(dsid, vvarnum);
+MPRINT(EM_DIAGRAM):   if TYPE eq 'N' then _X_ = getvarn(dsid, vvarnum);
+28553      output;
+MPRINT(EM_DIAGRAM):   output;
+28554      end;
+MPRINT(EM_DIAGRAM):   end;
+28555      dsid = close(dsid);
+MPRINT(EM_DIAGRAM):   dsid = close(dsid);
+28556      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The data set WORK.PART_BAR has 2 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+28557      proc sort data=WORK.Part_BAR NOTHREADS;
+MPRINT(EM_DIAGRAM):   proc sort data=WORK.Part_BAR NOTHREADS;
+28558      by _VARIABLE_;
+MPRINT(EM_DIAGRAM):   by _VARIABLE_;
+28559      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: The data set WORK.PART_BAR has 2 observations and 6 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+28560      proc sort data=WORK.M3FHJG3B;
+MPRINT(EM_DIAGRAM):   proc sort data=WORK.M3FHJG3B;
+28561      by Name;
+MPRINT(EM_DIAGRAM):   by Name;
+28562      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 1 observations read from the data set WORK.M3FHJG3B.
+NOTE: The data set WORK.M3FHJG3B has 1 observations and 21 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+28563      data WORK.Part_BAR;
+MPRINT(EM_DIAGRAM):   data WORK.Part_BAR;
+28564      merge WORK.Part_BAR(in=_a) WORK.M3FHJG3B(keep=Name Label Role rename=(Name=_Variable_ Label=_Label_));
+MPRINT(EM_DIAGRAM):   merge WORK.Part_BAR(in=_a) WORK.M3FHJG3B(keep=Name Label Role rename=(Name=_Variable_ Label=_Label_));
+28565      by _Variable_;
+MPRINT(EM_DIAGRAM):   by _Variable_;
+28566      label Role = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel ,  NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label Role = "Role";
+28567      label Label = "%sysfunc(sasmsg(sashelp.dmine, meta_label_vlabel , NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label Label = "Label";
+28568      if _a then output;
+MPRINT(EM_DIAGRAM):   if _a then output;
+28569      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Variable Label is uninitialized.
+WARNING: Multiple lengths were specified for the BY variable _VARIABLE_ by input data sets. This might cause unexpected results.
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: There were 1 observations read from the data set WORK.M3FHJG3B.
+NOTE: The data set WORK.PART_BAR has 2 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+28570      data EMWS5.Part_CLASS;
+MPRINT(EM_DIAGRAM):    data EMWS5.Part_CLASS;
+28571      length DATA $8;
+MPRINT(EM_DIAGRAM):   length DATA $8;
+28572      set WORK.Part_BAR;
+MPRINT(EM_DIAGRAM):   set WORK.Part_BAR;
+28573      DATA = "DATA";
+MPRINT(EM_DIAGRAM):   DATA = "DATA";
+28574      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: The data set EMWS5.PART_CLASS has 2 observations and 9 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+28575      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+28576      * Part: Computing statistics for interval target variables;
+MPRINT(EM_DIAGRAM):   * Part: Computing statistics for interval target variables;
+28577      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+28578      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+28579      * Part: Computing statistics for class target variables;
+MPRINT(EM_DIAGRAM):   * Part: Computing statistics for class target variables;
+28580      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+28581      ods listing close;
+MPRINT(EM_DIAGRAM):   ods listing close;
+28582      ods output onewayfreqs=WORK.TEMPFREQ;
+MPRINT(EM_DIAGRAM):   ods output onewayfreqs=WORK.TEMPFREQ;
+28583      proc freq data = EMWS5.Part_TRAIN order=formatted addnames;
+MPRINT(EM_DIAGRAM):   proc freq data = EMWS5.Part_TRAIN order=formatted addnames;
+28584      table default / missing;
+MPRINT(EM_DIAGRAM):   table default / missing;
+28585      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The data set WORK.TEMPFREQ has 2 observations and 8 variables.
+NOTE: There were 700 observations read from the data set EMWS5.PART_TRAIN.
+NOTE: PROCEDURE FREQ used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(EM_DIAGRAM):   quit;
+28586      quit;
+28587      ods listing;
+MPRINT(EM_DIAGRAM):   ods listing;
+28588      data WORK.Part_BAR(keep=_VARIABLE_ TYPE COUNT PERCENT _X_ _XLABEL_);
+MPRINT(EM_DIAGRAM):    data WORK.Part_BAR(keep=_VARIABLE_ TYPE COUNT PERCENT _X_ _XLABEL_);
+28589      label _VARIABLE_ = "%sysfunc(sasmsg(sashelp.dmine, rpt_variable_vlabel, NOQUOTE))" Type = "%sysfunc(sasmsg(sashelp.dmine, rpt_type_vlabel,         NOQUOTE))" _X_ = "%sysfunc(sasmsg(sashelp.dmine, rpt_numValue_vlabel, NOQUOTE))" _XLABEL_ =
+28590         "%sysfunc(sasmsg(sashelp.dmine, rpt_fmtValue_vlabel ,    NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel,        NOQUOTE))" PERCENT = "%sysfunc(sasmsg(sashelp.dmine, rpt_percent_vlabel,      NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label _VARIABLE_ = "Variable" Type = "Type" _X_ = "Numeric Value" _XLABEL_ = "Formatted Value" COUNT = "Frequency Count" PERCENT = "Percent";
+28591      dsid = open("WORK.TEMPFREQ");
+MPRINT(EM_DIAGRAM):   dsid = open("WORK.TEMPFREQ");
+28592      varnum = varnum(dsid, 'VARIABLE');
+MPRINT(EM_DIAGRAM):   varnum = varnum(dsid, 'VARIABLE');
+28593      freqnum = varnum(dsid, 'FREQUENCY');
+MPRINT(EM_DIAGRAM):   freqnum = varnum(dsid, 'FREQUENCY');
+28594      pvarnum = varnum(dsid, 'PERCENT');
+MPRINT(EM_DIAGRAM):   pvarnum = varnum(dsid, 'PERCENT');
+28595      typenum = varnum(dsid, '_TYPE_');
+MPRINT(EM_DIAGRAM):   typenum = varnum(dsid, '_TYPE_');
+28596      length _VARIABLE_ $32 TYPE $1 _XLABEL_ $32;
+MPRINT(EM_DIAGRAM):   length _VARIABLE_ $32 TYPE $1 _XLABEL_ $32;
+28597      do while(^fetch(dsid));
+MPRINT(EM_DIAGRAM):   do while(^fetch(dsid));
+28598      _VARIABLE_ = strip(getvarc(dsid, varnum));
+MPRINT(EM_DIAGRAM):   _VARIABLE_ = strip(getvarc(dsid, varnum));
+28599      count = getvarn(dsid, freqnum);
+MPRINT(EM_DIAGRAM):   count = getvarn(dsid, freqnum);
+28600      percent= getvarn(dsid, pvarnum);
+MPRINT(EM_DIAGRAM):   percent= getvarn(dsid, pvarnum);
+28601      vvarnum = varnum(dsid, _VARIABLE_);
+MPRINT(EM_DIAGRAM):   vvarnum = varnum(dsid, _VARIABLE_);
+28602      type = vartype(dsid, vvarnum);
+MPRINT(EM_DIAGRAM):   type = vartype(dsid, vvarnum);
+28603      fvarnum = varnum(dsid, 'F_'!!substr(_VARIABLE_, 1, 30));
+MPRINT(EM_DIAGRAM):   fvarnum = varnum(dsid, 'F_'!!substr(_VARIABLE_, 1, 30));
+28604      _XLABEL_ = left(getvarc(dsid, fvarnum));
+MPRINT(EM_DIAGRAM):   _XLABEL_ = left(getvarc(dsid, fvarnum));
+28605      _X_ = .;
+MPRINT(EM_DIAGRAM):   _X_ = .;
+28606      if TYPE eq 'N' then _X_ = getvarn(dsid, vvarnum);
+MPRINT(EM_DIAGRAM):   if TYPE eq 'N' then _X_ = getvarn(dsid, vvarnum);
+28607      output;
+MPRINT(EM_DIAGRAM):   output;
+28608      end;
+MPRINT(EM_DIAGRAM):   end;
+28609      dsid = close(dsid);
+MPRINT(EM_DIAGRAM):   dsid = close(dsid);
+28610      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The data set WORK.PART_BAR has 2 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+28611      proc sort data=WORK.Part_BAR NOTHREADS;
+MPRINT(EM_DIAGRAM):   proc sort data=WORK.Part_BAR NOTHREADS;
+28612      by _VARIABLE_;
+MPRINT(EM_DIAGRAM):   by _VARIABLE_;
+28613      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: The data set WORK.PART_BAR has 2 observations and 6 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+28614      proc sort data=WORK.M3FHJG3B;
+MPRINT(EM_DIAGRAM):   proc sort data=WORK.M3FHJG3B;
+28615      by Name;
+MPRINT(EM_DIAGRAM):   by Name;
+28616      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+28617      data WORK.Part_BAR;
+MPRINT(EM_DIAGRAM):   data WORK.Part_BAR;
+28618      merge WORK.Part_BAR(in=_a) WORK.M3FHJG3B(keep=Name Label Role rename=(Name=_Variable_ Label=_Label_));
+MPRINT(EM_DIAGRAM):   merge WORK.Part_BAR(in=_a) WORK.M3FHJG3B(keep=Name Label Role rename=(Name=_Variable_ Label=_Label_));
+28619      by _Variable_;
+MPRINT(EM_DIAGRAM):   by _Variable_;
+28620      label Role = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel ,  NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label Role = "Role";
+28621      label Label = "%sysfunc(sasmsg(sashelp.dmine, meta_label_vlabel , NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label Label = "Label";
+28622      if _a then output;
+MPRINT(EM_DIAGRAM):   if _a then output;
+28623      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Variable Label is uninitialized.
+WARNING: Multiple lengths were specified for the BY variable _VARIABLE_ by input data sets. This might cause unexpected results.
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: There were 1 observations read from the data set WORK.M3FHJG3B.
+NOTE: The data set WORK.PART_BAR has 2 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+28624      data WORK.Part_BAR;
+MPRINT(EM_DIAGRAM):    data WORK.Part_BAR;
+28625      length DATA $8;
+MPRINT(EM_DIAGRAM):   length DATA $8;
+28626      set WORK.Part_BAR;
+MPRINT(EM_DIAGRAM):   set WORK.Part_BAR;
+28627      DATA = "TRAIN";
+MPRINT(EM_DIAGRAM):   DATA = "TRAIN";
+28628      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: The data set WORK.PART_BAR has 2 observations and 9 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+28629      data EMWS5.Part_CLASS;
+MPRINT(EM_DIAGRAM):   data EMWS5.Part_CLASS;
+28630      set EMWS5.Part_CLASS WORK.Part_BAR;
+MPRINT(EM_DIAGRAM):   set EMWS5.Part_CLASS WORK.Part_BAR;
+28631      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 2 observations read from the data set EMWS5.PART_CLASS.
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: The data set EMWS5.PART_CLASS has 4 observations and 9 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+28632      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+28633      * Part: Computing statistics for interval target variables;
+MPRINT(EM_DIAGRAM):   * Part: Computing statistics for interval target variables;
+28634      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+28635      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+28636      * Part: Computing statistics for class target variables;
+MPRINT(EM_DIAGRAM):   * Part: Computing statistics for class target variables;
+28637      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+28638      ods listing close;
+MPRINT(EM_DIAGRAM):   ods listing close;
+28639      ods output onewayfreqs=WORK.TEMPFREQ;
+MPRINT(EM_DIAGRAM):   ods output onewayfreqs=WORK.TEMPFREQ;
+28640      proc freq data = EMWS5.Part_TEST order=formatted addnames;
+MPRINT(EM_DIAGRAM):   proc freq data = EMWS5.Part_TEST order=formatted addnames;
+28641      table default / missing;
+MPRINT(EM_DIAGRAM):   table default / missing;
+28642      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The data set WORK.TEMPFREQ has 2 observations and 8 variables.
+NOTE: There were 300 observations read from the data set EMWS5.PART_TEST.
+NOTE: PROCEDURE FREQ used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(EM_DIAGRAM):   quit;
+28643      quit;
+28644      ods listing;
+MPRINT(EM_DIAGRAM):   ods listing;
+28645      data WORK.Part_BAR(keep=_VARIABLE_ TYPE COUNT PERCENT _X_ _XLABEL_);
+MPRINT(EM_DIAGRAM):    data WORK.Part_BAR(keep=_VARIABLE_ TYPE COUNT PERCENT _X_ _XLABEL_);
+28646      label _VARIABLE_ = "%sysfunc(sasmsg(sashelp.dmine, rpt_variable_vlabel, NOQUOTE))" Type = "%sysfunc(sasmsg(sashelp.dmine, rpt_type_vlabel,         NOQUOTE))" _X_ = "%sysfunc(sasmsg(sashelp.dmine, rpt_numValue_vlabel, NOQUOTE))" _XLABEL_ =
+28647         "%sysfunc(sasmsg(sashelp.dmine, rpt_fmtValue_vlabel ,    NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel,        NOQUOTE))" PERCENT = "%sysfunc(sasmsg(sashelp.dmine, rpt_percent_vlabel,      NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label _VARIABLE_ = "Variable" Type = "Type" _X_ = "Numeric Value" _XLABEL_ = "Formatted Value" COUNT = "Frequency Count" PERCENT = "Percent";
+28648      dsid = open("WORK.TEMPFREQ");
+MPRINT(EM_DIAGRAM):   dsid = open("WORK.TEMPFREQ");
+28649      varnum = varnum(dsid, 'VARIABLE');
+MPRINT(EM_DIAGRAM):   varnum = varnum(dsid, 'VARIABLE');
+28650      freqnum = varnum(dsid, 'FREQUENCY');
+MPRINT(EM_DIAGRAM):   freqnum = varnum(dsid, 'FREQUENCY');
+28651      pvarnum = varnum(dsid, 'PERCENT');
+MPRINT(EM_DIAGRAM):   pvarnum = varnum(dsid, 'PERCENT');
+28652      typenum = varnum(dsid, '_TYPE_');
+MPRINT(EM_DIAGRAM):   typenum = varnum(dsid, '_TYPE_');
+28653      length _VARIABLE_ $32 TYPE $1 _XLABEL_ $32;
+MPRINT(EM_DIAGRAM):   length _VARIABLE_ $32 TYPE $1 _XLABEL_ $32;
+28654      do while(^fetch(dsid));
+MPRINT(EM_DIAGRAM):   do while(^fetch(dsid));
+28655      _VARIABLE_ = strip(getvarc(dsid, varnum));
+MPRINT(EM_DIAGRAM):   _VARIABLE_ = strip(getvarc(dsid, varnum));
+28656      count = getvarn(dsid, freqnum);
+MPRINT(EM_DIAGRAM):   count = getvarn(dsid, freqnum);
+28657      percent= getvarn(dsid, pvarnum);
+MPRINT(EM_DIAGRAM):   percent= getvarn(dsid, pvarnum);
+28658      vvarnum = varnum(dsid, _VARIABLE_);
+MPRINT(EM_DIAGRAM):   vvarnum = varnum(dsid, _VARIABLE_);
+28659      type = vartype(dsid, vvarnum);
+MPRINT(EM_DIAGRAM):   type = vartype(dsid, vvarnum);
+28660      fvarnum = varnum(dsid, 'F_'!!substr(_VARIABLE_, 1, 30));
+MPRINT(EM_DIAGRAM):   fvarnum = varnum(dsid, 'F_'!!substr(_VARIABLE_, 1, 30));
+28661      _XLABEL_ = left(getvarc(dsid, fvarnum));
+MPRINT(EM_DIAGRAM):   _XLABEL_ = left(getvarc(dsid, fvarnum));
+28662      _X_ = .;
+MPRINT(EM_DIAGRAM):   _X_ = .;
+28663      if TYPE eq 'N' then _X_ = getvarn(dsid, vvarnum);
+MPRINT(EM_DIAGRAM):   if TYPE eq 'N' then _X_ = getvarn(dsid, vvarnum);
+28664      output;
+MPRINT(EM_DIAGRAM):   output;
+28665      end;
+MPRINT(EM_DIAGRAM):   end;
+28666      dsid = close(dsid);
+MPRINT(EM_DIAGRAM):   dsid = close(dsid);
+28667      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The data set WORK.PART_BAR has 2 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+28668      proc sort data=WORK.Part_BAR NOTHREADS;
+MPRINT(EM_DIAGRAM):   proc sort data=WORK.Part_BAR NOTHREADS;
+28669      by _VARIABLE_;
+MPRINT(EM_DIAGRAM):   by _VARIABLE_;
+28670      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: The data set WORK.PART_BAR has 2 observations and 6 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+28671      proc sort data=WORK.M3FHJG3B;
+MPRINT(EM_DIAGRAM):   proc sort data=WORK.M3FHJG3B;
+28672      by Name;
+MPRINT(EM_DIAGRAM):   by Name;
+28673      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Input data set is already sorted, no sorting done.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+28674      data WORK.Part_BAR;
+MPRINT(EM_DIAGRAM):   data WORK.Part_BAR;
+28675      merge WORK.Part_BAR(in=_a) WORK.M3FHJG3B(keep=Name Label Role rename=(Name=_Variable_ Label=_Label_));
+MPRINT(EM_DIAGRAM):   merge WORK.Part_BAR(in=_a) WORK.M3FHJG3B(keep=Name Label Role rename=(Name=_Variable_ Label=_Label_));
+28676      by _Variable_;
+MPRINT(EM_DIAGRAM):   by _Variable_;
+28677      label Role = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel ,  NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label Role = "Role";
+28678      label Label = "%sysfunc(sasmsg(sashelp.dmine, meta_label_vlabel , NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label Label = "Label";
+28679      if _a then output;
+MPRINT(EM_DIAGRAM):   if _a then output;
+28680      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Variable Label is uninitialized.
+WARNING: Multiple lengths were specified for the BY variable _VARIABLE_ by input data sets. This might cause unexpected results.
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: There were 1 observations read from the data set WORK.M3FHJG3B.
+NOTE: The data set WORK.PART_BAR has 2 observations and 8 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+28681      data WORK.Part_BAR;
+MPRINT(EM_DIAGRAM):    data WORK.Part_BAR;
+28682      length DATA $8;
+MPRINT(EM_DIAGRAM):   length DATA $8;
+28683      set WORK.Part_BAR;
+MPRINT(EM_DIAGRAM):   set WORK.Part_BAR;
+28684      DATA = "TEST";
+MPRINT(EM_DIAGRAM):   DATA = "TEST";
+28685      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: The data set WORK.PART_BAR has 2 observations and 9 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+28686      data EMWS5.Part_CLASS;
+MPRINT(EM_DIAGRAM):   data EMWS5.Part_CLASS;
+28687      set EMWS5.Part_CLASS WORK.Part_BAR;
+MPRINT(EM_DIAGRAM):   set EMWS5.Part_CLASS WORK.Part_BAR;
+28688      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 4 observations read from the data set EMWS5.PART_CLASS.
+NOTE: There were 2 observations read from the data set WORK.PART_BAR.
+NOTE: The data set EMWS5.PART_CLASS has 6 observations and 9 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+28689      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+28690      * Part: Computing statistics for interval target variables;
+MPRINT(EM_DIAGRAM):   * Part: Computing statistics for interval target variables;
+28691      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+28692      data EMWS5.Part_CLASS(rename=(_VARIABLE_=VARIABLE _X_=VALUE _XLABEL_=FORMATTEDVALUE));
+MPRINT(EM_DIAGRAM):   data EMWS5.Part_CLASS(rename=(_VARIABLE_=VARIABLE _X_=VALUE _XLABEL_=FORMATTEDVALUE));
+28693      label DATA = "%sysfunc(sasmsg(sashelp.dmine, rpt_data_vlabel ,   NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label DATA = "Data";
+28694      set EMWS5.Part_CLASS;
+MPRINT(EM_DIAGRAM):   set EMWS5.Part_CLASS;
+28695      drop type role;
+MPRINT(EM_DIAGRAM):   drop type role;
+28696      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 6 observations read from the data set EMWS5.PART_CLASS.
+NOTE: The data set EMWS5.PART_CLASS has 6 observations and 7 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+28697      proc sort data=EMWS5.Part_CLASS NOTHREADS;
+MPRINT(EM_DIAGRAM):   proc sort data=EMWS5.Part_CLASS NOTHREADS;
+28698      by DATA;
+MPRINT(EM_DIAGRAM):   by DATA;
+28699      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 6 observations read from the data set EMWS5.PART_CLASS.
+NOTE: The data set EMWS5.PART_CLASS has 6 observations and 7 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+28700      %let _cn = %sysfunc(getoption(CENTER));
+28701      %let _nb = %sysfunc(getoption(NUMBER));
+28702      options nonumber nocenter;
+MPRINT(EM_DIAGRAM):   options nonumber nocenter;
+28703      proc print data=EMWS5.Part_CLASS noobs label;
+MPRINT(EM_DIAGRAM):   proc print data=EMWS5.Part_CLASS noobs label;
+28704      by DATA;
+MPRINT(EM_DIAGRAM):   by DATA;
+28705      title9 ' ';
+MPRINT(EM_DIAGRAM):   title9 ' ';
+28706      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_classTargetStats_title, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title10 "Summary Statistics for Class Targets";
+MPRINT(EM_DIAGRAM):   run;
+28707      run;
+
+NOTE: There were 6 observations read from the data set EMWS5.PART_CLASS.
+NOTE: The PROCEDURE PRINT printed page 6.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+28708      title10;
+MPRINT(EM_DIAGRAM):   title10;
+28709      options &_cn &_nb;
+MPRINT(EM_DIAGRAM):   options NOCENTER NONUMBER;
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;

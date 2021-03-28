@@ -1,0 +1,178 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+1 
+Trasversal: trasversal invocado. El mandato MPCONNECT es sas. 
+Trasversal: iniciando trasversal del flujo 
+*------------------------------------------------------------* 
+* 
+* Ids : Beginning Update 
+* datetime : 14MAR2021:15:44:03 
+* 
+*------------------------------------------------------------* 
+NOTE: Data file JOSE.HMEQ.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce performance.
+19459      %let _HPDMGRIDHOST=;
+19460      %let _HPDMGRIDINSTALLLOC=;
+19461      %let _HPDMGRIDDATASERVER=;
+19462      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Ids : End Update 
+* datetime : 14MAR2021:15:44:04 
+* 
+*------------------------------------------------------------* 
+Trasversal: WaitingNode "TREE3" 
+traverser_readyNode_note 
+*------------------------------------------------------------* 
+* 
+* Part : Beginning Update 
+* datetime : 14MAR2021:15:44:04 
+* 
+*------------------------------------------------------------* 
+19481      %let _HPDMGRIDHOST=;
+19482      %let _HPDMGRIDINSTALLLOC=;
+19483      %let _HPDMGRIDDATASERVER=;
+19484      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Part : End Update 
+* datetime : 14MAR2021:15:44:04 
+* 
+*------------------------------------------------------------* 
+traverser_readyNode_note 
+*------------------------------------------------------------* 
+* 
+* Tree3 : Beginning Update 
+* datetime : 14MAR2021:15:44:05 
+* 
+*------------------------------------------------------------* 
+PERFORMANCE  DETAILS
+19912      data EM_TARGETDECINFO;
+19913      length TARGET $32 DECDATA DECMETA $43;
+19914      TARGET="BAD";
+19915      DECDATA="EMWS3.Ids_BAD_DD";
+19916      DECMETA="EMWS3.Ids_BAD_DM";
+19917      output;
+19918      run;
+
+NOTE: The data set WORK.EM_TARGETDECINFO has 1 observations and 3 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+19919      %let emexceptionString =;
+19920      %let EMEXCEPTIONSTRING=;
+19921      *------------------------------------------------------------*;
+19922      * UPDATE: Tree3;
+19923      *------------------------------------------------------------*;
+19924      %let EM_ACTION = UPDATE;
+19925      %let syscc = 0;
+19926      %macro main;
+19927      
+19928        %if %upcase(&EM_ACTION) = CREATE %then %do;
+19929          filename temp catalog 'sashelp.emmodl.tree_create.source';
+19930          %include temp;
+19931          filename temp;
+19932      
+19933          %em_tree_create;
+19934        %end;
+19935      
+19936         %else
+19937         %if %upcase(&EM_ACTION) = TRAIN %then %do;
+19938      
+19939             filename temp catalog 'sashelp.emmodl.tree_train.source';
+19940             %include temp;
+19941             filename temp;
+19942             %em_tree_train;
+19943         %end;
+19944      
+19945        %else
+19946        %if %upcase(&EM_ACTION) = SCORE %then %do;
+19947          filename temp catalog 'sashelp.emmodl.tree_score.source';
+19948          %include temp;
+19949          filename temp;
+19950      
+19951          %em_tree_score;
+19952      
+19953        %end;
+19954      
+19955        %else
+19956        %if %upcase(&EM_ACTION) = REPORT %then %do;
+19957      
+19958             filename temp catalog 'sashelp.emmodl.tree_report.source';
+19959             %include temp;
+19960             filename temp;
+19961      
+19962             %em_tree_report;
+19963         %end;
+19964      
+19965        %else
+19966        %if %upcase(&EM_ACTION) = OPENINT %then %do;
+19967      
+19968             filename temp catalog 'sashelp.emmodl.tree_actions.source';
+19969             %include temp;
+19970             filename temp;
+19971             %EM_TREE_OPENTREEVIEWER;
+19972      
+19973         %end;
+19974      
+19975        %else
+19976        %if %upcase(&EM_ACTION) = CLOSEINT %then %do;
+19977      
+19978             filename temp catalog 'sashelp.emmodl.tree_actions.source';
+19979             %include temp;
+19980             filename temp;
+19981             %EM_TREE_CLOSETREEVIEWER;
+19982      
+19983         %end;
+19984      
+19985      
+19986         %doendm:
+19987      %mend main;
+19988      
+19989      %main;
+19990      
+19991      *------------------------------------------------------------*;
+19992      * End UPDATE: Tree3;
+19993      *------------------------------------------------------------*;
+
+19994      %em_delMacro;
+
+19996      %let _HPDMGRIDHOST=;
+19997      %let _HPDMGRIDINSTALLLOC=;
+19998      %let _HPDMGRIDDATASERVER=;
+19999      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Tree3 : End Update 
+* datetime : 14MAR2021:15:44:05 
+* 
+*------------------------------------------------------------* 
+Trasversal: ejecución completa 
+20000      proc printto;
+20001      run;
+

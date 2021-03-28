@@ -1,0 +1,50 @@
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "28 March 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "20:54:16" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Report Log";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Report Log
+Date:                28 March 2021
+Time:                20:54:16
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O3MFT8PL "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMREPORT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O3MFT8PL new;
+MPRINT(EM_DIAGRAM):   run;
+25924      proc print data = EMWS5.Meta_CMeta_TRAIN(obs=500) noobs label;
+MPRINT(EM_DIAGRAM):    proc print data = EMWS5.Meta_CMeta_TRAIN(obs=500) noobs label;
+25925      var name role level creator label;
+MPRINT(EM_DIAGRAM):   var name role level creator label;
+25926      label NAME = "%sysfunc(sasmsg(sashelp.dmine, meta_name_vlabel,      NOQUOTE))" LEVEL = "%sysfunc(sasmsg(sashelp.dmine, meta_level_vlabel,     NOQUOTE))" ROLE = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel,      NOQUOTE))" CREATOR =
+25927         "%sysfunc(sasmsg(sashelp.dmine, meta_creator_vlabel,   NOQUOTE))" LABEL = "%sysfunc(sasmsg(sashelp.dmine, meta_label_vlabel,     NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label NAME = "Variable Name" LEVEL = "Measurement Level" ROLE = "Role" CREATOR = "Creator" LABEL = "Label";
+25928      format label $32.;
+MPRINT(EM_DIAGRAM):   format label $32.;
+25929      title9 "%sysfunc(sasmsg(sashelp.dmine, rpt_exptattributes_title, NOQUOTE, TRAIN))";
+MPRINT(EM_DIAGRAM):   title9 "Exported Attributes for TRAIN Port";
+25930      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_maxObsPrinted_title, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title10 "(maximum 500 observations printed)";
+MPRINT(EM_DIAGRAM):   run;
+25931      run;
+
+NOTE: There were 31 observations read from the data set EMWS5.META_CMETA_TRAIN.
+NOTE: The PROCEDURE PRINT printed page 3.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+25932      title9;
+MPRINT(EM_DIAGRAM):   title9;
+25933      title10;
+MPRINT(EM_DIAGRAM):   title10;
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;

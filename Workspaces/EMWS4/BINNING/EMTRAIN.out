@@ -1,0 +1,30 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+Role         Level         Count
+
+ID         INTERVAL          1    
+INPUT      BINARY            1    
+INPUT      INTERVAL          3    
+INPUT      NOMINAL           4    
+TARGET     BINARY            1    
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+       Input
+Obs    Variable       Group Variable
+
+ 1     IMP_DEBTINC    GRP_IMP_DEBTINC
+ 2     IMP_DELINQ     GRP_IMP_DELINQ 
+ 3     IMP_DEROG      GRP_IMP_DEROG  
+ 4     IMP_JOB        GRP_IMP_JOB    
+ 5     IMP_MORTDUE    GRP_IMP_MORTDUE
+ 6     IMP_NINQ       GRP_IMP_NINQ   
+ 7     IMP_REASON     GRP_IMP_REASON 
+ 8     IMP_YOJ        GRP_IMP_YOJ    

@@ -1,0 +1,31 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Summary Statistics for Class Targets
+
+Data=DATA
+
+            Numeric    Formatted    Frequency
+Variable     Value       Value        Count      Percent     Label
+
+default        0           0           700          70      default
+default        1           1           300          30      default
+
+
+Data=TEST
+
+            Numeric    Formatted    Frequency
+Variable     Value       Value        Count      Percent     Label
+
+default        0           0           210          70      default
+default        1           1            90          30      default
+
+
+Data=TRAIN
+
+            Numeric    Formatted    Frequency
+Variable     Value       Value        Count      Percent     Label
+
+default        0           0           490          70      default
+default        1           1           210          30      default

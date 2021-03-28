@@ -1,0 +1,18 @@
+*------------------------------------------------------------*;
+* Metadata Changes;
+*------------------------------------------------------------*;
+if upcase(NAME) = "BL_DEFAULT" then ROLE="REJECTED";
+if upcase(NAME) = "CL_DEFAULT" then ROLE="REJECTED";
+if upcase(NAME) = "CLUS1" then ROLE="REJECTED";
+if upcase(NAME) = "CLUS2" then ROLE="REJECTED";
+if upcase(NAME) = "D_DEFAULT" then ROLE="REJECTED";
+if upcase(NAME) = "EL_DEFAULT" then ROLE="REJECTED";
+if upcase(NAME) = "F_DEFAULT" then ROLE="REJECTED";
+if upcase(NAME) = "I_DEFAULT" then ROLE="TARGET";
+if upcase(NAME) = "P_DEFAULT0" then ROLE="REJECTED";
+if upcase(NAME) = "P_DEFAULT1" then ROLE="REJECTED";
+if upcase(NAME) = "R_DEFAULT0" then ROLE="REJECTED";
+if upcase(NAME) = "R_DEFAULT1" then ROLE="REJECTED";
+if upcase(NAME) = "U_DEFAULT" then ROLE="REJECTED";
+if upcase(NAME) = "_WARN_" then ROLE="REJECTED";
+if upcase(NAME) = "DEFAULT" then ROLE="REJECTED";

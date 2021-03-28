@@ -1,0 +1,110 @@
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "28 March 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "17:58:39" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Score Log";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Score Log
+Date:                28 March 2021
+Time:                17:58:39
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O01ARSDD "C:\Jose\DM_ang\Workspaces\EMWS5\Ids\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O01ARSDD new;
+MPRINT(EM_DIAGRAM):   run;
+22661      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+22662      * Ids: Computing metadata for DATA data;
+MPRINT(EM_DIAGRAM):   * Ids: Computing metadata for DATA data;
+22663      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+
+NOTE: Data file JOSE.GERMAN.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+NOTE: View EMWS5.IDS_DATA.VIEW used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+NOTE: Data file JOSE.GERMAN.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+22664      data EMWS5.Ids_EMINFO;
+MPRINT(EM_DIAGRAM):    data EMWS5.Ids_EMINFO;
+22665      length TARGET KEY $32 DATA $43;
+MPRINT(EM_DIAGRAM):   length TARGET KEY $32 DATA $43;
+22666      TARGET="";
+MPRINT(EM_DIAGRAM):   TARGET="";
+22667      KEY="IDSTABLE";
+MPRINT(EM_DIAGRAM):   KEY="IDSTABLE";
+22668      DATA="JOSE.GERMAN";
+MPRINT(EM_DIAGRAM):   DATA="JOSE.GERMAN";
+22669      output;
+MPRINT(EM_DIAGRAM):   output;
+22670      TARGET="default";
+MPRINT(EM_DIAGRAM):   TARGET="default";
+22671      KEY="DECDATA";
+MPRINT(EM_DIAGRAM):   KEY="DECDATA";
+22672      DATA="EMWS5.Ids_default_DD";
+MPRINT(EM_DIAGRAM):   DATA="EMWS5.Ids_default_DD";
+22673      output;
+MPRINT(EM_DIAGRAM):   output;
+22674      TARGET="default";
+MPRINT(EM_DIAGRAM):   TARGET="default";
+22675      KEY="DECMETA";
+MPRINT(EM_DIAGRAM):   KEY="DECMETA";
+22676      DATA="EMWS5.Ids_default_DM";
+MPRINT(EM_DIAGRAM):   DATA="EMWS5.Ids_default_DM";
+22677      output;
+MPRINT(EM_DIAGRAM):   output;
+22678      TARGET="";
+MPRINT(EM_DIAGRAM):   TARGET="";
+22679      KEY="STATS";
+MPRINT(EM_DIAGRAM):   KEY="STATS";
+22680      DATA="EMWS5.Ids_EMSTATDEFAULT";
+MPRINT(EM_DIAGRAM):   DATA="EMWS5.Ids_EMSTATDEFAULT";
+22681      output;
+MPRINT(EM_DIAGRAM):   output;
+22682      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The data set EMWS5.IDS_EMINFO has 4 observations and 3 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file JOSE.GERMAN.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+NOTE: View EMWS5.IDS_DATA.VIEW used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+22683      data EMWS5.Ids_CMeta_DATA;
+MPRINT(EM_DIAGRAM):    data EMWS5.Ids_CMeta_DATA;
+22684      set EMWS5.Ids_VariableSet;
+MPRINT(EM_DIAGRAM):   set EMWS5.Ids_VariableSet;
+22685      drop DROP;
+MPRINT(EM_DIAGRAM):   drop DROP;
+22686      where DROP='N';
+MPRINT(EM_DIAGRAM):   where DROP='N';
+22687      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 21 observations read from the data set EMWS5.IDS_VARIABLESET.
+      WHERE DROP='N';
+NOTE: The data set EMWS5.IDS_CMETA_DATA has 21 observations and 20 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file JOSE.GERMAN.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;

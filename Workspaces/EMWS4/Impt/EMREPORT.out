@@ -1,0 +1,36 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+Imputation Summary
+Number Of Observations
+
+                                                                                             Number of
+Variable    Impute          Imputed                                 Measurement                Missing
+  Name      Method          Variable       Impute Value    Role        Level       Label     for TRAIN
+
+DEBTINC     DISTRIBUTION    IMP_DEBTINC                    INPUT     INTERVAL                      615
+DELINQ      COUNT           IMP_DELINQ                0    INPUT     NOMINAL                       292
+DEROG       COUNT           IMP_DEROG                 0    INPUT     NOMINAL                       352
+JOB         COUNT           IMP_JOB        Other           INPUT     NOMINAL                       141
+MORTDUE     DISTRIBUTION    IMP_MORTDUE                    INPUT     INTERVAL                      252
+NINQ        COUNT           IMP_NINQ                  0    INPUT     NOMINAL                       259
+REASON      COUNT           IMP_REASON     DebtCon         INPUT     BINARY                        131
+YOJ         DISTRIBUTION    IMP_YOJ                        INPUT     INTERVAL                      250
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Distribution Training Data
+
+        Number of
+          Missing    Number of    Percent of
+Obs     for TRAIN    Variables     Variables
+
+ 1            615        1           12.5   
+ 2            352        1           12.5   
+ 3            292        1           12.5   
+ 4            259        1           12.5   
+ 5            252        1           12.5   
+ 6            250        1           12.5   
+ 7            141        1           12.5   
+ 8            131        1           12.5   

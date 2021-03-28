@@ -1,0 +1,14 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+297        libname _hpdmDat "C:\Jose\DM_ang\Workspaces\EMWS2\HPDM";
+NOTE: Libref _HPDMDAT was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: C:\Jose\DM_ang\Workspaces\EMWS2\HPDM
+298        libname _hpdmDat;
+NOTE: Libref _HPDMDAT has been deassigned.
+299        proc printto;
+300        run;
+

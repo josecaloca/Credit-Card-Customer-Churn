@@ -1,0 +1,332 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+ Role        Level         Count
+
+INPUT      BINARY             3   
+INPUT      INTERVAL           3   
+INPUT      NOMINAL           14   
+TARGET     BINARY             1   
+ 
+                                                                                                                                                                                                                                                                
+ 
+Variable Levels Summary
+(maximum 500 observations printed)
+
+                      Frequency
+Variable     Role       Count
+
+default     TARGET        2    
+ 
+                                                                                                                                                                                                                                                                
+ 
+Class Variable Summary Statistics
+(maximum 500 observations printed)
+
+Data Role=TRAIN
+
+                                        Number
+Data                                      of                            Mode                  Mode2
+Role     Variable Name         Role     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+TRAIN    acc_status           INPUT        4         0       A14       39.40       A11        27.40   
+TRAIN    credit_history       INPUT        5         0       A32       53.00       A34        29.30   
+TRAIN    debtors              INPUT        3         0       A101      90.70       A103        5.20   
+TRAIN    employment           INPUT        5         0       A73       33.90       A75        25.30   
+TRAIN    foreign_worker       INPUT        2         0       A201      96.30       A202        3.70   
+TRAIN    housing              INPUT        3         0       A152      71.30       A151       17.90   
+TRAIN    instalment           INPUT        4         0       4         47.60       2          23.10   
+TRAIN    job                  INPUT        4         0       A173      63.00       A172       20.00   
+TRAIN    number_of_credit     INPUT        4         0       1         63.30       2          33.30   
+TRAIN    other_instalments    INPUT        3         0       A143      81.40       A141       13.90   
+TRAIN    people               INPUT        2         0       1         84.50       2          15.50   
+TRAIN    personal_status      INPUT        4         0       A93       54.80       A92        31.00   
+TRAIN    pourpose             INPUT       10         0       A43       28.00       A40        23.40   
+TRAIN    property             INPUT        4         0       A123      33.20       A121       28.20   
+TRAIN    residence            INPUT        4         0       4         41.30       2          30.80   
+TRAIN    savings              INPUT        5         0       A61       60.30       A65        18.30   
+TRAIN    telephone            INPUT        2         0       A191      59.60       A192       40.40   
+TRAIN    default              TARGET       2         0       0         70.00       1          30.00   
+ 
+                                                                                                                                                                                                                                                                
+ 
+Distribution of Class Target and Segment Variables
+(maximum 500 observations printed)
+
+Data Role=TRAIN
+
+Data     Variable                        Frequency
+Role       Name       Role     Level         Count    Percent
+
+TRAIN    default     TARGET      0             700       70  
+TRAIN    default     TARGET      1             300       30  
+ 
+                                                                                                                                                                                                                                                                
+ 
+Interval Variable Summary Statistics
+(maximum 500 observations printed)
+
+Data Role=TRAIN
+
+                                   Standard          Non
+Variable      Role         Mean    Deviation     Missing     Missing     Minimum      Median     Maximum    Skewness    Kurtosis
+
+age           INPUT      35.546    11.37547         1000           0          19          33          75    1.020739     0.59578
+credit_amt    INPUT    3271.258    2822.737         1000           0         250        2319       18424    1.949628     4.29259
+duration      INPUT      20.903    12.05881         1000           0           4          18          72    1.094184    0.919781
+ 
+                                                                                                                                                                                                                                                                
+ 
+Class Variable Summary Statistics by Class Target
+(maximum 500 observations printed)
+
+Data Role=TRAIN Variable Name=acc_status
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 4         0       A14       39.40        A11       27.40   
+default        0          4         0       A14       49.71        A12       23.43   
+default        1          4         0       A11       45.00        A12       35.00   
+
+
+Data Role=TRAIN Variable Name=credit_history
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 5         0       A32       53.00        A34       29.30   
+default        0          5         0       A32       51.57        A34       34.71   
+default        1          5         0       A32       56.33        A34       16.67   
+
+
+Data Role=TRAIN Variable Name=debtors
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 3         0       A101      90.70       A103        5.20   
+default        0          3         0       A101      90.71       A103        6.00   
+default        1          3         0       A101      90.67       A102        6.00   
+
+
+Data Role=TRAIN Variable Name=employment
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 5         0       A73       33.90        A75       25.30   
+default        0          5         0       A73       33.57        A75       27.00   
+default        1          5         0       A73       34.67        A72       23.33   
+
+
+Data Role=TRAIN Variable Name=foreign_worker
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 2         0       A201      96.30       A202        3.70   
+default        0          2         0       A201      95.29       A202        4.71   
+default        1          2         0       A201      98.67       A202        1.33   
+
+
+Data Role=TRAIN Variable Name=housing
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 3         0       A152      71.30       A151       17.90   
+default        0          3         0       A152      75.29       A151       15.57   
+default        1          3         0       A152      62.00       A151       23.33   
+
+
+Data Role=TRAIN Variable Name=instalment
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 4         0        4        47.60         2        23.10   
+default        0          4         0        4        45.29         2        24.14   
+default        1          4         0        4        53.00         2        20.67   
+
+
+Data Role=TRAIN Variable Name=job
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 4         0       A173      63.00       A172       20.00   
+default        0          4         0       A173      63.43       A172       20.57   
+default        1          4         0       A173      62.00       A172       18.67   
+
+
+Data Role=TRAIN Variable Name=number_of_credit
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 4         0        1        63.30         2        33.30   
+default        0          4         0        1        61.86         2        34.43   
+default        1          4         0        1        66.67         2        30.67   
+
+
+Data Role=TRAIN Variable Name=other_instalments
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 3         0       A143      81.40       A141       13.90   
+default        0          3         0       A143      84.29       A141       11.71   
+default        1          3         0       A143      74.67       A141       19.00   
+
+
+Data Role=TRAIN Variable Name=people
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 2         0        1        84.50         2        15.50   
+default        0          2         0        1        84.43         2        15.57   
+default        1          2         0        1        84.67         2        15.33   
+
+
+Data Role=TRAIN Variable Name=personal_status
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 4         0       A93       54.80        A92       31.00   
+default        0          4         0       A93       57.43        A92       28.71   
+default        1          4         0       A93       48.67        A92       36.33   
+
+
+Data Role=TRAIN Variable Name=pourpose
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                10         0       A43       28.00        A40       23.40   
+default        0         10         0       A43       31.14        A40       20.71   
+default        1         10         0       A40       29.67        A43       20.67   
+
+
+Data Role=TRAIN Variable Name=property
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 4         0       A123      33.20       A121       28.20   
+default        0          4         0       A123      32.86       A121       31.71   
+default        1          4         0       A123      34.00       A122       23.67   
+
+
+Data Role=TRAIN Variable Name=residence
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 4         0        4        41.30         2        30.80   
+default        0          4         0        4        41.29         2        30.14   
+default        1          4         0        4        41.33         2        32.33   
+
+
+Data Role=TRAIN Variable Name=savings
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 5         0       A61       60.30        A65       18.30   
+default        0          5         0       A61       55.14        A65       21.57   
+default        1          5         0       A61       72.33        A62       11.33   
+
+
+Data Role=TRAIN Variable Name=telephone
+
+                       Number
+             Target      of                            Mode                  Mode2
+ Target      Level     Levels    Missing    Mode    Percentage    Mode2    Percentage
+
+_OVERALL_                 2         0       A191      59.60       A192       40.40   
+default        0          2         0       A191      58.43       A192       41.57   
+default        1          2         0       A191      62.33       A192       37.67   
+ 
+                                                                                                                                                                                                                                                                
+ 
+Interval Variable Summary Statistics by Class Target
+(maximum 500 observations printed)
+
+Data Role=TRAIN Variable=age
+
+             Target                                 Non                                        Standard
+ Target      Level       Median     Missing     Missing     Minimum     Maximum        Mean    Deviation    Skewness    Kurtosis    Role     Label
+
+_OVERALL_                    33           0        1000          19          75      35.546    11.37547     1.020739     0.59578    INPUT     age 
+default        0             34           0         700          19          75    36.22429    11.38114     0.981607    0.574085    INPUT     age 
+default        1             31           0         300          19          74    33.96333    11.22238     1.155186    0.787579    INPUT     age 
+
+
+Data Role=TRAIN Variable=credit_amt
+
+             Target                                 Non                                        Standard
+ Target      Level       Median     Missing     Missing     Minimum     Maximum        Mean    Deviation    Skewness    Kurtosis    Role       Label
+
+_OVERALL_                  2319           0        1000         250       18424    3271.258    2822.737     1.949628     4.29259    INPUT    credit_amt
+default        0           2241           0         700         250       15857    2985.457    2401.472     1.950366    4.685748    INPUT    credit_amt
+default        1           2570           0         300         433       18424    3938.127    3535.819     1.583958    2.141651    INPUT    credit_amt
+
+
+Data Role=TRAIN Variable=duration
+
+             Target                                 Non                                        Standard
+ Target      Level       Median     Missing     Missing     Minimum     Maximum        Mean    Deviation    Skewness    Kurtosis    Role      Label
+
+_OVERALL_                    18           0        1000           4          72      20.903    12.05881     1.094184    0.919781    INPUT    duration
+default        0             18           0         700           4          60    19.20714    11.07956     1.188281    1.407752    INPUT    duration
+default        1             24           0         300           6          72       24.86    13.28264     0.835634    0.066521    INPUT    duration
+ 
+                                                                                                                                                                                                                                                                
+ 
+Chi-Square Statistics
+(maximum 500 observations printed)
+
+Data Role=TRAIN Target=default
+
+Input                Chi-Square    Df      Prob
+
+acc_status             123.7209     3    <.0001
+credit_history          61.6914     4    <.0001
+savings                 36.0989     4    <.0001
+pourpose                33.3564     9    0.0001
+property                23.7196     3    <.0001
+employment              18.3683     4    0.0010
+housing                 18.1998     2    0.0001
+other_instalments       12.8392     2    0.0016
+personal_status          9.6052     3    0.0222
+foreign_worker           6.7370     1    0.0094
+debtors                  6.6454     2    0.0361
+instalment               5.4768     3    0.1400
+number_of_credit         2.6712     3    0.4451
+job                      1.8852     3    0.5966
+telephone                1.3298     1    0.2488
+residence                0.7493     3    0.8616
+people                   0.0091     1    0.9240

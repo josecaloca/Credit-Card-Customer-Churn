@@ -1,0 +1,55 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+Role         Level         Count
+
+ID         INTERVAL          1    
+INPUT      BINARY            1    
+INPUT      INTERVAL          3    
+INPUT      NOMINAL           4    
+TARGET     BINARY            1    
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Model Events
+
+                                  Number
+                   Measurement      of
+Target    Event       Level       Levels      Order       Label
+
+ BAD        1        BINARY          2      Descending         
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Decision Matrix
+
+         Training
+BAD    Proportions    1    0
+
+ 1       0.19950      0    5
+ 0       0.80050      1    0
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Predicted and decision variables
+
+Type             Variable    Label
+
+TARGET            BAD                          
+PREDICTED         P_BAD1     Predicted: BAD=1  
+RESIDUAL          R_BAD1     Residual: BAD=1   
+PREDICTED         P_BAD0     Predicted: BAD=0  
+RESIDUAL          R_BAD0     Residual: BAD=0   
+FROM              F_BAD      From: BAD         
+INTO              I_BAD      Into: BAD         
+MODELDECISION     D_BAD      Decision: BAD     
+EXPECTEDLOSS      EL_BAD     Expected Loss: BAD
+COMPUTEDLOSS      CL_BAD     Computed Loss: BAD
+BESTLOSS          BL_BAD     Best Loss: BAD    

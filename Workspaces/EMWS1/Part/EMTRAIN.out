@@ -1,0 +1,26 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Resumen de variables
+
+          Nivel de     Número de
+ Rol       medida     ocurrencias
+
+INPUT     BINARY           1     
+INPUT     INTERVAL         7     
+INPUT     NOMINAL          4     
+TARGET    BINARY           1     
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Resumen de partición
+
+                                     Número de
+Tipo         Conjunto de datos     observaciones
+
+DATA        EMWS1.Ids_DATA              5960    
+TRAIN       EMWS1.Part_TRAIN            2979    
+VALIDATE    EMWS1.Part_VALIDATE         1788    
+TEST        EMWS1.Part_TEST             1193    

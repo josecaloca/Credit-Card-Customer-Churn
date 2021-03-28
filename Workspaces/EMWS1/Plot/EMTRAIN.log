@@ -1,0 +1,918 @@
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "07 de marzo de 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "13H53" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Log de entrenamiento";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Log de entrenamiento
+Fecha:                07 de marzo de 2021
+Hora:                13H53
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O0W62NXR "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O0W62NXR new;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOG "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMLOG.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "07 de marzo de 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "13H53" );
+MPRINT(EM_DIAGRAM):   file _LOG;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "Usuario:                Jose Caloca";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "Sitio:                70115216";
+MPRINT(EM_DIAGRAM):   put "Plataforma:            X64_10PRO";
+MPRINT(EM_DIAGRAM):   put "Versión de mantenimiento: 9.04.01M6P111518";
+MPRINT(EM_DIAGRAM):   put "Versión de EM:          15.1";
+MPRINT(EM_DIAGRAM):   put "* ";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOGIN "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMTRAIN.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_COPYFILE):   data _null_;
+MPRINT(EM_COPYFILE):   length line $20000;
+MPRINT(EM_COPYFILE):   file _LOG MOD lrecl=20000;
+MPRINT(EM_COPYFILE):   fid=fopen("_LOGIN",'i',20000,'v');
+MPRINT(EM_COPYFILE):   if fid > 0 then do;
+MPRINT(EM_COPYFILE):   do while(^fread(fid));
+MPRINT(EM_COPYFILE):   rlen = frlen(fid);
+MPRINT(EM_COPYFILE):   rc= fget(fid,line,20000);
+MPRINT(EM_COPYFILE):   start = length(line)-length(left(line))+1;
+MPRINT(EM_COPYFILE):   line=strip(line);
+MPRINT(EM_COPYFILE):   put @start line;
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   if fid > 0 then rc=fclose(fid);
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   run;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _LOGIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _LOG mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   filename _LOGIN "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMSCORE.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   file _LOG mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOGIN "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMREPORT.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _LOGIN;
+MPRINT(EM_DIAGRAM):    filename _LOG;
+MPRINT(EM_DIAGRAM):    filename _OUT "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMOUTPUT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "07 de marzo de 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "13H53" );
+MPRINT(EM_DIAGRAM):   file _OUT;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "Usuario:                Jose Caloca";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Salida de entrenamiento";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   ;
+MPRINT(EM_COPYFILE):   data _null_;
+MPRINT(EM_COPYFILE):   length line $20000;
+MPRINT(EM_COPYFILE):   file _OUT MOD lrecl=20000;
+MPRINT(EM_COPYFILE):   fid=fopen("_OUTIN",'i',20000,'v');
+MPRINT(EM_COPYFILE):   if fid > 0 then do;
+MPRINT(EM_COPYFILE):   do while(^fread(fid));
+MPRINT(EM_COPYFILE):   rlen = frlen(fid);
+MPRINT(EM_COPYFILE):   rc= fget(fid,line,20000);
+MPRINT(EM_COPYFILE):   start = length(line)-length(left(line))+1;
+MPRINT(EM_COPYFILE):   line=strip(line);
+MPRINT(EM_COPYFILE):   put @start line;
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   if fid > 0 then rc=fclose(fid);
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   run;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _OUT mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   put // "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Salida de puntuación";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _OUT mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   put // "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Salida del informe";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMREPORT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    filename _OUT;
+MPRINT(EM_DIAGRAM):    filename _emtool_ 'C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMRUNSTATUS.xml' encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    filename _emtool_ 'C:\Jose\DM_ang\Workspaces\EMWS1\Plot\EMRUNSTATUS.xml' encoding="UTF-8" NOBOM;
+22125      proc freq data=EMWS1.Plot_VariableSet noprint;
+MPRINT(EM_DIAGRAM):    proc freq data=EMWS1.Plot_VariableSet noprint;
+22126      table ROLE*LEVEL/out=WORK.PlotMETA;
+MPRINT(EM_DIAGRAM):   table ROLE*LEVEL/out=WORK.PlotMETA;
+22127      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 13 observations read from the data set EMWS1.PLOT_VARIABLESET.
+NOTE: The data set WORK.PLOTMETA has 4 observations and 4 variables.
+NOTE: PROCEDURE FREQ used (Total process time):
+      real time           0.05 seconds
+      cpu time            0.00 seconds
+      
+
+22128      proc print data=WORK.PlotMETA label noobs;
+MPRINT(EM_DIAGRAM):   proc print data=WORK.PlotMETA label noobs;
+22129      var ROLE LEVEL COUNT;
+MPRINT(EM_DIAGRAM):   var ROLE LEVEL COUNT;
+22130      label ROLE = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel, NOQUOTE))" LEVEL = "%sysfunc(sasmsg(sashelp.dmine, meta_level_vlabel, NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label ROLE = "Rol" LEVEL = "Nivel de medida" COUNT = "Número de ocurrencias";
+22131      title9 ' ';
+MPRINT(EM_DIAGRAM):   title9 ' ';
+22132      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_varSummary_title  , NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title10 "Resumen de variables";
+MPRINT(EM_DIAGRAM):   run;
+22133      run;
+
+NOTE: There were 4 observations read from the data set WORK.PLOTMETA.
+NOTE: The PROCEDURE PRINT printed page 1.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+22134      title10;
+MPRINT(EM_DIAGRAM):   title10;
+MPRINT(EM_DIAGRAM):    data WORK.M04MAC7A;
+MPRINT(EM_DIAGRAM):   set WORK.M04MAC7A;
+MPRINT(EM_DIAGRAM):   if role = 'TARGET' and use in ('Y', 'D') then do;
+MPRINT(EM_DIAGRAM):   role = 'TARGET';
+MPRINT(EM_DIAGRAM):   output;
+MPRINT(EM_DIAGRAM):   end;
+MPRINT(EM_DIAGRAM):   else if role in('REJECTED' 'PREDICT' 'RESIDUAL' 'GROUP' 'ASSESS') and use = 'Y' then do;
+MPRINT(EM_DIAGRAM):   role = 'INPUT';
+MPRINT(EM_DIAGRAM):   output;
+MPRINT(EM_DIAGRAM):   end;
+MPRINT(EM_DIAGRAM):   else if role = 'INPUT' and use in ('Y', 'D') then do;
+MPRINT(EM_DIAGRAM):   role = 'INPUT';
+MPRINT(EM_DIAGRAM):   output;
+MPRINT(EM_DIAGRAM):   end;
+MPRINT(EM_DIAGRAM):   else if role = 'FREQ' and use = 'Y' then do;
+MPRINT(EM_DIAGRAM):   role = 'FREQ';
+MPRINT(EM_DIAGRAM):   output;
+MPRINT(EM_DIAGRAM):   end;
+MPRINT(EM_DIAGRAM):   else delete;
+MPRINT(EM_DIAGRAM):   run;
+22155      *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------* ;
+22156      * Plot: DMDBClass Macro ;
+MPRINT(EM_DIAGRAM):   * Plot: DMDBClass Macro ;
+22157      *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+22158      %macro DMDBClass;
+22159          BAD(DESC) CLAGE(ASC) CLNO(ASC) DEBTINC(ASC) DELINQ(ASC) DEROG(ASC) JOB(ASC)
+22160         LOAN(ASC) MORTDUE(ASC) NINQ(ASC) REASON(ASC) VALUE(ASC) YOJ(ASC)
+22161      %mend DMDBClass;
+22162      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+22163      * Plot: Create DMDB;
+MPRINT(EM_DIAGRAM):   * Plot: Create DMDB;
+22164      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+22165      proc dmdb batch data=EMWS1.Part_TRAIN
+22166      dmdbcat=WORK.Plot_DMDB
+22167      maxlevel = 23
+22168      nonorm
+22169      ;
+MPRINT(EM_DIAGRAM):   proc dmdb batch data=EMWS1.Part_TRAIN dmdbcat=WORK.Plot_DMDB maxlevel = 23 nonorm ;
+MPRINT(EM_DIAGRAM):   class
+22170      class %DMDBClass;
+MPRINT(DMDBCLASS):   BAD(DESC) CLAGE(ASC) CLNO(ASC) DEBTINC(ASC) DELINQ(ASC) DEROG(ASC) JOB(ASC) LOAN(ASC) MORTDUE(ASC) NINQ(ASC) REASON(ASC) VALUE(ASC) YOJ(ASC)
+MPRINT(EM_DIAGRAM):  ;
+22171      target
+22172      BAD
+22173      ;
+MPRINT(EM_DIAGRAM):   target BAD ;
+22174      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Records processed = 2979   Memory used = 511K.
+NOTE: There were 2979 observations read from the data set EMWS1.PART_TRAIN.
+NOTE: PROCEDURE DMDB used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(EM_DIAGRAM):   quit;
+22175      quit;
+
+22176      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+22177      * Plot: Creating variable by class target charts;
+MPRINT(EM_DIAGRAM):   * Plot: Creating variable by class target charts;
+22178      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+22179      goptions ftext="SWISS";
+MPRINT(EM_DIAGRAM):   goptions ftext="SWISS";
+22180      goptions nodisplay device=PNG;
+MPRINT(EM_DIAGRAM):   goptions nodisplay device=PNG;
+22181      axis1 width=2 offset=(1,1) label=(rotate=90 angle=270) minor=none;
+MPRINT(EM_DIAGRAM):   axis1 width=2 offset=(1,1) label=(rotate=90 angle=270) minor=none;
+22182      axis2 width=2 minor=none;
+MPRINT(EM_DIAGRAM):   axis2 width=2 minor=none;
+22183      pattern1 value=solid;
+MPRINT(EM_DIAGRAM):   pattern1 value=solid;
+22184      proc gchart
+22185      data=EMWS1.Part_TRAIN gout=WORK.PlotGRAPH;
+MPRINT(EM_DIAGRAM):   proc gchart data=EMWS1.Part_TRAIN gout=WORK.PlotGRAPH;
+22186      *;
+MPRINT(EM_DIAGRAM):   *;
+22187      title "CLAGE por BAD";
+MPRINT(EM_DIAGRAM):   title "CLAGE por BAD";
+22188      vbar CLAGE /
+22189      name = "CLAGE          x BAD            " description = "CLAGE por BAD"
+22190      FREQ
+MPRINT(EM_DIAGRAM):   vbar CLAGE / name = "CLAGE          x BAD            " description = "CLAGE por BAD" FREQ type=FREQ subgroup=BAD noframe missing raxis=axis1 maxis=axis2;
+22191      type=FREQ
+MPRINT(EM_DIAGRAM):   run;
+22192      subgroup=BAD
+22193      noframe
+22194      missing
+22195      raxis=axis1 maxis=axis2;
+22196      run;
+
+NOTE: Graph's name, CLAGE, changed to CLAGE. CLAGE is already used or not a valid SAS name.
+22197      title "CLNO por BAD";
+MPRINT(EM_DIAGRAM):   title "CLNO por BAD";
+22198      vbar CLNO /
+22199      name = "CLNO           x BAD            " description = "CLNO por BAD"
+22200      FREQ
+MPRINT(EM_DIAGRAM):   vbar CLNO / name = "CLNO           x BAD            " description = "CLNO por BAD" FREQ type=FREQ subgroup=BAD noframe missing raxis=axis1 maxis=axis2;
+22201      type=FREQ
+MPRINT(EM_DIAGRAM):   run;
+22202      subgroup=BAD
+22203      noframe
+22204      missing
+22205      raxis=axis1 maxis=axis2;
+22206      run;
+
+NOTE: Graph's name, CLNO, changed to CLNO. CLNO is already used or not a valid SAS name.
+22207      title "DEBTINC por BAD";
+MPRINT(EM_DIAGRAM):   title "DEBTINC por BAD";
+22208      vbar DEBTINC /
+22209      name = "DEBTINC        x BAD            " description = "DEBTINC por BAD"
+22210      FREQ
+MPRINT(EM_DIAGRAM):   vbar DEBTINC / name = "DEBTINC        x BAD            " description = "DEBTINC por BAD" FREQ type=FREQ subgroup=BAD noframe missing raxis=axis1 maxis=axis2;
+22211      type=FREQ
+MPRINT(EM_DIAGRAM):   run;
+22212      subgroup=BAD
+22213      noframe
+22214      missing
+22215      raxis=axis1 maxis=axis2;
+22216      run;
+
+NOTE: Graph's name, DEBTINC, changed to DEBTINC. DEBTINC is already used or not a valid SAS name.
+22217      title "DELINQ por BAD";
+MPRINT(EM_DIAGRAM):   title "DELINQ por BAD";
+22218      vbar DELINQ /
+22219      name = "DELINQ         x BAD            " description = "DELINQ por BAD"
+22220      FREQ
+22221      type=FREQ
+MPRINT(EM_DIAGRAM):   vbar DELINQ / name = "DELINQ         x BAD            " description = "DELINQ por BAD" FREQ type=FREQ subgroup=BAD noframe missing discrete raxis=axis1 maxis=axis2;
+22222      subgroup=BAD
+MPRINT(EM_DIAGRAM):   run;
+22223      noframe
+22224      missing
+22225      discrete
+22226      raxis=axis1 maxis=axis2;
+22227      run;
+
+NOTE: Graph's name, DELINQ, changed to DELINQ. DELINQ is already used or not a valid SAS name.
+22228      title "DEROG por BAD";
+MPRINT(EM_DIAGRAM):   title "DEROG por BAD";
+22229      vbar DEROG /
+22230      name = "DEROG          x BAD            " description = "DEROG por BAD"
+22231      FREQ
+22232      type=FREQ
+MPRINT(EM_DIAGRAM):   vbar DEROG / name = "DEROG          x BAD            " description = "DEROG por BAD" FREQ type=FREQ subgroup=BAD noframe missing discrete raxis=axis1 maxis=axis2;
+22233      subgroup=BAD
+MPRINT(EM_DIAGRAM):   run;
+22234      noframe
+22235      missing
+22236      discrete
+22237      raxis=axis1 maxis=axis2;
+22238      run;
+
+NOTE: Graph's name, DEROG, changed to DEROG. DEROG is already used or not a valid SAS name.
+22239      title "JOB por BAD";
+MPRINT(EM_DIAGRAM):   title "JOB por BAD";
+22240      vbar JOB /
+22241      name = "JOB            x BAD            " description = "JOB por BAD"
+22242      FREQ
+MPRINT(EM_DIAGRAM):   vbar JOB / name = "JOB            x BAD            " description = "JOB por BAD" FREQ type=FREQ subgroup=BAD noframe missing raxis=axis1 maxis=axis2;
+22243      type=FREQ
+MPRINT(EM_DIAGRAM):   run;
+22244      subgroup=BAD
+22245      noframe
+22246      missing
+22247      raxis=axis1 maxis=axis2;
+22248      run;
+
+NOTE: Graph's name, JOB, changed to JOB. JOB is already used or not a valid SAS name.
+22249      title "LOAN por BAD";
+MPRINT(EM_DIAGRAM):   title "LOAN por BAD";
+22250      vbar LOAN /
+22251      name = "LOAN           x BAD            " description = "LOAN por BAD"
+22252      FREQ
+MPRINT(EM_DIAGRAM):   vbar LOAN / name = "LOAN           x BAD            " description = "LOAN por BAD" FREQ type=FREQ subgroup=BAD noframe missing raxis=axis1 maxis=axis2;
+22253      type=FREQ
+MPRINT(EM_DIAGRAM):   run;
+22254      subgroup=BAD
+22255      noframe
+22256      missing
+22257      raxis=axis1 maxis=axis2;
+22258      run;
+
+NOTE: Graph's name, LOAN, changed to LOAN. LOAN is already used or not a valid SAS name.
+22259      title "MORTDUE por BAD";
+MPRINT(EM_DIAGRAM):   title "MORTDUE por BAD";
+22260      vbar MORTDUE /
+22261      name = "MORTDUE        x BAD            " description = "MORTDUE por BAD"
+22262      FREQ
+MPRINT(EM_DIAGRAM):   vbar MORTDUE / name = "MORTDUE        x BAD            " description = "MORTDUE por BAD" FREQ type=FREQ subgroup=BAD noframe missing raxis=axis1 maxis=axis2;
+22263      type=FREQ
+MPRINT(EM_DIAGRAM):   run;
+22264      subgroup=BAD
+22265      noframe
+22266      missing
+22267      raxis=axis1 maxis=axis2;
+22268      run;
+
+NOTE: Graph's name, MORTDUE, changed to MORTDUE. MORTDUE is already used or not a valid SAS name.
+22269      title "NINQ por BAD";
+MPRINT(EM_DIAGRAM):   title "NINQ por BAD";
+22270      vbar NINQ /
+22271      name = "NINQ           x BAD            " description = "NINQ por BAD"
+22272      FREQ
+22273      type=FREQ
+MPRINT(EM_DIAGRAM):   vbar NINQ / name = "NINQ           x BAD            " description = "NINQ por BAD" FREQ type=FREQ subgroup=BAD noframe missing discrete raxis=axis1 maxis=axis2;
+22274      subgroup=BAD
+MPRINT(EM_DIAGRAM):   run;
+22275      noframe
+22276      missing
+22277      discrete
+22278      raxis=axis1 maxis=axis2;
+22279      run;
+
+NOTE: Graph's name, NINQ, changed to NINQ. NINQ is already used or not a valid SAS name.
+22280      title "REASON por BAD";
+MPRINT(EM_DIAGRAM):   title "REASON por BAD";
+22281      vbar REASON /
+22282      name = "REASON         x BAD            " description = "REASON por BAD"
+22283      FREQ
+MPRINT(EM_DIAGRAM):   vbar REASON / name = "REASON         x BAD            " description = "REASON por BAD" FREQ type=FREQ subgroup=BAD noframe missing raxis=axis1 maxis=axis2;
+22284      type=FREQ
+MPRINT(EM_DIAGRAM):   run;
+22285      subgroup=BAD
+22286      noframe
+22287      missing
+22288      raxis=axis1 maxis=axis2;
+22289      run;
+
+NOTE: Graph's name, REASON, changed to REASON. REASON is already used or not a valid SAS name.
+22290      title "VALUE por BAD";
+MPRINT(EM_DIAGRAM):   title "VALUE por BAD";
+22291      vbar VALUE /
+22292      name = "VALUE          x BAD            " description = "VALUE por BAD"
+22293      FREQ
+MPRINT(EM_DIAGRAM):   vbar VALUE / name = "VALUE          x BAD            " description = "VALUE por BAD" FREQ type=FREQ subgroup=BAD noframe missing raxis=axis1 maxis=axis2;
+22294      type=FREQ
+MPRINT(EM_DIAGRAM):   run;
+22295      subgroup=BAD
+22296      noframe
+22297      missing
+22298      raxis=axis1 maxis=axis2;
+22299      run;
+
+NOTE: Graph's name, VALUE, changed to VALUE. VALUE is already used or not a valid SAS name.
+22300      title "YOJ por BAD";
+MPRINT(EM_DIAGRAM):   title "YOJ por BAD";
+22301      vbar YOJ /
+22302      name = "YOJ            x BAD            " description = "YOJ por BAD"
+22303      FREQ
+MPRINT(EM_DIAGRAM):   vbar YOJ / name = "YOJ            x BAD            " description = "YOJ por BAD" FREQ type=FREQ subgroup=BAD noframe missing raxis=axis1 maxis=axis2;
+22304      type=FREQ
+MPRINT(EM_DIAGRAM):   run;
+22305      subgroup=BAD
+22306      noframe
+22307      missing
+22308      raxis=axis1 maxis=axis2;
+22309      run;
+
+NOTE: Graph's name, YOJ, changed to YOJ. YOJ is already used or not a valid SAS name.
+22310      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: There were 2979 observations read from the data set EMWS1.PART_TRAIN.
+NOTE: PROCEDURE GCHART used (Total process time):
+      real time           1.01 seconds
+      cpu time            0.36 seconds
+      
+
+22311      title;
+MPRINT(EM_DIAGRAM):   title;
+22312      goptions display;
+MPRINT(EM_DIAGRAM):   goptions display;
+22313      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+22314      * Plot: Creating variable by interval target charts;
+MPRINT(EM_DIAGRAM):   * Plot: Creating variable by interval target charts;
+22315      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+22316      *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+22317      * Plot: DMDBClass Macro ;
+MPRINT(EM_DIAGRAM):   * Plot: DMDBClass Macro ;
+22318      *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+22319      %macro DMDBClass;
+22320          BAD(DESC) DELINQ(ASC) DEROG(ASC) JOB(ASC) NINQ(ASC) REASON(ASC)
+22321      %mend DMDBClass;
+22322      *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+22323      * Plot: DMDBVar Macro ;
+MPRINT(EM_DIAGRAM):   * Plot: DMDBVar Macro ;
+22324      *------------------------------------------------------------* ;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------* ;
+22325      %macro DMDBVar;
+22326          CLAGE CLNO DEBTINC LOAN MORTDUE VALUE YOJ
+22327      %mend DMDBVar;
+22328      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+22329      * Plot: Create DMDB;
+MPRINT(EM_DIAGRAM):   * Plot: Create DMDB;
+22330      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+22331      proc dmdb batch data=EMWS1.Part_TRAIN
+22332      dmdbcat=WORK.Plot_DMDB
+22333      classout=work.classoutDs
+22334      varout=work.varoutDs
+22335      maxlevel = 513
+22336      ;
+MPRINT(EM_DIAGRAM):   proc dmdb batch data=EMWS1.Part_TRAIN dmdbcat=WORK.Plot_DMDB classout=work.classoutDs varout=work.varoutDs maxlevel = 513 ;
+MPRINT(EM_DIAGRAM):   class
+22337      class %DMDBClass;
+MPRINT(DMDBCLASS):   BAD(DESC) DELINQ(ASC) DEROG(ASC) JOB(ASC) NINQ(ASC) REASON(ASC)
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   var
+22338      var %DMDBVar;
+MPRINT(DMDBVAR):   CLAGE CLNO DEBTINC LOAN MORTDUE VALUE YOJ
+MPRINT(EM_DIAGRAM):  ;
+22339      target
+22340      BAD
+22341      ;
+MPRINT(EM_DIAGRAM):   target BAD ;
+22342      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Records processed = 2979   Memory used = 511K.
+NOTE: There were 2979 observations read from the data set EMWS1.PART_TRAIN.
+NOTE: The data set WORK.CLASSOUTDS has 55 observations and 9 variables.
+NOTE: The data set WORK.VAROUTDS has 7 observations and 9 variables.
+NOTE: PROCEDURE DMDB used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(EM_DIAGRAM):   quit;
+MPRINT(EM_DIAGRAM):   *--- end code ---*;
+22343      quit;
+22344      *--- end code ---*;
+
+22345      title8;
+MPRINT(EM_DIAGRAM):    title8;
+22346      title8 "%sysfunc(sasmsg(sashelp.dmine, rpt_classvars_title, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title8 "Variables de clase";
+22347      proc print data=work.classoutDs;
+MPRINT(EM_DIAGRAM):   proc print data=work.classoutDs;
+22348      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 55 observations read from the data set WORK.CLASSOUTDS.
+NOTE: The PROCEDURE PRINT printed page 2.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+22349      proc datasets lib=work nolist;
+MPRINT(EM_DIAGRAM):   proc datasets lib=work nolist;
+22350      delete classoutDs;
+MPRINT(EM_DIAGRAM):   delete classoutDs;
+22351      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Deleting WORK.CLASSOUTDS (memtype=DATA).
+22352      title8;
+MPRINT(EM_DIAGRAM):   title8;
+22353      title8;
+MPRINT(EM_DIAGRAM):   title8;
+22354      title8 "%sysfunc(sasmsg(sashelp.dmine, rpt_intvars_title, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title8 "Variables de intervalo";
+
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+22355      proc print data=work.varoutDs;
+MPRINT(EM_DIAGRAM):   proc print data=work.varoutDs;
+22356      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 7 observations read from the data set WORK.VAROUTDS.
+NOTE: The PROCEDURE PRINT printed page 3.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+22357      proc datasets lib=work nolist;
+MPRINT(EM_DIAGRAM):   proc datasets lib=work nolist;
+22358      delete varoutDs;
+MPRINT(EM_DIAGRAM):   delete varoutDs;
+22359      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Deleting WORK.VAROUTDS (memtype=DATA).
+22360      title8;
+MPRINT(EM_DIAGRAM):   title8;
+
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+22361      proc datasets lib=WORK nolist;
+MPRINT(EM_DIAGRAM):   proc datasets lib=WORK nolist;
+22362      delete Plot_DMDB;
+MPRINT(EM_DIAGRAM):   delete Plot_DMDB;
+22363      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The file WORK.PLOT_DMDB (memtype=DATA) was not found, but appears on a DELETE statement.
+22364      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+22365      proc datasets lib=WORK nolist;
+MPRINT(EM_DIAGRAM):    proc datasets lib=WORK nolist;
+22366      delete Plot_DMDB / memtype=catalog;
+MPRINT(EM_DIAGRAM):   delete Plot_DMDB / memtype=catalog;
+22367      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: Deleting WORK.PLOT_DMDB (memtype=CATALOG).
+22368      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+22369      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+22370      * Plot: copiando gráficos en la carpeta nodo;
+MPRINT(EM_DIAGRAM):   * Plot: copiando gráficos en la carpeta nodo;
+22371      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+22372      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\CLAGE por BAD.png";
+MPRINT(EM_DIAGRAM):   filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\CLAGE por BAD.png";
+22373      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22374      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22375      replay CLAGE;
+MPRINT(EM_DIAGRAM):   replay CLAGE;
+NOTE: This SAS session is using a registry in WORK.  All changes will be lost at the end of this session.
+NOTE: 7521 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\CLAGE por BAD.png.
+22376      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.10 seconds
+      cpu time            0.07 seconds
+      
+
+22377      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22378      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22379      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\CLNO por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\CLNO por BAD.png";
+22380      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22381      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22382      replay CLNO;
+MPRINT(EM_DIAGRAM):   replay CLNO;
+NOTE: 7853 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\CLNO por BAD.png.
+22383      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.11 seconds
+      
+
+22384      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22385      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22386      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\DEBTINC por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\DEBTINC por BAD.png";
+22387      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22388      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22389      replay DEBTINC;
+MPRINT(EM_DIAGRAM):   replay DEBTINC;
+NOTE: 7362 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\DEBTINC por BAD.png.
+22390      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.09 seconds
+      
+
+22391      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22392      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22393      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\DELINQ por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\DELINQ por BAD.png";
+22394      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22395      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22396      replay DELINQ;
+MPRINT(EM_DIAGRAM):   replay DELINQ;
+NOTE: 6065 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\DELINQ por BAD.png.
+22397      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.07 seconds
+      
+
+22398      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22399      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22400      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\DEROG por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\DEROG por BAD.png";
+22401      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22402      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22403      replay DEROG;
+MPRINT(EM_DIAGRAM):   replay DEROG;
+NOTE: 6010 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\DEROG por BAD.png.
+22404      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.07 seconds
+      
+
+22405      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22406      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22407      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\JOB por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\JOB por BAD.png";
+22408      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22409      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22410      replay JOB;
+MPRINT(EM_DIAGRAM):   replay JOB;
+NOTE: 6860 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\JOB por BAD.png.
+22411      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.07 seconds
+      
+
+22412      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22413      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22414      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\LOAN por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\LOAN por BAD.png";
+22415      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22416      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22417      replay LOAN;
+MPRINT(EM_DIAGRAM):   replay LOAN;
+NOTE: 8352 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\LOAN por BAD.png.
+22418      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.07 seconds
+      
+
+22419      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22420      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22421      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\MORTDUE por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\MORTDUE por BAD.png";
+22422      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22423      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22424      replay MORTDUE;
+MPRINT(EM_DIAGRAM):   replay MORTDUE;
+NOTE: 8484 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\MORTDUE por BAD.png.
+22425      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.10 seconds
+      cpu time            0.10 seconds
+      
+
+22426      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22427      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22428      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\NINQ por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\NINQ por BAD.png";
+22429      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22430      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22431      replay NINQ;
+MPRINT(EM_DIAGRAM):   replay NINQ;
+NOTE: 7052 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\NINQ por BAD.png.
+22432      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.09 seconds
+      
+
+22433      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22434      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22435      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\REASON por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\REASON por BAD.png";
+22436      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22437      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22438      replay REASON;
+MPRINT(EM_DIAGRAM):   replay REASON;
+NOTE: 6937 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\REASON por BAD.png.
+22439      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.07 seconds
+      
+
+22440      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22441      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22442      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\VALUE por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\VALUE por BAD.png";
+22443      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22444      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22445      replay VALUE;
+MPRINT(EM_DIAGRAM):   replay VALUE;
+NOTE: 7941 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\VALUE por BAD.png.
+22446      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.11 seconds
+      cpu time            0.10 seconds
+      
+
+22447      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22448      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+22449      filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\YOJ por BAD.png";
+MPRINT(EM_DIAGRAM):    filename gsasfile "C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\YOJ por BAD.png";
+22450      goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+MPRINT(EM_DIAGRAM):   goptions device= PNG display gaccess= gsasfile gsfmode= replace cback= white;
+22451      proc greplay igout=WORK.PLOTGRAPH nofs;
+MPRINT(EM_DIAGRAM):   proc greplay igout=WORK.PLOTGRAPH nofs;
+NOTE: Building list of graphs from the catalog.
+
+NOTE: Enter greplay commands or statements.
+22452      replay YOJ;
+MPRINT(EM_DIAGRAM):   replay YOJ;
+NOTE: 7617 bytes written to C:\Jose\DM_ang\Workspaces\EMWS1\Plot\GRAPH\YOJ por BAD.png.
+22453      quit;
+MPRINT(EM_DIAGRAM):   quit;
+
+NOTE: PROCEDURE GREPLAY used (Total process time):
+      real time           0.11 seconds
+      cpu time            0.09 seconds
+      
+
+22454      goptions device=win;
+MPRINT(EM_DIAGRAM):   goptions device=win;
+22455      filename gsasfile;
+MPRINT(EM_DIAGRAM):   filename gsasfile;
+NOTE: Fileref GSASFILE has been deassigned.
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;

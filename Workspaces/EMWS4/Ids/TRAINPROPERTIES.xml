@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  DataSource="hmeq" Scope="LOCAL" Role="RAW" Library="JOSE" Table="HMEQ" NCols="13"
+ NObs="5960" NBytes="640000" Segment="" DataSourceRole="RAW" OutputType="VIEW" ForceRun="N"
+ ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC"
+ ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y"
+ MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y"
+ VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="Y" DsId="hmeq"
+ DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="Jose Caloca" DsCreateDate="1930741747"
+ DsModifiedBy="Jose Caloca" DsModifyDate="1930741747.1" DsScope="LOCAL" Sample="D"
+ SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y"
+ RunAction="Train" Component="DataSource" RawCreateTime="1931469985.3" CreateTime="15MAR2021:23:26:25"
+ Description="" Data="JOSE.HMEQ" CMeta="WORK.M1HAAA80" RunId="29825165-4e89-4ff8-9cbe-f47613605b1d"
+ RawLastTimeRun="1931471406.9" RawRunTime="1.6300001144" LastTimeRun="15MAR2021:23:50:07"
+ RunTime="0 Hr. 0 Min. 1.63 Sec.">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES/>
+</_ROOT_>

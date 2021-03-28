@@ -1,0 +1,41 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+            Measurement    Frequency
+Role           Level         Count
+
+ID           INTERVAL           1   
+INPUT        ORDINAL            5   
+REJECTED     BINARY             1   
+REJECTED     INTERVAL           9   
+REJECTED     NOMINAL           14   
+TARGET       NOMINAL            1   
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Model Events
+
+                                     Number
+                      Measurement      of
+ Target      Event       Level       Levels      Order           Label
+
+I_default      1        NOMINAL         2      Descending    Into: default
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Predicted and decision variables
+
+Type           Variable      Label
+
+TARGET       I_default       Into: default         
+PREDICTED    P_I_default1    Predicted: I_default=1
+RESIDUAL     R_I_default1    Residual: I_default=1 
+PREDICTED    P_I_default0    Predicted: I_default=0
+RESIDUAL     R_I_default0    Residual: I_default=0 
+FROM         F_I_default     From: I_default       
+INTO         I_I_default     Into: I_default       

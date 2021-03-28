@@ -1,0 +1,1153 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Resumen de variables
+
+          Nivel de     Número de
+ Rol       medida     ocurrencias
+
+INPUT     BINARY           1     
+INPUT     INTERVAL         2     
+INPUT     NOMINAL          4     
+TARGET    BINARY           1     
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Eventos del modelo
+
+                                 Número
+                    Nivel de       de
+Target    Evento     medida     niveles      Orden       Etiqueta
+
+ BAD        1        BINARY        2       Descending            
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variables predichas y de decisión
+
+Tipo         Variable    Etiqueta
+
+TARGET        BAD                        
+PREDICTED     P_BAD1     Predicted: BAD=1
+RESIDUAL      R_BAD1     Residual: BAD=1 
+PREDICTED     P_BAD0     Predicted: BAD=0
+RESIDUAL      R_BAD0     Residual: BAD=0 
+FROM          F_BAD      From: BAD       
+INTO          I_BAD      Into: BAD       
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+                Model Information
+
+Training Data Set              WORK.EM_DMREG.VIEW
+DMDB Catalog                   WORK.REG2_DMDB    
+Target Variable                BAD               
+Target Measurement Level       Ordinal           
+Number of Target Categories    2                 
+Error                          MBernoulli        
+Link Function                  Logit             
+Number of Model Parameters     46                
+Number of Observations         2979              
+
+
+           Target Profile
+ 
+ Ordered                      Total
+   Value          BAD     Frequency
+
+       1            1           594
+       2            0          2385
+
+
+
+
+Stepwise Selection Procedure
+
+
+Step 0: Intercept entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               1
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 3.438805E-12                                                       
+
+                                            Optimization Results
+
+Iterations                                          0  Function Calls                                      3
+Hessian Calls                                       1  Active Constraints                                  0
+Objective Function                       1488.2000885  Max Abs Gradient Element                 3.438805E-12
+Ridge                                               0  Actual Over Pred Change                             0
+
+Convergence criterion (ABSGCONV=0.00001) satisfied.                                               
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2976.400         0.0000        0          .    
+
+
+
+
+                                Analysis of Maximum Likelihood Estimates
+ 
+                                         Standard          Wald                  Standardized
+Parameter              DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept               1     -1.3901      0.0459        918.93        <.0001                       0.249
+
+
+
+
+Step 1: Effect IMP_DELINQ entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              14
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 136.99697885                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             1351        137.1     48.6616         0        0.760
+   2            0           3              0             1342       9.1895      6.2499         0        0.785
+   3            0           4              0             1341       1.1049      0.4821         0        1.071
+   4            0           5              0             1341       0.0325      0.0196         0        1.152
+   5            0           6              0             1341      0.00726     0.00422         0        1.264
+   6            0           7              0             1341      0.00267     0.00155         0        1.264
+   7            0           8              0             1341     0.000980    0.000570         0        1.264
+
+                                            Optimization Results
+
+Iterations                                          7  Function Calls                                     10
+Hessian Calls                                       8  Active Constraints                                  0
+Objective Function                       1340.7617369  Max Abs Gradient Element                 0.0005702126
+Ridge                                               0  Actual Over Pred Change                   1.264218913
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2681.523       294.8767       13         <.0001
+
+
+          Type 3 Analysis of Effects
+ 
+                             Wald
+Effect           DF    Chi-Square    Pr > ChiSq
+
+IMP_DELINQ       13      235.0522        <.0001
+
+
+                                Analysis of Maximum Likelihood Estimates
+ 
+                                         Standard          Wald                  Standardized
+Parameter              DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept               1      4.2956     19.7295          0.05        0.8276                      73.378
+IMP_DELINQ  0           1     -6.1046     19.7296          0.10        0.7570                       0.002
+IMP_DELINQ  1           1     -5.2260     19.7298          0.07        0.7911                       0.005
+IMP_DELINQ  2           1     -4.7939     19.7302          0.06        0.8080                       0.008
+IMP_DELINQ  3           1     -4.0478     19.7307          0.04        0.8375                       0.017
+IMP_DELINQ  4           1     -3.8902     19.7315          0.04        0.8437                       0.020
+IMP_DELINQ  5           1     -2.9739     19.7364          0.02        0.8802                       0.051
+IMP_DELINQ  6           1     -2.5039     19.7380          0.02        0.8991                       0.082
+IMP_DELINQ  7           1     -2.6862     19.7425          0.02        0.8918                       0.068
+IMP_DELINQ  8           1      5.3710     69.9938          0.01        0.9388                     215.087
+IMP_DELINQ  10          1      5.3710       118.0          0.00        0.9637                     215.087
+IMP_DELINQ  11          1      5.3710     84.5818          0.00        0.9494                     215.087
+IMP_DELINQ  12          1      5.3710       118.0          0.00        0.9637                     215.087
+IMP_DELINQ  13          1      5.3710       118.0          0.00        0.9637                     215.087
+
+
+           Odds Ratio Estimates
+                     
+                                     Point
+Effect                            Estimate
+
+IMP_DELINQ  0 vs 15                 <0.001
+IMP_DELINQ  1 vs 15                 <0.001
+IMP_DELINQ  2 vs 15                 <0.001
+IMP_DELINQ  3 vs 15                 <0.001
+IMP_DELINQ  4 vs 15                 <0.001
+IMP_DELINQ  5 vs 15                 <0.001
+IMP_DELINQ  6 vs 15                 <0.001
+IMP_DELINQ  7 vs 15                 <0.001
+IMP_DELINQ  8 vs 15                  1.000
+IMP_DELINQ  10 vs 15                 1.000
+IMP_DELINQ  11 vs 15                 1.000
+IMP_DELINQ  12 vs 15                 1.000
+IMP_DELINQ  13 vs 15                 1.000
+
+
+Step 2: Effect IMP_DEROG entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              24
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 136.99697885                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             1297        191.7     64.4759         0        0.792
+   2            0           3              0             1286      10.6024      3.3542         0        0.899
+   3            0           4              0             1285       0.4679      0.2076         0        1.075
+   4            0           5              0             1285       0.0367      0.0213         0        1.251
+   5            0           6              0             1285       0.0129     0.00752         0        1.264
+   6            0           7              0             1285      0.00476     0.00277         0        1.264
+   7            0           8              0             1285      0.00175     0.00102         0        1.264
+   8            0           9              0             1285     0.000643    0.000374         0        1.264
+
+                                            Optimization Results
+
+Iterations                                          8  Function Calls                                     11
+Hessian Calls                                       9  Active Constraints                                  0
+Objective Function                       1285.3947865  Max Abs Gradient Element                 0.0003742099
+Ridge                                               0  Actual Over Pred Change                   1.264230806
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2570.790       405.6106       23         <.0001
+
+
+          Type 3 Analysis of Effects
+ 
+                             Wald
+Effect           DF    Chi-Square    Pr > ChiSq
+
+IMP_DELINQ       13      183.8097        <.0001
+IMP_DEROG        10      101.5210        <.0001
+
+
+                                Analysis of Maximum Likelihood Estimates
+ 
+                                         Standard          Wald                  Standardized
+Parameter              DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept               1      7.6084     35.5102          0.05        0.8303                     999.000
+IMP_DELINQ  0           1     -6.4350     32.5280          0.04        0.8432                       0.002
+IMP_DELINQ  1           1     -5.6275     32.5282          0.03        0.8626                       0.004
+IMP_DELINQ  2           1     -5.3415     32.5285          0.03        0.8696                       0.005
+IMP_DELINQ  3           1     -4.5609     32.5288          0.02        0.8885                       0.010
+IMP_DELINQ  4           1     -4.4196     32.5293          0.02        0.8919                       0.012
+IMP_DELINQ  5           1     -3.6106     32.5325          0.01        0.9116                       0.027
+IMP_DELINQ  6           1     -2.9819     32.5333          0.01        0.9270                       0.051
+IMP_DELINQ  7           1     -3.0106     32.5361          0.01        0.9263                       0.049
+IMP_DELINQ  8           1      6.2175       115.4          0.00        0.9570                     501.423
+IMP_DELINQ  10          1      6.2175       194.5          0.00        0.9745                     501.423
+IMP_DELINQ  11          1      6.2175       139.5          0.00        0.9644                     501.423
+IMP_DELINQ  12          1      6.2175       194.5          0.00        0.9745                     501.423
+IMP_DELINQ  13          1      6.2175       194.5          0.00        0.9745                     501.423
+IMP_DEROG   0           1     -3.1591     14.2446          0.05        0.8245                       0.042
+IMP_DEROG   1           1     -2.1787     14.2451          0.02        0.8784                       0.113
+IMP_DEROG   2           1     -1.8420     14.2459          0.02        0.8971                       0.158
+IMP_DEROG   3           1     -0.8395     14.2500          0.00        0.9530                       0.432
+IMP_DEROG   4           1     -1.4932     14.2550          0.01        0.9166                       0.225
+IMP_DEROG   5           1     -2.4276     14.2624          0.03        0.8648                       0.088
+IMP_DEROG   6           1     -1.8665     14.2876          0.02        0.8961                       0.155
+IMP_DEROG   7           1      6.7335     96.4003          0.00        0.9443                     840.086
+IMP_DEROG   8           1      8.9698       105.8          0.01        0.9324                     999.000
+IMP_DEROG   9           1     -1.1734     14.3019          0.01        0.9346                       0.309
+
+
+           Odds Ratio Estimates
+                     
+                                     Point
+Effect                            Estimate
+
+IMP_DELINQ  0 vs 15                 <0.001
+IMP_DELINQ  1 vs 15                 <0.001
+IMP_DELINQ  2 vs 15                 <0.001
+IMP_DELINQ  3 vs 15                 <0.001
+IMP_DELINQ  4 vs 15                 <0.001
+IMP_DELINQ  5 vs 15                 <0.001
+IMP_DELINQ  6 vs 15                 <0.001
+IMP_DELINQ  7 vs 15                 <0.001
+IMP_DELINQ  8 vs 15                  3.733
+IMP_DELINQ  10 vs 15                 3.733
+IMP_DELINQ  11 vs 15                 3.733
+IMP_DELINQ  12 vs 15                 3.733
+IMP_DELINQ  13 vs 15                 3.733
+IMP_DEROG   0 vs 10                  0.088
+IMP_DEROG   1 vs 10                  0.233
+IMP_DEROG   2 vs 10                  0.327
+IMP_DEROG   3 vs 10                  0.890
+IMP_DEROG   4 vs 10                  0.463
+IMP_DEROG   5 vs 10                  0.182
+IMP_DEROG   6 vs 10                  0.319
+IMP_DEROG   7 vs 10                999.000
+IMP_DEROG   8 vs 10                999.000
+IMP_DEROG   9 vs 10                  0.638
+
+
+Step 3: Effect IMP_NINQ entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              38
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 136.99697885                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             1262        226.2     76.0867         0        0.811
+   2            0           3              0             1250      12.2359      1.8996         0        0.933
+   3            0           4              0             1249       0.3968      0.1660         0        1.086
+   4            0           5              0             1249       0.0411      0.0238         0        1.257
+   5            0           6              0             1249       0.0148     0.00858         0        1.264
+   6            0           7              0             1249      0.00543     0.00316         0        1.264
+   7            0           8              0             1249      0.00200     0.00116         0        1.264
+   8            0           9              0             1249     0.000734    0.000427         0        1.264
+
+                                            Optimization Results
+
+Iterations                                          8  Function Calls                                     11
+Hessian Calls                                       9  Active Constraints                                  0
+Objective Function                       1249.3412902  Max Abs Gradient Element                 0.0004270974
+Ridge                                               0  Actual Over Pred Change                  1.2642325875
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2498.683       477.7176       37         <.0001
+
+
+          Type 3 Analysis of Effects
+ 
+                             Wald
+Effect           DF    Chi-Square    Pr > ChiSq
+
+IMP_DELINQ       13      183.3038        <.0001
+IMP_DEROG        10       78.3367        <.0001
+IMP_NINQ         14       62.1700        <.0001
+
+
+                                Analysis of Maximum Likelihood Estimates
+ 
+                                         Standard          Wald                  Standardized
+Parameter              DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept               1     10.5470     43.0675          0.06        0.8065                     999.000
+IMP_DELINQ  0           1     -6.4737     32.5234          0.04        0.8422                       0.002
+IMP_DELINQ  1           1     -5.6425     32.5235          0.03        0.8623                       0.004
+IMP_DELINQ  2           1     -5.3078     32.5238          0.03        0.8704                       0.005
+IMP_DELINQ  3           1     -4.5254     32.5241          0.02        0.8893                       0.011
+IMP_DELINQ  4           1     -4.4710     32.5247          0.02        0.8907                       0.011
+IMP_DELINQ  5           1     -3.6614     32.5278          0.01        0.9104                       0.026
+IMP_DELINQ  6           1     -3.0071     32.5287          0.01        0.9263                       0.049
+IMP_DELINQ  7           1     -3.1719     32.5317          0.01        0.9223                       0.042
+IMP_DELINQ  8           1      6.4622       115.4          0.00        0.9553                     640.441
+IMP_DELINQ  10          1      6.2592       194.5          0.00        0.9743                     522.792
+IMP_DELINQ  11          1      6.3630       139.3          0.00        0.9636                     579.989
+IMP_DELINQ  12          1      6.2592       194.5          0.00        0.9743                     522.792
+IMP_DELINQ  13          1      6.0385       194.5          0.00        0.9752                     419.257
+IMP_DEROG   0           1     -3.0225     14.9987          0.04        0.8403                       0.049
+IMP_DEROG   1           1     -2.1839     14.9992          0.02        0.8842                       0.113
+IMP_DEROG   2           1     -1.8628     15.0000          0.02        0.9012                       0.155
+IMP_DEROG   3           1     -0.6983     15.0041          0.00        0.9629                       0.497
+IMP_DEROG   4           1     -1.4851     15.0094          0.01        0.9212                       0.226
+IMP_DEROG   5           1     -2.6640     15.0186          0.03        0.8592                       0.070
+IMP_DEROG   6           1     -1.8004     15.0401          0.01        0.9047                       0.165
+IMP_DEROG   7           1      6.9620       104.2          0.00        0.9468                     999.000
+IMP_DEROG   8           1      9.1569       108.9          0.01        0.9330                     999.000
+IMP_DEROG   9           1     -1.7149     15.0580          0.01        0.9093                       0.180
+IMP_NINQ    0           1     -3.3199     23.9187          0.02        0.8896                       0.036
+IMP_NINQ    1           1     -3.1169     23.9187          0.02        0.8963                       0.044
+IMP_NINQ    2           1     -2.7154     23.9188          0.01        0.9096                       0.066
+IMP_NINQ    3           1     -2.8962     23.9191          0.01        0.9036                       0.055
+IMP_NINQ    4           1     -2.3277     23.9198          0.01        0.9225                       0.098
+IMP_NINQ    5           1     -1.8206     23.9206          0.01        0.9393                       0.162
+IMP_NINQ    6           1     -1.5411     23.9219          0.00        0.9486                       0.214
+IMP_NINQ    7           1     -2.0698     23.9222          0.01        0.9311                       0.126
+IMP_NINQ    8           1     -1.9406     23.9251          0.01        0.9354                       0.144
+IMP_NINQ    9           1     -1.5948     23.9286          0.00        0.9469                       0.203
+IMP_NINQ    10          1     -2.7567     23.9295          0.01        0.9083                       0.063
+IMP_NINQ    11          1     -2.7479     23.9327          0.01        0.9086                       0.064
+IMP_NINQ    12          1      9.6159       194.3          0.00        0.9605                     999.000
+IMP_NINQ    13          1      9.6159       194.3          0.00        0.9605                     999.000
+
+
+           Odds Ratio Estimates
+                     
+                                     Point
+Effect                            Estimate
+
+IMP_DELINQ  0 vs 15                 <0.001
+IMP_DELINQ  1 vs 15                 <0.001
+IMP_DELINQ  2 vs 15                 <0.001
+IMP_DELINQ  3 vs 15                 <0.001
+IMP_DELINQ  4 vs 15                 <0.001
+IMP_DELINQ  5 vs 15                 <0.001
+IMP_DELINQ  6 vs 15                 <0.001
+IMP_DELINQ  7 vs 15                 <0.001
+IMP_DELINQ  8 vs 15                  4.871
+IMP_DELINQ  10 vs 15                 3.976
+IMP_DELINQ  11 vs 15                 4.412
+IMP_DELINQ  12 vs 15                 3.976
+IMP_DELINQ  13 vs 15                 3.189
+IMP_DEROG   0 vs 10                  0.097
+IMP_DEROG   1 vs 10                  0.224
+IMP_DEROG   2 vs 10                  0.309
+IMP_DEROG   3 vs 10                  0.989
+IMP_DEROG   4 vs 10                  0.450
+IMP_DEROG   5 vs 10                  0.139
+IMP_DEROG   6 vs 10                  0.329
+IMP_DEROG   7 vs 10                999.000
+IMP_DEROG   8 vs 10                999.000
+IMP_DEROG   9 vs 10                  0.358
+IMP_NINQ    0 vs 14                 <0.001
+IMP_NINQ    1 vs 14                 <0.001
+IMP_NINQ    2 vs 14                 <0.001
+IMP_NINQ    3 vs 14                 <0.001
+IMP_NINQ    4 vs 14                 <0.001
+IMP_NINQ    5 vs 14                 <0.001
+IMP_NINQ    6 vs 14                 <0.001
+IMP_NINQ    7 vs 14                 <0.001
+IMP_NINQ    8 vs 14                 <0.001
+IMP_NINQ    9 vs 14                 <0.001
+IMP_NINQ    10 vs 14                <0.001
+IMP_NINQ    11 vs 14                <0.001
+IMP_NINQ    12 vs 14                 1.000
+IMP_NINQ    13 vs 14                 1.000
+
+
+Step 4: Effect IMP_DEBTINC entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              39
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 136.99697885                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             1251        237.0     77.3965         0        0.822
+   2            0           3              0             1239      12.3566      1.8497         0        0.958
+   3            0           4              0             1239       0.2938      0.1133         0        1.101
+   4            0           5              0             1239       0.0406      0.0235         0        1.262
+   5            0           6              0             1239       0.0148     0.00859         0        1.264
+   6            0           7              0             1239      0.00543     0.00316         0        1.264
+   7            0           8              0             1239      0.00200     0.00116         0        1.264
+   8            0           9              0             1239     0.000735    0.000428         0        1.264
+
+                                            Optimization Results
+
+Iterations                                          8  Function Calls                                     11
+Hessian Calls                                       9  Active Constraints                                  0
+Objective Function                        1238.531248  Max Abs Gradient Element                 0.0004277607
+Ridge                                               0  Actual Over Pred Change                  1.2642324035
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2477.062       499.3377       38         <.0001
+
+
+          Type 3 Analysis of Effects
+ 
+                             Wald
+Effect           DF    Chi-Square    Pr > ChiSq
+
+IMP_DEBTINC       1       17.1825        <.0001
+IMP_DELINQ       13      180.8752        <.0001
+IMP_DEROG        10       75.9027        <.0001
+IMP_NINQ         14       57.6172        <.0001
+
+
+                                Analysis of Maximum Likelihood Estimates
+ 
+                                         Standard          Wald                  Standardized
+Parameter              DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept               1      9.8234     43.0329          0.05        0.8194                     999.000
+IMP_DEBTINC             1      0.0234     0.00566         17.18        <.0001          0.1363       1.024
+IMP_DELINQ  0           1     -6.5593     32.4287          0.04        0.8397                       0.001
+IMP_DELINQ  1           1     -5.7082     32.4288          0.03        0.8603                       0.003
+IMP_DELINQ  2           1     -5.4250     32.4291          0.03        0.8671                       0.004
+IMP_DELINQ  3           1     -4.6037     32.4294          0.02        0.8871                       0.010
+IMP_DELINQ  4           1     -4.5181     32.4300          0.02        0.8892                       0.011
+IMP_DELINQ  5           1     -3.6011     32.4332          0.01        0.9116                       0.027
+IMP_DELINQ  6           1     -3.2385     32.4343          0.01        0.9205                       0.039
+IMP_DELINQ  7           1     -3.3088     32.4372          0.01        0.9188                       0.037
+IMP_DELINQ  8           1      6.3266       115.2          0.00        0.9562                     559.224
+IMP_DELINQ  10          1      6.1353       194.5          0.00        0.9748                     461.897
+IMP_DELINQ  11          1      6.4664       135.7          0.00        0.9620                     643.137
+IMP_DELINQ  12          1      6.2689       194.5          0.00        0.9743                     527.910
+IMP_DELINQ  13          1      6.7775       194.5          0.00        0.9722                     877.888
+IMP_DEROG   0           1     -3.0239     15.1029          0.04        0.8413                       0.049
+IMP_DEROG   1           1     -2.2256     15.1034          0.02        0.8829                       0.108
+IMP_DEROG   2           1     -1.8688     15.1042          0.02        0.9015                       0.154
+IMP_DEROG   3           1     -0.6332     15.1083          0.00        0.9666                       0.531
+IMP_DEROG   4           1     -1.5093     15.1138          0.01        0.9205                       0.221
+IMP_DEROG   5           1     -2.4842     15.1228          0.03        0.8695                       0.083
+IMP_DEROG   6           1     -1.7368     15.1446          0.01        0.9087                       0.176
+IMP_DEROG   7           1      6.8915       106.4          0.00        0.9483                     983.844
+IMP_DEROG   8           1      8.9596       108.3          0.01        0.9340                     999.000
+IMP_DEROG   9           1     -1.6216     15.1628          0.01        0.9148                       0.198
+IMP_NINQ    0           1     -3.2982     23.9187          0.02        0.8903                       0.037
+IMP_NINQ    1           1     -3.1066     23.9187          0.02        0.8967                       0.045
+IMP_NINQ    2           1     -2.7503     23.9188          0.01        0.9085                       0.064
+IMP_NINQ    3           1     -2.9226     23.9191          0.01        0.9028                       0.054
+IMP_NINQ    4           1     -2.3774     23.9198          0.01        0.9208                       0.093
+IMP_NINQ    5           1     -1.8405     23.9206          0.01        0.9387                       0.159
+IMP_NINQ    6           1     -1.5267     23.9219          0.00        0.9491                       0.217
+IMP_NINQ    7           1     -2.0427     23.9223          0.01        0.9320                       0.130
+IMP_NINQ    8           1     -1.9075     23.9250          0.01        0.9365                       0.148
+IMP_NINQ    9           1     -1.6136     23.9285          0.00        0.9462                       0.199
+IMP_NINQ    10          1     -2.5107     23.9286          0.01        0.9164                       0.081
+IMP_NINQ    11          1     -2.8160     23.9326          0.01        0.9063                       0.060
+IMP_NINQ    12          1      9.2945       194.3          0.00        0.9618                     999.000
+IMP_NINQ    13          1      9.6382       194.3          0.00        0.9604                     999.000
+
+
+           Odds Ratio Estimates
+                     
+                                     Point
+Effect                            Estimate
+
+IMP_DEBTINC                          1.024
+IMP_DELINQ  0 vs 15                 <0.001
+IMP_DELINQ  1 vs 15                 <0.001
+IMP_DELINQ  2 vs 15                 <0.001
+IMP_DELINQ  3 vs 15                 <0.001
+IMP_DELINQ  4 vs 15                 <0.001
+IMP_DELINQ  5 vs 15                 <0.001
+IMP_DELINQ  6 vs 15                 <0.001
+IMP_DELINQ  7 vs 15                 <0.001
+IMP_DELINQ  8 vs 15                  3.813
+IMP_DELINQ  10 vs 15                 3.149
+IMP_DELINQ  11 vs 15                 4.385
+IMP_DELINQ  12 vs 15                 3.599
+IMP_DELINQ  13 vs 15                 5.986
+IMP_DEROG   0 vs 10                  0.103
+IMP_DEROG   1 vs 10                  0.228
+IMP_DEROG   2 vs 10                  0.326
+IMP_DEROG   3 vs 10                  1.121
+IMP_DEROG   4 vs 10                  0.467
+IMP_DEROG   5 vs 10                  0.176
+IMP_DEROG   6 vs 10                  0.372
+IMP_DEROG   7 vs 10                999.000
+IMP_DEROG   8 vs 10                999.000
+IMP_DEROG   9 vs 10                  0.417
+IMP_NINQ    0 vs 14                 <0.001
+IMP_NINQ    1 vs 14                 <0.001
+IMP_NINQ    2 vs 14                 <0.001
+IMP_NINQ    3 vs 14                 <0.001
+IMP_NINQ    4 vs 14                 <0.001
+IMP_NINQ    5 vs 14                 <0.001
+IMP_NINQ    6 vs 14                 <0.001
+IMP_NINQ    7 vs 14                 <0.001
+IMP_NINQ    8 vs 14                 <0.001
+IMP_NINQ    9 vs 14                 <0.001
+IMP_NINQ    10 vs 14                <0.001
+IMP_NINQ    11 vs 14                <0.001
+IMP_NINQ    12 vs 14                 0.615
+IMP_NINQ    13 vs 14                 0.868
+
+
+Step 5: Effect IMP_JOB entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Dual Quasi-Newton Optimization
+
+Dual Broyden - Fletcher - Goldfarb - Shanno Update (DBFGS)
+
+Parameter Estimates              44
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 136.99697885                                                       
+
+
+                                                                 Objective     Max Abs                Slope of
+                     Function         Active        Objective     Function    Gradient       Step       Search
+Iter     Restarts       Calls    Constraints         Function       Change     Element       Size    Direction
+
+   1            0           5              0             1238        250.7     73.6060      0.894       -596.5
+   2            0           7              0             1228       9.5959     14.0709      1.000      -16.579
+   3            0           9              0             1227       1.0191      0.9317      1.000       -1.884
+   4            0          11              0             1227       0.0937      1.5489      1.000       -0.140
+   5            0          15              0             1227       0.1091      2.2303      2.300      -0.0942
+   6            0          17              0             1227       0.1504      1.1633      3.355      -0.0813
+   7            0          20              0             1227       0.0453      0.3882      2.317      -0.0501
+   8            0          23              0             1227       0.0231      0.2902      1.549      -0.0305
+   9            0          26              0             1226      0.00841      0.2724      2.819      -0.0072
+  10            0          29              0             1226      0.00506      0.1106      1.702      -0.0061
+  11            0          32              0             1226      0.00212      0.0600      2.843      -0.0018
+  12            0          35              0             1226     0.000905      0.0266      1.624      -0.0012
+
+                                            Optimization Results
+
+Iterations                                         12  Function Calls                                     37
+Gradient Calls                                     16  Active Constraints                                  0
+Objective Function                        1226.485013  Max Abs Gradient Element                 0.0266457353
+Slope of Search Direction                -0.001163917                                                       
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+NOTE: At least one element of the gradient is greater than 1e-3.
+
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2452.970       523.4302       43         <.0001
+
+
+          Type 3 Analysis of Effects
+ 
+                             Wald
+Effect           DF    Chi-Square    Pr > ChiSq
+
+IMP_DEBTINC       1       14.8768        0.0001
+IMP_DELINQ       13      182.8245        <.0001
+IMP_DEROG        10       68.7032        <.0001
+IMP_JOB           5       24.2034        0.0002
+IMP_NINQ         14       55.0682        <.0001
+
+
+                                Analysis of Maximum Likelihood Estimates
+ 
+                                         Standard          Wald                  Standardized
+Parameter              DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept               1      9.5488     33.9586          0.08        0.7786                     999.000
+IMP_DEBTINC             1      0.0225     0.00584         14.88        0.0001          0.1311       1.023
+IMP_DELINQ  0           1     -6.4109     25.5566          0.06        0.8019                       0.002
+IMP_DELINQ  1           1     -5.5574     25.5568          0.05        0.8279                       0.004
+IMP_DELINQ  2           1     -5.2853     25.5572          0.04        0.8362                       0.005
+IMP_DELINQ  3           1     -4.3808     25.5575          0.03        0.8639                       0.013
+IMP_DELINQ  4           1     -4.3208     25.5583          0.03        0.8658                       0.013
+IMP_DELINQ  5           1     -3.3853     25.5624          0.02        0.8946                       0.034
+IMP_DELINQ  6           1     -3.1792     25.5636          0.02        0.9010                       0.042
+IMP_DELINQ  7           1     -3.2142     25.5675          0.02        0.9000                       0.040
+IMP_DELINQ  8           1      6.0917     90.8815          0.00        0.9466                     442.182
+IMP_DELINQ  10          1      5.6608       152.6          0.00        0.9704                     287.376
+IMP_DELINQ  11          1      6.2570       110.8          0.00        0.9550                     521.662
+IMP_DELINQ  12          1      6.3369       152.6          0.00        0.9669                     565.052
+IMP_DELINQ  13          1      6.8023       152.6          0.00        0.9644                     899.933
+IMP_DEROG   0           1     -2.8550     12.1703          0.06        0.8145                       0.058
+IMP_DEROG   1           1     -2.1044     12.1709          0.03        0.8627                       0.122
+IMP_DEROG   2           1     -1.7784     12.1720          0.02        0.8838                       0.169
+IMP_DEROG   3           1     -0.4883     12.1770          0.00        0.9680                       0.614
+IMP_DEROG   4           1     -1.4274     12.1843          0.01        0.9067                       0.240
+IMP_DEROG   5           1     -2.4580     12.1957          0.04        0.8403                       0.086
+IMP_DEROG   6           1     -1.7117     12.2221          0.02        0.8886                       0.181
+IMP_DEROG   7           1      6.5686     85.4718          0.01        0.9387                     712.337
+IMP_DEROG   8           1      8.5682     87.4540          0.01        0.9220                     999.000
+IMP_DEROG   9           1     -1.5987     12.2444          0.02        0.8961                       0.202
+IMP_JOB     Mgr         1      0.0177      0.1365          0.02        0.8967                       1.018
+IMP_JOB     Office      1     -0.5412      0.1418         14.56        0.0001                       0.582
+IMP_JOB     Other       1     0.00647      0.1011          0.00        0.9490                       1.006
+IMP_JOB     ProfExe     1     -0.3289      0.1276          6.64        0.0100                       0.720
+IMP_JOB     Sales       1      0.8562      0.2787          9.44        0.0021                       2.354
+IMP_NINQ    0           1     -3.1843     18.7595          0.03        0.8652                       0.041
+IMP_NINQ    1           1     -2.9864     18.7595          0.03        0.8735                       0.050
+IMP_NINQ    2           1     -2.6315     18.7597          0.02        0.8884                       0.072
+IMP_NINQ    3           1     -2.7860     18.7600          0.02        0.8819                       0.062
+IMP_NINQ    4           1     -2.2033     18.7609          0.01        0.9065                       0.110
+IMP_NINQ    5           1     -1.7258     18.7620          0.01        0.9267                       0.178
+IMP_NINQ    6           1     -1.4953     18.7637          0.01        0.9365                       0.224
+IMP_NINQ    7           1     -2.0157     18.7641          0.01        0.9145                       0.133
+IMP_NINQ    8           1     -1.9138     18.7675          0.01        0.9188                       0.148
+IMP_NINQ    9           1     -1.5393     18.7719          0.01        0.9346                       0.215
+IMP_NINQ    10          1     -2.4747     18.7721          0.02        0.8951                       0.084
+IMP_NINQ    11          1     -2.7979     18.7772          0.02        0.8815                       0.061
+IMP_NINQ    12          1      8.8031       152.4          0.00        0.9539                     999.000
+IMP_NINQ    13          1      9.6812       152.4          0.00        0.9493                     999.000
+
+
+           Odds Ratio Estimates
+                     
+                                     Point
+Effect                            Estimate
+
+IMP_DEBTINC                          1.023
+IMP_DELINQ  0 vs 15                 <0.001
+IMP_DELINQ  1 vs 15                 <0.001
+IMP_DELINQ  2 vs 15                 <0.001
+IMP_DELINQ  3 vs 15                 <0.001
+IMP_DELINQ  4 vs 15                 <0.001
+IMP_DELINQ  5 vs 15                 <0.001
+IMP_DELINQ  6 vs 15                 <0.001
+IMP_DELINQ  7 vs 15                 <0.001
+IMP_DELINQ  8 vs 15                  4.511
+IMP_DELINQ  10 vs 15                 2.932
+IMP_DELINQ  11 vs 15                 5.322
+IMP_DELINQ  12 vs 15                 5.765
+IMP_DELINQ  13 vs 15                 9.182
+IMP_DEROG   0 vs 10                  0.118
+IMP_DEROG   1 vs 10                  0.249
+IMP_DEROG   2 vs 10                  0.345
+IMP_DEROG   3 vs 10                  1.254
+IMP_DEROG   4 vs 10                  0.490
+IMP_DEROG   5 vs 10                  0.175
+IMP_DEROG   6 vs 10                  0.369
+IMP_DEROG   7 vs 10                999.000
+IMP_DEROG   8 vs 10                999.000
+IMP_DEROG   9 vs 10                  0.413
+IMP_JOB     Mgr vs Self              1.028
+IMP_JOB     Office vs Self           0.588
+IMP_JOB     Other vs Self            1.017
+IMP_JOB     ProfExe vs Self          0.727
+IMP_JOB     Sales vs Self            2.379
+IMP_NINQ    0 vs 14                 <0.001
+IMP_NINQ    1 vs 14                 <0.001
+IMP_NINQ    2 vs 14                 <0.001
+IMP_NINQ    3 vs 14                 <0.001
+IMP_NINQ    4 vs 14                 <0.001
+IMP_NINQ    5 vs 14                 <0.001
+IMP_NINQ    6 vs 14                 <0.001
+IMP_NINQ    7 vs 14                 <0.001
+IMP_NINQ    8 vs 14                 <0.001
+IMP_NINQ    9 vs 14                 <0.001
+IMP_NINQ    10 vs 14                <0.001
+IMP_NINQ    11 vs 14                <0.001
+IMP_NINQ    12 vs 14                 0.627
+IMP_NINQ    13 vs 14                 1.509
+
+
+Step 6: Effect IMP_REASON entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Dual Quasi-Newton Optimization
+
+Dual Broyden - Fletcher - Goldfarb - Shanno Update (DBFGS)
+
+Parameter Estimates              45
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 136.99697885                                                       
+
+
+                                                                 Objective     Max Abs                Slope of
+                     Function         Active        Objective     Function    Gradient       Step       Search
+Iter     Restarts       Calls    Constraints         Function       Change     Element       Size    Direction
+
+   1            0           5              0             1234        254.5     74.6963      0.895       -603.7
+   2            0           7              0             1224      10.0401     14.7427      1.000      -17.211
+   3            0           9              0             1223       1.1022      0.8716      1.000       -2.028
+   4            0          11              0             1222       0.0967      1.5476      1.000       -0.146
+   5            0          15              0             1222       0.1061      2.2724      2.315      -0.0910
+   6            0          17              0             1222       0.1472      1.2009      3.307      -0.0802
+   7            0          20              0             1222       0.0479      0.4956      2.201      -0.0540
+   8            0          23              0             1222       0.0249      0.3408      1.596      -0.0320
+   9            0          26              0             1222      0.00881      0.2475      2.645      -0.0080
+  10            0          29              0             1222      0.00531      0.1258      1.782      -0.0062
+  11            0          32              0             1222      0.00237      0.0665      2.728      -0.0020
+  12            0          35              0             1222     0.000985      0.0423      1.704      -0.0012
+
+                                            Optimization Results
+
+Iterations                                         12  Function Calls                                     37
+Gradient Calls                                     16  Active Constraints                                  0
+Objective Function                       1222.0812202  Max Abs Gradient Element                 0.0423301583
+Slope of Search Direction                -0.001219124                                                       
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+NOTE: At least one element of the gradient is greater than 1e-3.
+
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2444.162       532.2377       44         <.0001
+
+
+          Type 3 Analysis of Effects
+ 
+                             Wald
+Effect           DF    Chi-Square    Pr > ChiSq
+
+IMP_DEBTINC       1       15.0661        0.0001
+IMP_DELINQ       13      182.0801        <.0001
+IMP_DEROG        10       69.4734        <.0001
+IMP_JOB           5       25.4677        0.0001
+IMP_NINQ         14       59.7076        <.0001
+IMP_REASON        1        8.9237        0.0028
+
+
+                                Analysis of Maximum Likelihood Estimates
+ 
+                                         Standard          Wald                  Standardized
+Parameter              DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept               1      9.5557     32.3880          0.09        0.7680                     999.000
+IMP_DEBTINC             1      0.0229     0.00590         15.07        0.0001          0.1331       1.023
+IMP_DELINQ  0           1     -6.3681     24.3713          0.07        0.7939                       0.002
+IMP_DELINQ  1           1     -5.5140     24.3715          0.05        0.8210                       0.004
+IMP_DELINQ  2           1     -5.2844     24.3720          0.05        0.8283                       0.005
+IMP_DELINQ  3           1     -4.3392     24.3724          0.03        0.8587                       0.013
+IMP_DELINQ  4           1     -4.2598     24.3732          0.03        0.8613                       0.014
+IMP_DELINQ  5           1     -3.2851     24.3775          0.02        0.8928                       0.037
+IMP_DELINQ  6           1     -3.0932     24.3788          0.02        0.8990                       0.045
+IMP_DELINQ  7           1     -3.1877     24.3827          0.02        0.8960                       0.041
+IMP_DELINQ  8           1      5.8233     86.2021          0.00        0.9461                     338.097
+IMP_DELINQ  10          1      5.7039       144.7          0.00        0.9686                     300.048
+IMP_DELINQ  11          1      6.2858       110.4          0.00        0.9546                     536.917
+IMP_DELINQ  12          1      6.3831       144.7          0.00        0.9648                     591.737
+IMP_DELINQ  13          1      6.8110       144.7          0.00        0.9625                     907.740
+IMP_DEROG   0           1     -2.8674     11.7738          0.06        0.8076                       0.057
+IMP_DEROG   1           1     -2.1187     11.7744          0.03        0.8572                       0.120
+IMP_DEROG   2           1     -1.7635     11.7756          0.02        0.8810                       0.171
+IMP_DEROG   3           1     -0.4881     11.7808          0.00        0.9669                       0.614
+IMP_DEROG   4           1     -1.3861     11.7885          0.01        0.9064                       0.250
+IMP_DEROG   5           1     -2.4229     11.7997          0.04        0.8373                       0.089
+IMP_DEROG   6           1     -1.6352     11.8275          0.02        0.8900                       0.195
+IMP_DEROG   7           1      6.5467     81.2083          0.01        0.9357                     696.946
+IMP_DEROG   8           1      8.4370     86.0230          0.01        0.9219                     999.000
+IMP_DEROG   9           1     -1.5338     11.8500          0.02        0.8970                       0.216
+IMP_JOB     Mgr         1      0.0377      0.1372          0.08        0.7834                       1.038
+IMP_JOB     Office      1     -0.5385      0.1420         14.39        0.0001                       0.584
+IMP_JOB     Other       1      0.0102      0.1015          0.01        0.9201                       1.010
+IMP_JOB     ProfExe     1     -0.3276      0.1280          6.56        0.0105                       0.721
+IMP_JOB     Sales       1      0.9323      0.2821         10.92        0.0010                       2.540
+IMP_NINQ    0           1     -3.2014     17.7870          0.03        0.8572                       0.041
+IMP_NINQ    1           1     -2.9776     17.7871          0.03        0.8671                       0.051
+IMP_NINQ    2           1     -2.5959     17.7873          0.02        0.8840                       0.075
+IMP_NINQ    3           1     -2.7291     17.7876          0.02        0.8781                       0.065
+IMP_NINQ    4           1     -2.1645     17.7885          0.01        0.9032                       0.115
+IMP_NINQ    5           1     -1.7023     17.7897          0.01        0.9238                       0.182
+IMP_NINQ    6           1     -1.4038     17.7915          0.01        0.9371                       0.246
+IMP_NINQ    7           1     -2.0131     17.7920          0.01        0.9099                       0.134
+IMP_NINQ    8           1     -1.8659     17.7957          0.01        0.9165                       0.155
+IMP_NINQ    9           1     -1.4593     17.8003          0.01        0.9347                       0.232
+IMP_NINQ    10          1     -2.4815     17.8006          0.02        0.8891                       0.084
+IMP_NINQ    11          1     -2.8485     17.8056          0.03        0.8729                       0.058
+IMP_NINQ    12          1      8.8078       144.5          0.00        0.9514                     999.000
+IMP_NINQ    13          1      9.6921       144.5          0.00        0.9465                     999.000
+IMP_REASON  DebtCon     1     -0.1695      0.0567          8.92        0.0028                       0.844
+
+
+           Odds Ratio Estimates
+                     
+                                     Point
+Effect                            Estimate
+
+IMP_DEBTINC                          1.023
+IMP_DELINQ  0 vs 15                 <0.001
+IMP_DELINQ  1 vs 15                 <0.001
+IMP_DELINQ  2 vs 15                 <0.001
+IMP_DELINQ  3 vs 15                 <0.001
+IMP_DELINQ  4 vs 15                 <0.001
+IMP_DELINQ  5 vs 15                 <0.001
+IMP_DELINQ  6 vs 15                 <0.001
+IMP_DELINQ  7 vs 15                 <0.001
+IMP_DELINQ  8 vs 15                  4.477
+IMP_DELINQ  10 vs 15                 3.973
+IMP_DELINQ  11 vs 15                 7.110
+IMP_DELINQ  12 vs 15                 7.835
+IMP_DELINQ  13 vs 15                12.020
+IMP_DEROG   0 vs 10                  0.123
+IMP_DEROG   1 vs 10                  0.259
+IMP_DEROG   2 vs 10                  0.369
+IMP_DEROG   3 vs 10                  1.323
+IMP_DEROG   4 vs 10                  0.539
+IMP_DEROG   5 vs 10                  0.191
+IMP_DEROG   6 vs 10                  0.420
+IMP_DEROG   7 vs 10                999.000
+IMP_DEROG   8 vs 10                999.000
+IMP_DEROG   9 vs 10                  0.465
+IMP_JOB     Mgr vs Self              1.164
+IMP_JOB     Office vs Self           0.654
+IMP_JOB     Other vs Self            1.132
+IMP_JOB     ProfExe vs Self          0.808
+IMP_JOB     Sales vs Self            2.847
+IMP_NINQ    0 vs 14                 <0.001
+IMP_NINQ    1 vs 14                 <0.001
+IMP_NINQ    2 vs 14                 <0.001
+IMP_NINQ    3 vs 14                 <0.001
+IMP_NINQ    4 vs 14                 <0.001
+IMP_NINQ    5 vs 14                 <0.001
+IMP_NINQ    6 vs 14                 <0.001
+IMP_NINQ    7 vs 14                 <0.001
+IMP_NINQ    8 vs 14                 <0.001
+IMP_NINQ    9 vs 14                 <0.001
+IMP_NINQ    10 vs 14                <0.001
+IMP_NINQ    11 vs 14                <0.001
+IMP_NINQ    12 vs 14                 0.874
+IMP_NINQ    13 vs 14                 2.115
+IMP_REASON  DebtCon vs HomeImp       0.713
+
+
+NOTE: No (additional) effects met the 0.05 significance level for entry into the model.
+
+
+                           Summary of Stepwise Selection
+ 
+              Effect               Number         Score          Wald
+    Step    Entered          DF        In    Chi-Square    Chi-Square    Pr > ChiSq
+
+       1    IMP_DELINQ       13         1      360.6021                      <.0001
+       2    IMP_DEROG        10         2      125.1705                      <.0001
+       3    IMP_NINQ         14         3       88.0157                      <.0001
+       4    IMP_DEBTINC       1         4       21.3206                      <.0001
+       5    IMP_JOB           5         5       24.9581                      0.0001
+       6    IMP_REASON        1         6        8.9703                      0.0027
+
+
+The selected model is the model trained in the last step (Step 6). It consists of the following effects:
+
+Intercept  IMP_DEBTINC  IMP_DELINQ  IMP_DEROG  IMP_JOB  IMP_NINQ  IMP_REASON  
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2444.162       532.2377       44         <.0001
+
+
+          Type 3 Analysis of Effects
+ 
+                             Wald
+Effect           DF    Chi-Square    Pr > ChiSq
+
+IMP_DEBTINC       1       15.0661        0.0001
+IMP_DELINQ       13      182.0801        <.0001
+IMP_DEROG        10       69.4734        <.0001
+IMP_JOB           5       25.4677        0.0001
+IMP_NINQ         14       59.7076        <.0001
+IMP_REASON        1        8.9237        0.0028
+
+
+                                Analysis of Maximum Likelihood Estimates
+ 
+                                         Standard          Wald                  Standardized
+Parameter              DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept               1      9.5557     32.3880          0.09        0.7680                     999.000
+IMP_DEBTINC             1      0.0229     0.00590         15.07        0.0001          0.1331       1.023
+IMP_DELINQ  0           1     -6.3681     24.3713          0.07        0.7939                       0.002
+IMP_DELINQ  1           1     -5.5140     24.3715          0.05        0.8210                       0.004
+IMP_DELINQ  2           1     -5.2844     24.3720          0.05        0.8283                       0.005
+IMP_DELINQ  3           1     -4.3392     24.3724          0.03        0.8587                       0.013
+IMP_DELINQ  4           1     -4.2598     24.3732          0.03        0.8613                       0.014
+IMP_DELINQ  5           1     -3.2851     24.3775          0.02        0.8928                       0.037
+IMP_DELINQ  6           1     -3.0932     24.3788          0.02        0.8990                       0.045
+IMP_DELINQ  7           1     -3.1877     24.3827          0.02        0.8960                       0.041
+IMP_DELINQ  8           1      5.8233     86.2021          0.00        0.9461                     338.097
+IMP_DELINQ  10          1      5.7039       144.7          0.00        0.9686                     300.048
+IMP_DELINQ  11          1      6.2858       110.4          0.00        0.9546                     536.917
+IMP_DELINQ  12          1      6.3831       144.7          0.00        0.9648                     591.737
+IMP_DELINQ  13          1      6.8110       144.7          0.00        0.9625                     907.740
+IMP_DEROG   0           1     -2.8674     11.7738          0.06        0.8076                       0.057
+IMP_DEROG   1           1     -2.1187     11.7744          0.03        0.8572                       0.120
+IMP_DEROG   2           1     -1.7635     11.7756          0.02        0.8810                       0.171
+IMP_DEROG   3           1     -0.4881     11.7808          0.00        0.9669                       0.614
+IMP_DEROG   4           1     -1.3861     11.7885          0.01        0.9064                       0.250
+IMP_DEROG   5           1     -2.4229     11.7997          0.04        0.8373                       0.089
+IMP_DEROG   6           1     -1.6352     11.8275          0.02        0.8900                       0.195
+IMP_DEROG   7           1      6.5467     81.2083          0.01        0.9357                     696.946
+IMP_DEROG   8           1      8.4370     86.0230          0.01        0.9219                     999.000
+IMP_DEROG   9           1     -1.5338     11.8500          0.02        0.8970                       0.216
+IMP_JOB     Mgr         1      0.0377      0.1372          0.08        0.7834                       1.038
+IMP_JOB     Office      1     -0.5385      0.1420         14.39        0.0001                       0.584
+IMP_JOB     Other       1      0.0102      0.1015          0.01        0.9201                       1.010
+IMP_JOB     ProfExe     1     -0.3276      0.1280          6.56        0.0105                       0.721
+IMP_JOB     Sales       1      0.9323      0.2821         10.92        0.0010                       2.540
+IMP_NINQ    0           1     -3.2014     17.7870          0.03        0.8572                       0.041
+IMP_NINQ    1           1     -2.9776     17.7871          0.03        0.8671                       0.051
+IMP_NINQ    2           1     -2.5959     17.7873          0.02        0.8840                       0.075
+IMP_NINQ    3           1     -2.7291     17.7876          0.02        0.8781                       0.065
+IMP_NINQ    4           1     -2.1645     17.7885          0.01        0.9032                       0.115
+IMP_NINQ    5           1     -1.7023     17.7897          0.01        0.9238                       0.182
+IMP_NINQ    6           1     -1.4038     17.7915          0.01        0.9371                       0.246
+IMP_NINQ    7           1     -2.0131     17.7920          0.01        0.9099                       0.134
+IMP_NINQ    8           1     -1.8659     17.7957          0.01        0.9165                       0.155
+IMP_NINQ    9           1     -1.4593     17.8003          0.01        0.9347                       0.232
+IMP_NINQ    10          1     -2.4815     17.8006          0.02        0.8891                       0.084
+IMP_NINQ    11          1     -2.8485     17.8056          0.03        0.8729                       0.058
+IMP_NINQ    12          1      8.8078       144.5          0.00        0.9514                     999.000
+IMP_NINQ    13          1      9.6921       144.5          0.00        0.9465                     999.000
+IMP_REASON  DebtCon     1     -0.1695      0.0567          8.92        0.0028                       0.844
+
+
+           Odds Ratio Estimates
+                     
+                                     Point
+Effect                            Estimate
+
+IMP_DEBTINC                          1.023
+IMP_DELINQ  0 vs 15                 <0.001
+IMP_DELINQ  1 vs 15                 <0.001
+IMP_DELINQ  2 vs 15                 <0.001
+IMP_DELINQ  3 vs 15                 <0.001
+IMP_DELINQ  4 vs 15                 <0.001
+IMP_DELINQ  5 vs 15                 <0.001
+IMP_DELINQ  6 vs 15                 <0.001
+IMP_DELINQ  7 vs 15                 <0.001
+IMP_DELINQ  8 vs 15                  4.477
+IMP_DELINQ  10 vs 15                 3.973
+IMP_DELINQ  11 vs 15                 7.110
+IMP_DELINQ  12 vs 15                 7.835
+IMP_DELINQ  13 vs 15                12.020
+IMP_DEROG   0 vs 10                  0.123
+IMP_DEROG   1 vs 10                  0.259
+IMP_DEROG   2 vs 10                  0.369
+IMP_DEROG   3 vs 10                  1.323
+IMP_DEROG   4 vs 10                  0.539
+IMP_DEROG   5 vs 10                  0.191
+IMP_DEROG   6 vs 10                  0.420
+IMP_DEROG   7 vs 10                999.000
+IMP_DEROG   8 vs 10                999.000
+IMP_DEROG   9 vs 10                  0.465
+IMP_JOB     Mgr vs Self              1.164
+IMP_JOB     Office vs Self           0.654
+IMP_JOB     Other vs Self            1.132
+IMP_JOB     ProfExe vs Self          0.808
+IMP_JOB     Sales vs Self            2.847
+IMP_NINQ    0 vs 14                 <0.001
+IMP_NINQ    1 vs 14                 <0.001
+IMP_NINQ    2 vs 14                 <0.001
+IMP_NINQ    3 vs 14                 <0.001
+IMP_NINQ    4 vs 14                 <0.001
+IMP_NINQ    5 vs 14                 <0.001
+IMP_NINQ    6 vs 14                 <0.001
+IMP_NINQ    7 vs 14                 <0.001
+IMP_NINQ    8 vs 14                 <0.001
+IMP_NINQ    9 vs 14                 <0.001
+IMP_NINQ    10 vs 14                <0.001
+IMP_NINQ    11 vs 14                <0.001
+IMP_NINQ    12 vs 14                 0.874
+IMP_NINQ    13 vs 14                 2.115
+IMP_REASON  DebtCon vs HomeImp       0.713

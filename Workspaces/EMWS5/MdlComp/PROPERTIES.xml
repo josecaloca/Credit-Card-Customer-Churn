@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6"
+ ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01"
+ AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" intervalViyaCriteria="DEFAULT"
+ classViyaCriteria="DEFAULT" SelectionTable="TEST" SelectionCriteria="_GAIN_" SelectionDepth="10"
+ NumberofBins="20" RecomputeAssess="N" TargetName="default" ModelId="Neural2" ModelDescription="Neural Network (2)"
+ ModelCriteria="Test: Gain" ForceRun="N" RunAction="Train" Component="ModelCompare"
+ RawCreateTime="1932573402.7" CreateTime="28MAR2021:17:56:43" RunId="c1c32546-55a9-44ea-81c9-b4bdd3bc3671"
+ StatisticUsed="_TGAIN_" TargetLabel="default">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES/>
+</_ROOT_>

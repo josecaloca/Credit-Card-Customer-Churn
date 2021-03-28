@@ -1,0 +1,15 @@
+*;
+* IMPUTE VARIABLE: JOB;
+*;
+length IMP_JOB $7;
+label IMP_JOB = 'Imputed JOB';
+IMP_JOB = JOB;
+IF JOB eq '' THEN DO;
+_random_ = DMRAN(12345);
+if _random_ <= 0.1275546159267 then IMP_JOB = 'Mgr';
+else if _random_ <= 0.3030303030303 then IMP_JOB = 'Office';
+else if _random_ <= 0.7276250880902 then IMP_JOB = 'Other';
+else if _random_ <= 0.94291754756871 then IMP_JOB = 'ProfExe';
+else if _random_ <= 0.96053558844256 then IMP_JOB = 'Sales';
+else IMP_JOB = 'Self';
+END;

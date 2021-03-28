@@ -1,0 +1,1334 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Resumen de variables
+
+          Nivel de     Número de
+ Rol       medida     ocurrencias
+
+INPUT     BINARY           1     
+INPUT     INTERVAL         7     
+INPUT     NOMINAL          4     
+TARGET    BINARY           1     
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Eventos del modelo
+
+                                 Número
+                    Nivel de       de
+Target    Evento     medida     niveles      Orden       Etiqueta
+
+ BAD        1        BINARY        2       Descending            
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variables predichas y de decisión
+
+Tipo         Variable    Etiqueta
+
+TARGET        BAD                        
+PREDICTED     P_BAD1     Predicted: BAD=1
+RESIDUAL      R_BAD1     Residual: BAD=1 
+PREDICTED     P_BAD0     Predicted: BAD=0
+RESIDUAL      R_BAD0     Residual: BAD=0 
+FROM          F_BAD      From: BAD       
+INTO          I_BAD      Into: BAD       
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+                Model Information
+
+Training Data Set              WORK.EM_DMREG.VIEW
+DMDB Catalog                   WORK.REG_DMDB     
+Target Variable                BAD               
+Target Measurement Level       Ordinal           
+Number of Target Categories    2                 
+Error                          MBernoulli        
+Link Function                  Logit             
+Number of Model Parameters     51                
+Number of Observations         1714              
+
+
+           Target Profile
+ 
+ Ordered                      Total
+   Value          BAD     Frequency
+
+       1            1           149
+       2            0          1565
+
+
+
+
+Stepwise Selection Procedure
+
+
+Step 0: Intercept entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               1
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       506.28053422
+Max Abs Gradient Element                 3.204936E-13                                                       
+
+                                            Optimization Results
+
+Iterations                                          0  Function Calls                                      3
+Hessian Calls                                       1  Active Constraints                                  0
+Objective Function                       506.28053422  Max Abs Gradient Element                 3.204936E-13
+Ridge                                               0  Actual Over Pred Change                             0
+
+Convergence criterion (ABSGCONV=0.00001) satisfied.                                               
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   1012.561        1012.561         0.0000        0          .    
+
+
+
+
+                               Analysis of Maximum Likelihood Estimates
+ 
+                                       Standard          Wald                  Standardized
+Parameter            DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept             1     -2.3517      0.0857        752.41        <.0001                       0.095
+
+
+
+
+Step 1: Effect DELINQ entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              10
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       506.28053422
+Max Abs Gradient Element                  70.44924154                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0        460.07140      46.2091     22.1462         0        0.479
+   2            0           3              0        453.64792       6.4235      1.4252         0        1.039
+   3            0           4              0        453.59930       0.0486      0.0236         0        1.014
+   4            0           5              0        453.59916     0.000144    0.000077         0        1.226
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       453.59915518  Max Abs Gradient Element                 0.0000765836
+Ridge                                               0  Actual Over Pred Change                  1.2257281009
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   1012.561         907.198       105.3628        9         <.0001
+
+
+         Type 3 Analysis of Effects
+ 
+                          Wald
+Effect        DF    Chi-Square    Pr > ChiSq
+
+DELINQ         8     4835.3336        <.0001
+
+
+                               Analysis of Maximum Likelihood Estimates
+ 
+                                       Standard          Wald                  Standardized
+Parameter            DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept             1     12.1518      0.1095      12323.82        <.0001                     999.000
+DELINQ    0           1    -14.8636           .           .           .                   .       0.000
+DELINQ    1           1    -14.0781      0.2531       3093.88        <.0001                       0.000
+DELINQ    2           1    -13.3414      0.3243       1692.76        <.0001                       0.000
+DELINQ    3           1    -13.2504      0.4500        867.21        <.0001                       0.000
+DELINQ    4           1    -12.9991      0.6987        346.14        <.0001                       0.000
+DELINQ    5           1    -8.46E-8       251.3          0.00        1.0000                       1.000
+DELINQ    6           1    -8.45E-8       217.6          0.00        1.0000                       1.000
+DELINQ    7           1    -8.48E-8       194.6          0.00        1.0000                       1.000
+DELINQ    8           1    -8.54E-8       435.2          0.00        1.0000                       1.000
+DELINQ    10          0           0           .           .           .                   .        .   
+DELINQ    11          0           0           .           .           .                   .        .   
+DELINQ    12          0           0           .           .           .                   .        .   
+DELINQ    13          0           0           .           .           .                   .        .   
+
+NOTE: There are no valid observations for DELINQ=11.
+
+NOTE: There are no valid observations for DELINQ=12.
+
+NOTE: There are no valid observations for DELINQ=13.
+
+NOTE: There are no valid observations for DELINQ=15.
+WARNING: Since there are no valid observations for DELINQ=15, the design variables for DELINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+
+         Odds Ratio Estimates
+                   
+                                 Point
+Effect                        Estimate
+
+DELINQ  0 vs 10                 <0.001
+DELINQ  1 vs 10                 <0.001
+DELINQ  2 vs 10                 <0.001
+DELINQ  3 vs 10                 <0.001
+DELINQ  4 vs 10                 <0.001
+DELINQ  5 vs 10                  1.000
+DELINQ  6 vs 10                  1.000
+DELINQ  7 vs 10                  1.000
+DELINQ  8 vs 10                  1.000
+DELINQ  11 vs 10                  .   
+DELINQ  12 vs 10                  .   
+DELINQ  13 vs 10                  .   
+
+
+Step 2: Effect DEBTINC entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              11
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       506.28053422
+Max Abs Gradient Element                  70.44924154                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0        431.34809      74.9324     39.0985         0        0.589
+   2            0           3              0        421.48332       9.8648      3.5312         0        1.061
+   3            0           4              0        421.32470       0.1586      0.0957         0        1.023
+   4            0           5              0        421.32413     0.000576    0.000214         0        1.170
+   5            0           6              0        421.32398     0.000147    0.000086         0        1.264
+
+                                            Optimization Results
+
+Iterations                                          5  Function Calls                                      8
+Hessian Calls                                       6  Active Constraints                                  0
+Objective Function                       421.32398059  Max Abs Gradient Element                 0.0000856683
+Ridge                                               0  Actual Over Pred Change                  1.2642301355
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   1012.561         842.648       169.9131       10         <.0001
+
+
+         Type 3 Analysis of Effects
+ 
+                          Wald
+Effect        DF    Chi-Square    Pr > ChiSq
+
+DEBTINC        1       48.4702        <.0001
+DELINQ         8     5125.2620        <.0001
+
+
+                               Analysis of Maximum Likelihood Estimates
+ 
+                                       Standard          Wald                  Standardized
+Parameter            DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept             1      9.4989      0.5617        285.94        <.0001                     999.000
+DEBTINC               1      0.1022      0.0147         48.47        <.0001          0.4523       1.108
+DELINQ    0           1    -15.8919           .           .           .                   .       0.000
+DELINQ    1           1    -15.0321      0.2607       3324.92        <.0001                       0.000
+DELINQ    2           1    -14.4463      0.3384       1822.51        <.0001                       0.000
+DELINQ    3           1    -14.1804      0.4978        811.58        <.0001                       0.000
+DELINQ    4           1    -13.5689      0.7304        345.08        <.0001                       0.000
+DELINQ    5           1      0.4384       324.4          0.00        0.9989                       1.550
+DELINQ    6           1     -3.1843       126.8          0.00        0.9800                       0.041
+DELINQ    7           1     -0.2865       315.5          0.00        0.9993                       0.751
+DELINQ    8           1     -0.0371       717.6          0.00        1.0000                       0.964
+DELINQ    10          0           0           .           .           .                   .        .   
+DELINQ    11          0           0           .           .           .                   .        .   
+DELINQ    12          0           0           .           .           .                   .        .   
+DELINQ    13          0           0           .           .           .                   .        .   
+
+NOTE: There are no valid observations for DELINQ=11.
+
+NOTE: There are no valid observations for DELINQ=12.
+
+NOTE: There are no valid observations for DELINQ=13.
+
+NOTE: There are no valid observations for DELINQ=15.
+WARNING: Since there are no valid observations for DELINQ=15, the design variables for DELINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+
+         Odds Ratio Estimates
+                   
+                                 Point
+Effect                        Estimate
+
+DEBTINC                          1.108
+DELINQ  0 vs 10                 <0.001
+DELINQ  1 vs 10                 <0.001
+DELINQ  2 vs 10                 <0.001
+DELINQ  3 vs 10                 <0.001
+DELINQ  4 vs 10                 <0.001
+DELINQ  5 vs 10                  1.550
+DELINQ  6 vs 10                  0.041
+DELINQ  7 vs 10                  0.751
+DELINQ  8 vs 10                  0.964
+DELINQ  11 vs 10                  .   
+DELINQ  12 vs 10                  .   
+DELINQ  13 vs 10                  .   
+
+
+Step 3: Effect DEROG entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              20
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       506.28053422
+Max Abs Gradient Element                  70.44924154                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0        411.17581      95.1047     45.1892         0        0.560
+   2            0           3              0        397.02029      14.1555      4.0526         0        1.051
+   3            0           4              0        396.77231       0.2480      0.1566         0        1.030
+   4            0           5              0        396.77105      0.00125    0.000535         0        1.148
+   5            0           6              0        396.77077     0.000283    0.000165         0        1.264
+
+                                            Optimization Results
+
+Iterations                                          5  Function Calls                                      8
+Hessian Calls                                       6  Active Constraints                                  0
+Objective Function                       396.77076928  Max Abs Gradient Element                 0.0001647201
+Ridge                                               0  Actual Over Pred Change                  1.2642197613
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   1012.561         793.542       219.0195       19         <.0001
+
+
+         Type 3 Analysis of Effects
+ 
+                          Wald
+Effect        DF    Chi-Square    Pr > ChiSq
+
+DEBTINC        1       48.9878        <.0001
+DELINQ         8     4814.1162        <.0001
+DEROG          8     1017.2016        <.0001
+
+
+                               Analysis of Maximum Likelihood Estimates
+ 
+                                       Standard          Wald                  Standardized
+Parameter            DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept             1     19.0541      0.5715       1111.65        <.0001                     999.000
+DEBTINC               1      0.1039      0.0149         48.99        <.0001          0.4602       1.110
+DELINQ    0           1    -16.0489           .           .           .                   .       0.000
+DELINQ    1           1    -15.2300      0.2700       3180.93        <.0001                       0.000
+DELINQ    2           1    -14.7653      0.3649       1637.58        <.0001                       0.000
+DELINQ    3           1    -14.6890      0.5597        688.80        <.0001                       0.000
+DELINQ    4           1    -13.7032      0.7497        334.10        <.0001                       0.000
+DELINQ    5           1     -0.8929       219.6          0.00        0.9968                       0.409
+DELINQ    6           1     -3.8007     93.4692          0.00        0.9676                       0.022
+DELINQ    7           1     -0.8062       267.5          0.00        0.9976                       0.447
+DELINQ    8           1     -0.0377       717.6          0.00        1.0000                       0.963
+DELINQ    10          0           0           .           .           .                   .        .   
+DELINQ    11          0           0           .           .           .                   .        .   
+DELINQ    12          0           0           .           .           .                   .        .   
+DELINQ    13          0           0           .           .           .                   .        .   
+DEROG     0           1     -9.6192           .           .           .                   .       0.000
+DEROG     1           1     -9.0831      0.3491        677.02        <.0001                       0.000
+DEROG     2           1     -7.7656      0.4101        358.51        <.0001                       0.000
+DEROG     3           1     -7.2641      0.8322         76.20        <.0001                       0.001
+DEROG     4           1      4.1591       655.1          0.00        0.9949                      64.015
+DEROG     5           0           0           .           .           .                   .        .   
+DEROG     6           1      5.8728       655.1          0.00        0.9928                     355.230
+DEROG     7           1      5.4223       655.1          0.00        0.9934                     226.399
+DEROG     8           1      4.3474       655.1          0.00        0.9947                      77.274
+DEROG     9           1      6.6055       655.1          0.00        0.9920                     739.166
+
+NOTE: There are no valid observations for DELINQ=11.
+
+NOTE: There are no valid observations for DELINQ=12.
+
+NOTE: There are no valid observations for DELINQ=13.
+
+NOTE: There are no valid observations for DELINQ=15.
+WARNING: Since there are no valid observations for DELINQ=15, the design variables for DELINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+NOTE: There are no valid observations for DEROG=5.
+
+
+         Odds Ratio Estimates
+                   
+                                 Point
+Effect                        Estimate
+
+DEBTINC                          1.110
+DELINQ  0 vs 10                 <0.001
+DELINQ  1 vs 10                 <0.001
+DELINQ  2 vs 10                 <0.001
+DELINQ  3 vs 10                 <0.001
+DELINQ  4 vs 10                 <0.001
+DELINQ  5 vs 10                  0.409
+DELINQ  6 vs 10                  0.022
+DELINQ  7 vs 10                  0.447
+DELINQ  8 vs 10                  0.963
+DELINQ  11 vs 10                  .   
+DELINQ  12 vs 10                  .   
+DELINQ  13 vs 10                  .   
+DEROG   0 vs 10                 <0.001
+DEROG   1 vs 10                 <0.001
+DEROG   2 vs 10                 <0.001
+DEROG   3 vs 10                 <0.001
+DEROG   4 vs 10                  0.042
+DEROG   5 vs 10                   .   
+DEROG   6 vs 10                  0.234
+DEROG   7 vs 10                  0.149
+DEROG   8 vs 10                  0.051
+DEROG   9 vs 10                  0.487
+
+
+Step 4: Effect NINQ entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              32
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       506.28053422
+Max Abs Gradient Element                  70.44924154                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0        403.30542        103.0     55.9564         0        0.537
+   2            0           3              0        381.70339      21.6020      4.9198         0        0.937
+   3            0           4              0        380.61844       1.0850      0.4849         0        0.978
+   4            0           5              0        380.59929       0.0191     0.00874         0        1.144
+   5            0           6              0        380.59512      0.00417     0.00241         0        1.264
+   6            0           7              0        380.59359      0.00153    0.000885         0        1.264
+   7            0           8              0        380.59303     0.000563    0.000325         0        1.264
+   8            0           9              0        380.59282     0.000207    0.000120         0        1.264
+
+                                            Optimization Results
+
+Iterations                                          8  Function Calls                                     11
+Hessian Calls                                       9  Active Constraints                                  0
+Objective Function                       380.59282293  Max Abs Gradient Element                 0.0001197153
+Ridge                                               0  Actual Over Pred Change                  1.2642318986
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   1012.561         761.186       251.3754       31         <.0001
+
+
+         Type 3 Analysis of Effects
+ 
+                          Wald
+Effect        DF    Chi-Square    Pr > ChiSq
+
+DEBTINC        1       44.2987        <.0001
+DELINQ         8     6653.6431        <.0001
+DEROG          8     1448.7456        <.0001
+NINQ          11     8472.0869        <.0001
+
+
+                               Analysis of Maximum Likelihood Estimates
+ 
+                                       Standard          Wald                  Standardized
+Parameter            DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept             1     43.9959      0.5821       5713.05        <.0001                     999.000
+DEBTINC               1      0.1001      0.0150         44.30        <.0001          0.4432       1.105
+DELINQ    0           1    -19.4217           .           .           .                   .       0.000
+DELINQ    1           1    -18.5140      0.2768       4473.07        <.0001                       0.000
+DELINQ    2           1    -17.9615      0.3708       2346.23        <.0001                       0.000
+DELINQ    3           1    -17.8574      0.5659        995.87        <.0001                       0.000
+DELINQ    4           1    -16.9077      0.7572        498.56        <.0001                       0.000
+DELINQ    5           1     -0.9202       971.7          0.00        0.9992                       0.398
+DELINQ    6           1     -4.0971       385.0          0.00        0.9915                       0.017
+DELINQ    7           1     -1.3154      1087.4          0.00        0.9990                       0.268
+DELINQ    8           1     -0.2234      3216.1          0.00        0.9999                       0.800
+DELINQ    10          0           0           .           .           .                   .        .   
+DELINQ    11          0           0           .           .           .                   .        .   
+DELINQ    12          0           0           .           .           .                   .        .   
+DELINQ    13          0           0           .           .           .                   .        .   
+DEROG     0           1    -11.7875           .           .           .                   .       0.000
+DEROG     1           1    -11.4702      0.3706        957.98        <.0001                       0.000
+DEROG     2           1    -10.1726      0.4417        530.47        <.0001                       0.000
+DEROG     3           1     -9.3682      0.8581        119.18        <.0001                       0.000
+DEROG     4           1      2.9411      2935.9          0.00        0.9992                      18.936
+DEROG     5           0           0           .           .           .                   .        .   
+DEROG     6           1      6.5902      2935.9          0.00        0.9982                     727.936
+DEROG     7           1     13.3962      2937.3          0.00        0.9964                     999.000
+DEROG     8           1      5.3228      2935.9          0.00        0.9986                     204.961
+DEROG     9           1      6.2391      2935.9          0.00        0.9983                     512.405
+NINQ      0           1    -19.4487           .           .           .                   .       0.000
+NINQ      1           1    -19.6358      0.2755       5080.94        <.0001                       0.000
+NINQ      2           1    -19.1281      0.2943       4223.99        <.0001                       0.000
+NINQ      3           1    -19.0746      0.3314       3312.11        <.0001                       0.000
+NINQ      4           1    -18.3647      0.4727       1509.68        <.0001                       0.000
+NINQ      5           1    -18.0714      0.8781        423.50        <.0001                       0.000
+NINQ      6           1    -17.1232      0.7773        485.34        <.0001                       0.000
+NINQ      7           1    -17.3532      0.9059        366.98        <.0001                       0.000
+NINQ      8           1    -17.5105      0.8701        405.03        <.0001                       0.000
+NINQ      9           1    -16.9211      1.2764        175.75        <.0001                       0.000
+NINQ      10          1    -26.6226       109.5          0.06        0.8080                       0.000
+NINQ      11          1    -26.6059       190.2          0.02        0.8888                       0.000
+NINQ      12          0           0           .           .           .                   .        .   
+NINQ      13          0           0           .           .           .                   .        .   
+
+NOTE: There are no valid observations for DELINQ=11.
+
+NOTE: There are no valid observations for DELINQ=12.
+
+NOTE: There are no valid observations for DELINQ=13.
+
+NOTE: There are no valid observations for DELINQ=15.
+WARNING: Since there are no valid observations for DELINQ=15, the design variables for DELINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+NOTE: There are no valid observations for DEROG=5.
+
+NOTE: There are no valid observations for NINQ=12.
+
+NOTE: There are no valid observations for NINQ=14.
+WARNING: Since there are no valid observations for NINQ=14, the design variables for NINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+
+         Odds Ratio Estimates
+                   
+                                 Point
+Effect                        Estimate
+
+DEBTINC                          1.105
+DELINQ  0 vs 10                 <0.001
+DELINQ  1 vs 10                 <0.001
+DELINQ  2 vs 10                 <0.001
+DELINQ  3 vs 10                 <0.001
+DELINQ  4 vs 10                 <0.001
+DELINQ  5 vs 10                  0.398
+DELINQ  6 vs 10                  0.017
+DELINQ  7 vs 10                  0.268
+DELINQ  8 vs 10                  0.800
+DELINQ  11 vs 10                  .   
+DELINQ  12 vs 10                  .   
+DELINQ  13 vs 10                  .   
+DEROG   0 vs 10                 <0.001
+DEROG   1 vs 10                 <0.001
+DEROG   2 vs 10                 <0.001
+DEROG   3 vs 10                 <0.001
+DEROG   4 vs 10                  0.005
+DEROG   5 vs 10                   .   
+DEROG   6 vs 10                  0.179
+DEROG   7 vs 10                161.909
+DEROG   8 vs 10                  0.050
+DEROG   9 vs 10                  0.126
+NINQ    0 vs 13                 <0.001
+NINQ    1 vs 13                 <0.001
+NINQ    2 vs 13                 <0.001
+NINQ    3 vs 13                 <0.001
+NINQ    4 vs 13                 <0.001
+NINQ    5 vs 13                 <0.001
+NINQ    6 vs 13                 <0.001
+NINQ    7 vs 13                 <0.001
+NINQ    8 vs 13                 <0.001
+NINQ    9 vs 13                 <0.001
+NINQ    10 vs 13                <0.001
+NINQ    11 vs 13                <0.001
+NINQ    12 vs 13                  .   
+
+
+Step 5: Effect CLAGE entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              33
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       506.28053422
+Max Abs Gradient Element                  70.44924154                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0        399.61474        106.7     57.9812         0        0.549
+   2            0           3              0        376.09402      23.5207      6.1383         0        0.937
+   3            0           4              0        374.62560       1.4684      0.7066         0        0.967
+   4            0           5              0        374.59799       0.0276      0.0108         0        1.099
+   5            0           6              0        374.59373      0.00425     0.00245         0        1.264
+   6            0           7              0        374.59217      0.00156    0.000902         0        1.264
+   7            0           8              0        374.59160     0.000574    0.000332         0        1.264
+   8            0           9              0        374.59139     0.000211    0.000122         0        1.264
+
+                                            Optimization Results
+
+Iterations                                          8  Function Calls                                     11
+Hessian Calls                                       9  Active Constraints                                  0
+Objective Function                       374.59138851  Max Abs Gradient Element                 0.0001220783
+Ridge                                               0  Actual Over Pred Change                   1.264230866
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   1012.561         749.183       263.3783       32         <.0001
+
+
+         Type 3 Analysis of Effects
+ 
+                          Wald
+Effect        DF    Chi-Square    Pr > ChiSq
+
+CLAGE          1       11.0982        0.0009
+DEBTINC        1       44.8863        <.0001
+DELINQ         8     6670.2859        <.0001
+DEROG          8     1467.7341        <.0001
+NINQ          11     8048.8763        <.0001
+
+
+                               Analysis of Maximum Likelihood Estimates
+ 
+                                       Standard          Wald                  Standardized
+Parameter            DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept             1     44.5141      0.6214       5131.85        <.0001                     999.000
+CLAGE                 1    -0.00503     0.00151         11.10        0.0009         -0.2313       0.995
+DEBTINC               1      0.1022      0.0153         44.89        <.0001          0.4527       1.108
+DELINQ    0           1    -19.5519           .           .           .                   .       0.000
+DELINQ    1           1    -18.6174      0.2790       4451.28        <.0001                       0.000
+DELINQ    2           1    -18.1600      0.3708       2398.54        <.0001                       0.000
+DELINQ    3           1    -17.9355      0.5723        982.13        <.0001                       0.000
+DELINQ    4           1    -16.8312      0.7600        490.49        <.0001                       0.000
+DELINQ    5           1     -0.7735       939.9          0.00        0.9993                       0.461
+DELINQ    6           1     -4.1936       386.2          0.00        0.9913                       0.015
+DELINQ    7           1     -1.3906      1120.6          0.00        0.9990                       0.249
+DELINQ    8           1     -0.6150      3216.1          0.00        0.9998                       0.541
+DELINQ    10          0           0           .           .           .                   .        .   
+DELINQ    11          0           0           .           .           .                   .        .   
+DELINQ    12          0           0           .           .           .                   .        .   
+DELINQ    13          0           0           .           .           .                   .        .   
+DEROG     0           1    -11.7572           .           .           .                   .       0.000
+DEROG     1           1    -11.4073      0.3685        958.37        <.0001                       0.000
+DEROG     2           1    -10.2372      0.4383        545.42        <.0001                       0.000
+DEROG     3           1     -9.4171      0.8320        128.10        <.0001                       0.000
+DEROG     4           1      2.9396      2935.9          0.00        0.9992                      18.908
+DEROG     5           0           0           .           .           .                   .        .   
+DEROG     6           1      6.6922      2935.9          0.00        0.9982                     806.134
+DEROG     7           1     13.6748      2937.2          0.00        0.9963                     999.000
+DEROG     8           1      5.5328      2935.9          0.00        0.9985                     252.855
+DEROG     9           1      5.5413      2935.9          0.00        0.9985                     255.008
+NINQ      0           1    -19.0654           .           .           .                   .       0.000
+NINQ      1           1    -19.2922      0.2782       4808.57        <.0001                       0.000
+NINQ      2           1    -18.8080      0.2963       4030.27        <.0001                       0.000
+NINQ      3           1    -18.7002      0.3324       3164.46        <.0001                       0.000
+NINQ      4           1    -17.9897      0.4721       1452.34        <.0001                       0.000
+NINQ      5           1    -17.6336      0.8827        399.06        <.0001                       0.000
+NINQ      6           1    -17.2057      0.7891        475.42        <.0001                       0.000
+NINQ      7           1    -17.0915      0.8759        380.75        <.0001                       0.000
+NINQ      8           1    -17.1587      0.8714        387.71        <.0001                       0.000
+NINQ      9           1    -17.2331      1.2780        181.84        <.0001                       0.000
+NINQ      10          1    -26.7016       108.0          0.06        0.8047                       0.000
+NINQ      11          1    -25.8661       190.2          0.02        0.8919                       0.000
+NINQ      12          0           0           .           .           .                   .        .   
+NINQ      13          0           0           .           .           .                   .        .   
+
+NOTE: There are no valid observations for DELINQ=11.
+
+NOTE: There are no valid observations for DELINQ=12.
+
+NOTE: There are no valid observations for DELINQ=13.
+
+NOTE: There are no valid observations for DELINQ=15.
+WARNING: Since there are no valid observations for DELINQ=15, the design variables for DELINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+NOTE: There are no valid observations for DEROG=5.
+
+NOTE: There are no valid observations for NINQ=12.
+
+NOTE: There are no valid observations for NINQ=14.
+WARNING: Since there are no valid observations for NINQ=14, the design variables for NINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+
+         Odds Ratio Estimates
+                   
+                                 Point
+Effect                        Estimate
+
+CLAGE                            0.995
+DEBTINC                          1.108
+DELINQ  0 vs 10                 <0.001
+DELINQ  1 vs 10                 <0.001
+DELINQ  2 vs 10                 <0.001
+DELINQ  3 vs 10                 <0.001
+DELINQ  4 vs 10                 <0.001
+DELINQ  5 vs 10                  0.461
+DELINQ  6 vs 10                  0.015
+DELINQ  7 vs 10                  0.249
+DELINQ  8 vs 10                  0.541
+DELINQ  11 vs 10                  .   
+DELINQ  12 vs 10                  .   
+DELINQ  13 vs 10                  .   
+DEROG   0 vs 10                 <0.001
+DEROG   1 vs 10                 <0.001
+DEROG   2 vs 10                 <0.001
+DEROG   3 vs 10                 <0.001
+DEROG   4 vs 10                  0.004
+DEROG   5 vs 10                   .   
+DEROG   6 vs 10                  0.175
+DEROG   7 vs 10                188.072
+DEROG   8 vs 10                  0.055
+DEROG   9 vs 10                  0.055
+NINQ    0 vs 13                 <0.001
+NINQ    1 vs 13                 <0.001
+NINQ    2 vs 13                 <0.001
+NINQ    3 vs 13                 <0.001
+NINQ    4 vs 13                 <0.001
+NINQ    5 vs 13                 <0.001
+NINQ    6 vs 13                 <0.001
+NINQ    7 vs 13                 <0.001
+NINQ    8 vs 13                 <0.001
+NINQ    9 vs 13                 <0.001
+NINQ    10 vs 13                <0.001
+NINQ    11 vs 13                <0.001
+NINQ    12 vs 13                  .   
+
+
+Step 6: Effect LOAN entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              34
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       506.28053422
+Max Abs Gradient Element                  70.44924154                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0        396.23698        110.0     59.9104         0        0.557
+   2            0           3              0        371.94910      24.2879      7.0550         0        0.930
+   3            0           4              0        370.25284       1.6963      0.8969         0        0.930
+   4            0           5              0        370.19954       0.0533      0.0170         0        1.055
+   5            0           6              0        370.19527      0.00427     0.00246         0        1.263
+   6            0           7              0        370.19370      0.00157    0.000905         0        1.264
+   7            0           8              0        370.19313     0.000576    0.000333         0        1.264
+   8            0           9              0        370.19292     0.000212    0.000123         0        1.264
+
+                                            Optimization Results
+
+Iterations                                          8  Function Calls                                     11
+Hessian Calls                                       9  Active Constraints                                  0
+Objective Function                       370.19291604  Max Abs Gradient Element                 0.0001225065
+Ridge                                               0  Actual Over Pred Change                  1.2642306063
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   1012.561         740.386       272.1752       33         <.0001
+
+
+         Type 3 Analysis of Effects
+ 
+                          Wald
+Effect        DF    Chi-Square    Pr > ChiSq
+
+CLAGE          1        8.9182        0.0028
+DEBTINC        1       49.2500        <.0001
+DELINQ         8     6767.7201        <.0001
+DEROG          8     1470.2901        <.0001
+LOAN           1        7.5672        0.0059
+NINQ          11     8080.0969        <.0001
+
+
+                               Analysis of Maximum Likelihood Estimates
+ 
+                                       Standard          Wald                  Standardized
+Parameter            DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept             1     45.0354      0.6280       5143.10        <.0001                     999.000
+CLAGE                 1    -0.00449     0.00150          8.92        0.0028         -0.2064       0.996
+DEBTINC               1      0.1109      0.0158         49.25        <.0001          0.4912       1.117
+DELINQ    0           1    -19.7692           .           .           .                   .       0.000
+DELINQ    1           1    -18.7933      0.2798       4510.98        <.0001                       0.000
+DELINQ    2           1    -18.4632      0.3745       2430.17        <.0001                       0.000
+DELINQ    3           1    -18.3124      0.5820        990.00        <.0001                       0.000
+DELINQ    4           1    -17.1857      0.7540        519.47        <.0001                       0.000
+DELINQ    5           1     -0.7961       955.3          0.00        0.9993                       0.451
+DELINQ    6           1     -4.7356       395.2          0.00        0.9904                       0.009
+DELINQ    7           1     -1.5126      1128.4          0.00        0.9989                       0.220
+DELINQ    8           1     -1.0569      3216.1          0.00        0.9997                       0.348
+DELINQ    10          0           0           .           .           .                   .        .   
+DELINQ    11          0           0           .           .           .                   .        .   
+DELINQ    12          0           0           .           .           .                   .        .   
+DELINQ    13          0           0           .           .           .                   .        .   
+DEROG     0           1    -11.7584           .           .           .                   .       0.000
+DEROG     1           1    -11.3978      0.3685        956.64        <.0001                       0.000
+DEROG     2           1    -10.1920      0.4356        547.56        <.0001                       0.000
+DEROG     3           1     -9.5017      0.8488        125.33        <.0001                       0.000
+DEROG     4           1      2.7657      2935.9          0.00        0.9992                      15.891
+DEROG     5           0           0           .           .           .                   .        .   
+DEROG     6           1      6.6314      2935.9          0.00        0.9982                     758.537
+DEROG     7           1     14.0240      2937.2          0.00        0.9962                     999.000
+DEROG     8           1      5.2427      2935.9          0.00        0.9986                     189.177
+DEROG     9           1      5.7285      2935.9          0.00        0.9984                     307.518
+LOAN                  1    -0.00003    0.000011          7.57        0.0059         -0.1949       1.000
+NINQ      0           1    -19.2098           .           .           .                   .       0.000
+NINQ      1           1    -19.4437      0.2791       4854.71        <.0001                       0.000
+NINQ      2           1    -18.9687      0.2989       4027.17        <.0001                       0.000
+NINQ      3           1    -18.8648      0.3336       3197.25        <.0001                       0.000
+NINQ      4           1    -18.1599      0.4701       1492.18        <.0001                       0.000
+NINQ      5           1    -17.8103      0.8746        414.66        <.0001                       0.000
+NINQ      6           1    -17.1950      0.8015        460.31        <.0001                       0.000
+NINQ      7           1    -16.7629      0.8707        370.66        <.0001                       0.000
+NINQ      8           1    -16.9027      0.9261        333.10        <.0001                       0.000
+NINQ      9           1    -17.5334      1.2794        187.81        <.0001                       0.000
+NINQ      10          1    -27.0533       107.5          0.06        0.8013                       0.000
+NINQ      11          1    -26.1056       190.2          0.02        0.8909                       0.000
+NINQ      12          0           0           .           .           .                   .        .   
+NINQ      13          0           0           .           .           .                   .        .   
+
+NOTE: There are no valid observations for DELINQ=11.
+
+NOTE: There are no valid observations for DELINQ=12.
+
+NOTE: There are no valid observations for DELINQ=13.
+
+NOTE: There are no valid observations for DELINQ=15.
+WARNING: Since there are no valid observations for DELINQ=15, the design variables for DELINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+NOTE: There are no valid observations for DEROG=5.
+
+NOTE: There are no valid observations for NINQ=12.
+
+NOTE: There are no valid observations for NINQ=14.
+WARNING: Since there are no valid observations for NINQ=14, the design variables for NINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+
+         Odds Ratio Estimates
+                   
+                                 Point
+Effect                        Estimate
+
+CLAGE                            0.996
+DEBTINC                          1.117
+DELINQ  0 vs 10                 <0.001
+DELINQ  1 vs 10                 <0.001
+DELINQ  2 vs 10                 <0.001
+DELINQ  3 vs 10                 <0.001
+DELINQ  4 vs 10                 <0.001
+DELINQ  5 vs 10                  0.451
+DELINQ  6 vs 10                  0.009
+DELINQ  7 vs 10                  0.220
+DELINQ  8 vs 10                  0.348
+DELINQ  11 vs 10                  .   
+DELINQ  12 vs 10                  .   
+DELINQ  13 vs 10                  .   
+DEROG   0 vs 10                 <0.001
+DEROG   1 vs 10                 <0.001
+DEROG   2 vs 10                 <0.001
+DEROG   3 vs 10                 <0.001
+DEROG   4 vs 10                  0.003
+DEROG   5 vs 10                   .   
+DEROG   6 vs 10                  0.161
+DEROG   7 vs 10                261.518
+DEROG   8 vs 10                  0.040
+DEROG   9 vs 10                  0.065
+LOAN                             1.000
+NINQ    0 vs 13                 <0.001
+NINQ    1 vs 13                 <0.001
+NINQ    2 vs 13                 <0.001
+NINQ    3 vs 13                 <0.001
+NINQ    4 vs 13                 <0.001
+NINQ    5 vs 13                 <0.001
+NINQ    6 vs 13                 <0.001
+NINQ    7 vs 13                 <0.001
+NINQ    8 vs 13                 <0.001
+NINQ    9 vs 13                 <0.001
+NINQ    10 vs 13                <0.001
+NINQ    11 vs 13                <0.001
+NINQ    12 vs 13                  .   
+
+
+Step 7: Effect CLNO entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates              35
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       506.28053422
+Max Abs Gradient Element                  70.44924154                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0        394.05204        112.2     61.5523         0        0.561
+   2            0           3              0        369.16539      24.8867      7.1144         0        0.940
+   3            0           4              0        367.48498       1.6804      0.8454         0        0.957
+   4            0           5              0        367.44571       0.0393      0.0143         0        1.073
+   5            0           6              0        367.44134      0.00437     0.00252         0        1.264
+   6            0           7              0        367.43973      0.00161    0.000928         0        1.264
+   7            0           8              0        367.43914     0.000590    0.000341         0        1.264
+   8            0           9              0        367.43892     0.000217    0.000126         0        1.264
+
+                                            Optimization Results
+
+Iterations                                          8  Function Calls                                     11
+Hessian Calls                                       9  Active Constraints                                  0
+Objective Function                       367.43892341  Max Abs Gradient Element                 0.0001255563
+Ridge                                               0  Actual Over Pred Change                   1.264230102
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   1012.561         734.878       277.6832       34         <.0001
+
+
+         Type 3 Analysis of Effects
+ 
+                          Wald
+Effect        DF    Chi-Square    Pr > ChiSq
+
+CLAGE          1        6.5680        0.0104
+CLNO           1        5.3090        0.0212
+DEBTINC        1       50.8549        <.0001
+DELINQ         8     6158.2043        <.0001
+DEROG          8     1466.6651        <.0001
+LOAN           1        6.1469        0.0132
+NINQ          11     7752.5986        <.0001
+
+
+                               Analysis of Maximum Likelihood Estimates
+ 
+                                       Standard          Wald                  Standardized
+Parameter            DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept             1     45.0358      0.6363       5009.68        <.0001                     999.000
+CLAGE                 1    -0.00382     0.00149          6.57        0.0104         -0.1758       0.996
+CLNO                  1     -0.0267      0.0116          5.31        0.0212         -0.1405       0.974
+DEBTINC               1      0.1139      0.0160         50.85        <.0001          0.5044       1.121
+DELINQ    0           1    -19.5529           .           .           .                   .       0.000
+DELINQ    1           1    -18.4641      0.2830       4256.42        <.0001                       0.000
+DELINQ    2           1    -18.1305      0.3771       2311.75        <.0001                       0.000
+DELINQ    3           1    -17.9973      0.5904        929.17        <.0001                       0.000
+DELINQ    4           1    -16.6501      0.7941        439.66        <.0001                       0.000
+DELINQ    5           1     -0.5475       939.8          0.00        0.9995                       0.578
+DELINQ    6           1     -4.2770       370.9          0.00        0.9908                       0.014
+DELINQ    7           1     -1.2419      1106.1          0.00        0.9991                       0.289
+DELINQ    8           1     -0.3370      3216.1          0.00        0.9999                       0.714
+DELINQ    10          0           0           .           .           .                   .        .   
+DELINQ    11          0           0           .           .           .                   .        .   
+DELINQ    12          0           0           .           .           .                   .        .   
+DELINQ    13          0           0           .           .           .                   .        .   
+DEROG     0           1    -11.8385           .           .           .                   .       0.000
+DEROG     1           1    -11.5215      0.3734        952.03        <.0001                       0.000
+DEROG     2           1    -10.2570      0.4393        545.15        <.0001                       0.000
+DEROG     3           1     -9.3098      0.8284        126.31        <.0001                       0.000
+DEROG     4           1      2.6265      2935.9          0.00        0.9993                      13.825
+DEROG     5           0           0           .           .           .                   .        .   
+DEROG     6           1      7.1781      2935.9          0.00        0.9980                     999.000
+DEROG     7           1     14.5526      2937.2          0.00        0.9960                     999.000
+DEROG     8           1      4.9310      2935.9          0.00        0.9987                     138.524
+DEROG     9           1      5.5191      2935.9          0.00        0.9985                     249.404
+LOAN                  1    -0.00003    0.000011          6.15        0.0132         -0.1732       1.000
+NINQ      0           1    -19.1137           .           .           .                   .       0.000
+NINQ      1           1    -19.3123      0.2798       4763.31        <.0001                       0.000
+NINQ      2           1    -18.8056      0.3020       3877.06        <.0001                       0.000
+NINQ      3           1    -18.6391      0.3395       3014.40        <.0001                       0.000
+NINQ      4           1    -17.9812      0.4745       1436.07        <.0001                       0.000
+NINQ      5           1    -17.5889      0.8967        384.77        <.0001                       0.000
+NINQ      6           1    -17.0831      0.7997        456.38        <.0001                       0.000
+NINQ      7           1    -16.6607      0.8826        356.36        <.0001                       0.000
+NINQ      8           1    -16.8324      0.9160        337.64        <.0001                       0.000
+NINQ      9           1    -17.5085      1.2803        187.00        <.0001                       0.000
+NINQ      10          1    -27.0491       106.2          0.06        0.7990                       0.000
+NINQ      11          1    -25.9438       190.2          0.02        0.8915                       0.000
+NINQ      12          0           0           .           .           .                   .        .   
+NINQ      13          0           0           .           .           .                   .        .   
+
+NOTE: There are no valid observations for DELINQ=11.
+
+NOTE: There are no valid observations for DELINQ=12.
+
+NOTE: There are no valid observations for DELINQ=13.
+
+NOTE: There are no valid observations for DELINQ=15.
+WARNING: Since there are no valid observations for DELINQ=15, the design variables for DELINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+NOTE: There are no valid observations for DEROG=5.
+
+NOTE: There are no valid observations for NINQ=12.
+
+NOTE: There are no valid observations for NINQ=14.
+WARNING: Since there are no valid observations for NINQ=14, the design variables for NINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+
+         Odds Ratio Estimates
+                   
+                                 Point
+Effect                        Estimate
+
+CLAGE                            0.996
+CLNO                             0.974
+DEBTINC                          1.121
+DELINQ  0 vs 10                 <0.001
+DELINQ  1 vs 10                 <0.001
+DELINQ  2 vs 10                 <0.001
+DELINQ  3 vs 10                 <0.001
+DELINQ  4 vs 10                 <0.001
+DELINQ  5 vs 10                  0.578
+DELINQ  6 vs 10                  0.014
+DELINQ  7 vs 10                  0.289
+DELINQ  8 vs 10                  0.714
+DELINQ  11 vs 10                  .   
+DELINQ  12 vs 10                  .   
+DELINQ  13 vs 10                  .   
+DEROG   0 vs 10                 <0.001
+DEROG   1 vs 10                 <0.001
+DEROG   2 vs 10                 <0.001
+DEROG   3 vs 10                 <0.001
+DEROG   4 vs 10                  0.004
+DEROG   5 vs 10                   .   
+DEROG   6 vs 10                  0.390
+DEROG   7 vs 10                622.048
+DEROG   8 vs 10                  0.041
+DEROG   9 vs 10                  0.074
+LOAN                             1.000
+NINQ    0 vs 13                 <0.001
+NINQ    1 vs 13                 <0.001
+NINQ    2 vs 13                 <0.001
+NINQ    3 vs 13                 <0.001
+NINQ    4 vs 13                 <0.001
+NINQ    5 vs 13                 <0.001
+NINQ    6 vs 13                 <0.001
+NINQ    7 vs 13                 <0.001
+NINQ    8 vs 13                 <0.001
+NINQ    9 vs 13                 <0.001
+NINQ    10 vs 13                <0.001
+NINQ    11 vs 13                <0.001
+NINQ    12 vs 13                  .   
+
+
+NOTE: No (additional) effects met the 0.05 significance level for entry into the model.
+
+
+                         Summary of Stepwise Selection
+ 
+            Effect             Number         Score          Wald
+    Step    Entered      DF        In    Chi-Square    Chi-Square    Pr > ChiSq
+
+       1    DELINQ        9         1      192.8166                      <.0001
+       2    DEBTINC       1         2       69.3143                      <.0001
+       3    DEROG         9         3      105.4335                      <.0001
+       4    NINQ         12         4       59.6100                      <.0001
+       5    CLAGE         1         5       10.6076                      0.0011
+       6    LOAN          1         6        7.5189                      0.0061
+       7    CLNO          1         7        5.3542                      0.0207
+
+
+The selected model is the model trained in the last step (Step 7). It consists of the following effects:
+
+Intercept  CLAGE  CLNO  DEBTINC  DELINQ  DEROG  LOAN  NINQ  
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   1012.561         734.878       277.6832       34         <.0001
+
+
+         Type 3 Analysis of Effects
+ 
+                          Wald
+Effect        DF    Chi-Square    Pr > ChiSq
+
+CLAGE          1        6.5680        0.0104
+CLNO           1        5.3090        0.0212
+DEBTINC        1       50.8549        <.0001
+DELINQ         8     6158.2043        <.0001
+DEROG          8     1466.6651        <.0001
+LOAN           1        6.1469        0.0132
+NINQ          11     7752.5986        <.0001
+
+
+                               Analysis of Maximum Likelihood Estimates
+ 
+                                       Standard          Wald                  Standardized
+Parameter            DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept             1     45.0358      0.6363       5009.68        <.0001                     999.000
+CLAGE                 1    -0.00382     0.00149          6.57        0.0104         -0.1758       0.996
+CLNO                  1     -0.0267      0.0116          5.31        0.0212         -0.1405       0.974
+DEBTINC               1      0.1139      0.0160         50.85        <.0001          0.5044       1.121
+DELINQ    0           1    -19.5529           .           .           .                   .       0.000
+DELINQ    1           1    -18.4641      0.2830       4256.42        <.0001                       0.000
+DELINQ    2           1    -18.1305      0.3771       2311.75        <.0001                       0.000
+DELINQ    3           1    -17.9973      0.5904        929.17        <.0001                       0.000
+DELINQ    4           1    -16.6501      0.7941        439.66        <.0001                       0.000
+DELINQ    5           1     -0.5475       939.8          0.00        0.9995                       0.578
+DELINQ    6           1     -4.2770       370.9          0.00        0.9908                       0.014
+DELINQ    7           1     -1.2419      1106.1          0.00        0.9991                       0.289
+DELINQ    8           1     -0.3370      3216.1          0.00        0.9999                       0.714
+DELINQ    10          0           0           .           .           .                   .        .   
+DELINQ    11          0           0           .           .           .                   .        .   
+DELINQ    12          0           0           .           .           .                   .        .   
+DELINQ    13          0           0           .           .           .                   .        .   
+DEROG     0           1    -11.8385           .           .           .                   .       0.000
+DEROG     1           1    -11.5215      0.3734        952.03        <.0001                       0.000
+DEROG     2           1    -10.2570      0.4393        545.15        <.0001                       0.000
+DEROG     3           1     -9.3098      0.8284        126.31        <.0001                       0.000
+DEROG     4           1      2.6265      2935.9          0.00        0.9993                      13.825
+DEROG     5           0           0           .           .           .                   .        .   
+DEROG     6           1      7.1781      2935.9          0.00        0.9980                     999.000
+DEROG     7           1     14.5526      2937.2          0.00        0.9960                     999.000
+DEROG     8           1      4.9310      2935.9          0.00        0.9987                     138.524
+DEROG     9           1      5.5191      2935.9          0.00        0.9985                     249.404
+LOAN                  1    -0.00003    0.000011          6.15        0.0132         -0.1732       1.000
+NINQ      0           1    -19.1137           .           .           .                   .       0.000
+NINQ      1           1    -19.3123      0.2798       4763.31        <.0001                       0.000
+NINQ      2           1    -18.8056      0.3020       3877.06        <.0001                       0.000
+NINQ      3           1    -18.6391      0.3395       3014.40        <.0001                       0.000
+NINQ      4           1    -17.9812      0.4745       1436.07        <.0001                       0.000
+NINQ      5           1    -17.5889      0.8967        384.77        <.0001                       0.000
+NINQ      6           1    -17.0831      0.7997        456.38        <.0001                       0.000
+NINQ      7           1    -16.6607      0.8826        356.36        <.0001                       0.000
+NINQ      8           1    -16.8324      0.9160        337.64        <.0001                       0.000
+NINQ      9           1    -17.5085      1.2803        187.00        <.0001                       0.000
+NINQ      10          1    -27.0491       106.2          0.06        0.7990                       0.000
+NINQ      11          1    -25.9438       190.2          0.02        0.8915                       0.000
+NINQ      12          0           0           .           .           .                   .        .   
+NINQ      13          0           0           .           .           .                   .        .   
+
+NOTE: There are no valid observations for DELINQ=11.
+
+NOTE: There are no valid observations for DELINQ=12.
+
+NOTE: There are no valid observations for DELINQ=13.
+
+NOTE: There are no valid observations for DELINQ=15.
+WARNING: Since there are no valid observations for DELINQ=15, the design variables for DELINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+NOTE: There are no valid observations for DEROG=5.
+
+NOTE: There are no valid observations for NINQ=12.
+
+NOTE: There are no valid observations for NINQ=14.
+WARNING: Since there are no valid observations for NINQ=14, the design variables for NINQ are identical to those produced by the GLM coding option rather than the deviation coding option specified for this analysis.
+
+
+         Odds Ratio Estimates
+                   
+                                 Point
+Effect                        Estimate
+
+CLAGE                            0.996
+CLNO                             0.974
+DEBTINC                          1.121
+DELINQ  0 vs 10                 <0.001
+DELINQ  1 vs 10                 <0.001
+DELINQ  2 vs 10                 <0.001
+DELINQ  3 vs 10                 <0.001
+DELINQ  4 vs 10                 <0.001
+DELINQ  5 vs 10                  0.578
+DELINQ  6 vs 10                  0.014
+DELINQ  7 vs 10                  0.289
+DELINQ  8 vs 10                  0.714
+DELINQ  11 vs 10                  .   
+DELINQ  12 vs 10                  .   
+DELINQ  13 vs 10                  .   
+DEROG   0 vs 10                 <0.001
+DEROG   1 vs 10                 <0.001
+DEROG   2 vs 10                 <0.001
+DEROG   3 vs 10                 <0.001
+DEROG   4 vs 10                  0.004
+DEROG   5 vs 10                   .   
+DEROG   6 vs 10                  0.390
+DEROG   7 vs 10                622.048
+DEROG   8 vs 10                  0.041
+DEROG   9 vs 10                  0.074
+LOAN                             1.000
+NINQ    0 vs 13                 <0.001
+NINQ    1 vs 13                 <0.001
+NINQ    2 vs 13                 <0.001
+NINQ    3 vs 13                 <0.001
+NINQ    4 vs 13                 <0.001
+NINQ    5 vs 13                 <0.001
+NINQ    6 vs 13                 <0.001
+NINQ    7 vs 13                 <0.001
+NINQ    8 vs 13                 <0.001
+NINQ    9 vs 13                 <0.001
+NINQ    10 vs 13                <0.001
+NINQ    11 vs 13                <0.001
+NINQ    12 vs 13                  .   

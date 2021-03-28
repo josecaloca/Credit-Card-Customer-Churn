@@ -1,0 +1,220 @@
+*------------------------------------------------------------*
+User:                Jose Caloca
+Date:                28 March 2021
+Time:                20:17:39
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+ Role        Level         Count
+ 
+TARGET      BINARY           1
+ 
+ 
+ 
+ 
+ 
+                                                                                      BINNED_KS_
+                                                             _KS_PROB_                   PROB_
+Obs    TARGET     TARGETLABEL    _AUR_    _GINI_      KS       CUTOFF     _KS_BIN_      CUTOFF
+ 
+ 1     default      default       0.99     0.979    0.939      0.255        0.918        0.536
+ 
+ 
+ 
+ 
+ 
+                                                                _TKS_              _TBINNED_
+                                                                PROB_     _TKS_     KS_PROB_
+Obs    TARGET     TARGETLABEL    _TAUR_    _TGINI_     TKS     CUTOFF_     BIN_     CUTOFF_
+ 
+ 1     default      default       0.678     0.357     0.295     0.667     0.278       0.9
+ 
+ 
+ 
+ 
+ 
+                                                                                      BINNED_KS_
+                                                             _KS_PROB_                   PROB_
+Obs    TARGET     TARGETLABEL    _AUR_    _GINI_      KS       CUTOFF     _KS_BIN_      CUTOFF
+ 
+ 1     default      default      0.853     0.705    0.544      0.298        0.541        0.294
+ 
+ 
+ 
+ 
+ 
+                                                                _TKS_              _TBINNED_
+                                                                PROB_     _TKS_     KS_PROB_
+Obs    TARGET     TARGETLABEL    _TAUR_    _TGINI_     TKS     CUTOFF_     BIN_     CUTOFF_
+ 
+ 1     default      default       0.737     0.473     0.422     0.214     0.413      0.237
+ 
+ 
+ 
+ 
+ 
+                                                                                      BINNED_KS_
+                                                             _KS_PROB_                   PROB_
+Obs    TARGET     TARGETLABEL    _AUR_    _GINI_      KS       CUTOFF     _KS_BIN_      CUTOFF
+ 
+ 1     default      default      0.782     0.564    0.427      0.223        0.426        0.34
+ 
+ 
+ 
+ 
+ 
+                                                                _TKS_              _TBINNED_
+                                                                PROB_     _TKS_     KS_PROB_
+Obs    TARGET     TARGETLABEL    _TAUR_    _TGINI_     TKS     CUTOFF_     BIN_     CUTOFF_
+ 
+ 1     default      default       0.725      0.45     0.373     0.223     0.366      0.281
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fit Statistics
+Model Selection based on Test: Gain (_TGAIN_)
+ 
+                                                         Train:
+                                                        Average          Train:         Train:
+Selected    Model                             Test:     Squared    Misclassification      Roc     Train: Gini
+ Model      Node       Model Description       Gain      Error            Rate           Index    Coefficient
+ 
+   Y        Neural2    Neural Network (2)    122.222    0.01905         0.02000          0.990       0.979
+            Neural     Neural Network         92.593    0.13808         0.20000          0.853       0.705
+            Tree       Decision Tree          75.397    0.16394         0.24571          0.782       0.564
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fit Statistics Table
+Target: default
+ 
+Data Role=Train
+ 
+Statistics                                                        Neural2     Neural       Tree
+ 
+Train: Bin-Based Two-Way Kolmogorov-Smirnov Probability Cutoff       0.54       0.29       0.34
+Train: Kolmogorov-Smirnov Statistic                                  0.94       0.54       0.43
+Train: Akaike's Information Criterion                              621.06     741.15        .
+Train: Average Loss for default                                      0.09       0.40       0.46
+Train: Average Squared Error                                         0.02       0.14       0.16
+Train: Roc Index                                                     0.99       0.85       0.78
+Train: Average Error Function                                        0.08       0.42        .
+Train: Cumulative Percent Captured Response                         33.33      27.14      21.06
+Train: Percent Captured Response                                    16.67      11.90      10.48
+Selection Criterion: Test: Gain                                    122.22      92.59      75.40
+Train: Degrees of Freedom for Error                                447.00     624.00        .
+Train: Model Degrees of Freedom                                    253.00      76.00        .
+Train: Total Degrees of Freedom                                    700.00     700.00     700.00
+Train: Divisor for ASE                                            1400.00    1400.00    1400.00
+Train: Error Function                                              115.06     589.15        .
+Train: Final Prediction Error                                        0.04       0.17        .
+Train: Gain                                                        233.33     171.43     110.61
+Train: Gini Coefficient                                              0.98       0.71       0.56
+Train: Bin-Based Two-Way Kolmogorov-Smirnov Statistic                0.92       0.54       0.43
+Train: Kolmogorov-Smirnov Probability Cutoff                         0.26       0.30       0.22
+Train: Cumulative Lift                                               3.33       2.71       2.11
+Train: Lift                                                          3.33       2.38       2.10
+Train: Total Loss for default                                       63.00     283.00     322.00
+Train: Maximum Absolute Error                                        1.00       0.98       0.96
+Train: Misclassification Rate                                        0.02       0.20       0.25
+Train: Mean Squared Error                                            0.03       0.15        .
+Train: Sum of Frequencies                                          700.00     700.00     700.00
+Train: Number of Estimated Weights                                 253.00      76.00        .
+Train: Root Average Squared Error                                    0.14       0.37       0.40
+Train: Cumulative Percent Response                                 100.00      81.43      63.18
+Train: Percent Response                                            100.00      71.43      62.86
+Train: Root Final Prediction Error                                   0.20       0.41        .
+Train: Root Mean Squared Error                                       0.17       0.39        .
+Train: Schwarz's Bayesian Criterion                               1772.48    1087.03        .
+Train: Sum of Squared Errors                                        26.67     193.32     229.51
+Train: Sum of Case Weights Times Freq                             1400.00    1400.00        .
+Train: Number of Wrong Classifications                              14.00     140.00        .
+ 
+ 
+Data Role=Test
+ 
+Statistics                                                        Neural2     Neural       Tree
+ 
+Test:  Kolmogorov-Smirnov Statistic                                  0.30      0.422      0.373
+Test: Average Loss for default                                       0.92      0.583      0.547
+Test: Average Squared Error                                          0.27      0.188      0.180
+Test:  Roc Index                                                     0.68      0.737      0.725
+Test: Average Error Function                                         1.93      0.651       .
+Test:  Bin-Based Two-Way Kolmogorov-Smirnov Probability Cutoff       0.90      0.237      0.281
+Test: Cumulative Percent Captured Response                          22.22     19.259     17.540
+Test: Percent Captured Response                                      8.89      8.148     10.119
+Test: Divisor for TASE                                             600.00    600.000    600.000
+Test: Error Function                                              1160.29    390.302       .
+Test: Gain                                                         122.22     92.593     75.397
+Test:  Gini Coefficient                                              0.36      0.473      0.450
+Test:  Bin-Based Two-Way Kolmogorov-Smirnov Statistic                0.28      0.413      0.366
+Test:  Kolmogorov-Smirnov Probability Cutoff                         0.67      0.214      0.223
+Test: Cumulative Lift                                                2.22      1.926      1.754
+Test: Lift                                                           1.78      1.630      2.024
+Test: Total Loss for default                                       275.00    175.000    164.000
+Test: Maximum Absolute Error                                         1.00      1.000      0.960
+Test: Misclassification Rate                                         0.29      0.270      0.273
+Test: Lower 95% Conf. Limit for TMISC                                 .         .          .
+Test: Upper 95% Conf. Limit for TMISC                                 .         .          .
+Test: Mean Squared Error                                             0.27      0.188       .
+Test: Sum of Frequencies                                           300.00    300.000    300.000
+Test: Root Average Squared Error                                     0.52      0.434      0.424
+Test: Cumulative Percent Response                                   66.67     57.778     52.619
+Test: Percent Response                                              53.33     48.889     60.714
+Test: Root Mean Squared Error                                        0.52      0.434       .
+Test: Sum of Squared Errors                                        160.51    112.779    108.027
+Test: Sum of Case Weights Times Freq                               600.00    600.000    600.000
+Test: Number of Wrong Classifications                               86.00     81.000       .
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Event Classification Table
+Model Selection based on Test: Gain (_TGAIN_)
+ 
+Model                            Data                Target       False       True        False       True
+Node       Model Description     Role     Target      Label     Negative    Negative    Positive    Positive
+ 
+Neural2    Neural Network (2)    TRAIN    default    default        12         488          2          198
+Neural     Neural Network        TRAIN    default    default        90         440         50          120
+Tree       Decision Tree         TRAIN    default    default       118         436         54           92
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*

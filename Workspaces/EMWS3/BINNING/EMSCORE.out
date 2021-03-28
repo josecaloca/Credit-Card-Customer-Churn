@@ -1,0 +1,18 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+                   Estadístico    Nivel para        Rol        Nuevo                             Ordenación
+Obs    Variable      de Gini      Interactivo    calculado      rol       Nivel      Etiqueta       Gini
+
+  1    DEBTINC        64.213       INTERVAL      Input        Default    INTERVAL                     1    
+  2    DELINQ         32.654       NOMINAL       Input        Default    NOMINAL                      2    
+  3    CLAGE          27.279       INTERVAL      Input        Default    INTERVAL                     3    
+  4    NINQ           23.071       NOMINAL       Input        Default    NOMINAL                      4    
+  5    DEROG          21.545       NOMINAL       Input        Default    NOMINAL                      5    
+  6    VALUE          20.553       INTERVAL      Input        Default    INTERVAL                     6    
+  7    JOB            16.512       NOMINAL       Rejected     Default    NOMINAL                      7    
+  8    LOAN           12.733       INTERVAL      Rejected     Default    INTERVAL                     8    
+  9    YOJ            11.014       INTERVAL      Rejected     Default    INTERVAL                     9    
+ 10    MORTDUE        10.686       INTERVAL      Rejected     Default    INTERVAL                    10    
+ 11    CLNO            9.901       INTERVAL      Rejected     Default    INTERVAL                    11    
+ 12    REASON          3.975       BINARY        Rejected     Default    BINARY                      12    

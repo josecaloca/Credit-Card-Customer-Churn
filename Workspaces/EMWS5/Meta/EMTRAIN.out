@@ -1,0 +1,42 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+                  Measurement    Frequency
+Role                 Level         Count
+
+ASSESS             INTERVAL           3   
+ASSESS             NOMINAL            1   
+CLASSIFICATION     NOMINAL            3   
+DECISION           NOMINAL            1   
+ID                 INTERVAL           1   
+INPUT              ORDINAL            5   
+PREDICT            INTERVAL           2   
+REJECTED           INTERVAL           7   
+REJECTED           NOMINAL           15   
+RESIDUAL           INTERVAL           2   
+TARGET             BINARY             1   
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Modified Attributes for DATA Port
+
+Variable      Measurement      New                                               New                 New
+Name             Level        Level     Role              New Role    Report    Report    Order     Order     Creator    Label
+
+BL_DEFAULT     INTERVAL      DEFAULT    ASSESS            REJECTED      N         D                DEFAULT    Neural     Best Loss: default        
+CL_DEFAULT     INTERVAL      DEFAULT    ASSESS            REJECTED      N         D                DEFAULT    Neural     Computed Loss: default    
+D_DEFAULT      NOMINAL       DEFAULT    DECISION          REJECTED      N         D                DEFAULT    Neural     Decision: default         
+EL_DEFAULT     INTERVAL      DEFAULT    ASSESS            REJECTED      N         D                DEFAULT    Neural     Expected Loss: default    
+F_default      NOMINAL       DEFAULT    CLASSIFICATION    REJECTED      N         D                DEFAULT    Neural     From: default             
+I_default      NOMINAL       DEFAULT    CLASSIFICATION    TARGET        N         D                DEFAULT    Neural     Into: default             
+P_default0     INTERVAL      DEFAULT    PREDICT           REJECTED      N         D                DEFAULT    Neural     Predicted: default=0      
+P_default1     INTERVAL      DEFAULT    PREDICT           REJECTED      N         D                DEFAULT    Neural     Predicted: default=1      
+R_default0     INTERVAL      DEFAULT    RESIDUAL          REJECTED      N         D                DEFAULT    Neural     Residual: default=0       
+R_default1     INTERVAL      DEFAULT    RESIDUAL          REJECTED      N         D                DEFAULT    Neural     Residual: default=1       
+U_default      NOMINAL       DEFAULT    CLASSIFICATION    REJECTED      N         D                DEFAULT    Neural     Unnormalized Into: default
+_WARN_         NOMINAL       DEFAULT    ASSESS            REJECTED      N         D                DEFAULT    Neural     Warnings                  
+default        BINARY        DEFAULT    TARGET            REJECTED      N         D                DEFAULT               default                   

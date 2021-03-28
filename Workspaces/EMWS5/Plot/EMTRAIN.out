@@ -1,0 +1,100 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+ Role        Level         Count
+
+INPUT      BINARY             3   
+INPUT      INTERVAL           3   
+INPUT      NOMINAL           14   
+TARGET     BINARY             1   
+ 
+                                                                                                                                                                                                                                                                
+ 
+Class Variables
+
+Obs    NAME                 LEVEL      CODE     FREQUENCY    TYPE    CRAW    NRAW    FREQPERCENT    NMISSPERCENT
+
+  1    acc_status           A11           2           274     C      A11       .         27.4           27.4    
+  2    acc_status           A12           3           269     C      A12       .         26.9           26.9    
+  3    acc_status           A13           1            63     C      A13       .          6.3            6.3    
+  4    acc_status           A14           0           394     C      A14       .         39.4           39.4    
+  5    credit_history       A30           2            40     C      A30       .          4.0            4.0    
+  6    credit_history       A31           3            49     C      A31       .          4.9            4.9    
+  7    credit_history       A32           1           530     C      A32       .         53.0           53.0    
+  8    credit_history       A33           4            88     C      A33       .          8.8            8.8    
+  9    credit_history       A34           0           293     C      A34       .         29.3           29.3    
+ 10    debtors              A101          0           907     C      A101      .         90.7           90.7    
+ 11    debtors              A102          2            41     C      A102      .          4.1            4.1    
+ 12    debtors              A103          1            52     C      A103      .          5.2            5.2    
+ 13    default              1             1           300     N                1         30.0           30.0    
+ 14    default              0             0           700     N                0         70.0           70.0    
+ 15    employment           A71           4            62     C      A71       .          6.2            6.2    
+ 16    employment           A72           1           172     C      A72       .         17.2           17.2    
+ 17    employment           A73           3           339     C      A73       .         33.9           33.9    
+ 18    employment           A74           0           174     C      A74       .         17.4           17.4    
+ 19    employment           A75           2           253     C      A75       .         25.3           25.3    
+ 20    foreign_worker       A201          0           963     C      A201      .         96.3           96.3    
+ 21    foreign_worker       A202          1            37     C      A202      .          3.7            3.7    
+ 22    housing              A151          1           179     C      A151      .         17.9           17.9    
+ 23    housing              A152          0           713     C      A152      .         71.3           71.3    
+ 24    housing              A153          2           108     C      A153      .         10.8           10.8    
+ 25    instalment           1             1           136     N                1         13.6           13.6    
+ 26    instalment           2             0           231     N                2         23.1           23.1    
+ 27    instalment           3             3           157     N                3         15.7           15.7    
+ 28    instalment           4             2           476     N                4         47.6           47.6    
+ 29    job                  A171          2            22     C      A171      .          2.2            2.2    
+ 30    job                  A172          0           200     C      A172      .         20.0           20.0    
+ 31    job                  A173          1           630     C      A173      .         63.0           63.0    
+ 32    job                  A174          3           148     C      A174      .         14.8           14.8    
+ 33    number_of_credit     1             1           633     N                1         63.3           63.3    
+ 34    number_of_credit     2             2           333     N                2         33.3           33.3    
+ 35    number_of_credit     3             0            28     N                3          2.8            2.8    
+ 36    number_of_credit     4             3             6     N                4          0.6            0.6    
+ 37    other_instalments    A141          1           139     C      A141      .         13.9           13.9    
+ 38    other_instalments    A142          2            47     C      A142      .          4.7            4.7    
+ 39    other_instalments    A143          0           814     C      A143      .         81.4           81.4    
+ 40    people               1             1           845     N                1         84.5           84.5    
+ 41    people               2             0           155     N                2         15.5           15.5    
+ 42    personal_status      A91           3            50     C      A91       .          5.0            5.0    
+ 43    personal_status      A92           1           310     C      A92       .         31.0           31.0    
+ 44    personal_status      A93           0           548     C      A93       .         54.8           54.8    
+ 45    personal_status      A94           2            92     C      A94       .          9.2            9.2    
+ 46    pourpose             A40           1           234     C      A40       .         23.4           23.4    
+ 47    pourpose             A41           4           103     C      A41       .         10.3           10.3    
+ 48    pourpose             A410          9            12     C      A410      .          1.2            1.2    
+ 49    pourpose             A42           2           181     C      A42       .         18.1           18.1    
+ 50    pourpose             A43           0           280     C      A43       .         28.0           28.0    
+ 51    pourpose             A44           7            12     C      A44       .          1.2            1.2    
+ 52    pourpose             A45           6            22     C      A45       .          2.2            2.2    
+ 53    pourpose             A46           8            50     C      A46       .          5.0            5.0    
+ 54    pourpose             A48           5             9     C      A48       .          0.9            0.9    
+ 55    pourpose             A49           3            97     C      A49       .          9.7            9.7    
+ 56    property             A121          0           282     C      A121      .         28.2           28.2    
+ 57    property             A122          2           232     C      A122      .         23.2           23.2    
+ 58    property             A123          1           332     C      A123      .         33.2           33.2    
+ 59    property             A124          3           154     C      A124      .         15.4           15.4    
+ 60    residence            1             0           130     N                1         13.0           13.0    
+ 61    residence            2             1           308     N                2         30.8           30.8    
+ 62    residence            3             2           149     N                3         14.9           14.9    
+ 63    residence            4             3           413     N                4         41.3           41.3    
+ 64    savings              A61           0           603     C      A61       .         60.3           60.3    
+ 65    savings              A62           3           103     C      A62       .         10.3           10.3    
+ 66    savings              A63           2            63     C      A63       .          6.3            6.3    
+ 67    savings              A64           4            48     C      A64       .          4.8            4.8    
+ 68    savings              A65           1           183     C      A65       .         18.3           18.3    
+ 69    telephone            A191          0           596     C      A191      .         59.6           59.6    
+ 70    telephone            A192          1           404     C      A192      .         40.4           40.4    
+ 
+                                                                                                                                                                                                                                                                
+ 
+Interval Variables
+
+Obs    NAME              NMISS            N    MIN      MAX      MEAN       STD      SKEWNESS    KURTOSIS
+
+ 1     age                   0         1000     19       75      35.55      11.38     1.02074     0.59578
+ 2     credit_amt            0         1000    250    18424    3271.26    2822.74     1.94963     4.29259
+ 3     duration              0         1000      4       72      20.90      12.06     1.09418     0.91978

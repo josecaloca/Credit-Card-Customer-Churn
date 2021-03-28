@@ -1,0 +1,708 @@
+*------------------------------------------------------------*
+User:                Jose Caloca
+Date:                28 March 2021
+Time:                18:36:09
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+INPUT        ORDINAL            5
+REJECTED     INTERVAL           2
+REJECTED     NOMINAL           10
+TARGET       BINARY             1
+ 
+ 
+ 
+ 
+Model Events
+ 
+                                   Number
+                    Measurement      of
+Target     Event       Level       Levels      Order        Label
+ 
+default      1        BINARY          2      Descending    default
+ 
+ 
+ 
+ 
+Decision Matrix
+ 
+             Training
+default    Proportions    1    0
+ 
+   1           0.3        0    5
+   0           0.7        1    0
+ 
+ 
+ 
+ 
+Predicted and decision variables
+ 
+Type              Variable     Label
+ 
+TARGET           default       default
+PREDICTED        P_default1    Predicted: default=1
+RESIDUAL         R_default1    Residual: default=1
+PREDICTED        P_default0    Predicted: default=0
+RESIDUAL         R_default0    Residual: default=0
+FROM             F_default     From: default
+INTO             I_default     Into: default
+MODELDECISION    D_default     Decision: default
+EXPECTEDLOSS     EL_DEFAULT    Expected Loss: default
+COMPUTEDLOSS     CL_DEFAULT    Computed Loss: default
+BESTLOSS         BL_DEFAULT    Best Loss: default
+ 
+ 
+ 
+ 
+ 
+The NEURAL Procedure
+ 
+Preliminary       Starting         Objective         Number
+ Training          Random           Function           of        Terminating
+    Run             Seed             Value         Iterations     Criteria
+ 
+        1               12345    0.447174792873           10
+        2           734635899    0.454248209547           10
+        3             6541955     0.46079490701           10
+        4           335245709    0.450525033458           10
+        5          1489754846     0.47271003781           10
+ 
+ 
+ 
+ 
+ 
+The NEURAL Procedure
+ 
+                                             Optimization Start
+                                            Parameter Estimates
+                                                   Gradient           Lower           Upper    Active
+                                                  Objective           Bound           Bound    Bound
+  N Parameter                      Estimate        Function      Constraint      Constraint    Constraint
+ 
+  1 GRP_acc_status2_H11            0.565939        0.006909           1E-10               .
+  2 GRP_acc_status3_H11            1.096219        0.005217           1E-10               .
+  3 GRP_acc_status4_H11            0.956513       -0.008085           1E-10               .
+  4 GRP_credit_history2_H11        1.023068       -0.001024           1E-10               .
+  5 GRP_credit_history3_H11           1E-10       -0.003958           1E-10               .     Lower BC
+  6 GRP_credit_history4_H11    9.999999E-11       -0.003780           1E-10               .     Lower BC
+  7 GRP_credit_history5_H11           1E-10       -0.007694           1E-10               .     Lower BC
+  8 GRP_duration2_H11                 1E-10        0.021629           1E-10               .     Lower BC
+  9 GRP_duration3_H11          9.999999E-11        0.011618           1E-10               .     Lower BC
+ 10 GRP_duration4_H11                 1E-10        0.018181           1E-10               .     Lower BC
+ 11 GRP_pourpose2_H11          9.999999E-11       -0.007689           1E-10               .     Lower BC
+ 12 GRP_pourpose3_H11              0.932518       -0.000747           1E-10               .
+ 13 GRP_pourpose4_H11                 1E-10        0.000624           1E-10               .     Lower BC
+ 14 GRP_pourpose5_H11              1.443958       -0.003859           1E-10               .
+ 15 GRP_pourpose6_H11              0.797176       -0.004754           1E-10               .
+ 16 GRP_pourpose7_H11                 1E-10       -0.004890           1E-10               .     Lower BC
+ 17 GRP_pourpose8_H11          9.999999E-11       -0.006721           1E-10               .     Lower BC
+ 18 GRP_pourpose9_H11                 1E-10       -0.006202           1E-10               .     Lower BC
+ 19 GRP_pourpose10_H11             0.999539       -0.006554           1E-10               .
+ 20 GRP_savings2_H11               0.746331       -0.006223           1E-10               .
+ 21 GRP_savings3_H11                  1E-10       -0.004372           1E-10               .     Lower BC
+ 22 GRP_savings4_H11               0.291415       -0.008760           1E-10               .
+ 23 GRP_savings5_H11               0.667865       -0.007624           1E-10               .
+ 24 GRP_acc_status2_H12            1.371897       -0.008606           1E-10               .
+ 25 GRP_acc_status3_H12            2.110880       -0.005576           1E-10               .
+ 26 GRP_acc_status4_H12            0.696613        0.007158           1E-10               .
+ 27 GRP_credit_history2_H12        0.465151       -0.001527           1E-10               .
+ 28 GRP_credit_history3_H12        0.661656        0.003282           1E-10               .
+ 29 GRP_credit_history4_H12        0.489491        0.006005           1E-10               .
+ 30 GRP_credit_history5_H12           1E-10        0.008307           1E-10               .     Lower BC
+ 31 GRP_duration2_H12                 1E-10       -0.009017           1E-10               .     Lower BC
+ 32 GRP_duration3_H12          9.999999E-11       -0.006794           1E-10               .     Lower BC
+ 33 GRP_duration4_H12          9.999999E-11       -0.008738           1E-10               .     Lower BC
+ 34 GRP_pourpose2_H12                 1E-10        0.001254           1E-10               .     Lower BC
+ 35 GRP_pourpose3_H12                 1E-10        0.001059           1E-10               .     Lower BC
+ 36 GRP_pourpose4_H12                 1E-10        0.003199           1E-10               .     Lower BC
+ 37 GRP_pourpose5_H12              2.021374        0.003510           1E-10               .
+ 38 GRP_pourpose6_H12              1.290079        0.004270           1E-10               .
+ 39 GRP_pourpose7_H12                 1E-10        0.006088           1E-10               .     Lower BC
+ 40 GRP_pourpose8_H12                 1E-10        0.004789           1E-10               .     Lower BC
+ 41 GRP_pourpose9_H12              0.864813        0.004081           1E-10               .
+ 42 GRP_pourpose10_H12         9.999999E-11        0.005523           1E-10               .     Lower BC
+ 43 GRP_savings2_H12                  1E-10        0.001554           1E-10               .     Lower BC
+ 44 GRP_savings3_H12               0.886435        0.006420           1E-10               .
+ 45 GRP_savings4_H12                  1E-10        0.009694           1E-10               .     Lower BC
+ 46 GRP_savings5_H12                  1E-10        0.008880           1E-10               .     Lower BC
+ 47 GRP_acc_status2_H13            0.642614       -0.003683           1E-10               .
+ 48 GRP_acc_status3_H13            0.197004       -0.004209           1E-10               .
+ 49 GRP_acc_status4_H13               1E-10        0.010221           1E-10               .     Lower BC
+ 50 GRP_credit_history2_H13           1E-10       -0.002487           1E-10               .     Lower BC
+ 51 GRP_credit_history3_H13        0.217786        0.006003           1E-10               .
+ 52 GRP_credit_history4_H13        0.160977        0.007020           1E-10               .
+ 53 GRP_credit_history5_H13        0.423649        0.007533           1E-10               .
+ 54 GRP_duration2_H13              0.086671       -0.007301           1E-10               .
+ 55 GRP_duration3_H13              0.344449       -0.002158           1E-10               .
+ 56 GRP_duration4_H13              0.092820        0.003150           1E-10               .
+ 57 GRP_pourpose2_H13              0.649090       -0.000928           1E-10               .
+ 58 GRP_pourpose3_H13                 1E-10       -0.005347           1E-10               .     Lower BC
+ 59 GRP_pourpose4_H13                 1E-10        0.002215           1E-10               .     Lower BC
+ 60 GRP_pourpose5_H13                 1E-10        0.005668           1E-10               .     Lower BC
+ 61 GRP_pourpose6_H13              1.303073        0.005381           1E-10               .
+ 62 GRP_pourpose7_H13          9.999999E-11        0.005491           1E-10               .     Lower BC
+ 63 GRP_pourpose8_H13          9.999999E-11        0.006236           1E-10               .     Lower BC
+ 64 GRP_pourpose9_H13          9.999999E-11        0.006056           1E-10               .     Lower BC
+ 65 GRP_pourpose10_H13                1E-10        0.006005           1E-10               .     Lower BC
+ 66 GRP_savings2_H13                  1E-10        0.010286           1E-10               .     Lower BC
+ 67 GRP_savings3_H13               0.142625        0.007488           1E-10               .
+ 68 GRP_savings4_H13               0.245378        0.008890           1E-10               .
+ 69 GRP_savings5_H13                  1E-10        0.008907           1E-10               .     Lower BC
+ 70 BIAS_H11                       1.606114        0.015325               .               .
+ 71 BIAS_H12                       0.581817       -0.013151               .               .
+ 72 BIAS_H13                       0.851618       -0.015242               .               .
+ 73 H11_default1                  -3.537416        0.002241               .               .
+ 74 H12_default1                   2.544912        0.001577               .               .
+ 75 H13_default1                   2.835410       -0.001843               .               .
+ 76 BIAS_default1                 -1.272512       -0.006798               .               .
+ 
+Value of Objective Function = 0.4471747929
+ 
+ 
+ 
+           First Order Lagrange Multipliers
+ 
+ 
+                                               Lagrange
+           Active Constraint                 Multiplier
+ 
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+                GRP_acc_status2_H11                   0
+ 
+ 
+  Projected Gradient
+ 
+     Free    Projected
+Dimension     Gradient
+ 
+        1     0.006909
+        2     0.006909
+        3     0.006909
+        4     0.006909
+        5     0.006909
+        6     0.006909
+        7     0.006909
+        8     0.006909
+        9     0.006909
+       10     0.006909
+       11     0.006909
+       12     0.006909
+       13     0.006909
+       14     0.006909
+       15     0.006909
+       16     0.006909
+       17     0.006909
+       18     0.006909
+       19     0.006909
+       20     0.006909
+       21     0.006909
+       22     0.006909
+       23     0.006909
+       24     0.006909
+       25     0.006909
+       26     0.006909
+       27     0.006909
+       28     0.006909
+       29     0.006909
+       30     0.006909
+       31     0.006909
+       32     0.006909
+       33     0.006909
+       34     0.006909
+       35     0.006909
+       36     0.006909
+       37     0.006909
+       38     0.006909
+       39     0.006909
+       40     0.006909
+ 
+ 
+ 
+ 
+ 
+The NEURAL Procedure
+ 
+Levenberg-Marquardt Optimization
+ 
+ 
+Minimum Iterations                                    0
+Maximum Iterations                                   50
+Maximum Function Calls                       2147483647
+Maximum CPU Time                                  14400
+ABSGCONV Gradient Criterion                     0.00001
+GCONV Gradient Criterion                           1E-8
+GCONV2 Gradient Criterion                             0
+ABSFCONV Function Criterion                           0
+FCONV Function Criterion                         0.0001
+FCONV2 Function Criterion                             0
+FSIZE Parameter                                       0
+ABSXCONV Parameter Change Criterion                   0
+XCONV Parameter Change Criterion                      0
+XSIZE Parameter                                       0
+ABSCONV Function Criterion                 0.0015606477
+Trust Region Initial Radius Factor                    1
+Singularity Tolerance (SINGULAR)                   1E-8
+Constraint Precision (LCEPS)                       1E-8
+Linearly Dependent Constraints (LCSING)            1E-8
+Releasing Active Constraints (LCDEACT)                .
+ 
+Levenberg-Marquardt Optimization
+ 
+Scaling Update of More (1978)
+ 
+Parameter Estimates              76
+Lower Bounds                     69
+Upper Bounds                      0
+ 
+                                             Optimization Start
+ 
+Active Constraints (+)                             35  Objective Function                       0.4471747929
+Max Abs Gradient Element                 0.0216291118  Radius                                              1
+ 
+ 
+                                                                                                         Ratio
+                                                                                                       Between
+                                                                                                        Actual
+                                                                 Objective     Max Abs                     and
+                     Function         Active        Objective     Function    Gradient               Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Lambda       Change
+ 
+   1            0           4             34'         0.44637     0.000807      0.0143     0.0587        0.273
+   2            0           5             33'         0.44266      0.00371     0.00854      0.145        0.683
+   3            0           6             33'         0.44076      0.00190      0.0126     0.0336        0.695
+   4            0           7             32'         0.43701      0.00375     0.00829      0.165        0.733
+   5            0           8             31'         0.43506      0.00194     0.00779     0.0858        0.622
+   6            0          10             31'         0.43444     0.000621      0.0165     0.0316        0.240
+   7            0          12             33'         0.43341      0.00103      0.0117      0.159        0.387
+   8            0          13             33'         0.43280     0.000609      0.0101      0.105        0.439
+   9            0          14             32'         0.43171      0.00109     0.00790      0.132        0.698
+  10            0          15             32'         0.43084     0.000874     0.00694      0.102        0.797
+  11            0          16             32'         0.42973      0.00111      0.0217     0.0424        0.704
+  12            0          17             32'         0.42738      0.00234      0.0342    0.00769        0.685
+  13            0          18             31'         0.42481      0.00257      0.0279    0.00610        0.771
+  14            0          21             31'         0.42449     0.000324      0.0437     0.0560        0.213
+  15            0          22             31'         0.42416     0.000331      0.0379     0.0529        0.179
+  16            0          23             31'         0.42402     0.000140      0.0592     0.0513       0.0641
+  17            0          24             31'         0.42287      0.00115      0.0326      0.135        0.475
+  18            0          25             30'         0.42208     0.000798      0.0144      0.107        0.700
+  19            0          26             29'         0.42148     0.000595     0.00625      0.124        0.852
+  20            0          27             28'         0.42082     0.000659     0.00561     0.0459        0.874
+  21            0          28             28'         0.41922      0.00160     0.00773     0.0144        0.631
+  22            0          29             27'         0.41798      0.00124     0.00664     0.0102        0.602
+  23            0          30             27'         0.41734     0.000644      0.0104     0.0102        0.311
+  24            0          31             26'         0.41699     0.000345      0.0115     0.0101        0.131
+  25            0          33             26'         0.41609     0.000900      0.0127      0.123        0.475
+  26            0          34             26'         0.41592     0.000171      0.0346     0.0318        0.227
+  27            0          36             26'         0.41572     0.000197      0.0295      0.206        0.293
+  28            0          37             26'         0.41553     0.000197      0.0205      0.106        0.477
+  29            0          38             25'         0.41536     0.000170     0.00922      0.131        0.659
+  30            0          39             25'         0.41529     0.000065      0.0149      0.112        0.505
+  31            0          40             24'         0.41517     0.000121     0.00641      0.109        0.776
+  32            0          42             24'         0.41513     0.000045      0.0176     0.0903        0.378
+  33            0          44             24'         0.41510     0.000030      0.0163      0.262        0.216
+  34            0          45             24'         0.41503     0.000067      0.0128      0.223        0.510
+  35            0          46             24'         0.41501     0.000016      0.0144      0.247        0.160
+  36            0          47             24'         0.41496     0.000057      0.0124      0.219        0.501
+  37            0          48             24'         0.41494     0.000016      0.0139      0.241        0.175
+  38            0          49             24'         0.41489     0.000053      0.0124      0.216        0.490
+  39            0          50             24'         0.41487     0.000018      0.0137      0.235        0.198
+  40            0          51             24'         0.41482     0.000050      0.0125      0.214        0.478
+  41            0          52             24'         0.41480     0.000020      0.0134      0.229        0.224
+  42            0          53             25'         0.41476     0.000041      0.0138      0.211        0.401
+  43            0          54             25'         0.41473     0.000023      0.0137      0.218        0.238
+  44            0          55             25'         0.41469     0.000046      0.0121      0.201        0.452
+  45            0          56             25'         0.41467     0.000022      0.0127      0.208        0.253
+  46            0          57             25'         0.41464     0.000030      0.0133      0.201        0.319
+  47            0          58             25'         0.41461     0.000028      0.0129      0.204        0.285
+  48            0          59             25'         0.41459     0.000022      0.0145      0.203        0.220
+  49            0          60             25'         0.41455     0.000033      0.0133      0.201        0.309
+  50            0          61             25'         0.41454     0.000015      0.0155      0.206        0.147
+ 
+                                            Optimization Results
+ 
+Iterations                                         50  Function Calls                                     63
+Jacobian Calls                                     52  Active Constraints (+)                             26
+Objective Function                       0.4145387559  Max Abs Gradient Element                 0.0154987144
+Lambda                                   0.2056517419  Actual Over Pred Change                  0.1466644567
+Radius                                   0.0140440703
+ 
+LEVMAR needs more than 50 iterations or 2147483647 function calls.
+ 
+WARNING: LEVMAR Optimization cannot be completed.
+ 
+ 
+ 
+ 
+ 
+ 
+The NEURAL Procedure
+ 
+                            Optimization Results
+                            Parameter Estimates
+                                                   Gradient    Active
+                                                  Objective    Bound
+  N Parameter                      Estimate        Function    Constraint
+ 
+  1 GRP_acc_status2_H11            1.367632       -0.009666
+  2 GRP_acc_status3_H11            1.734390       -0.005749
+  3 GRP_acc_status4_H11            0.722179        0.007521
+  4 GRP_credit_history2_H11        1.179609        0.004577
+  5 GRP_credit_history3_H11           1E-10        0.012307     Lower BC
+  6 GRP_credit_history4_H11           1E-10        0.010226     Lower BC
+  7 GRP_credit_history5_H11        0.166871        0.008573
+  8 GRP_duration2_H11                 1E-10       -0.006492     Lower BC
+  9 GRP_duration3_H11          9.999999E-11       -0.000629     Lower BC
+ 10 GRP_duration4_H11                 1E-10        0.013323     Lower BC
+ 11 GRP_pourpose2_H11              1.335737       -0.005076
+ 12 GRP_pourpose3_H11              0.927682       -0.001134
+ 13 GRP_pourpose4_H11              0.082937        0.003469
+ 14 GRP_pourpose5_H11              3.004985        0.003579
+ 15 GRP_pourpose6_H11              0.446649        0.004742
+ 16 GRP_pourpose7_H11                 1E-10        0.006043     Lower BC
+ 17 GRP_pourpose8_H11                 1E-10        0.006395     Lower BC
+ 18 GRP_pourpose9_H11                 1E-10        0.006951     Lower BC
+ 19 GRP_pourpose10_H11             2.214936        0.006009
+ 20 GRP_savings2_H11               1.179838        0.005614
+ 21 GRP_savings3_H11                  1E-10        0.012078     Lower BC
+ 22 GRP_savings4_H11               0.524766        0.008288
+ 23 GRP_savings5_H11               0.544531        0.008267
+ 24 GRP_acc_status2_H12            2.789078        0.006693
+ 25 GRP_acc_status3_H12            2.765642        0.004344
+ 26 GRP_acc_status4_H12            0.696391       -0.005561
+ 27 GRP_credit_history2_H12        1.251274       -0.003626
+ 28 GRP_credit_history3_H12        0.419586       -0.006052
+ 29 GRP_credit_history4_H12        0.452165       -0.006362
+ 30 GRP_credit_history5_H12        0.188196       -0.006614
+ 31 GRP_duration2_H12              0.169131        0.005617
+ 32 GRP_duration3_H12          9.999999E-11        0.008779     Lower BC
+ 33 GRP_duration4_H12              0.109516       -0.000889
+ 34 GRP_pourpose2_H12              1.657038        0.003793
+ 35 GRP_pourpose3_H12              0.661498        0.000477
+ 36 GRP_pourpose4_H12                 1E-10        0.002017     Lower BC
+ 37 GRP_pourpose5_H12              5.318808       -0.002931
+ 38 GRP_pourpose6_H12          9.999999E-11       -0.001921     Lower BC
+ 39 GRP_pourpose7_H12              0.271171       -0.003839
+ 40 GRP_pourpose8_H12                 1E-10       -0.003935     Lower BC
+ 41 GRP_pourpose9_H12              1.078455       -0.004284
+ 42 GRP_pourpose10_H12         9.999999E-11       -0.004215     Lower BC
+ 43 GRP_savings2_H12               1.283722       -0.004693
+ 44 GRP_savings3_H12               0.377402       -0.005629
+ 45 GRP_savings4_H12                  1E-10        0.000311     Lower BC
+ 46 GRP_savings5_H12                  1E-10       -0.003677     Lower BC
+ 47 GRP_acc_status2_H13            0.350190        0.005256
+ 48 GRP_acc_status3_H13            0.321820        0.002252
+ 49 GRP_acc_status4_H13               1E-10       -0.002639     Lower BC
+ 50 GRP_credit_history2_H13        0.026139       -0.002403
+ 51 GRP_credit_history3_H13        0.052920       -0.004924
+ 52 GRP_credit_history4_H13           1E-10       -0.005862     Lower BC
+ 53 GRP_credit_history5_H13        0.204590       -0.005470
+ 54 GRP_duration2_H13                 1E-10        0.012509     Lower BC
+ 55 GRP_duration3_H13              0.138018        0.001683
+ 56 GRP_duration4_H13              0.028394       -0.000870
+ 57 GRP_pourpose2_H13              0.417021        0.002754
+ 58 GRP_pourpose3_H13              0.116438        0.000313
+ 59 GRP_pourpose4_H13                 1E-10       -0.001621     Lower BC
+ 60 GRP_pourpose5_H13                 1E-10       -0.001586     Lower BC
+ 61 GRP_pourpose6_H13              0.617434       -0.003071
+ 62 GRP_pourpose7_H13          9.999999E-11       -0.003556     Lower BC
+ 63 GRP_pourpose8_H13          9.999999E-11       -0.003554     Lower BC
+ 64 GRP_pourpose9_H13          9.999999E-11       -0.004281     Lower BC
+ 65 GRP_pourpose10_H13                1E-10       -0.003246     Lower BC
+ 66 GRP_savings2_H13                  1E-10        0.007603     Lower BC
+ 67 GRP_savings3_H13               0.082826       -0.004167
+ 68 GRP_savings4_H13               0.166816       -0.004991
+ 69 GRP_savings5_H13               0.005516       -0.005223
+ 70 BIAS_H11                       1.581584       -0.015499
+ 71 BIAS_H12                       0.203689        0.010962
+ 72 BIAS_H13                       0.437274        0.010262
+ 73 H11_default1                 -11.109310    -0.000032096
+ 74 H12_default1                   8.965786       -0.000890
+ 75 H13_default1                   5.572788        0.000703
+ 76 BIAS_default1                 -1.909250        0.002006
+ 
+Value of Objective Function = 0.4145387559
+ 
+ 
+ 
+           First Order Lagrange Multipliers
+ 
+ 
+                                               Lagrange
+           Active Constraint                 Multiplier
+ 
+ Lower BC       GRP_credit_history3_H11        0.012307
+ Lower BC       GRP_credit_history4_H11        0.010226
+ Lower BC       GRP_duration2_H11             -0.006492
+ Lower BC       GRP_duration3_H11             -0.000629
+ Lower BC       GRP_duration4_H11              0.013323
+ Lower BC       GRP_pourpose7_H11              0.006043
+ Lower BC       GRP_pourpose8_H11              0.006395
+ Lower BC       GRP_pourpose9_H11              0.006951
+ Lower BC       GRP_savings3_H11               0.012078
+ Lower BC       GRP_duration3_H12              0.008779
+ Lower BC       GRP_pourpose4_H12              0.002017
+ Lower BC       GRP_pourpose6_H12             -0.001921
+ Lower BC       GRP_pourpose8_H12             -0.003935
+ Lower BC       GRP_pourpose10_H12            -0.004215
+ Lower BC       GRP_savings4_H12               0.000311
+ Lower BC       GRP_savings5_H12              -0.003677
+ Lower BC       GRP_acc_status4_H13           -0.002639
+ Lower BC       GRP_credit_history4_H13       -0.005862
+ Lower BC       GRP_duration2_H13              0.012509
+ Lower BC       GRP_pourpose4_H13             -0.001621
+ Lower BC       GRP_pourpose5_H13             -0.001586
+ Lower BC       GRP_pourpose7_H13             -0.003556
+ Lower BC       GRP_pourpose8_H13             -0.003554
+ Lower BC       GRP_pourpose9_H13             -0.004281
+ Lower BC       GRP_pourpose10_H13            -0.003246
+ Lower BC       GRP_savings2_H13               0.007603
+ 
+ 
+  Projected Gradient
+ 
+     Free    Projected
+Dimension     Gradient
+ 
+        1    -0.009666
+        2    -0.005749
+        3     0.007521
+        4     0.004577
+        5     0.008573
+        6    -0.005076
+        7    -0.001134
+        8     0.003469
+        9     0.003579
+       10     0.004742
+       11     0.006009
+       12     0.005614
+       13     0.008288
+       14     0.008267
+       15     0.006693
+       16     0.004344
+       17    -0.005561
+       18    -0.003626
+       19    -0.006052
+       20    -0.006362
+       21    -0.006614
+       22     0.005617
+       23    -0.000889
+       24     0.003793
+       25     0.000477
+       26    -0.002931
+       27    -0.003839
+       28    -0.004284
+       29    -0.004693
+       30    -0.005629
+       31     0.005256
+       32     0.002252
+       33    -0.002403
+       34    -0.004924
+       35    -0.005470
+       36     0.001683
+       37    -0.000870
+       38     0.002754
+       39     0.000313
+       40    -0.003071
+       41    -0.004167
+       42    -0.004991
+       43    -0.005223
+       44    -0.015499
+       45     0.010962
+       46     0.010262
+       47 -0.000032096
+       48    -0.000890
+       49     0.000703
+       50     0.002006
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Fit Statistics
+ 
+Target=default Target Label=default
+ 
+   Fit
+Statistics    Statistics Label                     Train       Test
+ 
+ _DFT_        Total Degrees of Freedom            700.00       .
+ _DFE_        Degrees of Freedom for Error        624.00       .
+ _DFM_        Model Degrees of Freedom             76.00       .
+ _NW_         Number of Estimated Weights          76.00       .
+ _AIC_        Akaike's Information Criterion      741.15       .
+ _SBC_        Schwarz's Bayesian Criterion       1087.03       .
+ _ASE_        Average Squared Error                 0.14      0.188
+ _MAX_        Maximum Absolute Error                0.98      1.000
+ _DIV_        Divisor for ASE                    1400.00    600.000
+ _NOBS_       Sum of Frequencies                  700.00    300.000
+ _RASE_       Root Average Squared Error            0.37      0.434
+ _SSE_        Sum of Squared Errors               193.32    112.779
+ _SUMW_       Sum of Case Weights Times Freq     1400.00    600.000
+ _FPE_        Final Prediction Error                0.17       .
+ _MSE_        Mean Squared Error                    0.15      0.188
+ _RFPE_       Root Final Prediction Error           0.41       .
+ _RMSE_       Root Mean Squared Error               0.39      0.434
+ _AVERR_      Average Error Function                0.42      0.651
+ _ERR_        Error Function                      589.15    390.302
+ _MISC_       Misclassification Rate                0.20      0.270
+ _WRONG_      Number of Wrong Classifications     140.00     81.000
+ _LOSS_       Total Loss for default              283.00    175.000
+ _ALOSS_      Average Loss for default              0.40      0.583
+ 
+ 
+ 
+ 
+Classification Table
+ 
+Data Role=TRAIN Target Variable=default Target Label=default
+ 
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+ 
+  0          0         83.0189       89.7959        440         62.8571
+  1          0         16.9811       42.8571         90         12.8571
+  0          1         29.4118       10.2041         50          7.1429
+  1          1         70.5882       57.1429        120         17.1429
+ 
+ 
+ 
+ 
+Decision Table
+ 
+Data Role=TRAIN Target Variable=default Target Label=default
+ 
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+ 
+  0          0         94.7195       58.5714        287         41.0000
+  1          0          5.2805        7.6190         16          2.2857
+  0          1         51.1335       41.4286        203         29.0000
+  1          1         48.8665       92.3810        194         27.7143
+ 
+ 
+ 
+ 
+Event Classification Table
+ 
+Data Role=TRAIN Target=default Target Label=default
+ 
+  False       True        False       True
+Negative    Negative    Positive    Positive
+ 
+   90          440         50          120
+ 
+ 
+ 
+ 
+Assessment Score Rankings
+ 
+Data Role=TRAIN Target Variable=default Target Label=default
+ 
+                                                                                           Mean
+                               Cumulative        %       Cumulative      Number of      Posterior
+Depth       Gain      Lift        Lift       Response    % Response    Observations    Probability
+ 
+   5     204.762    3.04762      3.04762      91.4286      91.4286          35           0.88641
+  10     171.429    2.38095      2.71429      71.4286      81.4286          35           0.76219
+  15     163.492    2.47619      2.63492      74.2857      79.0476          35           0.68838
+  20     145.238    1.90476      2.45238      57.1429      73.5714          35           0.58815
+  25     132.381    1.80952      2.32381      54.2857      69.7143          35           0.52544
+  30     113.492    1.19048      2.13492      35.7143      64.0476          35           0.45289
+  35      98.639    1.09524      1.98639      32.8571      59.5918          35           0.39412
+  40      91.667    1.42857      1.91667      42.8571      57.5000          35           0.33553
+  45      84.127    1.23810      1.84127      37.1429      55.2381          35           0.29148
+  50      75.000    0.92857      1.75000      27.8571      52.5000          35           0.24796
+  55      65.368    0.69048      1.65368      20.7143      49.6104          35           0.20055
+  60      55.556    0.47619      1.55556      14.2857      46.6667          35           0.15745
+  65      45.788    0.28571      1.45788       8.5714      43.7363          35           0.13311
+  70      38.776    0.47619      1.38776      14.2857      41.6327          35           0.11498
+  75      30.794    0.19048      1.30794       5.7143      39.2381          35           0.08234
+  80      23.214    0.09524      1.23214       2.8571      36.9643          35           0.05898
+  85      16.527    0.09524      1.16527       2.8571      34.9580          35           0.03947
+  90      11.111    0.19048      1.11111       5.7143      33.3333          35           0.02791
+  95       5.263    0.00000      1.05263       0.0000      31.5789          35           0.00566
+ 100       0.000    0.00000      1.00000       0.0000      30.0000          35           0.00042
+ 
+ 
+ 
+ 
+Assessment Score Distribution
+ 
+Data Role=TRAIN Target Variable=default Target Label=default
+ 
+ Posterior     Number                     Mean
+Probability      of      Number of     Posterior
+   Range       Events    Nonevents    Probability    Percentage
+ 
+ 0.95-1.00       13           0         0.96806         1.8571
+ 0.90-0.95        5           0         0.93520         0.7143
+ 0.85-0.90        2           0         0.88355         0.2857
+ 0.80-0.85        8           1         0.81338         1.2857
+ 0.75-0.80       25          11         0.76781         5.1429
+ 0.70-0.75       16           4         0.72717         2.8571
+ 0.65-0.70       10           2         0.68209         1.7143
+ 0.60-0.65       10           5         0.62849         2.1429
+ 0.55-0.60       16          15         0.57731         4.4286
+ 0.50-0.55       15          12         0.52768         3.8571
+ 0.45-0.50        9          13         0.47398         3.1429
+ 0.40-0.45       14          19         0.42594         4.7143
+ 0.35-0.40        3          19         0.37940         3.1429
+ 0.30-0.35       21          26         0.32588         6.7143
+ 0.25-0.30       10          27         0.27353         5.2857
+ 0.20-0.25       10          23         0.22573         4.7143
+ 0.15-0.20        7          36         0.18039         6.1429
+ 0.10-0.15       10          69         0.12795        11.2857
+ 0.05-0.10        4          74         0.07106        11.1429
+ 0.00-0.05        2         134         0.01733        19.4286

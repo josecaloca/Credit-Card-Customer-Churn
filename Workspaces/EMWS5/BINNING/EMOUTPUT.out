@@ -1,0 +1,69 @@
+*------------------------------------------------------------*
+User:                Jose Caloca
+Date:                28 March 2021
+Time:                18:36:03
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+          Measurement    Frequency
+Role         Level         Count
+ 
+ID         INTERVAL           1
+INPUT      INTERVAL           2
+INPUT      NOMINAL           10
+TARGET     BINARY             1
+ 
+ 
+ 
+ 
+ 
+Obs    Input Variable       Group Variable
+ 
+  1    acc_status           GRP_acc_status
+  2    age                  GRP_age
+  3    credit_history       GRP_credit_history
+  4    duration             GRP_duration
+  5    employment           GRP_employment
+  6    instalment           GRP_instalment
+  7    job                  GRP_job
+  8    other_instalments    GRP_other_instalments
+  9    personal_status      GRP_personal_status
+ 10    pourpose             GRP_pourpose
+ 11    residence            GRP_residence
+ 12    savings              GRP_savings
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+ 
+                               Gini       Level for       New      Calculated                                       Gini
+Obs    Variable             Statistic    Interactive     Role         Role        Level      Label                Ordering
+ 
+  1    acc_status             41.973      NOMINAL       Default     Input        NOMINAL     acc_status               1
+  2    credit_history         26.118      NOMINAL       Default     Input        NOMINAL     credit_history           2
+  3    savings                22.505      NOMINAL       Default     Input        NOMINAL     savings                  3
+  4    pourpose               21.872      NOMINAL       Default     Input        NOMINAL     pourpose                 4
+  5    duration               20.859      INTERVAL      Default     Input        INTERVAL    duration                 5
+  6    employment             16.847      NOMINAL       Default     Rejected     NOMINAL     employment               6
+  7    age                    14.895      INTERVAL      Default     Rejected     INTERVAL    age                      7
+  8    other_instalments      11.275      NOMINAL       Default     Rejected     NOMINAL     other_instalments        8
+  9    personal_status         8.583      NOMINAL       Default     Rejected     NOMINAL     personal_status          9
+ 10    instalment              7.229      NOMINAL       Default     Rejected     NOMINAL     instalment              10
+ 11    residence               4.561      NOMINAL       Default     Rejected     NOMINAL     residence               11
+ 12    job                     3.669      NOMINAL       Default     Rejected     NOMINAL     job                     12
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*

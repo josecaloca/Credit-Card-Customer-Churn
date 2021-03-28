@@ -1,0 +1,241 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Resumen de variables
+
+          Nivel de     Número de
+ Rol       medida     ocurrencias
+
+INPUT     BINARY           1     
+INPUT     INTERVAL         2     
+INPUT     NOMINAL          4     
+TARGET    BINARY           1     
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Eventos del modelo
+
+                                 Número
+                    Nivel de       de
+Target    Evento     medida     niveles      Orden       Etiqueta
+
+ BAD        1        BINARY        2       Descending            
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variables predichas y de decisión
+
+Tipo         Variable    Etiqueta
+
+TARGET        BAD                        
+PREDICTED     P_BAD1     Predicted: BAD=1
+RESIDUAL      R_BAD1     Residual: BAD=1 
+PREDICTED     P_BAD0     Predicted: BAD=0
+RESIDUAL      R_BAD0     Residual: BAD=0 
+FROM          F_BAD      From: BAD       
+INTO          I_BAD      Into: BAD       
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+                Model Information
+
+Training Data Set              WORK.EM_DMREG.VIEW
+DMDB Catalog                   WORK.REG_DMDB     
+Target Variable                BAD               
+Target Measurement Level       Ordinal           
+Number of Target Categories    2                 
+Error                          MBernoulli        
+Link Function                  Logit             
+Number of Model Parameters     46                
+Number of Observations         2979              
+
+
+           Target Profile
+ 
+ Ordered                      Total
+   Value          BAD     Frequency
+
+       1            1           594
+       2            0          2385
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Dual Quasi-Newton Optimization
+
+Dual Broyden - Fletcher - Goldfarb - Shanno Update (DBFGS)
+
+Parameter Estimates              46
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 136.99697885                                                       
+
+
+                                                                 Objective     Max Abs                Slope of
+                     Function         Active        Objective     Function    Gradient       Step       Search
+Iter     Restarts       Calls    Constraints         Function       Change     Element       Size    Direction
+
+   1            0           5              0             1234        254.6     74.6792      0.895       -603.9
+   2            0           7              0             1224      10.0284     14.7252      1.000      -17.195
+   3            0           9              0             1222       1.1014      0.8762      1.000       -2.025
+   4            0          11              0             1222       0.0970      1.5544      1.000       -0.147
+   5            0          15              0             1222       0.1061      2.2531      2.315      -0.0910
+   6            0          17              0             1222       0.1473      1.2053      3.308      -0.0802
+   7            0          20              0             1222       0.0481      0.4820      2.216      -0.0539
+   8            0          23              0             1222       0.0248      0.3382      1.592      -0.0320
+   9            0          26              0             1222      0.00880      0.2484      2.652      -0.0079
+  10            0          29              0             1222      0.00529      0.1282      1.779      -0.0062
+  11            0          32              0             1222      0.00237      0.0664      2.738      -0.0020
+  12            0          35              0             1222     0.000984      0.0407      1.700      -0.0012
+
+                                            Optimization Results
+
+Iterations                                         12  Function Calls                                     37
+Gradient Calls                                     16  Active Constraints                                  0
+Objective Function                       1222.0515229  Max Abs Gradient Element                 0.0406861927
+Slope of Search Direction                -0.001220419                                                       
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+NOTE: At least one element of the gradient is greater than 1e-3.
+
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2444.103       532.2971       45         <.0001
+
+
+          Type 3 Analysis of Effects
+ 
+                             Wald
+Effect           DF    Chi-Square    Pr > ChiSq
+
+IMP_DEBTINC       1       15.0725        0.0001
+IMP_DELINQ       13      181.8631        <.0001
+IMP_DEROG        10       69.4056        <.0001
+IMP_JOB           5       25.0583        0.0001
+IMP_NINQ         14       59.6402        <.0001
+IMP_REASON        1        8.9161        0.0028
+IMP_VALUE         1        0.0590        0.8081
+
+
+                                Analysis of Maximum Likelihood Estimates
+ 
+                                         Standard          Wald                  Standardized
+Parameter              DF    Estimate       Error    Chi-Square    Pr > ChiSq        Estimate    Exp(Est)
+
+Intercept               1      9.5783     32.4005          0.09        0.7675                     999.000
+IMP_DEBTINC             1      0.0230     0.00593         15.07        0.0001          0.1338       1.023
+IMP_DELINQ  0           1     -6.3698     24.3759          0.07        0.7939                       0.002
+IMP_DELINQ  1           1     -5.5173     24.3761          0.05        0.8209                       0.004
+IMP_DELINQ  2           1     -5.2897     24.3765          0.05        0.8282                       0.005
+IMP_DELINQ  3           1     -4.3437     24.3769          0.03        0.8586                       0.013
+IMP_DELINQ  4           1     -4.2587     24.3777          0.03        0.8613                       0.014
+IMP_DELINQ  5           1     -3.2837     24.3821          0.02        0.8929                       0.037
+IMP_DELINQ  6           1     -3.0917     24.3833          0.02        0.8991                       0.045
+IMP_DELINQ  7           1     -3.1859     24.3873          0.02        0.8961                       0.041
+IMP_DELINQ  8           1      5.8152     86.2021          0.00        0.9462                     335.356
+IMP_DELINQ  10          1      5.7259       144.7          0.00        0.9684                     306.718
+IMP_DELINQ  11          1      6.2850       110.6          0.00        0.9547                     536.472
+IMP_DELINQ  12          1      6.3869       144.7          0.00        0.9648                     593.996
+IMP_DELINQ  13          1      6.8211       144.7          0.00        0.9624                     916.991
+IMP_DEROG   0           1     -2.8677     11.7986          0.06        0.8080                       0.057
+IMP_DEROG   1           1     -2.1186     11.7992          0.03        0.8575                       0.120
+IMP_DEROG   2           1     -1.7650     11.8003          0.02        0.8811                       0.171
+IMP_DEROG   3           1     -0.4899     11.8056          0.00        0.9669                       0.613
+IMP_DEROG   4           1     -1.3835     11.8132          0.01        0.9068                       0.251
+IMP_DEROG   5           1     -2.4275     11.8245          0.04        0.8373                       0.088
+IMP_DEROG   6           1     -1.6385     11.8521          0.02        0.8900                       0.194
+IMP_DEROG   7           1      6.5573     81.3030          0.01        0.9357                     704.386
+IMP_DEROG   8           1      8.4433     86.2763          0.01        0.9220                     999.000
+IMP_DEROG   9           1     -1.5325     11.8746          0.02        0.8973                       0.216
+IMP_JOB     Mgr         1      0.0358      0.1374          0.07        0.7947                       1.036
+IMP_JOB     Office      1     -0.5417      0.1426         14.44        0.0001                       0.582
+IMP_JOB     Other       1     0.00438      0.1043          0.00        0.9665                       1.004
+IMP_JOB     ProfExe     1     -0.3238      0.1289          6.31        0.0120                       0.723
+IMP_JOB     Sales       1      0.9319      0.2821         10.91        0.0010                       2.539
+IMP_NINQ    0           1     -3.1999     17.7869          0.03        0.8572                       0.041
+IMP_NINQ    1           1     -2.9761     17.7870          0.03        0.8671                       0.051
+IMP_NINQ    2           1     -2.5938     17.7872          0.02        0.8841                       0.075
+IMP_NINQ    3           1     -2.7283     17.7875          0.02        0.8781                       0.065
+IMP_NINQ    4           1     -2.1610     17.7885          0.01        0.9033                       0.115
+IMP_NINQ    5           1     -1.7023     17.7896          0.01        0.9238                       0.182
+IMP_NINQ    6           1     -1.4068     17.7914          0.01        0.9370                       0.245
+IMP_NINQ    7           1     -2.0119     17.7919          0.01        0.9100                       0.134
+IMP_NINQ    8           1     -1.8571     17.7957          0.01        0.9169                       0.156
+IMP_NINQ    9           1     -1.4633     17.8002          0.01        0.9345                       0.231
+IMP_NINQ    10          1     -2.4861     17.8005          0.02        0.8889                       0.083
+IMP_NINQ    11          1     -2.8445     17.8055          0.03        0.8731                       0.058
+IMP_NINQ    12          1      8.8010       144.5          0.00        0.9514                     999.000
+IMP_NINQ    13          1      9.7020       144.5          0.00        0.9465                     999.000
+IMP_REASON  DebtCon     1     -0.1694      0.0567          8.92        0.0028                       0.844
+IMP_VALUE               1     -2.3E-7    9.465E-7          0.06        0.8081        -0.00736       1.000
+
+
+           Odds Ratio Estimates
+                     
+                                     Point
+Effect                            Estimate
+
+IMP_DEBTINC                          1.023
+IMP_DELINQ  0 vs 15                 <0.001
+IMP_DELINQ  1 vs 15                 <0.001
+IMP_DELINQ  2 vs 15                 <0.001
+IMP_DELINQ  3 vs 15                 <0.001
+IMP_DELINQ  4 vs 15                 <0.001
+IMP_DELINQ  5 vs 15                 <0.001
+IMP_DELINQ  6 vs 15                 <0.001
+IMP_DELINQ  7 vs 15                 <0.001
+IMP_DELINQ  8 vs 15                  4.522
+IMP_DELINQ  10 vs 15                 4.136
+IMP_DELINQ  11 vs 15                 7.234
+IMP_DELINQ  12 vs 15                 8.010
+IMP_DELINQ  13 vs 15                12.366
+IMP_DEROG   0 vs 10                  0.124
+IMP_DEROG   1 vs 10                  0.262
+IMP_DEROG   2 vs 10                  0.373
+IMP_DEROG   3 vs 10                  1.333
+IMP_DEROG   4 vs 10                  0.546
+IMP_DEROG   5 vs 10                  0.192
+IMP_DEROG   6 vs 10                  0.423
+IMP_DEROG   7 vs 10                999.000
+IMP_DEROG   8 vs 10                999.000
+IMP_DEROG   9 vs 10                  0.470
+IMP_JOB     Mgr vs Self              1.153
+IMP_JOB     Office vs Self           0.647
+IMP_JOB     Other vs Self            1.117
+IMP_JOB     ProfExe vs Self          0.805
+IMP_JOB     Sales vs Self            2.825
+IMP_NINQ    0 vs 14                 <0.001
+IMP_NINQ    1 vs 14                 <0.001
+IMP_NINQ    2 vs 14                 <0.001
+IMP_NINQ    3 vs 14                 <0.001
+IMP_NINQ    4 vs 14                 <0.001
+IMP_NINQ    5 vs 14                 <0.001
+IMP_NINQ    6 vs 14                 <0.001
+IMP_NINQ    7 vs 14                 <0.001
+IMP_NINQ    8 vs 14                 <0.001
+IMP_NINQ    9 vs 14                 <0.001
+IMP_NINQ    10 vs 14                <0.001
+IMP_NINQ    11 vs 14                <0.001
+IMP_NINQ    12 vs 14                 0.880
+IMP_NINQ    13 vs 14                 2.168
+IMP_REASON  DebtCon vs HomeImp       0.713
+IMP_VALUE                            1.000

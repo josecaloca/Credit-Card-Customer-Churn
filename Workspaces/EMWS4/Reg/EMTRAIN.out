@@ -1,0 +1,449 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+            Measurement    Frequency
+Role           Level         Count
+
+INPUT        ORDINAL           3    
+REJECTED     BINARY            1    
+REJECTED     INTERVAL          3    
+REJECTED     NOMINAL           4    
+TARGET       BINARY            1    
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Model Events
+
+                                  Number
+                   Measurement      of
+Target    Event       Level       Levels      Order       Label
+
+ BAD        1        BINARY          2      Descending         
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Decision Matrix
+
+         Training
+BAD    Proportions    1    0
+
+ 1       0.19950      0    5
+ 0       0.80050      1    0
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Predicted and decision variables
+
+Type             Variable    Label
+
+TARGET            BAD                          
+PREDICTED         P_BAD1     Predicted: BAD=1  
+RESIDUAL          R_BAD1     Residual: BAD=1   
+PREDICTED         P_BAD0     Predicted: BAD=0  
+RESIDUAL          R_BAD0     Residual: BAD=0   
+FROM              F_BAD      From: BAD         
+INTO              I_BAD      Into: BAD         
+MODELDECISION     D_BAD      Decision: BAD     
+EXPECTEDLOSS      EL_BAD     Expected Loss: BAD
+COMPUTEDLOSS      CL_BAD     Computed Loss: BAD
+BESTLOSS          BL_BAD     Best Loss: BAD    
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+                Model Information
+
+Training Data Set              WORK.EM_DMREG.VIEW
+DMDB Catalog                   WORK.REG_DMDB     
+Target Variable                BAD               
+Target Measurement Level       Ordinal           
+Number of Target Categories    2                 
+Error                          MBernoulli        
+Link Function                  Logit             
+Number of Model Parameters     9                 
+Number of Observations         2979              
+
+
+           Target Profile
+ 
+ Ordered                      Total
+   Value          BAD     Frequency
+
+       1            1           594
+       2            0          2385
+
+
+
+
+Stepwise Selection Procedure
+
+
+Step 0: Intercept entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               1
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 3.438805E-12                                                       
+
+                                            Optimization Results
+
+Iterations                                          0  Function Calls                                      3
+Hessian Calls                                       1  Active Constraints                                  0
+Objective Function                       1488.2000885  Max Abs Gradient Element                 3.438805E-12
+Ridge                                               0  Actual Over Pred Change                             0
+
+Convergence criterion (ABSGCONV=0.00001) satisfied.                                               
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2976.400         0.0000        0          .    
+
+
+
+
+                       Analysis of Maximum Likelihood Estimates
+ 
+                                      Standard          Wald
+Parameter           DF    Estimate       Error    Chi-Square    Pr > ChiSq    Exp(Est)
+
+Intercept            1     -1.3901      0.0459        918.93        <.0001       0.249
+
+
+
+
+Step 1: Effect GRP_IMP_DELINQ entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               3
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 245.71903323                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             1367        121.5     62.4605         0        0.728
+   2            0           3              0             1351      15.3055      7.1693         0        0.887
+   3            0           4              0             1351       0.3593      0.0534         0        1.005
+   4            0           5              0             1351     0.000022    3.965E-6         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       1351.0777278  Max Abs Gradient Element                 3.9651366E-6
+Ridge                                               0  Actual Over Pred Change                  1.0000494693
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2702.155       274.2447        2         <.0001
+
+
+            Type 3 Analysis of Effects
+ 
+                                Wald
+Effect              DF    Chi-Square    Pr > ChiSq
+
+GRP_IMP_DELINQ       2      271.4879        <.0001
+
+
+                       Analysis of Maximum Likelihood Estimates
+ 
+                                      Standard          Wald
+Parameter           DF    Estimate       Error    Chi-Square    Pr > ChiSq    Exp(Est)
+
+Intercept            1     -0.7575      0.0612        153.06        <.0001       0.469
+GRP_IMP_DELINQ 2     1     -1.0470      0.0700        223.87        <.0001       0.351
+GRP_IMP_DELINQ 3     1     -0.0823      0.0937          0.77        0.3796       0.921
+
+
+      Odds Ratio Estimates
+                
+                            Point
+Effect                   Estimate
+
+GRP_IMP_DELINQ 2 vs 4       0.113
+GRP_IMP_DELINQ 3 vs 4       0.298
+
+
+Step 2: Effect GRP_IMP_DEROG entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               5
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 245.71903323                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             1309        179.0     78.0890         0        0.770
+   2            0           3              0             1294      15.1818      4.8202         0        0.927
+   3            0           4              0             1294       0.1946      0.0448         0        1.007
+   4            0           5              0             1294     0.000022    6.366E-6         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       1293.8096872  Max Abs Gradient Element                 6.3660955E-6
+Ridge                                               0  Actual Over Pred Change                   1.000082701
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2587.619       388.7808        4         <.0001
+
+
+            Type 3 Analysis of Effects
+ 
+                                Wald
+Effect              DF    Chi-Square    Pr > ChiSq
+
+GRP_IMP_DELINQ       2      209.6311        <.0001
+GRP_IMP_DEROG        2      117.6580        <.0001
+
+
+                       Analysis of Maximum Likelihood Estimates
+ 
+                                      Standard          Wald
+Parameter           DF    Estimate       Error    Chi-Square    Pr > ChiSq    Exp(Est)
+
+Intercept            1     -0.0791      0.0896          0.78        0.3773       0.924
+GRP_IMP_DELINQ 2     1     -0.9543      0.0725        173.41        <.0001       0.385
+GRP_IMP_DELINQ 3     1     -0.0777      0.0974          0.64        0.4248       0.925
+GRP_IMP_DEROG  2     1     -0.9479      0.0878        116.42        <.0001       0.388
+GRP_IMP_DEROG  3     1      0.1161      0.1199          0.94        0.3329       1.123
+
+
+      Odds Ratio Estimates
+                
+                            Point
+Effect                   Estimate
+
+GRP_IMP_DELINQ 2 vs 4       0.137
+GRP_IMP_DELINQ 3 vs 4       0.330
+GRP_IMP_DEROG  2 vs 4       0.169
+GRP_IMP_DEROG  3 vs 4       0.489
+
+
+Step 3: Effect GRP_IMP_NINQ entered.
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMREG Procedure
+
+Newton-Raphson Ridge Optimization
+
+Without Parameter Scaling
+
+Parameter Estimates               9
+
+                                             Optimization Start
+
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 245.71903323                                                       
+
+
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+
+   1            0           2              0             1277        211.7     89.1503         0        0.797
+   2            0           3              0             1261      15.8233      4.9841         0        0.949
+   3            0           4              0             1261       0.1412      0.0397         0        1.006
+   4            0           5              0             1261     0.000014    4.894E-6         0        1.000
+
+                                            Optimization Results
+
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       1260.5732591  Max Abs Gradient Element                 4.8938024E-6
+Ridge                                               0  Actual Over Pred Change                  1.0000771824
+
+Convergence criterion (GCONV=1E-6) satisfied.                                                     
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2521.147       455.2537        8         <.0001
+
+
+            Type 3 Analysis of Effects
+ 
+                                Wald
+Effect              DF    Chi-Square    Pr > ChiSq
+
+GRP_IMP_DELINQ       2      210.6224        <.0001
+GRP_IMP_DEROG        2       92.8499        <.0001
+GRP_IMP_NINQ         4       70.1953        <.0001
+
+
+                       Analysis of Maximum Likelihood Estimates
+ 
+                                      Standard          Wald
+Parameter           DF    Estimate       Error    Chi-Square    Pr > ChiSq    Exp(Est)
+
+Intercept            1      0.1119      0.0973          1.32        0.2502       1.118
+GRP_IMP_DELINQ 2     1     -0.9707      0.0740        172.15        <.0001       0.379
+GRP_IMP_DELINQ 3     1     -0.0974      0.0997          0.96        0.3284       0.907
+GRP_IMP_DEROG  2     1     -0.8662      0.0907         91.21        <.0001       0.421
+GRP_IMP_DEROG  3     1      0.0617      0.1230          0.25        0.6158       1.064
+GRP_IMP_NINQ   2     1     -0.4875      0.0849         32.96        <.0001       0.614
+GRP_IMP_NINQ   3     1     -0.4047      0.1041         15.12        0.0001       0.667
+GRP_IMP_NINQ   4     1      0.0844      0.1181          0.51        0.4747       1.088
+GRP_IMP_NINQ   5     1     -0.0984      0.1532          0.41        0.5206       0.906
+
+
+      Odds Ratio Estimates
+                
+                            Point
+Effect                   Estimate
+
+GRP_IMP_DELINQ 2 vs 4       0.130
+GRP_IMP_DELINQ 3 vs 4       0.312
+GRP_IMP_DEROG  2 vs 4       0.188
+GRP_IMP_DEROG  3 vs 4       0.476
+GRP_IMP_NINQ   2 vs 6       0.248
+GRP_IMP_NINQ   3 vs 6       0.270
+GRP_IMP_NINQ   4 vs 6       0.440
+GRP_IMP_NINQ   5 vs 6       0.366
+
+
+NOTE: All effects have been entered into the model.
+
+
+                                    Summary of Stepwise Selection
+ 
+                Effect                Number         Score          Wald                  Validation
+    Step    Entered             DF        In    Chi-Square    Chi-Square    Pr > ChiSq          Loss
+
+       1    GRP_IMP_DELINQ       2         1      333.6842                      <.0001        1103.0
+       2    GRP_IMP_DEROG        2         2      129.6335                      <.0001        1028.0
+       3    GRP_IMP_NINQ         4         3       74.4038                      <.0001        1032.0
+
+
+The selected model, based on the total loss for the validation data, is the model trained in Step 2. It consists of the following effects:
+
+Intercept  GRP_IMP_DELINQ  GRP_IMP_DEROG  
+
+
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+
+   2976.400        2587.619       388.7808        4         <.0001
+
+
+            Type 3 Analysis of Effects
+ 
+                                Wald
+Effect              DF    Chi-Square    Pr > ChiSq
+
+GRP_IMP_DELINQ       2      209.6311        <.0001
+GRP_IMP_DEROG        2      117.6580        <.0001
+
+
+                       Analysis of Maximum Likelihood Estimates
+ 
+                                      Standard          Wald
+Parameter           DF    Estimate       Error    Chi-Square    Pr > ChiSq    Exp(Est)
+
+Intercept            1     -0.0791      0.0896          0.78        0.3773       0.924
+GRP_IMP_DELINQ 2     1     -0.9543      0.0725        173.41        <.0001       0.385
+GRP_IMP_DELINQ 3     1     -0.0777      0.0974          0.64        0.4248       0.925
+GRP_IMP_DEROG  2     1     -0.9479      0.0878        116.42        <.0001       0.388
+GRP_IMP_DEROG  3     1      0.1161      0.1199          0.94        0.3329       1.123
+
+
+      Odds Ratio Estimates
+                
+                            Point
+Effect                   Estimate
+
+GRP_IMP_DELINQ 2 vs 4       0.137
+GRP_IMP_DELINQ 3 vs 4       0.330
+GRP_IMP_DEROG  2 vs 4       0.169
+GRP_IMP_DEROG  3 vs 4       0.489

@@ -1,0 +1,191 @@
+*------------------------------------------------------------*
+User:                Jose Caloca
+Date:                28 March 2021
+Time:                20:54:25
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+ID           INTERVAL           1
+INPUT        ORDINAL            5
+REJECTED     BINARY             1
+REJECTED     INTERVAL           9
+REJECTED     NOMINAL           14
+TARGET       NOMINAL            1
+ 
+ 
+ 
+ 
+Model Events
+ 
+                                     Number
+                      Measurement      of
+ Target      Event       Level       Levels      Order           Label
+ 
+I_default      1        NOMINAL         2      Descending    Into: default
+ 
+ 
+ 
+ 
+Predicted and decision variables
+ 
+Type           Variable      Label
+ 
+TARGET       I_default       Into: default
+PREDICTED    P_I_default1    Predicted: I_default=1
+RESIDUAL     R_I_default1    Residual: I_default=1
+PREDICTED    P_I_default0    Predicted: I_default=0
+RESIDUAL     R_I_default0    Residual: I_default=0
+FROM         F_I_default     From: I_default
+INTO         I_I_default     Into: I_default
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+Variable Importance
+ 
+                                                 Number of
+                                                 Splitting
+Variable Name                  Label               Rules           Importance
+ 
+GRP_acc_status        Grouped: acc_status            3                 1.0000
+GRP_pourpose          Grouped: pourpose              4                 0.7000
+GRP_duration          Grouped: duration              1                 0.6504
+GRP_credit_history    Grouped: credit_history        1                 0.4944
+GRP_savings           Grouped: savings               1                 0.4757
+ 
+ 
+ 
+Tree Leaf Report
+ 
+                                 Training
+Node               Training       Percent
+ Id     Depth    Observations        1
+ 
+  2       1           278          0.01
+ 20       5           109          0.22
+ 16       4           101          0.12
+ 13       3            63          0.33
+ 23       5            54          0.89
+ 29       6            23          0.83
+ 11       3            20          0.80
+ 24       5            16          0.13
+ 25       5            15          0.93
+ 21       5            12          0.75
+ 28       6             9          0.11
+ 
+ 
+ 
+ 
+Fit Statistics
+ 
+Target=I_default Target Label=Into: default
+ 
+   Fit
+Statistics    Statistics Label                Train       Test
+ 
+  _NOBS_      Sum of Frequencies             700.00    300.000
+  _MISC_      Misclassification Rate           0.12      0.150
+  _MAX_       Maximum Absolute Error           0.99      0.986
+  _SSE_       Sum of Squared Errors          129.78     68.337
+  _ASE_       Average Squared Error            0.09      0.114
+  _RASE_      Root Average Squared Error       0.30      0.337
+  _DIV_       Divisor for ASE               1400.00    600.000
+  _DFT_       Total Degrees of Freedom       700.00       .
+ 
+ 
+ 
+ 
+Classification Table
+ 
+Data Role=TRAIN Target Variable=I_default Target Label=Into: default
+ 
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+ 
+  0          0         88.8889       96.6038        512         73.1429
+  1          0         11.1111       37.6471         64          9.1429
+  0          1         14.5161        3.3962         18          2.5714
+  1          1         85.4839       62.3529        106         15.1429
+ 
+ 
+ 
+ 
+Event Classification Table
+ 
+Data Role=TRAIN Target=I_default Target Label=Into: default
+ 
+  False       True        False       True
+Negative    Negative    Positive    Positive
+ 
+   64          512         18          106
+ 
+ 
+ 
+ 
+Assessment Score Rankings
+ 
+Data Role=TRAIN Target Variable=I_default Target Label=Into: default
+ 
+                                                                                           Mean
+                               Cumulative        %       Cumulative      Number of      Posterior
+Depth       Gain      Lift        Lift       Response    % Response    Observations    Probability
+ 
+   5     273.856    3.73856      3.73856      90.7937      90.7937          35           0.90794
+  10     269.565    3.65274      3.69565      88.7095      89.7516          35           0.88709
+  15     258.431    3.36164      3.58431      81.6398      87.0476          35           0.81640
+  20     227.451    2.34510      3.27451      56.9524      79.5238          35           0.56952
+  25     189.412    1.37255      2.89412      33.3333      70.2857          35           0.33333
+  30     158.949    1.06638      2.58949      25.8978      62.8877          35           0.25898
+  35     134.909    0.90664      2.34909      22.0183      57.0492          35           0.22018
+  40     116.878    0.90664      2.16878      22.0183      52.6704          35           0.22018
+  45     100.466    0.69169      2.00466      16.7982      48.6846          35           0.16798
+  50      85.312    0.48923      1.85312      11.8812      45.0042          35           0.11881
+  55      72.913    0.48923      1.72913      11.8812      41.9931          35           0.11881
+  60      62.527    0.48288      1.62527      11.7272      39.4709          35           0.11727
+  65      50.656    0.08200      1.50656       1.9915      36.5879          35           0.01992
+  70      40.318    0.05925      1.40318       1.4388      34.0772          35           0.01439
+  75      31.358    0.05925      1.31358       1.4388      31.9013          35           0.01439
+  80      23.519    0.05925      1.23519       1.4388      29.9974          35           0.01439
+  85      16.602    0.05925      1.16602       1.4388      28.3175          35           0.01439
+  90      10.453    0.05925      1.10453       1.4388      26.8243          35           0.01439
+  95       4.951    0.05925      1.04951       1.4388      25.4882          35           0.01439
+ 100       0.000    0.05925      1.00000       1.4388      24.2857          35           0.01439
+ 
+ 
+ 
+ 
+Assessment Score Distribution
+ 
+Data Role=TRAIN Target Variable=I_default Target Label=Into: default
+ 
+ Posterior     Number                     Mean
+Probability      of      Number of     Posterior
+   Range       Events    Nonevents    Probability    Percentage
+ 
+ 0.90-0.95       14           1         0.93333         2.1429
+ 0.85-0.90       48           6         0.88889         7.7143
+ 0.80-0.85       19           4         0.82609         3.2857
+ 0.75-0.80       16           4         0.80000         2.8571
+ 0.70-0.75        9           3         0.75000         1.7143
+ 0.30-0.35       21          42         0.33333         9.0000
+ 0.20-0.25       24          85         0.22018        15.5714
+ 0.10-0.15       15         111         0.11905        18.0000
+ 0.00-0.05        4         274         0.01439        39.7143

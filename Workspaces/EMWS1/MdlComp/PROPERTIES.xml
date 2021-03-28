@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6"
+ ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01"
+ AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" intervalViyaCriteria="DEFAULT"
+ classViyaCriteria="DEFAULT" SelectionTable="TEST" SelectionCriteria="_MISC_" SelectionDepth="10"
+ NumberofBins="20" RecomputeAssess="N" TargetName="BAD" ModelId="Reg" ModelDescription="Regresión"
+ ModelCriteria="Test: Misclassification Rate" ForceRun="N" RunAction="Train" Component="ModelCompare"
+ RawCreateTime="1930745983.1" CreateTime="07MAR2021:14:19:43" RunId="593a070b-d232-4d96-9ee4-22006988a608"
+ StatisticUsed="_TMISC_" TargetLabel="">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES/>
+</_ROOT_>

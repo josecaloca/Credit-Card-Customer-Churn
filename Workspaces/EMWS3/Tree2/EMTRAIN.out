@@ -1,0 +1,41 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Resumen de variables
+
+            Nivel de     Número de
+Rol          medida     ocurrencias
+
+ID          INTERVAL         1     
+INPUT       ORDINAL          6     
+REJECTED    BINARY           1     
+REJECTED    INTERVAL         7     
+REJECTED    NOMINAL          4     
+TARGET      BINARY           1     
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Eventos del modelo
+
+                                 Número
+                    Nivel de       de
+Target    Evento     medida     niveles      Orden       Etiqueta
+
+ BAD        1        BINARY        2       Descending            
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variables predichas y de decisión
+
+Tipo         Variable    Etiqueta
+
+TARGET        BAD                        
+PREDICTED     P_BAD1     Predicted: BAD=1
+RESIDUAL      R_BAD1     Residual: BAD=1 
+PREDICTED     P_BAD0     Predicted: BAD=0
+RESIDUAL      R_BAD0     Residual: BAD=0 
+FROM          F_BAD      From: BAD       
+INTO          I_BAD      Into: BAD       

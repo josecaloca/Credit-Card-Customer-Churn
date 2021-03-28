@@ -1,0 +1,61 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+1 
+Traverser: Traverser invoked.  MPCONNECT command is sas. 
+Traverser: Beginning flow traversal 
+*------------------------------------------------------------* 
+* 
+* Ids : Beginning Update 
+* datetime : 28MAR2021:21:00:12 
+* 
+*------------------------------------------------------------* 
+NOTE: Data file JOSE.GERMAN.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce 
+      performance.
+36007      %let _HPDMGRIDHOST=;
+36008      %let _HPDMGRIDINSTALLLOC=;
+36009      %let _HPDMGRIDDATASERVER=;
+36010      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Ids : End Update 
+* datetime : 28MAR2021:21:00:12 
+* 
+*------------------------------------------------------------* 
+traverser_readyNode_note 
+*------------------------------------------------------------* 
+* 
+* Plot : Beginning Update 
+* datetime : 28MAR2021:21:00:12 
+* 
+*------------------------------------------------------------* 
+36030      %let _HPDMGRIDHOST=;
+36031      %let _HPDMGRIDINSTALLLOC=;
+36032      %let _HPDMGRIDDATASERVER=;
+36033      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Plot : End Update 
+* datetime : 28MAR2021:21:00:12 
+* 
+*------------------------------------------------------------* 
+Traverser: Run Completed 
+36034      proc printto;
+36035      run;
+

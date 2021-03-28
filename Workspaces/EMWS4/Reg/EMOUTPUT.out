@@ -1,0 +1,669 @@
+*------------------------------------------------------------*
+User:                Jose Caloca
+Date:                16 March 2021
+Time:                00:06:21
+*------------------------------------------------------------*
+* Training Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Variable Summary
+ 
+            Measurement    Frequency
+Role           Level         Count
+ 
+INPUT        ORDINAL           3
+REJECTED     BINARY            1
+REJECTED     INTERVAL          3
+REJECTED     NOMINAL           4
+TARGET       BINARY            1
+ 
+ 
+ 
+ 
+Model Events
+ 
+                                  Number
+                   Measurement      of
+Target    Event       Level       Levels      Order       Label
+ 
+ BAD        1        BINARY          2      Descending
+ 
+ 
+ 
+ 
+Decision Matrix
+ 
+         Training
+BAD    Proportions    1    0
+ 
+ 1       0.19950      0    5
+ 0       0.80050      1    0
+ 
+ 
+ 
+ 
+Predicted and decision variables
+ 
+Type             Variable    Label
+ 
+TARGET            BAD
+PREDICTED         P_BAD1     Predicted: BAD=1
+RESIDUAL          R_BAD1     Residual: BAD=1
+PREDICTED         P_BAD0     Predicted: BAD=0
+RESIDUAL          R_BAD0     Residual: BAD=0
+FROM              F_BAD      From: BAD
+INTO              I_BAD      Into: BAD
+MODELDECISION     D_BAD      Decision: BAD
+EXPECTEDLOSS      EL_BAD     Expected Loss: BAD
+COMPUTEDLOSS      CL_BAD     Computed Loss: BAD
+BESTLOSS          BL_BAD     Best Loss: BAD
+ 
+ 
+ 
+ 
+ 
+The DMREG Procedure
+ 
+                Model Information
+ 
+Training Data Set              WORK.EM_DMREG.VIEW
+DMDB Catalog                   WORK.REG_DMDB
+Target Variable                BAD
+Target Measurement Level       Ordinal
+Number of Target Categories    2
+Error                          MBernoulli
+Link Function                  Logit
+Number of Model Parameters     9
+Number of Observations         2979
+ 
+ 
+           Target Profile
+ 
+ Ordered                      Total
+   Value          BAD     Frequency
+ 
+       1            1           594
+       2            0          2385
+ 
+ 
+ 
+ 
+Stepwise Selection Procedure
+ 
+ 
+Step 0: Intercept entered.
+ 
+ 
+ 
+ 
+ 
+The DMREG Procedure
+ 
+Newton-Raphson Ridge Optimization
+ 
+Without Parameter Scaling
+ 
+Parameter Estimates               1
+ 
+                                             Optimization Start
+ 
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 3.438805E-12
+ 
+                                            Optimization Results
+ 
+Iterations                                          0  Function Calls                                      3
+Hessian Calls                                       1  Active Constraints                                  0
+Objective Function                       1488.2000885  Max Abs Gradient Element                 3.438805E-12
+Ridge                                               0  Actual Over Pred Change                             0
+ 
+Convergence criterion (ABSGCONV=0.00001) satisfied.
+ 
+ 
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+ 
+   2976.400        2976.400         0.0000        0          .
+ 
+ 
+ 
+ 
+                       Analysis of Maximum Likelihood Estimates
+ 
+                                      Standard          Wald
+Parameter           DF    Estimate       Error    Chi-Square    Pr > ChiSq    Exp(Est)
+ 
+Intercept            1     -1.3901      0.0459        918.93        <.0001       0.249
+ 
+ 
+ 
+ 
+Step 1: Effect GRP_IMP_DELINQ entered.
+ 
+ 
+ 
+ 
+ 
+The DMREG Procedure
+ 
+Newton-Raphson Ridge Optimization
+ 
+Without Parameter Scaling
+ 
+Parameter Estimates               3
+ 
+                                             Optimization Start
+ 
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 245.71903323
+ 
+ 
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+ 
+   1            0           2              0             1367        121.5     62.4605         0        0.728
+   2            0           3              0             1351      15.3055      7.1693         0        0.887
+   3            0           4              0             1351       0.3593      0.0534         0        1.005
+   4            0           5              0             1351     0.000022    3.965E-6         0        1.000
+ 
+                                            Optimization Results
+ 
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       1351.0777278  Max Abs Gradient Element                 3.9651366E-6
+Ridge                                               0  Actual Over Pred Change                  1.0000494693
+ 
+Convergence criterion (GCONV=1E-6) satisfied.
+ 
+ 
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+ 
+   2976.400        2702.155       274.2447        2         <.0001
+ 
+ 
+            Type 3 Analysis of Effects
+ 
+                                Wald
+Effect              DF    Chi-Square    Pr > ChiSq
+ 
+GRP_IMP_DELINQ       2      271.4879        <.0001
+ 
+ 
+                       Analysis of Maximum Likelihood Estimates
+ 
+                                      Standard          Wald
+Parameter           DF    Estimate       Error    Chi-Square    Pr > ChiSq    Exp(Est)
+ 
+Intercept            1     -0.7575      0.0612        153.06        <.0001       0.469
+GRP_IMP_DELINQ 2     1     -1.0470      0.0700        223.87        <.0001       0.351
+GRP_IMP_DELINQ 3     1     -0.0823      0.0937          0.77        0.3796       0.921
+ 
+ 
+      Odds Ratio Estimates
+ 
+                            Point
+Effect                   Estimate
+ 
+GRP_IMP_DELINQ 2 vs 4       0.113
+GRP_IMP_DELINQ 3 vs 4       0.298
+ 
+ 
+Step 2: Effect GRP_IMP_DEROG entered.
+ 
+ 
+ 
+ 
+ 
+The DMREG Procedure
+ 
+Newton-Raphson Ridge Optimization
+ 
+Without Parameter Scaling
+ 
+Parameter Estimates               5
+ 
+                                             Optimization Start
+ 
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 245.71903323
+ 
+ 
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+ 
+   1            0           2              0             1309        179.0     78.0890         0        0.770
+   2            0           3              0             1294      15.1818      4.8202         0        0.927
+   3            0           4              0             1294       0.1946      0.0448         0        1.007
+   4            0           5              0             1294     0.000022    6.366E-6         0        1.000
+ 
+                                            Optimization Results
+ 
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       1293.8096872  Max Abs Gradient Element                 6.3660955E-6
+Ridge                                               0  Actual Over Pred Change                   1.000082701
+ 
+Convergence criterion (GCONV=1E-6) satisfied.
+ 
+ 
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+ 
+   2976.400        2587.619       388.7808        4         <.0001
+ 
+ 
+            Type 3 Analysis of Effects
+ 
+                                Wald
+Effect              DF    Chi-Square    Pr > ChiSq
+ 
+GRP_IMP_DELINQ       2      209.6311        <.0001
+GRP_IMP_DEROG        2      117.6580        <.0001
+ 
+ 
+                       Analysis of Maximum Likelihood Estimates
+ 
+                                      Standard          Wald
+Parameter           DF    Estimate       Error    Chi-Square    Pr > ChiSq    Exp(Est)
+ 
+Intercept            1     -0.0791      0.0896          0.78        0.3773       0.924
+GRP_IMP_DELINQ 2     1     -0.9543      0.0725        173.41        <.0001       0.385
+GRP_IMP_DELINQ 3     1     -0.0777      0.0974          0.64        0.4248       0.925
+GRP_IMP_DEROG  2     1     -0.9479      0.0878        116.42        <.0001       0.388
+GRP_IMP_DEROG  3     1      0.1161      0.1199          0.94        0.3329       1.123
+ 
+ 
+      Odds Ratio Estimates
+ 
+                            Point
+Effect                   Estimate
+ 
+GRP_IMP_DELINQ 2 vs 4       0.137
+GRP_IMP_DELINQ 3 vs 4       0.330
+GRP_IMP_DEROG  2 vs 4       0.169
+GRP_IMP_DEROG  3 vs 4       0.489
+ 
+ 
+Step 3: Effect GRP_IMP_NINQ entered.
+ 
+ 
+ 
+ 
+ 
+The DMREG Procedure
+ 
+Newton-Raphson Ridge Optimization
+ 
+Without Parameter Scaling
+ 
+Parameter Estimates               9
+ 
+                                             Optimization Start
+ 
+Active Constraints                                  0  Objective Function                       1488.2000885
+Max Abs Gradient Element                 245.71903323
+ 
+ 
+                                                                                                        Ratio
+                                                                                                      Between
+                                                                                                       Actual
+                                                                 Objective     Max Abs                    and
+                     Function         Active        Objective     Function    Gradient              Predicted
+Iter     Restarts       Calls    Constraints         Function       Change     Element     Ridge       Change
+ 
+   1            0           2              0             1277        211.7     89.1503         0        0.797
+   2            0           3              0             1261      15.8233      4.9841         0        0.949
+   3            0           4              0             1261       0.1412      0.0397         0        1.006
+   4            0           5              0             1261     0.000014    4.894E-6         0        1.000
+ 
+                                            Optimization Results
+ 
+Iterations                                          4  Function Calls                                      7
+Hessian Calls                                       5  Active Constraints                                  0
+Objective Function                       1260.5732591  Max Abs Gradient Element                 4.8938024E-6
+Ridge                                               0  Actual Over Pred Change                  1.0000771824
+ 
+Convergence criterion (GCONV=1E-6) satisfied.
+ 
+ 
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+ 
+   2976.400        2521.147       455.2537        8         <.0001
+ 
+ 
+            Type 3 Analysis of Effects
+ 
+                                Wald
+Effect              DF    Chi-Square    Pr > ChiSq
+ 
+GRP_IMP_DELINQ       2      210.6224        <.0001
+GRP_IMP_DEROG        2       92.8499        <.0001
+GRP_IMP_NINQ         4       70.1953        <.0001
+ 
+ 
+                       Analysis of Maximum Likelihood Estimates
+ 
+                                      Standard          Wald
+Parameter           DF    Estimate       Error    Chi-Square    Pr > ChiSq    Exp(Est)
+ 
+Intercept            1      0.1119      0.0973          1.32        0.2502       1.118
+GRP_IMP_DELINQ 2     1     -0.9707      0.0740        172.15        <.0001       0.379
+GRP_IMP_DELINQ 3     1     -0.0974      0.0997          0.96        0.3284       0.907
+GRP_IMP_DEROG  2     1     -0.8662      0.0907         91.21        <.0001       0.421
+GRP_IMP_DEROG  3     1      0.0617      0.1230          0.25        0.6158       1.064
+GRP_IMP_NINQ   2     1     -0.4875      0.0849         32.96        <.0001       0.614
+GRP_IMP_NINQ   3     1     -0.4047      0.1041         15.12        0.0001       0.667
+GRP_IMP_NINQ   4     1      0.0844      0.1181          0.51        0.4747       1.088
+GRP_IMP_NINQ   5     1     -0.0984      0.1532          0.41        0.5206       0.906
+ 
+ 
+      Odds Ratio Estimates
+ 
+                            Point
+Effect                   Estimate
+ 
+GRP_IMP_DELINQ 2 vs 4       0.130
+GRP_IMP_DELINQ 3 vs 4       0.312
+GRP_IMP_DEROG  2 vs 4       0.188
+GRP_IMP_DEROG  3 vs 4       0.476
+GRP_IMP_NINQ   2 vs 6       0.248
+GRP_IMP_NINQ   3 vs 6       0.270
+GRP_IMP_NINQ   4 vs 6       0.440
+GRP_IMP_NINQ   5 vs 6       0.366
+ 
+ 
+NOTE: All effects have been entered into the model.
+ 
+ 
+                                    Summary of Stepwise Selection
+ 
+                Effect                Number         Score          Wald                  Validation
+    Step    Entered             DF        In    Chi-Square    Chi-Square    Pr > ChiSq          Loss
+ 
+       1    GRP_IMP_DELINQ       2         1      333.6842                      <.0001        1103.0
+       2    GRP_IMP_DEROG        2         2      129.6335                      <.0001        1028.0
+       3    GRP_IMP_NINQ         4         3       74.4038                      <.0001        1032.0
+ 
+ 
+The selected model, based on the total loss for the validation data, is the model trained in Step 2. It consists of the following effects:
+ 
+Intercept  GRP_IMP_DELINQ  GRP_IMP_DEROG
+ 
+ 
+     Likelihood Ratio Test for Global Null Hypothesis: BETA=0
+ 
+     -2 Log Likelihood          Likelihood
+  Intercept     Intercept &          Ratio
+       Only      Covariates     Chi-Square       DF     Pr > ChiSq
+ 
+   2976.400        2587.619       388.7808        4         <.0001
+ 
+ 
+            Type 3 Analysis of Effects
+ 
+                                Wald
+Effect              DF    Chi-Square    Pr > ChiSq
+ 
+GRP_IMP_DELINQ       2      209.6311        <.0001
+GRP_IMP_DEROG        2      117.6580        <.0001
+ 
+ 
+                       Analysis of Maximum Likelihood Estimates
+ 
+                                      Standard          Wald
+Parameter           DF    Estimate       Error    Chi-Square    Pr > ChiSq    Exp(Est)
+ 
+Intercept            1     -0.0791      0.0896          0.78        0.3773       0.924
+GRP_IMP_DELINQ 2     1     -0.9543      0.0725        173.41        <.0001       0.385
+GRP_IMP_DELINQ 3     1     -0.0777      0.0974          0.64        0.4248       0.925
+GRP_IMP_DEROG  2     1     -0.9479      0.0878        116.42        <.0001       0.388
+GRP_IMP_DEROG  3     1      0.1161      0.1199          0.94        0.3329       1.123
+ 
+ 
+      Odds Ratio Estimates
+ 
+                            Point
+Effect                   Estimate
+ 
+GRP_IMP_DELINQ 2 vs 4       0.137
+GRP_IMP_DELINQ 3 vs 4       0.330
+GRP_IMP_DEROG  2 vs 4       0.169
+GRP_IMP_DEROG  3 vs 4       0.489
+
+
+*------------------------------------------------------------*
+* Score Output
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Report Output
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Fit Statistics
+ 
+Target=BAD Target Label=' '
+ 
+   Fit
+Statistics    Statistics Label                    Train    Validation       Test
+ 
+ _AIC_        Akaike's Information Criterion    2597.62          .           .
+ _ASE_        Average Squared Error                0.13         0.14        0.13
+ _AVERR_      Average Error Function               0.43         0.44        0.43
+ _DFE_        Degrees of Freedom for Error      2974.00          .           .
+ _DFM_        Model Degrees of Freedom             5.00          .           .
+ _DFT_        Total Degrees of Freedom          2979.00          .           .
+ _DIV_        Divisor for ASE                   5958.00      3576.00     2386.00
+ _ERR_        Error Function                    2587.62      1564.91     1022.19
+ _FPE_        Final Prediction Error               0.13          .           .
+ _MAX_        Maximum Absolute Error               0.88         0.88        0.88
+ _MSE_        Mean Square Error                    0.13         0.14        0.13
+ _NOBS_       Sum of Frequencies                2979.00      1788.00     1193.00
+ _NW_         Number of Estimate Weights           5.00          .           .
+ _RASE_       Root Average Sum of Squares          0.37         0.37        0.36
+ _RFPE_       Root Final Prediction Error          0.37          .           .
+ _RMSE_       Root Mean Squared Error              0.37         0.37        0.36
+ _SBC_        Schwarz's Bayesian Criterion      2627.62          .           .
+ _SSE_        Sum of Squared Errors              801.46       488.84      316.73
+ _SUMW_       Sum of Case Weights Times Freq    5958.00      3576.00     2386.00
+ _MISC_       Misclassification Rate               0.18         0.19        0.19
+ _LOSS_       Total Loss for BAD                1800.00      1028.00      681.00
+ _ALOSS_      Average Loss for BAD                 0.60         0.57        0.57
+ 
+ 
+ 
+ 
+Classification Table
+ 
+Data Role=TRAIN Target Variable=BAD Target Label=' '
+ 
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+ 
+  0          0         84.5265       95.0524        2267        76.0994
+  1          0         15.4735       69.8653         415        13.9308
+  0          1         39.7306        4.9476         118         3.9611
+  1          1         60.2694       30.1347         179         6.0087
+ 
+ 
+Data Role=VALIDATE Target Variable=BAD Target Label=' '
+ 
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+ 
+  0          0         84.6397       93.5709        1339        74.8881
+  1          0         15.3603       68.0672         243        13.5906
+  0          1         44.6602        6.4291          92         5.1454
+  1          1         55.3398       31.9328         114         6.3758
+ 
+ 
+ 
+ 
+Decision Table
+ 
+Data Role=TRAIN Target Variable=BAD Target Label=' '
+ 
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+ 
+  0          0         87.8161       80.0839        1910        64.1155
+  1          0         12.1839       44.6128         265         8.8956
+  0          1         59.0796       19.9161         475        15.9449
+  1          1         40.9204       55.3872         329        11.0440
+ 
+ 
+Data Role=VALIDATE Target Variable=BAD Target Label=' '
+ 
+                       Target        Outcome     Frequency       Total
+Target    Outcome    Percentage    Percentage      Count      Percentage
+ 
+  0          0         88.6096       78.8260        1128        63.0872
+  1          0         11.3904       40.6162         145         8.1096
+  0          1         58.8350       21.1740         303        16.9463
+  1          1         41.1650       59.3838         212        11.8568
+ 
+ 
+ 
+ 
+Event Classification Table
+ 
+Data Role=TRAIN Target=BAD Target Label=' '
+ 
+  False       True        False       True
+Negative    Negative    Positive    Positive
+ 
+   415        2267         118         179
+ 
+ 
+Data Role=VALIDATE Target=BAD Target Label=' '
+ 
+  False       True        False       True
+Negative    Negative    Positive    Positive
+ 
+   243        1339         92          114
+ 
+ 
+ 
+ 
+Assessment Score Rankings
+ 
+Data Role=TRAIN Target Variable=BAD Target Label=' '
+ 
+                                                                                           Mean
+                               Cumulative        %       Cumulative      Number of      Posterior
+Depth       Gain      Lift        Lift       Response    % Response    Observations    Probability
+ 
+   5     241.556    3.41556      3.41556      68.1048      68.1048          149          0.69382
+  10     202.346    2.63136      3.02346      52.4682      60.2865          149          0.50119
+  15     172.206    2.11926      2.72206      42.2572      54.2767          149          0.40357
+  20     137.065    1.31640      2.37065      26.2485      47.2697          149          0.27173
+  25     112.448    1.13981      2.12448      22.7273      42.3612          149          0.24886
+  30      90.713    0.82042      1.90713      16.3588      38.0275          149          0.17174
+  35      72.198    0.61104      1.72198      12.1839      34.3355          149          0.12118
+  40      58.311    0.61104      1.58311      12.1839      31.5666          149          0.12118
+  45      47.510    0.61104      1.47510      12.1839      29.4129          149          0.12118
+  50      38.870    0.61104      1.38870      12.1839      27.6900          149          0.12118
+  55      31.800    0.61104      1.31800      12.1839      26.2804          149          0.12118
+  60      25.909    0.61104      1.25909      12.1839      25.1057          149          0.12118
+  65      20.924    0.61104      1.20924      12.1839      24.1117          149          0.12118
+  70      16.651    0.61104      1.16651      12.1839      23.2597          149          0.12118
+  75      12.948    0.61104      1.12948      12.1839      22.5213          149          0.12118
+  80       9.708    0.61104      1.09708      12.1839      21.8752          149          0.12118
+  85       6.849    0.61104      1.06849      12.1839      21.3052          149          0.12118
+  90       4.307    0.61104      1.04307      12.1839      20.7984          149          0.12118
+  95       2.033    0.61104      1.02033      12.1839      20.3450          149          0.12118
+ 100       0.000    0.61104      1.00000      12.1839      19.9396          148          0.12118
+ 
+ 
+Data Role=VALIDATE Target Variable=BAD Target Label=' '
+ 
+                                                                                           Mean
+                               Cumulative        %       Cumulative      Number of      Posterior
+Depth       Gain      Lift        Lift       Response    % Response    Observations    Probability
+ 
+   5     238.531    3.38531      3.38531      67.5926      67.5926          90           0.74321
+  10     184.346    2.29552      2.84346      45.8333      56.7737          89           0.50126
+  15     157.618    2.04459      2.57618      40.8232      51.4371          90           0.47590
+  20     123.505    1.20402      2.23505      24.0399      44.6261          89           0.28919
+  25     112.138    1.66414      2.12138      33.2269      42.3565          89           0.24927
+  30     100.062    1.40083      2.00062      27.9695      39.9452          90           0.21765
+  35      79.729    0.57048      1.79729      11.3904      35.8855          89           0.12118
+  40      64.308    0.57048      1.64308      11.3904      32.8065          90           0.12118
+  45      52.450    0.57048      1.52450      11.3904      30.4388          89           0.12118
+  50      42.952    0.57048      1.42952      11.3904      28.5425          89           0.12118
+  55      35.095    0.57048      1.35095      11.3904      26.9737          90           0.12118
+  60      28.621    0.57048      1.28621      11.3904      25.6811          89           0.12118
+  65      23.083    0.57048      1.23083      11.3904      24.5752          90           0.12118
+  70      18.388    0.57048      1.18388      11.3904      23.6380          89           0.12118
+  75      14.317    0.57048      1.14317      11.3904      22.8251          89           0.12118
+  80      10.716    0.57048      1.10716      11.3904      22.1060          90           0.12118
+  85       7.573    0.57048      1.07573      11.3904      21.4785          89           0.12118
+  90       4.749    0.57048      1.04749      11.3904      20.9146          90           0.12118
+  95       2.250    0.57048      1.02250      11.3904      20.4157          89           0.12118
+ 100       0.000    0.57048      1.00000      11.3904      19.9664          89           0.12118
+ 
+ 
+ 
+ 
+Assessment Score Distribution
+ 
+Data Role=TRAIN Target Variable=BAD Target Label=' '
+ 
+ Posterior     Number                     Mean
+Probability      of      Number of     Posterior
+   Range       Events    Nonevents    Probability    Percentage
+ 
+ 0.85-0.90        34           6        0.85629         1.3427
+ 0.70-0.75        28          15        0.74441         1.4434
+ 0.65-0.70        18           7        0.66263         0.8392
+ 0.50-0.55        99          90        0.50126         6.3444
+ 0.45-0.50        17           9        0.48982         0.8728
+ 0.40-0.45        33          43        0.44977         2.5512
+ 0.25-0.30        40         101        0.28550         4.7331
+ 0.20-0.25        60         204        0.24886         8.8620
+ 0.10-0.15       265        1910        0.12118        73.0111
+ 
+ 
+Data Role=VALIDATE Target Variable=BAD Target Label=' '
+ 
+ Posterior     Number                     Mean
+Probability      of      Number of     Posterior
+   Range       Events    Nonevents    Probability    Percentage
+ 
+ 0.85-0.90        22           4        0.85629         1.4541
+ 0.70-0.75        21          14        0.74441         1.9575
+ 0.65-0.70        16           9        0.66263         1.3982
+ 0.50-0.55        55          65        0.50126         6.7114
+ 0.45-0.50        12          12        0.48982         1.3423
+ 0.40-0.45        13          28        0.44977         2.2931
+ 0.25-0.30        21          67        0.28550         4.9217
+ 0.20-0.25        52         104        0.24886         8.7248
+ 0.10-0.15       145        1128        0.12118        71.1969

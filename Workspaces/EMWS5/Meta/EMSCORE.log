@@ -1,0 +1,176 @@
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "28 March 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "20:54:16" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Score Log";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Score Log
+Date:                28 March 2021
+Time:                20:54:16
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O028FEAX "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O028FEAX new;
+MPRINT(EM_DIAGRAM):   run;
+25851      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+25852      * Meta: Scoring DATA data;
+MPRINT(EM_DIAGRAM):   * Meta: Scoring DATA data;
+25853      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+25854      data EMWS5.Meta_TRAIN
+25855      / view=EMWS5.Meta_TRAIN
+25856      ;
+MPRINT(EM_DIAGRAM):   data EMWS5.Meta_TRAIN / view=EMWS5.Meta_TRAIN ;
+25857      set EMWS5.Neural_TRAIN
+25858      ;
+MPRINT(EM_DIAGRAM):   set EMWS5.Neural_TRAIN ;
+25859      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: DATA STEP view saved on file EMWS5.META_TRAIN.
+NOTE: A stored DATA STEP view cannot run under a different operating system.
+NOTE: View EMWS5.NEURAL_TRAIN.VIEW used (Total process time):
+      real time           0.08 seconds
+      cpu time            0.09 seconds
+      
+NOTE: DATA statement used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.11 seconds
+      
+
+MPRINT(EM_DIAGRAM):   quit;
+25860      quit;
+
+25861      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+25862      * Meta: Scoring TEST data;
+MPRINT(EM_DIAGRAM):   * Meta: Scoring TEST data;
+25863      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+25864      data EMWS5.Meta_TEST
+25865      / view=EMWS5.Meta_TEST
+25866      ;
+MPRINT(EM_DIAGRAM):   data EMWS5.Meta_TEST / view=EMWS5.Meta_TEST ;
+25867      set EMWS5.Neural_TEST
+25868      ;
+MPRINT(EM_DIAGRAM):   set EMWS5.Neural_TEST ;
+25869      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: DATA STEP view saved on file EMWS5.META_TEST.
+NOTE: A stored DATA STEP view cannot run under a different operating system.
+NOTE: View EMWS5.NEURAL_TEST.VIEW used (Total process time):
+      real time           0.08 seconds
+      cpu time            0.06 seconds
+      
+NOTE: DATA statement used (Total process time):
+      real time           0.09 seconds
+      cpu time            0.07 seconds
+      
+
+MPRINT(EM_DIAGRAM):   quit;
+25870      quit;
+
+25871      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+25872      * Meta: Computing metadata for TRAIN data;
+MPRINT(EM_DIAGRAM):   * Meta: Computing metadata for TRAIN data;
+25873      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+
+25874      data _TEMP;
+MPRINT(EM_DIAGRAM):    data _TEMP;
+25875      set EMWS5.Neural_CMeta_TRAIN;
+MPRINT(EM_DIAGRAM):   set EMWS5.Neural_CMeta_TRAIN;
+25876      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+25877      * Metadata Changes;
+MPRINT(EM_DIAGRAM):   * Metadata Changes;
+25878      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+25879      if upcase(NAME) = "BL_DEFAULT" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "BL_DEFAULT" then ROLE="REJECTED";
+25880      if upcase(NAME) = "CL_DEFAULT" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "CL_DEFAULT" then ROLE="REJECTED";
+25881      if upcase(NAME) = "CLUS1" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "CLUS1" then ROLE="REJECTED";
+25882      if upcase(NAME) = "CLUS2" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "CLUS2" then ROLE="REJECTED";
+25883      if upcase(NAME) = "D_DEFAULT" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "D_DEFAULT" then ROLE="REJECTED";
+25884      if upcase(NAME) = "EL_DEFAULT" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "EL_DEFAULT" then ROLE="REJECTED";
+25885      if upcase(NAME) = "F_DEFAULT" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "F_DEFAULT" then ROLE="REJECTED";
+25886      if upcase(NAME) = "I_DEFAULT" then ROLE="TARGET";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "I_DEFAULT" then ROLE="TARGET";
+25887      if upcase(NAME) = "P_DEFAULT0" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "P_DEFAULT0" then ROLE="REJECTED";
+25888      if upcase(NAME) = "P_DEFAULT1" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "P_DEFAULT1" then ROLE="REJECTED";
+25889      if upcase(NAME) = "R_DEFAULT0" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "R_DEFAULT0" then ROLE="REJECTED";
+25890      if upcase(NAME) = "R_DEFAULT1" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "R_DEFAULT1" then ROLE="REJECTED";
+25891      if upcase(NAME) = "U_DEFAULT" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "U_DEFAULT" then ROLE="REJECTED";
+25892      if upcase(NAME) = "_WARN_" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "_WARN_" then ROLE="REJECTED";
+25893      if upcase(NAME) = "DEFAULT" then ROLE="REJECTED";
+MPRINT(EM_DIAGRAM):   if upcase(NAME) = "DEFAULT" then ROLE="REJECTED";
+25894      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 31 observations read from the data set EMWS5.NEURAL_CMETA_TRAIN.
+NOTE: The data set WORK._TEMP has 31 observations and 21 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+25895      proc sort data=_TEMP;
+MPRINT(EM_DIAGRAM):    proc sort data=_TEMP;
+25896      by NAME;
+MPRINT(EM_DIAGRAM):   by NAME;
+25897      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 31 observations read from the data set WORK._TEMP.
+NOTE: The data set WORK._TEMP has 31 observations and 21 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+25898      data EMWS5.Meta_CMeta_TRAIN;
+MPRINT(EM_DIAGRAM):    data EMWS5.Meta_CMeta_TRAIN;
+25899      set _TEMP;
+MPRINT(EM_DIAGRAM):   set _TEMP;
+25900      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 31 observations read from the data set WORK._TEMP.
+NOTE: The data set EMWS5.META_CMETA_TRAIN has 31 observations and 21 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: View EMWS5.META_TRAIN.VIEW used (Total process time):
+      real time           0.10 seconds
+      cpu time            0.10 seconds
+      
+NOTE: View EMWS5.META_TEST.VIEW used (Total process time):
+      real time           0.10 seconds
+      cpu time            0.10 seconds
+      
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;

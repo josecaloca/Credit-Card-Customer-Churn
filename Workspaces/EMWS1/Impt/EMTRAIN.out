@@ -1,0 +1,13 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Resumen de variables
+
+          Nivel de     Número de
+ Rol       medida     ocurrencias
+
+INPUT     BINARY           1     
+INPUT     INTERVAL         2     
+INPUT     NOMINAL          4     
+TARGET    BINARY           1     

@@ -1,0 +1,248 @@
+*------------------------------------------------------------*
+Usuario:                Jose Caloca
+Fecha:                07 de marzo de 2021
+Hora:                13H49
+*------------------------------------------------------------*
+* Salida de entrenamiento
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Resumen de variables
+ 
+          Nivel de     Número de
+Rol        medida     ocurrencias
+ 
+ID        INTERVAL         1
+INPUT     BINARY           1
+INPUT     INTERVAL         7
+INPUT     NOMINAL          4
+TARGET    BINARY           1
+ 
+ 
+ 
+Sumarización de los niveles de la variable
+(máximo imprimido 500 observaciones)
+ 
+                        Número de
+Variable     Rol       ocurrencias
+ 
+BAD          TARGET           2
+_dataobs_    ID            2979
+ 
+ 
+ 
+Estadísticos de sumarización de la variable de clase
+(máximo imprimido 500 observaciones)
+ 
+Rol de los datos=TRAIN
+ 
+Rol de     Nombre                 Número
+ los        de la                   de                            Porcentaje               Porcentaje
+datos     variable      Rol      niveles    Ausente    Moda          moda       Moda2        Moda2
+ 
+TRAIN      DELINQ      INPUT        15        292      0            70.49       1            10.57
+TRAIN      DEROG       INPUT        12        352      0            76.40       .            11.82
+TRAIN      JOB         INPUT         7        141      Other        40.45       ProfExe      20.51
+TRAIN      NINQ        INPUT        16        259      0            43.24       1            22.42
+TRAIN      REASON      INPUT         3        131      DebtCon      65.66       HomeImp      29.94
+TRAIN      BAD         TARGET        2          0      0            80.06       1            19.94
+ 
+ 
+ 
+Distribución de la variable target de clase y de las variables de segmento
+(máximo imprimido 500 observaciones)
+ 
+Rol de los datos=TRAIN
+ 
+Rol de     Nombre
+ los        de la                          Número de
+datos     variable      Rol      Nivel    ocurrencias    Porcentaje
+ 
+TRAIN        BAD       TARGET      0            2385       80.0604
+TRAIN        BAD       TARGET      1             594       19.9396
+ 
+ 
+ 
+Estadísticos descriptivos de la variable de intervalo
+(máximo imprimido 500 observaciones)
+ 
+Rol de los datos=TRAIN
+ 
+                                 Desviación          No
+Variable     Rol        Media     estándar      ausente     Ausente      Mínimo     Mediana      Máximo    Asimetría    Curtosis
+ 
+CLAGE       INPUT    181.1531     87.31155         2820         159           0    175.1537    1168.234    1.752588     12.48287
+CLNO        INPUT    21.27708     10.28315         2862         117           0          20          65    0.791345     1.051547
+DEBTINC     INPUT    33.78695     9.006641         2364         615    0.524499    34.72788    203.3121    3.827289      66.8786
+LOAN        INPUT    18684.09     11544.17         2979           0        1100       16200       89800     2.17922     7.663773
+MORTDUE     INPUT     73574.9     43678.04         2727         252        2063       64674      399550    1.646619     5.187907
+VALUE       INPUT    102480.6     57975.14         2925          54        8000       89100      855909    3.404679     30.90231
+YOJ         INPUT    8.868358     7.634042         2729         250           0           7          41    1.023502     0.480189
+ 
+ 
+ 
+Estadísticos descriptivos de la variable de clase por la variable target de clase
+(máximo imprimido 500 observaciones)
+ 
+Rol de los datos=TRAIN Nombre de la variable=DELINQ
+ 
+             Nivel      Número
+              del         de                         Porcentaje             Porcentaje
+Target       target    niveles    Ausente    Moda       moda       Moda2      Moda2
+ 
+BAD            0           7        244       0        75.89         .        10.23
+BAD            1          15         48       0        48.82         1        15.99
+_OVERALL_                 15        292       0        70.49         1        10.57
+ 
+ 
+Rol de los datos=TRAIN Nombre de la variable=DEROG
+ 
+             Nivel      Número
+              del         de                         Porcentaje             Porcentaje
+Target       target    niveles    Ausente    Moda       moda       Moda2      Moda2
+ 
+BAD            0           8        295       0        80.04         .        12.37
+BAD            1          12         57       0        61.78         1        14.31
+_OVERALL_                 12        352       0        76.40         .        11.82
+ 
+ 
+Rol de los datos=TRAIN Nombre de la variable=JOB
+ 
+             Nivel      Número
+              del         de                          Porcentaje               Porcentaje
+Target       target    niveles    Ausente    Moda        moda        Moda2       Moda2
+ 
+BAD            0          7         125      Other      38.91       ProfExe      21.51
+BAD            1          7          16      Other      46.63       ProfExe      16.50
+_OVERALL_                 7         141      Other      40.45       ProfExe      20.51
+ 
+ 
+Rol de los datos=TRAIN Nombre de la variable=NINQ
+ 
+             Nivel      Número
+              del         de                         Porcentaje             Porcentaje
+Target       target    niveles    Ausente    Moda       moda       Moda2      Moda2
+ 
+BAD            0          13        210       0        46.37         1        22.56
+BAD            1          16         49       0        30.64         1        21.89
+_OVERALL_                 16        259       0        43.24         1        22.42
+ 
+ 
+Rol de los datos=TRAIN Nombre de la variable=REASON
+ 
+             Nivel      Número
+              del         de                            Porcentaje               Porcentaje
+Target       target    niveles    Ausente     Moda         moda        Moda2       Moda2
+ 
+BAD            0          3         100      DebtCon      66.42       HomeImp      29.39
+BAD            1          3          31      DebtCon      62.63       HomeImp      32.15
+_OVERALL_                 3         131      DebtCon      65.66       HomeImp      29.94
+ 
+ 
+ 
+Estadísticos descriptivos de la variable de intervalo por la variable target de clase
+(máximo imprimido 500 observaciones)
+ 
+Rol de los datos=TRAIN Variable=CLAGE
+ 
+             Nivel
+              del                                    No                                        Desviación
+Target       target     Mediana     Ausente     ausente      Mínimo      Máximo       Media     estándar     Asimetría    Curtosis     Rol     Etiqueta
+ 
+BAD            0       181.6965         114        2271    0.486711    649.7471    188.2731     84.02926     0.897388     2.291451    INPUT     CLAGE
+BAD            1          130.3          45         549           0    1168.234    151.7002     94.27451     4.764549     46.63022    INPUT     CLAGE
+_OVERALL_              175.1537         159        2820           0    1168.234    181.1531     87.31155     1.752588     12.48287    INPUT     CLAGE
+ 
+ 
+Rol de los datos=TRAIN Variable=CLNO
+ 
+             Nivel
+              del                                    No                                        Desviación
+Target       target     Mediana     Ausente     ausente      Mínimo      Máximo       Media     estándar     Asimetría    Curtosis     Rol     Etiqueta
+ 
+BAD            0             20          81        2304           0          56    21.35764     9.933328     0.787947     0.905931    INPUT      CLNO
+BAD            1             20          36         558           0          65    20.94444     11.62052      0.80749     1.194239    INPUT      CLNO
+_OVERALL_                    20         117        2862           0          65    21.27708     10.28315     0.791345     1.051547    INPUT      CLNO
+ 
+ 
+Rol de los datos=TRAIN Variable=DEBTINC
+ 
+             Nivel
+              del                                    No                                        Desviación
+Target       target     Mediana     Ausente     ausente      Mínimo      Máximo       Media     estándar     Asimetría    Curtosis     Rol     Etiqueta
+ 
+BAD            0       34.39191         230        2155    0.720295    45.41318    33.20276     6.959216     -0.83107     0.686136    INPUT    DEBTINC
+BAD            1        38.2636         385         209    0.524499    203.3121    39.81053     19.49447     3.874843     27.91879    INPUT    DEBTINC
+_OVERALL_              34.72788         615        2364    0.524499    203.3121    33.78695     9.006641     3.827289      66.8786    INPUT    DEBTINC
+ 
+ 
+Rol de los datos=TRAIN Variable=LOAN
+ 
+             Nivel
+              del                                    No                                        Desviación
+Target       target     Mediana     Ausente     ausente      Mínimo      Máximo       Media     estándar     Asimetría    Curtosis     Rol     Etiqueta
+ 
+BAD            0          16600           0        2385        1700       89800     19082.6     11528.35     2.306348     8.509931    INPUT      LOAN
+BAD            1          15000           0         594        1100       77200    17084.01     11478.54     1.744028     4.292941    INPUT      LOAN
+_OVERALL_                 16200           0        2979        1100       89800    18684.09     11544.17      2.17922     7.663773    INPUT      LOAN
+ 
+ 
+Rol de los datos=TRAIN Variable=MORTDUE
+ 
+             Nivel
+              del                                    No                                        Desviación
+Target       target     Mediana     Ausente     ausente      Mínimo      Máximo       Media     estándar     Asimetría    Curtosis     Rol     Etiqueta
+ 
+BAD            0          66197         193        2192        2619      371003    74594.11     43072.72     1.583141     4.750255    INPUT    MORTDUE
+BAD            1          60336          59         535        2063      399550       69399        45881     1.917318     6.874743    INPUT    MORTDUE
+_OVERALL_                 64674         252        2727        2063      399550     73574.9     43678.04     1.646619     5.187907    INPUT    MORTDUE
+ 
+ 
+Rol de los datos=TRAIN Variable=VALUE
+ 
+             Nivel
+              del                                    No                                        Desviación
+Target       target     Mediana     Ausente     ausente      Mínimo      Máximo       Media     estándar     Asimetría    Curtosis     Rol     Etiqueta
+ 
+BAD            0          90550           2        2383        8000      467818    102964.1     52016.89     1.629101      4.42798    INPUT     VALUE
+BAD            1          82000          52         542        9500      855909      100355     79039.85     5.279221     44.83423    INPUT     VALUE
+_OVERALL_                 89100          54        2925        8000      855909    102480.6     57975.14     3.404679     30.90231    INPUT     VALUE
+ 
+ 
+Rol de los datos=TRAIN Variable=YOJ
+ 
+             Nivel
+              del                                    No                                        Desviación
+Target       target     Mediana     Ausente     ausente      Mínimo      Máximo       Media     estándar     Asimetría    Curtosis     Rol     Etiqueta
+ 
+BAD            0              7         211        2174           0          36    9.153588     7.749029     0.958539     0.221986    INPUT      YOJ
+BAD            1              5          39         555           0          41    7.751081     7.062284     1.309868     1.941725    INPUT      YOJ
+_OVERALL_                     7         250        2729           0          41    8.868358     7.634042     1.023502     0.480189    INPUT      YOJ
+ 
+ 
+ 
+Estadísticos chi-cuadrado
+(máximo imprimido 500 observaciones)
+ 
+Rol de los datos=TRAIN Target=BAD
+ 
+                Chi-
+Input       cuadrado    Df      Prob
+ 
+DELINQ      403.4780    14    <.0001
+DEROG       242.6095    11    <.0001
+NINQ        130.2858    15    <.0001
+JOB          45.4885     6    <.0001
+REASON        3.3904     2    0.1836
+
+
+*------------------------------------------------------------*
+* Salida de puntuación
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Salida del informe
+*------------------------------------------------------------*

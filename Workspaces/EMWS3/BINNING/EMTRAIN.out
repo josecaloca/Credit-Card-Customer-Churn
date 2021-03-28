@@ -1,0 +1,34 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Resumen de variables
+
+          Nivel de     Número de
+Rol        medida     ocurrencias
+
+ID        INTERVAL         1     
+INPUT     BINARY           1     
+INPUT     INTERVAL         7     
+INPUT     NOMINAL          4     
+TARGET    BINARY           1     
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+       Variable    Variable
+Obs     input      de grupo
+
+  1    CLAGE       GRP_CLAGE  
+  2    CLNO        GRP_CLNO   
+  3    DEBTINC     GRP_DEBTINC
+  4    DELINQ      GRP_DELINQ 
+  5    DEROG       GRP_DEROG  
+  6    JOB         GRP_JOB    
+  7    LOAN        GRP_LOAN   
+  8    MORTDUE     GRP_MORTDUE
+  9    NINQ        GRP_NINQ   
+ 10    REASON      GRP_REASON 
+ 11    VALUE       GRP_VALUE  
+ 12    YOJ         GRP_YOJ    

@@ -1,0 +1,635 @@
+﻿<SASReport version="1.0">
+      <Data>
+            <IQData type="2DEmbedded" name="TreeData">
+                  <EmbeddedData>
+                        <Variables>
+                              <Variable name="Var1" varName="Var1" type="String" />
+                              <Variable name="Var2" varName="Var2" type="String" />
+                              <Variable name="Var3" varName="Var3" type="Numeric" />
+                              <Variable name="Var4" varName="Var4" type="Numeric" />
+                              <Variable name="Var5" varName="Var5" type="Numeric" />
+                              <Variable name="Var6" varName="Var6" type="Numeric" />
+                              <Variable name="Var7" varName="Var7" type="String"  />
+                              <Variable name="Var8" varName="Var8" type="String" />
+                              <Variable name="Var9" varName="Var9" type="Numeric" />
+                        </Variables>
+                        <ValuesList>
+    <Values>
+      <Value></Value>
+      <Value>DELINQ</Value>
+      <Value>10</Value>
+      <Value>80.06</Value>
+      <Value>1</Value>
+      <Value>0</Value>
+      <Value>          0:     80.1%
+  N en Nodo:      2979</Value>
+      <Value>          1:     19.9%&#10;          0:     80.1%&#10;  N en Nodo:      2979</Value>
+      <Value>2979</Value>
+    </Values>
+    <Values>
+      <Value>2, 3</Value>
+      <Value>DELINQ</Value>
+      <Value>0.9130580732</Value>
+      <Value>59.19</Value>
+      <Value>2</Value>
+      <Value>1</Value>
+      <Value>          1:     59.2%
+  N en Nodo:       272</Value>
+      <Value>          1:     59.2%&#10;          0:     40.8%&#10;  N en Nodo:       272</Value>
+      <Value>272</Value>
+    </Values>
+    <Values>
+      <Value>0, 1</Value>
+      <Value>DEBTINC</Value>
+      <Value>9.0869419268</Value>
+      <Value>84</Value>
+      <Value>3</Value>
+      <Value>1</Value>
+      <Value>          0:     84.0%
+  N en Nodo:      2707</Value>
+      <Value>          1:     16.0%&#10;          0:     84.0%&#10;  N en Nodo:      2707</Value>
+      <Value>2707</Value>
+    </Values>
+    <Values>
+      <Value>5, 6, ...</Value>
+      <Value>CLAGE</Value>
+      <Value>0.1745552199</Value>
+      <Value>96.15</Value>
+      <Value>4</Value>
+      <Value>2</Value>
+      <Value>          1:     96.2%
+  N en Nodo:        52</Value>
+      <Value>          1:     96.2%&#10;          0:      3.8%&#10;  N en Nodo:        52</Value>
+      <Value>52</Value>
+    </Values>
+    <Values>
+      <Value>2, 3</Value>
+      <Value>DEBTINC</Value>
+      <Value>0.7385028533</Value>
+      <Value>50.45</Value>
+      <Value>5</Value>
+      <Value>2</Value>
+      <Value>          1:     50.5%
+  N en Nodo:       220</Value>
+      <Value>          1:     50.5%&#10;          0:     49.5%&#10;  N en Nodo:       220</Value>
+      <Value>220</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 32.9705</Value>
+      <Value>NINQ</Value>
+      <Value>3.0580731789</Value>
+      <Value>96.49</Value>
+      <Value>6</Value>
+      <Value>3</Value>
+      <Value>          0:     96.5%
+  N en Nodo:       911</Value>
+      <Value>          1:      3.5%&#10;          0:     96.5%&#10;  N en Nodo:       911</Value>
+      <Value>911</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 32.9705</Value>
+      <Value>DEBTINC</Value>
+      <Value>6.0288687479</Value>
+      <Value>77.67</Value>
+      <Value>7</Value>
+      <Value>3</Value>
+      <Value>          0:     77.7%
+  N en Nodo:      1796</Value>
+      <Value>          1:     22.3%&#10;          0:     77.7%&#10;  N en Nodo:      1796</Value>
+      <Value>1796</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 32.9705</Value>
+      <Value>JOB</Value>
+      <Value>0.1611278953</Value>
+      <Value>75</Value>
+      <Value>10</Value>
+      <Value>5</Value>
+      <Value>          0:     75.0%
+  N en Nodo:        48</Value>
+      <Value>          1:     25.0%&#10;          0:     75.0%&#10;  N en Nodo:        48</Value>
+      <Value>48</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 32.9705</Value>
+      <Value>DEBTINC</Value>
+      <Value>0.577374958</Value>
+      <Value>57.56</Value>
+      <Value>11</Value>
+      <Value>5</Value>
+      <Value>          1:     57.6%
+  N en Nodo:       172</Value>
+      <Value>          1:     57.6%&#10;          0:     42.4%&#10;  N en Nodo:       172</Value>
+      <Value>172</Value>
+    </Values>
+    <Values>
+      <Value>5, 6</Value>
+      <Value>MORTDUE</Value>
+      <Value>0.043638805</Value>
+      <Value>61.54</Value>
+      <Value>12</Value>
+      <Value>6</Value>
+      <Value>          0:     61.5%
+  N en Nodo:        13</Value>
+      <Value>          1:     38.5%&#10;          0:     61.5%&#10;  N en Nodo:        13</Value>
+      <Value>13</Value>
+    </Values>
+    <Values>
+      <Value>0, 1, ...</Value>
+      <Value>VALUE</Value>
+      <Value>3.014434374</Value>
+      <Value>96.99</Value>
+      <Value>13</Value>
+      <Value>6</Value>
+      <Value>          0:     97.0%
+  N en Nodo:       898</Value>
+      <Value>          1:      3.0%&#10;          0:     97.0%&#10;  N en Nodo:       898</Value>
+      <Value>898</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 36.3774</Value>
+      <Value>DEBTINC</Value>
+      <Value>2.9842228936</Value>
+      <Value>65.8</Value>
+      <Value>14</Value>
+      <Value>7</Value>
+      <Value>          0:     65.8%
+  N en Nodo:       889</Value>
+      <Value>          1:     34.2%&#10;          0:     65.8%&#10;  N en Nodo:       889</Value>
+      <Value>889</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 36.3774</Value>
+      <Value>DEBTINC</Value>
+      <Value>3.0446458543</Value>
+      <Value>89.31</Value>
+      <Value>15</Value>
+      <Value>7</Value>
+      <Value>          0:     89.3%
+  N en Nodo:       907</Value>
+      <Value>          1:     10.7%&#10;          0:     89.3%&#10;  N en Nodo:       907</Value>
+      <Value>907</Value>
+    </Values>
+    <Values>
+      <Value>MGR, OTHER</Value>
+      <Value>DEBTINC</Value>
+      <Value>0.1477005707</Value>
+      <Value>81.82</Value>
+      <Value>17</Value>
+      <Value>10</Value>
+      <Value>          0:     81.8%
+  N en Nodo:        44</Value>
+      <Value>          1:     18.2%&#10;          0:     81.8%&#10;  N en Nodo:        44</Value>
+      <Value>44</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 36.3774</Value>
+      <Value>DEBTINC</Value>
+      <Value>0.3625377644</Value>
+      <Value>72.22</Value>
+      <Value>18</Value>
+      <Value>11</Value>
+      <Value>          1:     72.2%
+  N en Nodo:       108</Value>
+      <Value>          1:     72.2%&#10;          0:     27.8%&#10;  N en Nodo:       108</Value>
+      <Value>108</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 36.3774</Value>
+      <Value>DEBTINC</Value>
+      <Value>0.2148371937</Value>
+      <Value>67.19</Value>
+      <Value>19</Value>
+      <Value>11</Value>
+      <Value>          0:     67.2%
+  N en Nodo:        64</Value>
+      <Value>          1:     32.8%&#10;          0:     67.2%&#10;  N en Nodo:        64</Value>
+      <Value>64</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 65660.9</Value>
+      <Value>REASON</Value>
+      <Value>0.0335683115</Value>
+      <Value>80</Value>
+      <Value>20</Value>
+      <Value>12</Value>
+      <Value>          0:     80.0%
+  N en Nodo:        10</Value>
+      <Value>          1:     20.0%&#10;          0:     80.0%&#10;  N en Nodo:        10</Value>
+      <Value>10</Value>
+    </Values>
+    <Values>
+      <Value>&lt;  296289</Value>
+      <Value>DEROG</Value>
+      <Value>3.0110775428</Value>
+      <Value>97.1</Value>
+      <Value>22</Value>
+      <Value>13</Value>
+      <Value>          0:     97.1%
+  N en Nodo:       897</Value>
+      <Value>          1:      2.9%&#10;          0:     97.1%&#10;  N en Nodo:       897</Value>
+      <Value>897</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 33.7882</Value>
+      <Value>DEBTINC</Value>
+      <Value>1.9469620678</Value>
+      <Value>51.38</Value>
+      <Value>24</Value>
+      <Value>14</Value>
+      <Value>          0:     51.4%
+  N en Nodo:       580</Value>
+      <Value>          1:     48.6%&#10;          0:     51.4%&#10;  N en Nodo:       580</Value>
+      <Value>580</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 33.7882</Value>
+      <Value>CLAGE</Value>
+      <Value>1.0372608258</Value>
+      <Value>92.88</Value>
+      <Value>25</Value>
+      <Value>14</Value>
+      <Value>          0:     92.9%
+  N en Nodo:       309</Value>
+      <Value>          1:      7.1%&#10;          0:     92.9%&#10;  N en Nodo:       309</Value>
+      <Value>309</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 46.3934</Value>
+      <Value>DEBTINC</Value>
+      <Value>2.9741524001</Value>
+      <Value>91.42</Value>
+      <Value>26</Value>
+      <Value>15</Value>
+      <Value>          0:     91.4%
+  N en Nodo:       886</Value>
+      <Value>          1:      8.6%&#10;          0:     91.4%&#10;  N en Nodo:       886</Value>
+      <Value>886</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 327.105</Value>
+      <Value></Value>
+      <Value>0.1678415576</Value>
+      <Value>100</Value>
+      <Value>8</Value>
+      <Value>4</Value>
+      <Value>          1:    100.0%
+  N en Nodo:        50</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N en Nodo:        50</Value>
+      <Value>50</Value>
+    </Values>
+    <Values>
+      <Value>OFFICE, SALES, ...</Value>
+      <Value></Value>
+      <Value>0.0134273246</Value>
+      <Value>100</Value>
+      <Value>16</Value>
+      <Value>10</Value>
+      <Value>          1:    100.0%
+  N en Nodo:         4</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N en Nodo:         4</Value>
+      <Value>4</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 6.36478</Value>
+      <Value></Value>
+      <Value>0.0067136623</Value>
+      <Value>100</Value>
+      <Value>28</Value>
+      <Value>17</Value>
+      <Value>          1:    100.0%
+  N en Nodo:         2</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N en Nodo:         2</Value>
+      <Value>2</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 43.0547</Value>
+      <Value></Value>
+      <Value>0.0402819738</Value>
+      <Value>100</Value>
+      <Value>33</Value>
+      <Value>19</Value>
+      <Value>          1:    100.0%
+  N en Nodo:        12</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N en Nodo:        12</Value>
+      <Value>12</Value>
+    </Values>
+    <Values>
+      <Value>HOMEIMP</Value>
+      <Value></Value>
+      <Value>0.0067136623</Value>
+      <Value>100</Value>
+      <Value>34</Value>
+      <Value>20</Value>
+      <Value>          1:    100.0%
+  N en Nodo:         2</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N en Nodo:         2</Value>
+      <Value>2</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 65660.9</Value>
+      <Value></Value>
+      <Value>0.0100704935</Value>
+      <Value>100</Value>
+      <Value>21</Value>
+      <Value>12</Value>
+      <Value>          1:    100.0%
+  N en Nodo:         3</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N en Nodo:         3</Value>
+      <Value>3</Value>
+    </Values>
+    <Values>
+      <Value>7, 8</Value>
+      <Value></Value>
+      <Value>0.0033568312</Value>
+      <Value>100</Value>
+      <Value>36</Value>
+      <Value>22</Value>
+      <Value>          1:    100.0%
+  N en Nodo:         1</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N en Nodo:         1</Value>
+      <Value>1</Value>
+    </Values>
+    <Values>
+      <Value>&gt;=  296289</Value>
+      <Value></Value>
+      <Value>0.0033568312</Value>
+      <Value>100</Value>
+      <Value>23</Value>
+      <Value>13</Value>
+      <Value>          1:    100.0%
+  N en Nodo:         1</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N en Nodo:         1</Value>
+      <Value>1</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 46.3934</Value>
+      <Value></Value>
+      <Value>0.0704934542</Value>
+      <Value>100</Value>
+      <Value>27</Value>
+      <Value>15</Value>
+      <Value>          1:    100.0%
+  N en Nodo:        21</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N en Nodo:        21</Value>
+      <Value>21</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 33.7882</Value>
+      <Value></Value>
+      <Value>0.3188989594</Value>
+      <Value>78.95</Value>
+      <Value>30</Value>
+      <Value>18</Value>
+      <Value>          1:     78.9%
+  N en Nodo:        95</Value>
+      <Value>          1:     78.9%&#10;          0:     21.1%&#10;  N en Nodo:        95</Value>
+      <Value>95</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 46.7293</Value>
+      <Value></Value>
+      <Value>0.0134273246</Value>
+      <Value>75</Value>
+      <Value>40</Value>
+      <Value>25</Value>
+      <Value>          1:     75.0%
+  N en Nodo:         4</Value>
+      <Value>          1:     75.0%&#10;          0:     25.0%&#10;  N en Nodo:         4</Value>
+      <Value>4</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 44.5905</Value>
+      <Value></Value>
+      <Value>0.0268546492</Value>
+      <Value>75</Value>
+      <Value>43</Value>
+      <Value>26</Value>
+      <Value>          1:     75.0%
+  N en Nodo:         8</Value>
+      <Value>          1:     75.0%&#10;          0:     25.0%&#10;  N en Nodo:         8</Value>
+      <Value>8</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 33.7718</Value>
+      <Value></Value>
+      <Value>1.6515609265</Value>
+      <Value>56.1</Value>
+      <Value>39</Value>
+      <Value>24</Value>
+      <Value>          1:     56.1%
+  N en Nodo:       492</Value>
+      <Value>          1:     56.1%&#10;          0:     43.9%&#10;  N en Nodo:       492</Value>
+      <Value>492</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 33.7882</Value>
+      <Value></Value>
+      <Value>0.043638805</Value>
+      <Value>76.92</Value>
+      <Value>31</Value>
+      <Value>18</Value>
+      <Value>          0:     76.9%
+  N en Nodo:        13</Value>
+      <Value>          1:     23.1%&#10;          0:     76.9%&#10;  N en Nodo:        13</Value>
+      <Value>13</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 43.0547</Value>
+      <Value></Value>
+      <Value>0.1745552199</Value>
+      <Value>82.69</Value>
+      <Value>32</Value>
+      <Value>19</Value>
+      <Value>          0:     82.7%
+  N en Nodo:        52</Value>
+      <Value>          1:     17.3%&#10;          0:     82.7%&#10;  N en Nodo:        52</Value>
+      <Value>52</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 6.36478</Value>
+      <Value></Value>
+      <Value>0.1409869084</Value>
+      <Value>85.71</Value>
+      <Value>29</Value>
+      <Value>17</Value>
+      <Value>          0:     85.7%
+  N en Nodo:        42</Value>
+      <Value>          1:     14.3%&#10;          0:     85.7%&#10;  N en Nodo:        42</Value>
+      <Value>42</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 44.5905</Value>
+      <Value></Value>
+      <Value>2.9472977509</Value>
+      <Value>92.03</Value>
+      <Value>42</Value>
+      <Value>26</Value>
+      <Value>          0:     92.0%
+  N en Nodo:       878</Value>
+      <Value>          1:      8.0%&#10;          0:     92.0%&#10;  N en Nodo:       878</Value>
+      <Value>878</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 33.7718</Value>
+      <Value></Value>
+      <Value>0.2954011413</Value>
+      <Value>93.18</Value>
+      <Value>38</Value>
+      <Value>24</Value>
+      <Value>          0:     93.2%
+  N en Nodo:        88</Value>
+      <Value>          1:      6.8%&#10;          0:     93.2%&#10;  N en Nodo:        88</Value>
+      <Value>88</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 46.7293</Value>
+      <Value></Value>
+      <Value>1.0238335012</Value>
+      <Value>93.77</Value>
+      <Value>41</Value>
+      <Value>25</Value>
+      <Value>          0:     93.8%
+  N en Nodo:       305</Value>
+      <Value>          1:      6.2%&#10;          0:     93.8%&#10;  N en Nodo:       305</Value>
+      <Value>305</Value>
+    </Values>
+    <Values>
+      <Value>0, 1, ...</Value>
+      <Value></Value>
+      <Value>3.0077207116</Value>
+      <Value>97.21</Value>
+      <Value>37</Value>
+      <Value>22</Value>
+      <Value>          0:     97.2%
+  N en Nodo:       896</Value>
+      <Value>          1:      2.8%&#10;          0:     97.2%&#10;  N en Nodo:       896</Value>
+      <Value>896</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 327.105</Value>
+      <Value></Value>
+      <Value>0.0067136623</Value>
+      <Value>100</Value>
+      <Value>9</Value>
+      <Value>4</Value>
+      <Value>          0:    100.0%
+  N en Nodo:         2</Value>
+      <Value>          1:      0.0%&#10;          0:    100.0%&#10;  N en Nodo:         2</Value>
+      <Value>2</Value>
+    </Values>
+    <Values>
+      <Value>DEBTCON</Value>
+      <Value></Value>
+      <Value>0.0268546492</Value>
+      <Value>100</Value>
+      <Value>35</Value>
+      <Value>20</Value>
+      <Value>          0:    100.0%
+  N en Nodo:         8</Value>
+      <Value>          1:      0.0%&#10;          0:    100.0%&#10;  N en Nodo:         8</Value>
+      <Value>8</Value>
+    </Values>
+                        </ValuesList>
+                  </EmbeddedData>
+            </IQData>
+      </Data>
+
+      <View>
+            <Section>
+                  <Body>
+                        <Graph name="DecisionTree" >
+                              <ChartDataList>
+                                    <ChartData name="DTreeData" data="TreeData" >
+                                          <Roles>
+                                                <Role type="AboveText"   variable="Var1" > </Role>
+                                                <Role type="BelowText"   variable="Var2" > </Role>
+                                                <Role type="LinkWidth"   variable="Var3" > </Role>
+                                                <Role type="NodeColor"   variable="Var4" > </Role>
+                                                <Role type="ID"      variable="Var5" > </Role>
+                                                <Role type="Parent"    variable="Var6" > </Role>
+                                                <Role type="NodeText"    variable="Var7" > </Role>
+                                                <Role type="ToolTipText" variable="Var8" > </Role>
+                                                <Role type="NodeSize"    variable="Var9" > </Role>
+                                          </Roles>
+                                    </ChartData>
+                              </ChartDataList>
+                              <ColorMappers>
+                                    <ColorRamp  name="NodeColorRamp"
+                                                      underFlowColor="Red"
+                                                      overflowColor="Green"
+                                                      low="0"
+                                                      high="1000"
+                                                      beginColor="CX0000FF"
+                                                      endColor="CXFFFFFF" >
+                                    </ColorRamp>
+                                    <ColorRamp  name="LinkColorRamp"
+                                                      low="1"
+                                                      high="10"
+                                                      beginColor="CX000000"
+                                                      endColor="CX000000" >
+                                    </ColorRamp>
+                              </ColorMappers>
+                              <ChartAreas>
+                                    <ChartArea>
+                                          <Charts>
+                                          <DecisionTree name="DTree"
+                                                  chartData="DTreeData"
+                                                  selectionColor="CX00FF00"
+                                                  orientation="Vertical"
+                                                  emptyNodes="False"
+                                                  legendVisible="False"
+                                                  titleAnchor="Root"
+                                                  footnoteAnchor="Chart"
+                                                  displayDepth="4" >
+
+                                    <SplitVarList>
+                                          <SplitVar name="SPLIT VAR A" type="DISCRETE" missingBranch="3" values="1,A:1,B:2,C:3,D"/>
+                                          <SplitVar name="SPLIT VAR B" type="CONTINUOUS" breaks="10:50:100" />
+                                    </SplitVarList>
+
+                                    <IciclePlot isVisible="True"></IciclePlot>
+
+                                    <NodeStyle colorMapper="NodeColorRamp"
+                                                   outlineColor="Black"
+                                                   outlineWidth="1">
+                                          <NodeText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="12 pt"
+                                                        textFlags="Bold" />
+                                    </NodeStyle>
+                                    <FlaggedNodeStyle color="CXFF8844"
+                                                              outlineColor="Black"
+                                                              outlineWidth="3" >
+                                          <FlaggedNodeText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="12 pt"
+                                                        textFlags="Italic" />
+                                    </FlaggedNodeStyle>
+                                    <LinkStyle textVisible="True"
+                                                   colorMapper="LinkColorRamp"
+                                                   linkStyle="Manhattan"
+                                                   staticWidth="3" >
+                                          <LinkText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="10 pt"
+                                                        textFlags="Bold" />
+                                    </LinkStyle>
+                                    <GraphStyle numBars="3"
+                                                      numStacks="3"
+                                                      axisMin="0"
+                                                      axisMax="20"
+                                                      orientation="Vertical"
+                                                      visible="True" >
+                                    </GraphStyle>
+                              </DecisionTree>
+                              </Charts>
+                        </ChartArea>
+                  </ChartAreas>
+            </Graph>
+      </Body>
+      </Section>
+      </View>
+
+  </SASReport>
+

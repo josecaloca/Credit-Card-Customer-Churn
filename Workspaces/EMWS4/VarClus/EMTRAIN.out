@@ -1,0 +1,113 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+Role         Level         Count
+
+ID         INTERVAL          1    
+INPUT      BINARY            1    
+INPUT      INTERVAL          7    
+INPUT      NOMINAL           4    
+TARGET     BINARY            1    
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+Oblique Principal Component Cluster Analysis
+
+Observations           1989    Proportion          0
+Variables                 7    Maxeigen            1
+
+
+Clustering algorithm converged.                                            
+
+
+                      Cluster Summary for 1 Cluster
+ 
+                        Cluster    Variation    Proportion        Second
+Cluster    Members    Variation    Explained     Explained    Eigenvalue
+------------------------------------------------------------------------
+      1          7            7     2.224666        0.3178        1.2380
+
+Total variation explained = 2.224666 Proportion = 0.3178
+
+Cluster 1 will be split because it has the largest second eigenvalue, 1.237973, which is greater than the MAXEIGEN=1 value.
+
+
+Clustering algorithm converged.                                            
+
+
+                     Cluster Summary for 2 Clusters
+ 
+                        Cluster    Variation    Proportion        Second
+Cluster    Members    Variation    Explained     Explained    Eigenvalue
+------------------------------------------------------------------------
+      1          5            5     2.165007        0.4330        1.0022
+      2          2            2     1.206178        0.6031        0.7938
+
+Total variation explained = 3.371185 Proportion = 0.4816
+
+
+                            R-squared with
+2 Clusters                ------------------
+                              Own       Next    1-R**2
+Cluster       Variable    Cluster    Closest     Ratio
+------------------------------------------------------
+Cluster 1     CLNO         0.2423     0.0194    0.7727
+              DEBTINC      0.0743     0.0008    0.9264
+              LOAN         0.2189     0.0131    0.7915
+              MORTDUE      0.8297     0.0000    0.1703
+              VALUE        0.7998     0.0078    0.2018
+------------------------------------------------------
+Cluster 2     CLAGE        0.6031     0.0331    0.4105
+              YOJ          0.6031     0.0019    0.3977
+
+Cluster 1 will be split because it has the largest second eigenvalue, 1.002174, which is greater than the MAXEIGEN=1 value.
+
+
+Clustering algorithm converged.                                            
+
+
+                     Cluster Summary for 3 Clusters
+ 
+                        Cluster    Variation    Proportion        Second
+Cluster    Members    Variation    Explained     Explained    Eigenvalue
+------------------------------------------------------------------------
+      1          3            3     2.001759        0.6673        0.8494
+      2          2            2     1.206178        0.6031        0.7938
+      3          2            2     1.137347        0.5687        0.8627
+
+Total variation explained = 4.345284 Proportion = 0.6208
+
+
+                            R-squared with
+3 Clusters                ------------------
+                              Own       Next    1-R**2
+Cluster       Variable    Cluster    Closest     Ratio
+------------------------------------------------------
+Cluster 1     CLNO         0.2820     0.0194    0.7322
+              MORTDUE      0.8972     0.0537    0.1086
+              VALUE        0.8226     0.0697    0.1907
+------------------------------------------------------
+Cluster 2     CLAGE        0.6031     0.0368    0.4121
+              YOJ          0.6031     0.0053    0.3990
+------------------------------------------------------
+Cluster 3     DEBTINC      0.5687     0.0174    0.4390
+              LOAN         0.5687     0.0678    0.4627
+
+No cluster meets the criterion for splitting.
+
+
+                 Total     Proportion       Minimum       Maximum                  Maximum
+             Variation             of    Proportion        Second      Minimum      1-R**2
+  Number     Explained      Variation     Explained    Eigenvalue    R-squared       Ratio
+      of            by      Explained          by a          in a        for a       for a
+Clusters      Clusters    by Clusters       Cluster       Cluster     Variable    Variable
+------------------------------------------------------------------------------------------
+       1      2.224666         0.3178        0.3178      1.237973       0.0005            
+       2      3.371185         0.4816        0.4330      1.002174       0.0743      0.9264
+       3      4.345284         0.6208        0.5687      0.862653       0.2820      0.7322

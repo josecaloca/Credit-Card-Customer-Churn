@@ -1,0 +1,83 @@
+*------------------------------------------------------------*
+Usuario:                Jose Caloca
+Fecha:                14 de marzo de 2021
+Hora:                13H51
+*------------------------------------------------------------*
+* Salida de entrenamiento
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Resumen de variables
+ 
+          Nivel de     Número de
+ Rol       medida     ocurrencias
+ 
+INPUT     BINARY           1
+INPUT     INTERVAL         7
+INPUT     NOMINAL          4
+TARGET    BINARY           1
+ 
+ 
+ 
+ 
+Resumen de partición
+ 
+                                     Número de
+Tipo         Conjunto de datos     observaciones
+ 
+DATA        EMWS3.Ids_DATA              5960
+TRAIN       EMWS3.Part_TRAIN            2979
+VALIDATE    EMWS3.Part_VALIDATE         1788
+TEST        EMWS3.Part_TEST             1193
+
+
+*------------------------------------------------------------*
+* Salida de puntuación
+*------------------------------------------------------------*
+
+
+*------------------------------------------------------------*
+* Salida del informe
+*------------------------------------------------------------*
+ 
+ 
+ 
+ 
+Estadísticos descriptivos para los targets de clase
+ 
+Datos=DATA
+ 
+              Valor       Valor        Número de
+Variable    numérico    formateado    ocurrencias    Porcentaje    Etiqueta
+ 
+  BAD           0           0             4771         80.0503
+  BAD           1           1             1189         19.9497
+ 
+ 
+Datos=TEST
+ 
+              Valor       Valor        Número de
+Variable    numérico    formateado    ocurrencias    Porcentaje    Etiqueta
+ 
+  BAD           0           0             955          80.0503
+  BAD           1           1             238          19.9497
+ 
+ 
+Datos=TRAIN
+ 
+              Valor       Valor        Número de
+Variable    numérico    formateado    ocurrencias    Porcentaje    Etiqueta
+ 
+  BAD           0           0             2385         80.0604
+  BAD           1           1              594         19.9396
+ 
+ 
+Datos=VALIDATE
+ 
+              Valor       Valor        Número de
+Variable    numérico    formateado    ocurrencias    Porcentaje    Etiqueta
+ 
+  BAD           0           0             1431         80.0336
+  BAD           1           1              357         19.9664

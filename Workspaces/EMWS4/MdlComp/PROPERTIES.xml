@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  NumberOfReportedLevels="1E-6" NormalizeReportingVariables="Y" DecileBin="20" LiftEpsilon="1E-6"
+ ProfitEpsilon="1E-6" RoiEpsilon="1E-6" ScoreDistBin="20" RocChart="Y" RocEpsilon="0.01"
+ AssessAllTargetLevels="N" SelectionData="DEFAULT" HPCriteria="DEFAULT" intervalViyaCriteria="DEFAULT"
+ classViyaCriteria="DEFAULT" SelectionTable="TEST" SelectionCriteria="_GAIN_" SelectionDepth="10"
+ NumberofBins="20" RecomputeAssess="N" TargetName="BAD" ModelId="Reg2" ModelDescription="Regression all"
+ ModelCriteria="Test: Gain" ForceRun="N" RunAction="Train" Component="ModelCompare"
+ RawCreateTime="1931470840.9" CreateTime="15MAR2021:23:40:41" RunId="c4417dbe-4238-430b-bd82-7229721cf3cc"
+ StatisticUsed="_TGAIN_" TargetLabel="">
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES/>
+</_ROOT_>

@@ -1,0 +1,40 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Estadísticos descriptivos para los targets de clase
+
+Datos=DATA
+
+              Valor       Valor        Número de
+Variable    numérico    formateado    ocurrencias    Porcentaje    Etiqueta
+
+  BAD           0           0             4771         80.0503             
+  BAD           1           1             1189         19.9497             
+
+
+Datos=TEST
+
+              Valor       Valor        Número de
+Variable    numérico    formateado    ocurrencias    Porcentaje    Etiqueta
+
+  BAD           0           0             955          80.0503             
+  BAD           1           1             238          19.9497             
+
+
+Datos=TRAIN
+
+              Valor       Valor        Número de
+Variable    numérico    formateado    ocurrencias    Porcentaje    Etiqueta
+
+  BAD           0           0             2385         80.0604             
+  BAD           1           1              594         19.9396             
+
+
+Datos=VALIDATE
+
+              Valor       Valor        Número de
+Variable    numérico    formateado    ocurrencias    Porcentaje    Etiqueta
+
+  BAD           0           0             1431         80.0336             
+  BAD           1           1              357         19.9664             

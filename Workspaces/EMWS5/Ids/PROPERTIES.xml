@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  DataSource="german" Scope="LOCAL" Role="RAW" Library="JOSE" Table="GERMAN" NCols="21"
+ NObs="1000" NBytes="123904" Segment="" DataSourceRole="RAW" OutputType="VIEW" ForceRun="N"
+ ComputeStatistics="N" DataSelection="DATASOURCE" NewTable="" MetaAdvisor="BASIC"
+ ApplyIntervalLevelLowerLimit="Y" IntervalLowerLimit="20" ApplyMaxPercentMissing="Y"
+ MaxPercentMissing="50" ApplyMaxClassLevels="Y" MaxClassLevels="20" IdentifyEmptyColumns="Y"
+ VariableValidation="STRICT" NewVariableRole="REJECT" DropMapVariables="Y" DsId="german"
+ DsSampleName="" DsSampleSizeType="" DsSampleSize="" DsCreatedBy="Jose Caloca" DsCreateDate="1932571537.1"
+ DsModifiedBy="Jose Caloca" DsModifyDate="1932571537.1" DsScope="LOCAL" Sample="D"
+ SampleSizeType="PERCENT" SampleSizePercent="20" SampleSizeObs="10000" DBPassThrough="Y"
+ RunAction="Train" Component="DataSource" RawCreateTime="1932571546.5" CreateTime="28MAR2021:17:25:46"
+ Description="" Data="JOSE.GERMAN" CMeta="WORK.M0R9TOWS" RunId="9233abaa-b173-4410-bb19-82e270348f4a"
+>
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES/>
+</_ROOT_>

@@ -1,0 +1,779 @@
+﻿<SASReport version="1.0">
+      <Data>
+            <IQData type="2DEmbedded" name="TreeData">
+                  <EmbeddedData>
+                        <Variables>
+                              <Variable name="Var1" varName="Var1" type="String" />
+                              <Variable name="Var2" varName="Var2" type="String" />
+                              <Variable name="Var3" varName="Var3" type="Numeric" />
+                              <Variable name="Var4" varName="Var4" type="Numeric" />
+                              <Variable name="Var5" varName="Var5" type="Numeric" />
+                              <Variable name="Var6" varName="Var6" type="Numeric" />
+                              <Variable name="Var7" varName="Var7" type="String"  />
+                              <Variable name="Var8" varName="Var8" type="String" />
+                              <Variable name="Var9" varName="Var9" type="Numeric" />
+                        </Variables>
+                        <ValuesList>
+    <Values>
+      <Value></Value>
+      <Value>acc_status</Value>
+      <Value>10</Value>
+      <Value>70</Value>
+      <Value>1</Value>
+      <Value>0</Value>
+      <Value>          0:     70.0%
+  N in Node:       700</Value>
+      <Value>          1:     30.0%&#10;          0:     70.0%&#10;  N in Node:       700</Value>
+      <Value>700</Value>
+    </Values>
+    <Values>
+      <Value>A11, A12</Value>
+      <Value>duration</Value>
+      <Value>5.4285714286</Value>
+      <Value>56.32</Value>
+      <Value>2</Value>
+      <Value>1</Value>
+      <Value>          0:     56.3%
+  N in Node:       380</Value>
+      <Value>          1:     43.7%&#10;          0:     56.3%&#10;  N in Node:       380</Value>
+      <Value>380</Value>
+    </Values>
+    <Values>
+      <Value>A13, A14</Value>
+      <Value>other_instalments</Value>
+      <Value>4.5714285714</Value>
+      <Value>86.25</Value>
+      <Value>3</Value>
+      <Value>1</Value>
+      <Value>          0:     86.3%
+  N in Node:       320</Value>
+      <Value>          1:     13.8%&#10;          0:     86.3%&#10;  N in Node:       320</Value>
+      <Value>320</Value>
+    </Values>
+    <Values>
+      <Value>&lt;   21.68</Value>
+      <Value>credit_history</Value>
+      <Value>3.0714285714</Value>
+      <Value>66.05</Value>
+      <Value>4</Value>
+      <Value>2</Value>
+      <Value>          0:     66.0%
+  N in Node:       215</Value>
+      <Value>          1:     34.0%&#10;          0:     66.0%&#10;  N in Node:       215</Value>
+      <Value>215</Value>
+    </Values>
+    <Values>
+      <Value>&gt;=   21.68</Value>
+      <Value>savings</Value>
+      <Value>2.3571428571</Value>
+      <Value>56.36</Value>
+      <Value>5</Value>
+      <Value>2</Value>
+      <Value>          1:     56.4%
+  N in Node:       165</Value>
+      <Value>          1:     56.4%&#10;          0:     43.6%&#10;  N in Node:       165</Value>
+      <Value>165</Value>
+    </Values>
+    <Values>
+      <Value>A141</Value>
+      <Value>pourpose</Value>
+      <Value>0.5857142857</Value>
+      <Value>63.41</Value>
+      <Value>6</Value>
+      <Value>3</Value>
+      <Value>          0:     63.4%
+  N in Node:        41</Value>
+      <Value>          1:     36.6%&#10;          0:     63.4%&#10;  N in Node:        41</Value>
+      <Value>41</Value>
+    </Values>
+    <Values>
+      <Value>A142, A143</Value>
+      <Value>pourpose</Value>
+      <Value>3.9857142857</Value>
+      <Value>89.61</Value>
+      <Value>7</Value>
+      <Value>3</Value>
+      <Value>          0:     89.6%
+  N in Node:       279</Value>
+      <Value>          1:     10.4%&#10;          0:     89.6%&#10;  N in Node:       279</Value>
+      <Value>279</Value>
+    </Values>
+    <Values>
+      <Value>A30, A31</Value>
+      <Value>pourpose</Value>
+      <Value>0.2571428571</Value>
+      <Value>77.78</Value>
+      <Value>8</Value>
+      <Value>4</Value>
+      <Value>          1:     77.8%
+  N in Node:        18</Value>
+      <Value>          1:     77.8%&#10;          0:     22.2%&#10;  N in Node:        18</Value>
+      <Value>18</Value>
+    </Values>
+    <Values>
+      <Value>A32, A33</Value>
+      <Value>credit_amt</Value>
+      <Value>2.8142857143</Value>
+      <Value>70.05</Value>
+      <Value>9</Value>
+      <Value>4</Value>
+      <Value>          0:     70.1%
+  N in Node:       197</Value>
+      <Value>          1:     29.9%&#10;          0:     70.1%&#10;  N in Node:       197</Value>
+      <Value>197</Value>
+    </Values>
+    <Values>
+      <Value>A61, A62, ...</Value>
+      <Value>employment</Value>
+      <Value>2</Value>
+      <Value>62.86</Value>
+      <Value>10</Value>
+      <Value>5</Value>
+      <Value>          1:     62.9%
+  N in Node:       140</Value>
+      <Value>          1:     62.9%&#10;          0:     37.1%&#10;  N in Node:       140</Value>
+      <Value>140</Value>
+    </Values>
+    <Values>
+      <Value>A64, A65</Value>
+      <Value>employment</Value>
+      <Value>0.3571428571</Value>
+      <Value>80</Value>
+      <Value>11</Value>
+      <Value>5</Value>
+      <Value>          0:     80.0%
+  N in Node:        25</Value>
+      <Value>          1:     20.0%&#10;          0:     80.0%&#10;  N in Node:        25</Value>
+      <Value>25</Value>
+    </Values>
+    <Values>
+      <Value>A40, A44, ...</Value>
+      <Value>age</Value>
+      <Value>0.2428571429</Value>
+      <Value>64.71</Value>
+      <Value>12</Value>
+      <Value>6</Value>
+      <Value>          1:     64.7%
+  N in Node:        17</Value>
+      <Value>          1:     64.7%&#10;          0:     35.3%&#10;  N in Node:        17</Value>
+      <Value>17</Value>
+    </Values>
+    <Values>
+      <Value>A41, A410</Value>
+      <Value>job</Value>
+      <Value>0.3428571429</Value>
+      <Value>83.33</Value>
+      <Value>13</Value>
+      <Value>6</Value>
+      <Value>          0:     83.3%
+  N in Node:        24</Value>
+      <Value>          1:     16.7%&#10;          0:     83.3%&#10;  N in Node:        24</Value>
+      <Value>24</Value>
+    </Values>
+    <Values>
+      <Value>A40, A410, ...</Value>
+      <Value>credit_amt</Value>
+      <Value>1.9142857143</Value>
+      <Value>82.84</Value>
+      <Value>14</Value>
+      <Value>7</Value>
+      <Value>          0:     82.8%
+  N in Node:       134</Value>
+      <Value>          1:     17.2%&#10;          0:     82.8%&#10;  N in Node:       134</Value>
+      <Value>134</Value>
+    </Values>
+    <Values>
+      <Value>A41, A43</Value>
+      <Value>acc_status</Value>
+      <Value>2.0714285714</Value>
+      <Value>95.86</Value>
+      <Value>15</Value>
+      <Value>7</Value>
+      <Value>          0:     95.9%
+  N in Node:       145</Value>
+      <Value>          1:      4.1%&#10;          0:     95.9%&#10;  N in Node:       145</Value>
+      <Value>145</Value>
+    </Values>
+    <Values>
+      <Value>A40, A41, ...</Value>
+      <Value>age</Value>
+      <Value>0.2285714286</Value>
+      <Value>87.5</Value>
+      <Value>16</Value>
+      <Value>8</Value>
+      <Value>          1:     87.5%
+  N in Node:        16</Value>
+      <Value>          1:     87.5%&#10;          0:     12.5%&#10;  N in Node:        16</Value>
+      <Value>16</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 8610.04</Value>
+      <Value>age</Value>
+      <Value>2.7571428571</Value>
+      <Value>71.5</Value>
+      <Value>18</Value>
+      <Value>9</Value>
+      <Value>          0:     71.5%
+  N in Node:       193</Value>
+      <Value>          1:     28.5%&#10;          0:     71.5%&#10;  N in Node:       193</Value>
+      <Value>193</Value>
+    </Values>
+    <Values>
+      <Value>A72, A73</Value>
+      <Value>residence</Value>
+      <Value>0.9428571429</Value>
+      <Value>72.73</Value>
+      <Value>20</Value>
+      <Value>10</Value>
+      <Value>          1:     72.7%
+  N in Node:        66</Value>
+      <Value>          1:     72.7%&#10;          0:     27.3%&#10;  N in Node:        66</Value>
+      <Value>66</Value>
+    </Values>
+    <Values>
+      <Value>A71, A74</Value>
+      <Value>pourpose</Value>
+      <Value>1.0571428571</Value>
+      <Value>54.05</Value>
+      <Value>21</Value>
+      <Value>10</Value>
+      <Value>          1:     54.1%
+  N in Node:        74</Value>
+      <Value>          1:     54.1%&#10;          0:     45.9%&#10;  N in Node:        74</Value>
+      <Value>74</Value>
+    </Values>
+    <Values>
+      <Value>A71, A72</Value>
+      <Value>credit_amt</Value>
+      <Value>0.3285714286</Value>
+      <Value>86.96</Value>
+      <Value>23</Value>
+      <Value>11</Value>
+      <Value>          0:     87.0%
+  N in Node:        23</Value>
+      <Value>          1:     13.0%&#10;          0:     87.0%&#10;  N in Node:        23</Value>
+      <Value>23</Value>
+    </Values>
+    <Values>
+      <Value>&lt;   44.76</Value>
+      <Value>duration</Value>
+      <Value>0.2</Value>
+      <Value>78.57</Value>
+      <Value>24</Value>
+      <Value>12</Value>
+      <Value>          1:     78.6%
+  N in Node:        14</Value>
+      <Value>          1:     78.6%&#10;          0:     21.4%&#10;  N in Node:        14</Value>
+      <Value>14</Value>
+    </Values>
+    <Values>
+      <Value>A171, A172</Value>
+      <Value>duration</Value>
+      <Value>0.0857142857</Value>
+      <Value>50</Value>
+      <Value>26</Value>
+      <Value>13</Value>
+      <Value>          1:     50.0%
+  N in Node:         6</Value>
+      <Value>          1:     50.0%&#10;          0:     50.0%&#10;  N in Node:         6</Value>
+      <Value>6</Value>
+    </Values>
+    <Values>
+      <Value>A173, A174</Value>
+      <Value>savings</Value>
+      <Value>0.2571428571</Value>
+      <Value>94.44</Value>
+      <Value>27</Value>
+      <Value>13</Value>
+      <Value>          0:     94.4%
+  N in Node:        18</Value>
+      <Value>          1:      5.6%&#10;          0:     94.4%&#10;  N in Node:        18</Value>
+      <Value>18</Value>
+    </Values>
+    <Values>
+      <Value>&lt;  7519.6</Value>
+      <Value>personal_status</Value>
+      <Value>1.8142857143</Value>
+      <Value>85.04</Value>
+      <Value>28</Value>
+      <Value>14</Value>
+      <Value>          0:     85.0%
+  N in Node:       127</Value>
+      <Value>          1:     15.0%&#10;          0:     85.0%&#10;  N in Node:       127</Value>
+      <Value>127</Value>
+    </Values>
+    <Values>
+      <Value>&gt;=  7519.6</Value>
+      <Value>instalment</Value>
+      <Value>0.1</Value>
+      <Value>57.14</Value>
+      <Value>29</Value>
+      <Value>14</Value>
+      <Value>          1:     57.1%
+  N in Node:         7</Value>
+      <Value>          1:     57.1%&#10;          0:     42.9%&#10;  N in Node:         7</Value>
+      <Value>7</Value>
+    </Values>
+    <Values>
+      <Value>A13</Value>
+      <Value>age</Value>
+      <Value>0.2142857143</Value>
+      <Value>73.33</Value>
+      <Value>30</Value>
+      <Value>15</Value>
+      <Value>          0:     73.3%
+  N in Node:        15</Value>
+      <Value>          1:     26.7%&#10;          0:     73.3%&#10;  N in Node:        15</Value>
+      <Value>15</Value>
+    </Values>
+    <Values>
+      <Value>A14</Value>
+      <Value>credit_amt</Value>
+      <Value>1.8571428571</Value>
+      <Value>98.46</Value>
+      <Value>31</Value>
+      <Value>15</Value>
+      <Value>          0:     98.5%
+  N in Node:       130</Value>
+      <Value>          1:      1.5%&#10;          0:     98.5%&#10;  N in Node:       130</Value>
+      <Value>130</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 8610.04</Value>
+      <Value></Value>
+      <Value>0.0571428571</Value>
+      <Value>100</Value>
+      <Value>19</Value>
+      <Value>9</Value>
+      <Value>          1:    100.0%
+  N in Node:         4</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N in Node:         4</Value>
+      <Value>4</Value>
+    </Values>
+    <Values>
+      <Value>A74</Value>
+      <Value></Value>
+      <Value>0.0285714286</Value>
+      <Value>100</Value>
+      <Value>22</Value>
+      <Value>11</Value>
+      <Value>          1:    100.0%
+  N in Node:         2</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N in Node:         2</Value>
+      <Value>2</Value>
+    </Values>
+    <Values>
+      <Value>&lt;   12.16</Value>
+      <Value></Value>
+      <Value>0.0428571429</Value>
+      <Value>100</Value>
+      <Value>44</Value>
+      <Value>26</Value>
+      <Value>          1:    100.0%
+  N in Node:         3</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N in Node:         3</Value>
+      <Value>3</Value>
+    </Values>
+    <Values>
+      <Value>A63, A64</Value>
+      <Value></Value>
+      <Value>0.0142857143</Value>
+      <Value>100</Value>
+      <Value>46</Value>
+      <Value>27</Value>
+      <Value>          1:    100.0%
+  N in Node:         1</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N in Node:         1</Value>
+      <Value>1</Value>
+    </Values>
+    <Values>
+      <Value>1, 3, ...</Value>
+      <Value></Value>
+      <Value>0.0571428571</Value>
+      <Value>100</Value>
+      <Value>50</Value>
+      <Value>29</Value>
+      <Value>          1:    100.0%
+  N in Node:         4</Value>
+      <Value>          1:    100.0%&#10;          0:      0.0%&#10;  N in Node:         4</Value>
+      <Value>4</Value>
+    </Values>
+    <Values>
+      <Value>&gt;=   23.48</Value>
+      <Value></Value>
+      <Value>0.2142857143</Value>
+      <Value>93.33</Value>
+      <Value>33</Value>
+      <Value>16</Value>
+      <Value>          1:     93.3%
+  N in Node:        15</Value>
+      <Value>          1:     93.3%&#10;          0:      6.7%&#10;  N in Node:        15</Value>
+      <Value>15</Value>
+    </Values>
+    <Values>
+      <Value>&gt;=    6.72</Value>
+      <Value></Value>
+      <Value>0.1714285714</Value>
+      <Value>91.67</Value>
+      <Value>43</Value>
+      <Value>24</Value>
+      <Value>          1:     91.7%
+  N in Node:        12</Value>
+      <Value>          1:     91.7%&#10;          0:      8.3%&#10;  N in Node:        12</Value>
+      <Value>12</Value>
+    </Values>
+    <Values>
+      <Value>3, 4</Value>
+      <Value></Value>
+      <Value>0.4571428571</Value>
+      <Value>87.5</Value>
+      <Value>36</Value>
+      <Value>20</Value>
+      <Value>          1:     87.5%
+  N in Node:        32</Value>
+      <Value>          1:     87.5%&#10;          0:     12.5%&#10;  N in Node:        32</Value>
+      <Value>32</Value>
+    </Values>
+    <Values>
+      <Value>&lt;   29.08</Value>
+      <Value></Value>
+      <Value>0.0571428571</Value>
+      <Value>75</Value>
+      <Value>52</Value>
+      <Value>30</Value>
+      <Value>          1:     75.0%
+  N in Node:         4</Value>
+      <Value>          1:     75.0%&#10;          0:     25.0%&#10;  N in Node:         4</Value>
+      <Value>4</Value>
+    </Values>
+    <Values>
+      <Value>A40, A42, ...</Value>
+      <Value></Value>
+      <Value>0.6</Value>
+      <Value>71.43</Value>
+      <Value>38</Value>
+      <Value>21</Value>
+      <Value>          1:     71.4%
+  N in Node:        42</Value>
+      <Value>          1:     71.4%&#10;          0:     28.6%&#10;  N in Node:        42</Value>
+      <Value>42</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 1703.92</Value>
+      <Value></Value>
+      <Value>0.0428571429</Value>
+      <Value>66.67</Value>
+      <Value>40</Value>
+      <Value>23</Value>
+      <Value>          1:     66.7%
+  N in Node:         3</Value>
+      <Value>          1:     66.7%&#10;          0:     33.3%&#10;  N in Node:         3</Value>
+      <Value>3</Value>
+    </Values>
+    <Values>
+      <Value>1, 2</Value>
+      <Value></Value>
+      <Value>0.4857142857</Value>
+      <Value>58.82</Value>
+      <Value>37</Value>
+      <Value>20</Value>
+      <Value>          1:     58.8%
+  N in Node:        34</Value>
+      <Value>          1:     58.8%&#10;          0:     41.2%&#10;  N in Node:        34</Value>
+      <Value>34</Value>
+    </Values>
+    <Values>
+      <Value>&lt;   33.56</Value>
+      <Value></Value>
+      <Value>1.4428571429</Value>
+      <Value>63.37</Value>
+      <Value>34</Value>
+      <Value>18</Value>
+      <Value>          0:     63.4%
+  N in Node:       101</Value>
+      <Value>          1:     36.6%&#10;          0:     63.4%&#10;  N in Node:       101</Value>
+      <Value>101</Value>
+    </Values>
+    <Values>
+      <Value>A41, A410</Value>
+      <Value></Value>
+      <Value>0.4571428571</Value>
+      <Value>68.75</Value>
+      <Value>39</Value>
+      <Value>21</Value>
+      <Value>          0:     68.8%
+  N in Node:        32</Value>
+      <Value>          1:     31.3%&#10;          0:     68.8%&#10;  N in Node:        32</Value>
+      <Value>32</Value>
+    </Values>
+    <Values>
+      <Value>A92, A94</Value>
+      <Value></Value>
+      <Value>0.8</Value>
+      <Value>76.79</Value>
+      <Value>48</Value>
+      <Value>28</Value>
+      <Value>          0:     76.8%
+  N in Node:        56</Value>
+      <Value>          1:     23.2%&#10;          0:     76.8%&#10;  N in Node:        56</Value>
+      <Value>56</Value>
+    </Values>
+    <Values>
+      <Value>&gt;=   33.56</Value>
+      <Value></Value>
+      <Value>1.3142857143</Value>
+      <Value>80.43</Value>
+      <Value>35</Value>
+      <Value>18</Value>
+      <Value>          0:     80.4%
+  N in Node:        92</Value>
+      <Value>          1:     19.6%&#10;          0:     80.4%&#10;  N in Node:        92</Value>
+      <Value>92</Value>
+    </Values>
+    <Values>
+      <Value>&gt;=   29.08</Value>
+      <Value></Value>
+      <Value>0.1571428571</Value>
+      <Value>90.91</Value>
+      <Value>53</Value>
+      <Value>30</Value>
+      <Value>          0:     90.9%
+  N in Node:        11</Value>
+      <Value>          1:      9.1%&#10;          0:     90.9%&#10;  N in Node:        11</Value>
+      <Value>11</Value>
+    </Values>
+    <Values>
+      <Value>A91, A93</Value>
+      <Value></Value>
+      <Value>1.0142857143</Value>
+      <Value>91.55</Value>
+      <Value>49</Value>
+      <Value>28</Value>
+      <Value>          0:     91.5%
+  N in Node:        71</Value>
+      <Value>          1:      8.5%&#10;          0:     91.5%&#10;  N in Node:        71</Value>
+      <Value>71</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 1703.92</Value>
+      <Value></Value>
+      <Value>0.2857142857</Value>
+      <Value>95</Value>
+      <Value>41</Value>
+      <Value>23</Value>
+      <Value>          0:     95.0%
+  N in Node:        20</Value>
+      <Value>          1:      5.0%&#10;          0:     95.0%&#10;  N in Node:        20</Value>
+      <Value>20</Value>
+    </Values>
+    <Values>
+      <Value>&gt;= 3521.32</Value>
+      <Value></Value>
+      <Value>0.5857142857</Value>
+      <Value>95.12</Value>
+      <Value>55</Value>
+      <Value>31</Value>
+      <Value>          0:     95.1%
+  N in Node:        41</Value>
+      <Value>          1:      4.9%&#10;          0:     95.1%&#10;  N in Node:        41</Value>
+      <Value>41</Value>
+    </Values>
+    <Values>
+      <Value>&lt;   23.48</Value>
+      <Value></Value>
+      <Value>0.0142857143</Value>
+      <Value>100</Value>
+      <Value>32</Value>
+      <Value>16</Value>
+      <Value>          0:    100.0%
+  N in Node:         1</Value>
+      <Value>          1:      0.0%&#10;          0:    100.0%&#10;  N in Node:         1</Value>
+      <Value>1</Value>
+    </Values>
+    <Values>
+      <Value>A48, A49</Value>
+      <Value></Value>
+      <Value>0.0285714286</Value>
+      <Value>100</Value>
+      <Value>17</Value>
+      <Value>8</Value>
+      <Value>          0:    100.0%
+  N in Node:         2</Value>
+      <Value>          1:      0.0%&#10;          0:    100.0%&#10;  N in Node:         2</Value>
+      <Value>2</Value>
+    </Values>
+    <Values>
+      <Value>&lt;    6.72</Value>
+      <Value></Value>
+      <Value>0.0285714286</Value>
+      <Value>100</Value>
+      <Value>42</Value>
+      <Value>24</Value>
+      <Value>          0:    100.0%
+  N in Node:         2</Value>
+      <Value>          1:      0.0%&#10;          0:    100.0%&#10;  N in Node:         2</Value>
+      <Value>2</Value>
+    </Values>
+    <Values>
+      <Value>&gt;=   44.76</Value>
+      <Value></Value>
+      <Value>0.0428571429</Value>
+      <Value>100</Value>
+      <Value>25</Value>
+      <Value>12</Value>
+      <Value>          0:    100.0%
+  N in Node:         3</Value>
+      <Value>          1:      0.0%&#10;          0:    100.0%&#10;  N in Node:         3</Value>
+      <Value>3</Value>
+    </Values>
+    <Values>
+      <Value>&gt;=   12.16</Value>
+      <Value></Value>
+      <Value>0.0428571429</Value>
+      <Value>100</Value>
+      <Value>45</Value>
+      <Value>26</Value>
+      <Value>          0:    100.0%
+  N in Node:         3</Value>
+      <Value>          1:      0.0%&#10;          0:    100.0%&#10;  N in Node:         3</Value>
+      <Value>3</Value>
+    </Values>
+    <Values>
+      <Value>A61, A62</Value>
+      <Value></Value>
+      <Value>0.2428571429</Value>
+      <Value>100</Value>
+      <Value>47</Value>
+      <Value>27</Value>
+      <Value>          0:    100.0%
+  N in Node:        17</Value>
+      <Value>          1:      0.0%&#10;          0:    100.0%&#10;  N in Node:        17</Value>
+      <Value>17</Value>
+    </Values>
+    <Values>
+      <Value>2</Value>
+      <Value></Value>
+      <Value>0.0428571429</Value>
+      <Value>100</Value>
+      <Value>51</Value>
+      <Value>29</Value>
+      <Value>          0:    100.0%
+  N in Node:         3</Value>
+      <Value>          1:      0.0%&#10;          0:    100.0%&#10;  N in Node:         3</Value>
+      <Value>3</Value>
+    </Values>
+    <Values>
+      <Value>&lt; 3521.32</Value>
+      <Value></Value>
+      <Value>1.2714285714</Value>
+      <Value>100</Value>
+      <Value>54</Value>
+      <Value>31</Value>
+      <Value>          0:    100.0%
+  N in Node:        89</Value>
+      <Value>          1:      0.0%&#10;          0:    100.0%&#10;  N in Node:        89</Value>
+      <Value>89</Value>
+    </Values>
+                        </ValuesList>
+                  </EmbeddedData>
+            </IQData>
+      </Data>
+
+      <View>
+            <Section>
+                  <Body>
+                        <Graph name="DecisionTree" >
+                              <ChartDataList>
+                                    <ChartData name="DTreeData" data="TreeData" >
+                                          <Roles>
+                                                <Role type="AboveText"   variable="Var1" > </Role>
+                                                <Role type="BelowText"   variable="Var2" > </Role>
+                                                <Role type="LinkWidth"   variable="Var3" > </Role>
+                                                <Role type="NodeColor"   variable="Var4" > </Role>
+                                                <Role type="ID"      variable="Var5" > </Role>
+                                                <Role type="Parent"    variable="Var6" > </Role>
+                                                <Role type="NodeText"    variable="Var7" > </Role>
+                                                <Role type="ToolTipText" variable="Var8" > </Role>
+                                                <Role type="NodeSize"    variable="Var9" > </Role>
+                                          </Roles>
+                                    </ChartData>
+                              </ChartDataList>
+                              <ColorMappers>
+                                    <ColorRamp  name="NodeColorRamp"
+                                                      underFlowColor="Red"
+                                                      overflowColor="Green"
+                                                      low="0"
+                                                      high="1000"
+                                                      beginColor="CX0000FF"
+                                                      endColor="CXFFFFFF" >
+                                    </ColorRamp>
+                                    <ColorRamp  name="LinkColorRamp"
+                                                      low="1"
+                                                      high="10"
+                                                      beginColor="CX000000"
+                                                      endColor="CX000000" >
+                                    </ColorRamp>
+                              </ColorMappers>
+                              <ChartAreas>
+                                    <ChartArea>
+                                          <Charts>
+                                          <DecisionTree name="DTree"
+                                                  chartData="DTreeData"
+                                                  selectionColor="CX00FF00"
+                                                  orientation="Vertical"
+                                                  emptyNodes="False"
+                                                  legendVisible="False"
+                                                  titleAnchor="Root"
+                                                  footnoteAnchor="Chart"
+                                                  displayDepth="4" >
+
+                                    <SplitVarList>
+                                          <SplitVar name="SPLIT VAR A" type="DISCRETE" missingBranch="3" values="1,A:1,B:2,C:3,D"/>
+                                          <SplitVar name="SPLIT VAR B" type="CONTINUOUS" breaks="10:50:100" />
+                                    </SplitVarList>
+
+                                    <IciclePlot isVisible="True"></IciclePlot>
+
+                                    <NodeStyle colorMapper="NodeColorRamp"
+                                                   outlineColor="Black"
+                                                   outlineWidth="1">
+                                          <NodeText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="12 pt"
+                                                        textFlags="Bold" />
+                                    </NodeStyle>
+                                    <FlaggedNodeStyle color="CXFF8844"
+                                                              outlineColor="Black"
+                                                              outlineWidth="3" >
+                                          <FlaggedNodeText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="12 pt"
+                                                        textFlags="Italic" />
+                                    </FlaggedNodeStyle>
+                                    <LinkStyle textVisible="True"
+                                                   colorMapper="LinkColorRamp"
+                                                   linkStyle="Manhattan"
+                                                   staticWidth="3" >
+                                          <LinkText textColor="Black"
+                                                        textFont="SansSerif"
+                                                        textSize="10 pt"
+                                                        textFlags="Bold" />
+                                    </LinkStyle>
+                                    <GraphStyle numBars="3"
+                                                      numStacks="3"
+                                                      axisMin="0"
+                                                      axisMax="20"
+                                                      orientation="Vertical"
+                                                      visible="True" >
+                                    </GraphStyle>
+                              </DecisionTree>
+                              </Charts>
+                        </ChartArea>
+                  </ChartAreas>
+            </Graph>
+      </Body>
+      </Section>
+      </View>
+
+  </SASReport>
+

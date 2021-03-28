@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?><_ROOT_  TargetModel="CHISQUARE" HideRejectedVars="Y" MaxMissingPercent="50" MaxLevel="100"
+ RejectUnusedInputVars="Y" ByPassVars="NONE" ByPassVarsRole="INPUT" HideUnusedInputVars="Y"
+ UseAov16="N" UseInteractions="N" UseGroups="Y" MinR2="0.005" StopR2="0.0005" MaxRows="3000"
+ Passes="6" ChiSquare="3.84" Bins="50" SASSPDS="Y" PrintOption="DEFAULT" ForceRun="N"
+ RunAction="Train" Component="VariableSelection" VarselLabel="VARSELLABEL" RawCreateTime="1930744062.4"
+ CreateTime="07MAR2021:13:47:42" RoleUnusedVars="DEFAULT" RunId="9de084a8-9722-492d-8a62-f0bcaff52b3e"
+>
+<VARIABLEPROPERTIES/>
+<FILEPROPERTIES/>
+<MANUALSELECTIONVARIABLES/>
+<NAMEMAPPINGS/>
+</_ROOT_>

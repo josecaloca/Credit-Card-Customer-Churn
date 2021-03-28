@@ -1,0 +1,106 @@
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "14 de marzo de 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "13H51" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Log de puntuación";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Log de puntuación
+Fecha:                14 de marzo de 2021
+Hora:                13H51
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O2_R7VBZ "C:\Jose\DM_ang\Workspaces\EMWS3\Ids\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O2_R7VBZ new;
+MPRINT(EM_DIAGRAM):   run;
+22729      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+22730      * Ids: Computing metadata for DATA data;
+MPRINT(EM_DIAGRAM):   * Ids: Computing metadata for DATA data;
+22731      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+
+NOTE: Data file JOSE.HMEQ.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce performance.
+NOTE: View EMWS3.IDS_DATA.VIEW used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.01 seconds
+      
+NOTE: Data file JOSE.HMEQ.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce performance.
+22732      data EMWS3.Ids_EMINFO;
+MPRINT(EM_DIAGRAM):    data EMWS3.Ids_EMINFO;
+22733      length TARGET KEY $32 DATA $43;
+MPRINT(EM_DIAGRAM):   length TARGET KEY $32 DATA $43;
+22734      TARGET="";
+MPRINT(EM_DIAGRAM):   TARGET="";
+22735      KEY="IDSTABLE";
+MPRINT(EM_DIAGRAM):   KEY="IDSTABLE";
+22736      DATA="JOSE.HMEQ";
+MPRINT(EM_DIAGRAM):   DATA="JOSE.HMEQ";
+22737      output;
+MPRINT(EM_DIAGRAM):   output;
+22738      TARGET="BAD";
+MPRINT(EM_DIAGRAM):   TARGET="BAD";
+22739      KEY="DECDATA";
+MPRINT(EM_DIAGRAM):   KEY="DECDATA";
+22740      DATA="EMWS3.Ids_BAD_DD";
+MPRINT(EM_DIAGRAM):   DATA="EMWS3.Ids_BAD_DD";
+22741      output;
+MPRINT(EM_DIAGRAM):   output;
+22742      TARGET="BAD";
+MPRINT(EM_DIAGRAM):   TARGET="BAD";
+22743      KEY="DECMETA";
+MPRINT(EM_DIAGRAM):   KEY="DECMETA";
+22744      DATA="EMWS3.Ids_BAD_DM";
+MPRINT(EM_DIAGRAM):   DATA="EMWS3.Ids_BAD_DM";
+22745      output;
+MPRINT(EM_DIAGRAM):   output;
+22746      TARGET="";
+MPRINT(EM_DIAGRAM):   TARGET="";
+22747      KEY="STATS";
+MPRINT(EM_DIAGRAM):   KEY="STATS";
+22748      DATA="EMWS3.Ids_EMSTATDEFAULT";
+MPRINT(EM_DIAGRAM):   DATA="EMWS3.Ids_EMSTATDEFAULT";
+22749      output;
+MPRINT(EM_DIAGRAM):   output;
+22750      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The data set EMWS3.IDS_EMINFO has 4 observations and 3 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: Data file JOSE.HMEQ.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce performance.
+NOTE: View EMWS3.IDS_DATA.VIEW used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+22751      data EMWS3.Ids_CMeta_DATA;
+MPRINT(EM_DIAGRAM):    data EMWS3.Ids_CMeta_DATA;
+22752      set EMWS3.Ids_VariableSet;
+MPRINT(EM_DIAGRAM):   set EMWS3.Ids_VariableSet;
+22753      drop DROP;
+MPRINT(EM_DIAGRAM):   drop DROP;
+22754      where DROP='N';
+MPRINT(EM_DIAGRAM):   where DROP='N';
+22755      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 13 observations read from the data set EMWS3.IDS_VARIABLESET.
+      WHERE DROP='N';
+NOTE: The data set EMWS3.IDS_CMETA_DATA has 13 observations and 20 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+NOTE: Data file JOSE.HMEQ.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce performance.
+MPRINT(EM_DIAGRAM):    proc printto;
+MPRINT(EM_DIAGRAM):   run;

@@ -1,0 +1,32 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+Role         Level         Count
+
+ID         INTERVAL           1   
+INPUT      INTERVAL           2   
+INPUT      NOMINAL           10   
+TARGET     BINARY             1   
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+Obs    Input Variable       Group Variable
+
+  1    acc_status           GRP_acc_status       
+  2    age                  GRP_age              
+  3    credit_history       GRP_credit_history   
+  4    duration             GRP_duration         
+  5    employment           GRP_employment       
+  6    instalment           GRP_instalment       
+  7    job                  GRP_job              
+  8    other_instalments    GRP_other_instalments
+  9    personal_status      GRP_personal_status  
+ 10    pourpose             GRP_pourpose         
+ 11    residence            GRP_residence        
+ 12    savings              GRP_savings          

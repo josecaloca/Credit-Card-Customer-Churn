@@ -1,0 +1,18 @@
+*------------------------------------------------------------*;
+* Variable Attributes for DATA;
+*------------------------------------------------------------*;
+if upcase(NAME) = "BL_DEFAULT" then NEWROLE="REJECTED";
+if upcase(NAME) = "CL_DEFAULT" then NEWROLE="REJECTED";
+if upcase(NAME) = "CLUS1" then NEWROLE="REJECTED";
+if upcase(NAME) = "CLUS2" then NEWROLE="REJECTED";
+if upcase(NAME) = "D_DEFAULT" then NEWROLE="REJECTED";
+if upcase(NAME) = "EL_DEFAULT" then NEWROLE="REJECTED";
+if upcase(NAME) = "F_DEFAULT" then NEWROLE="REJECTED";
+if upcase(NAME) = "I_DEFAULT" then NEWROLE="TARGET";
+if upcase(NAME) = "P_DEFAULT0" then NEWROLE="REJECTED";
+if upcase(NAME) = "P_DEFAULT1" then NEWROLE="REJECTED";
+if upcase(NAME) = "R_DEFAULT0" then NEWROLE="REJECTED";
+if upcase(NAME) = "R_DEFAULT1" then NEWROLE="REJECTED";
+if upcase(NAME) = "U_DEFAULT" then NEWROLE="REJECTED";
+if upcase(NAME) = "_WARN_" then NEWROLE="REJECTED";
+if upcase(NAME) = "DEFAULT" then NEWROLE="REJECTED";

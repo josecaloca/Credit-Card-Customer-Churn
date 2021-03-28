@@ -1,0 +1,112 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+ Role        Level         Count
+
+INPUT      BINARY             3   
+INPUT      INTERVAL           3   
+INPUT      NOMINAL           14   
+TARGET     BINARY             1   
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Model Events
+
+                                   Number
+                    Measurement      of
+Target     Event       Level       Levels      Order        Label
+
+default      1        BINARY          2      Descending    default
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Decision Matrix
+
+             Training
+default    Proportions    1    0
+
+   1           0.3        0    5
+   0           0.7        1    0
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Predicted and decision variables
+
+Type              Variable     Label
+
+TARGET           default       default               
+PREDICTED        P_default1    Predicted: default=1  
+RESIDUAL         R_default1    Residual: default=1   
+PREDICTED        P_default0    Predicted: default=0  
+RESIDUAL         R_default0    Residual: default=0   
+FROM             F_default     From: default         
+INTO             I_default     Into: default         
+MODELDECISION    D_default     Decision: default     
+EXPECTEDLOSS     EL_DEFAULT    Expected Loss: default
+COMPUTEDLOSS     CL_DEFAULT    Computed Loss: default
+BESTLOSS         BL_DEFAULT    Best Loss: default    
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+The DMSPLIT Procedure
+
+           Effect Summary
+ 
+                       Node     Total
+                        1st     Times
+Effect                Split     Split
+
+acc_status                1         2
+duration                  2         3
+other_instalments         3         1
+credit_history            4         1
+savings                   5         2
+pourpose                  6         4
+credit_amt                9         4
+employment               10         2
+age                      12         4
+job                      13         1
+residence                20         1
+personal_status          28         1
+instalment               29         1
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------
+Summary of Variable Selection from Training
+-------------------------------------------------------------------
+
+
+Target Name : default
+Target Level : BINARY
+Variable Selection Model : Chi-Square
+
+Total number of inputs : 20
+Total number of used inputs : 20
+Total number of unused inputs : 0
+Total number of rejected inputs : 7
+
+Maximum missing percentage : 50
+NOTE: There is no rejected variable by maximum missing percentage
+
+Maximum class level : 100
+NOTE:There is no rejected variable by maximum class level

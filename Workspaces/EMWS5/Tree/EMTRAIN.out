@@ -1,0 +1,54 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Variable Summary
+
+          Measurement    Frequency
+Role         Level         Count
+
+ID         INTERVAL           1   
+INPUT      INTERVAL           2   
+INPUT      NOMINAL           10   
+TARGET     BINARY             1   
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Model Events
+
+                                   Number
+                    Measurement      of
+Target     Event       Level       Levels      Order        Label
+
+default      1        BINARY          2      Descending    default
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Decision Matrix
+
+             Training
+default    Proportions    1    0
+
+   1           0.3        0    5
+   0           0.7        1    0
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Predicted and decision variables
+
+Type              Variable     Label
+
+TARGET           default       default               
+PREDICTED        P_default1    Predicted: default=1  
+RESIDUAL         R_default1    Residual: default=1   
+PREDICTED        P_default0    Predicted: default=0  
+RESIDUAL         R_default0    Residual: default=0   
+FROM             F_default     From: default         
+INTO             I_default     Into: default         
+MODELDECISION    D_default     Decision: default     
+EXPECTEDLOSS     EL_DEFAULT    Expected Loss: default
+COMPUTEDLOSS     CL_DEFAULT    Computed Loss: default
+BESTLOSS         BL_DEFAULT    Best Loss: default    

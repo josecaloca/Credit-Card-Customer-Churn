@@ -1,0 +1,36 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+1 
+Traverser: Traverser invoked.  MPCONNECT command is sas. 
+Traverser: Beginning flow traversal 
+*------------------------------------------------------------* 
+* 
+* Ids : Beginning Update 
+* datetime : 15MAR2021:23:49:20 
+* 
+*------------------------------------------------------------* 
+NOTE: Data file JOSE.HMEQ.DATA is in a format that is native to another host, or the file encoding does not match the session encoding. Cross Environment Data Access will be used, which might require additional CPU resources and might reduce performance.
+20132      %let _HPDMGRIDHOST=;
+20133      %let _HPDMGRIDINSTALLLOC=;
+20134      %let _HPDMGRIDDATASERVER=;
+20135      %hpdm_gridSetOPtions;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+
+*------------------------------------------------------------* 
+* 
+* Ids : End Update 
+* datetime : 15MAR2021:23:49:20 
+* 
+*------------------------------------------------------------* 
+Traverser: Run Completed 
+20136      proc printto;
+20137      run;
+

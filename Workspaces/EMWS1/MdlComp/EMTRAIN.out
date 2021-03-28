@@ -1,0 +1,229 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+Resumen de variables
+
+          Nivel de     Número de
+ Rol       medida     ocurrencias
+
+TARGET     BINARY          1     
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+                                                                                     BINNED_KS_
+                                                            _KS_PROB_                   PROB_
+Obs    TARGET    TARGETLABEL    _AUR_    _GINI_      KS       CUTOFF     _KS_BIN_      CUTOFF
+
+ 1      BAD                     0.768     0.535    0.424      0.196        0.422        0.21   
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+                                                               _VKS_              _VBINNED_
+                                                               PROB_     _VKS_     KS_PROB_
+Obs    TARGET    TARGETLABEL    _VAUR_    _VGINI_     VKS     CUTOFF_     BIN_     CUTOFF_
+
+ 1      BAD                      0.755      0.51     0.404      0.19     0.392      0.173  
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+                                                               _TKS_              _TBINNED_
+                                                               PROB_     _TKS_     KS_PROB_
+Obs    TARGET    TARGETLABEL    _TAUR_    _TGINI_     TKS     CUTOFF_     BIN_     CUTOFF_
+
+ 1      BAD                      0.749     0.498     0.411     0.198     0.402      0.206  
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+                                                                                     BINNED_KS_
+                                                            _KS_PROB_                   PROB_
+Obs    TARGET    TARGETLABEL    _AUR_    _GINI_      KS       CUTOFF     _KS_BIN_      CUTOFF
+
+ 1      BAD                     0.768     0.535    0.425      0.197        0.422        0.21   
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+                                                               _VKS_              _VBINNED_
+                                                               PROB_     _VKS_     KS_PROB_
+Obs    TARGET    TARGETLABEL    _VAUR_    _VGINI_     VKS     CUTOFF_     BIN_     CUTOFF_
+
+ 1      BAD                      0.756     0.511     0.402     0.189     0.392      0.194  
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+                                                               _TKS_              _TBINNED_
+                                                               PROB_     _TKS_     KS_PROB_
+Obs    TARGET    TARGETLABEL    _TAUR_    _TGINI_     TKS     CUTOFF_     BIN_     CUTOFF_
+
+ 1      BAD                      0.749     0.497     0.408     0.197     0.402      0.206  
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+
+
+
+
+
+
+Estadísticos de ajuste
+Selección de modelo basada en Test: Misclassification Rate (_TMISC_)
+
+                                                                   Train:                          Valid:
+                                                   Test:          Average          Train:         Average          Valid:
+   Modelo       Nodo del     Descripción     Misclassification    Squared    Misclassification    Squared    Misclassification
+seleccionado     modelo      del modelo             Rate           Error            Rate           Error            Rate
+
+     Y            Reg       Regresión             0.17938         0.12674         0.17355         0.13492         0.18009     
+                  Reg2      Regresión (2)         0.18022         0.12675         0.17321         0.13496         0.18065     
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+
+
+
+
+
+
+Tabla de estadísticos de ajuste
+Target: BAD
+
+Rol de los datos=Train
+
+Estadísticos                                                                                                Reg       Reg2
+
+Entrenar: Corte de probabilidad Kolmogorov-Smirnov de dos factores basado en variables categorizadas       0.21       0.21
+Entrenar: Estadístico Kolmogorov-Smirnov                                                                   0.42       0.43
+Train: Akaike's Information Criterion                                                                   2536.10    2534.16
+Train: Average Squared Error                                                                               0.13       0.13
+Entrenar: Índice Roc                                                                                       0.77       0.77
+Train: Average Error Function                                                                              0.41       0.41
+Entrenar: Respuesta capturada de porcentaje acumulado                                                     32.66      32.66
+Entrenar: Respuesta capturada del porcentaje                                                              13.47      13.47
+Criterio de selección: Test: Misclassification Rate                                                        0.18       0.18
+Train: Degrees of Freedom for Error                                                                     2933.00    2934.00
+Train: Model Degrees of Freedom                                                                           46.00      45.00
+Train: Total Degrees of Freedom                                                                         2979.00    2979.00
+Train: Divisor for ASE                                                                                  5958.00    5958.00
+Train: Error Function                                                                                   2444.10    2444.16
+Train: Final Prediction Error                                                                              0.13       0.13
+Entrenar: Ganancia                                                                                       226.49     226.49
+Entrenar: Coeficiente de Gini                                                                              0.54       0.54
+Entrenar: Estadístico Kolmogorov-Smirnov de dos factores basado en variables categorizadas                 0.42       0.42
+Entrenar: Corte de probabilidad Kolmogorov-Smirnov                                                         0.20       0.20
+Entrenar: Mejora acumulada                                                                                 3.26       3.26
+Entrenar: Mejora                                                                                           2.69       2.69
+Train: Maximum Absolute Error                                                                              0.97       0.97
+Train: Misclassification Rate                                                                              0.17       0.17
+Train: Mean Square Error                                                                                   0.13       0.13
+Train: Sum of Frequencies                                                                               2979.00    2979.00
+Train: Number of Estimate Weights                                                                         46.00      45.00
+Train: Root Average Sum of Squares                                                                         0.36       0.36
+Entrenar: Respuesta de porcentaje acumulado                                                               65.10      65.10
+Entrenar: Respuesta de porcentaje                                                                         53.69      53.69
+Train: Root Final Prediction Error                                                                         0.36       0.36
+Train: Root Mean Squared Error                                                                             0.36       0.36
+Train: Schwarz's Bayesian Criterion                                                                     2812.07    2804.13
+Train: Sum of Squared Errors                                                                             755.15     755.17
+Train: Sum of Case Weights Times Freq                                                                   5958.00    5958.00
+
+
+Rol de los datos=Valid
+
+Estadísticos                                                                                               Reg       Reg2
+
+Validar: Estadístico Kolmogorov-Smirnov                                                                   0.40       0.40
+Valid: Average Squared Error                                                                              0.13       0.13
+Validar: Índice Roc                                                                                       0.76       0.76
+Valid: Average Error Function                                                                             0.44       0.44
+Validar: corte de probabilidad Kolmogorov-Smirnov de dos factores basado en variables categorizadas       0.17       0.19
+Validar: Respuesta capturada de porcentaje acumulado                                                     28.57      28.57
+Validar: Respuesta capturada del porcentaje                                                              10.92      10.92
+Valid: Divisor for VASE                                                                                3576.00    3576.00
+Valid: Error Function                                                                                  1576.56    1576.60
+Validar: Ganancia                                                                                       185.40     185.40
+Validar: Coeficiente de Gini                                                                              0.51       0.51
+Validar: Estadístico Kolmogorov-Smirnov de dos factores basado en variables categorizadas                 0.39       0.39
+Validar: Corte de probabilidad Kolmogorov-Smirnov                                                         0.19       0.19
+Validar: Mejora acumulada                                                                                 2.85       2.85
+Validar: Mejora                                                                                           2.19       2.19
+Valid: Maximum Absolute Error                                                                             1.00       1.00
+Valid: Misclassification Rate                                                                             0.18       0.18
+Valid: Mean Square Error                                                                                  0.13       0.13
+Valid: Sum of Frequencies                                                                              1788.00    1788.00
+Valid: Root Average Squared Error                                                                         0.37       0.37
+Validar: Respuesta de porcentaje acumulado                                                               56.98      56.98
+Validar: Respuesta de porcentaje                                                                         43.82      43.82
+Valid: Root Mean Square Error                                                                             0.37       0.37
+Valid: Sum of Square Errors                                                                             482.48     482.63
+Valid: Sum of Case Weights Times Freq                                                                  3576.00    3576.00
+
+
+Rol de los datos=Test
+
+Estadísticos                                                                                              Reg       Reg2
+
+Probar: Estadístico Kolmogorov-Smirnov                                                                   0.41       0.41
+Test: Average Squared Error                                                                              0.13       0.13
+Probar: Índice Roc                                                                                       0.75       0.75
+Test: Average Error Function                                                                             0.42       0.42
+Probar: Corte de probabilidad Kolmogorov-Smirnov de dos factores basado en variables categorizadas       0.21       0.21
+Probar: Respuesta capturada de porcentaje acumulado                                                     30.67      30.67
+Probar: Respuesta capturada del porcentaje                                                              11.76      11.76
+Test: Divisor for TASE                                                                                2386.00    2386.00
+Test: Error Function                                                                                  1003.24    1003.70
+Probar: Ganancia                                                                                       204.93     204.93
+Probar: Coeficiente de Gini                                                                              0.50       0.50
+Probar: Estadístico Kolmogorov-Smirnov de dos factores basado en variables categorizadas                 0.40       0.40
+Probar: Corte de probabilidad Kolmogorov-Smirnov                                                         0.20       0.20
+Probar: Mejora acumulada                                                                                 3.05       3.05
+Probar: Mejora                                                                                           2.34       2.34
+Test: Maximum Absolute Error                                                                             0.95       0.95
+Test: Misclassification Rate                                                                             0.18       0.18
+Test: Lower 95% Conf. Limit for TMISC                                                                    0.16       0.16
+Test: Upper 95% Conf. Limit for TMISC                                                                    0.20       0.20
+Test: Mean Square Error                                                                                  0.13       0.13
+Test: Sum of Frequencies                                                                              1193.00    1193.00
+Test: Root Average Squared Error                                                                         0.36       0.36
+Probar: Respuesta de porcentaje acumulado                                                               60.83      60.83
+Probar: Respuesta de porcentaje                                                                         46.67      46.67
+Test: Root Mean Square Error                                                                             0.36       0.36
+Test: Sum of Square Errors                                                                             311.89     312.04
+Test: Sum of Case Weights Times Freq                                                                  2386.00    2386.00
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+
+
+
+
+
+
+Tabla de evento de clasificación
+Selección de modelo basada en Test: Misclassification Rate (_TMISC_)
+
+                             Rol de
+Nodo del     Descripción     los                   Etiqueta      Falso     Verdadero      Falso     Verdadero
+ modelo      del modelo      datos       Target     target     negativo     negativo    positivo     positivo
+
+  Reg       Regresión        TRAIN        BAD                     436         2304         81          158   
+  Reg       Regresión        VALIDATE     BAD                     256         1365         66          101   
+  Reg2      Regresión (2)    TRAIN        BAD                     435         2304         81          159   
+  Reg2      Regresión (2)    VALIDATE     BAD                     256         1364         67          101   

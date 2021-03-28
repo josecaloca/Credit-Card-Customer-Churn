@@ -1,0 +1,390 @@
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "28 March 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "20:54:16" );
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Training Log";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+*------------------------------------------------------------*
+* Training Log
+Date:                28 March 2021
+Time:                20:54:16
+*------------------------------------------------------------*
+MPRINT(EM_DIAGRAM):    filename O1GND4FZ "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   proc printto print=O1GND4FZ new;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOG "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMLOG.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "28 March 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "20:54:16" );
+MPRINT(EM_DIAGRAM):   file _LOG;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "User:                Jose Caloca";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "Site:                70115216";
+MPRINT(EM_DIAGRAM):   put "Platform:            X64_10PRO";
+MPRINT(EM_DIAGRAM):   put "Maintenance Release: 9.04.01M6P111518";
+MPRINT(EM_DIAGRAM):   put "EM Version:          15.1";
+MPRINT(EM_DIAGRAM):   put "* ";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOGIN "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMTRAIN.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_COPYFILE):   data _null_;
+MPRINT(EM_COPYFILE):   length line $20000;
+MPRINT(EM_COPYFILE):   file _LOG MOD lrecl=20000;
+MPRINT(EM_COPYFILE):   fid=fopen("_LOGIN",'i',20000,'v');
+MPRINT(EM_COPYFILE):   if fid > 0 then do;
+MPRINT(EM_COPYFILE):   do while(^fread(fid));
+MPRINT(EM_COPYFILE):   rlen = frlen(fid);
+MPRINT(EM_COPYFILE):   rc= fget(fid,line,20000);
+MPRINT(EM_COPYFILE):   start = length(line)-length(left(line))+1;
+MPRINT(EM_COPYFILE):   line=strip(line);
+MPRINT(EM_COPYFILE):   put @start line;
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   if fid > 0 then rc=fclose(fid);
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   run;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _LOGIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _LOG mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   filename _LOGIN "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMSCORE.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   file _LOG mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _LOGIN "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMREPORT.log" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _LOGIN;
+MPRINT(EM_DIAGRAM):    filename _LOG;
+MPRINT(EM_DIAGRAM):    filename _OUT "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMOUTPUT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   call symput('NLDATE', strip(put(date(), NLDATE.)));
+MPRINT(EM_DIAGRAM):   call symput('NLTIME', strip(put(datetime(), NLTIME.)));
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):   data _null_;
+MPRINT(EM_DIAGRAM):   nldate= sasmsg("sashelp.dmine", "log_date_note", 'N', "28 March 2021" );
+MPRINT(EM_DIAGRAM):   nltime= sasmsg("sashelp.dmine", "log_time_note", 'N', "20:54:16" );
+MPRINT(EM_DIAGRAM):   file _OUT;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "User:                Jose Caloca";
+MPRINT(EM_DIAGRAM):   put nldate;
+MPRINT(EM_DIAGRAM):   put nltime;
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Training Output";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMTRAIN.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):   ;
+MPRINT(EM_COPYFILE):   data _null_;
+MPRINT(EM_COPYFILE):   length line $20000;
+MPRINT(EM_COPYFILE):   file _OUT MOD lrecl=20000;
+MPRINT(EM_COPYFILE):   fid=fopen("_OUTIN",'i',20000,'v');
+MPRINT(EM_COPYFILE):   if fid > 0 then do;
+MPRINT(EM_COPYFILE):   do while(^fread(fid));
+MPRINT(EM_COPYFILE):   rlen = frlen(fid);
+MPRINT(EM_COPYFILE):   rc= fget(fid,line,20000);
+MPRINT(EM_COPYFILE):   start = length(line)-length(left(line))+1;
+MPRINT(EM_COPYFILE):   line=strip(line);
+MPRINT(EM_COPYFILE):   put @start line;
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   if fid > 0 then rc=fclose(fid);
+MPRINT(EM_COPYFILE):   end;
+MPRINT(EM_COPYFILE):   run;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _OUT mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   put // "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Score Output";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMSCORE.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    data _null_;
+MPRINT(EM_DIAGRAM):   file _OUT mod;
+MPRINT(EM_DIAGRAM):   put _page_;
+MPRINT(EM_DIAGRAM):   put // "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   put "* Report Output";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*";
+MPRINT(EM_DIAGRAM):   run;
+MPRINT(EM_DIAGRAM):    filename _OUTIN "C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMREPORT.out" encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):  ;
+MPRINT(EM_DIAGRAM):   filename _OUTIN;
+MPRINT(EM_DIAGRAM):    filename _OUT;
+MPRINT(EM_DIAGRAM):    filename _emtool_ 'C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMRUNSTATUS.xml' encoding="UTF-8" NOBOM;
+MPRINT(EM_DIAGRAM):    filename _emtool_ 'C:\Jose\DM_ang\Workspaces\EMWS5\Meta\EMRUNSTATUS.xml' encoding="UTF-8" NOBOM;
+25656      proc freq data=EMWS5.Meta_VariableSet noprint;
+MPRINT(EM_DIAGRAM):    proc freq data=EMWS5.Meta_VariableSet noprint;
+25657      table ROLE*LEVEL/out=WORK.MetaMETA;
+MPRINT(EM_DIAGRAM):   table ROLE*LEVEL/out=WORK.MetaMETA;
+25658      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 41 observations read from the data set EMWS5.META_VARIABLESET.
+NOTE: The data set WORK.METAMETA has 11 observations and 4 variables.
+NOTE: PROCEDURE FREQ used (Total process time):
+      real time           0.05 seconds
+      cpu time            0.01 seconds
+      
+
+25659      proc print data=WORK.MetaMETA label noobs;
+MPRINT(EM_DIAGRAM):   proc print data=WORK.MetaMETA label noobs;
+25660      var ROLE LEVEL COUNT;
+MPRINT(EM_DIAGRAM):   var ROLE LEVEL COUNT;
+25661      label ROLE = "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel, NOQUOTE))" LEVEL = "%sysfunc(sasmsg(sashelp.dmine, meta_level_vlabel, NOQUOTE))" COUNT = "%sysfunc(sasmsg(sashelp.dmine, rpt_count_vlabel, NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label ROLE = "Role" LEVEL = "Measurement Level" COUNT = "Frequency Count";
+25662      title9 ' ';
+MPRINT(EM_DIAGRAM):   title9 ' ';
+25663      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_varSummary_title  , NOQUOTE))";
+MPRINT(EM_DIAGRAM):   title10 "Variable Summary";
+MPRINT(EM_DIAGRAM):   run;
+25664      run;
+
+NOTE: There were 11 observations read from the data set WORK.METAMETA.
+NOTE: The PROCEDURE PRINT printed page 1.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+25665      title10;
+MPRINT(EM_DIAGRAM):   title10;
+25666      data WORK.META_CHANGE;
+MPRINT(EM_DIAGRAM):    data WORK.META_CHANGE;
+25667      set EMWS5.Meta_VariableSet;
+MPRINT(EM_DIAGRAM):   set EMWS5.Meta_VariableSet;
+25668      where (NEWROLE ne "DEFAULT" and NEWROLE ne ROLE) or (NEWLEVEL ne "DEFAULT" and NEWLEVEL ne LEVEL) or (NEWREPORT ne "D" and NEWREPORT ne REPORT) or (NEWORDER ne "DEFAULT" and NEWORDER ne ORDER);
+MPRINT(EM_DIAGRAM):   where (NEWROLE ne "DEFAULT" and NEWROLE ne ROLE) or (NEWLEVEL ne "DEFAULT" and NEWLEVEL ne LEVEL) or (NEWREPORT ne "D" and NEWREPORT ne REPORT) or (NEWORDER ne "DEFAULT" and NEWORDER ne ORDER);
+25669      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 13 observations read from the data set EMWS5.META_VARIABLESET.
+      WHERE ((NEWROLE not = 'DEFAULT') and (NEWROLE not = ROLE)) or ((NEWLEVEL not = 'DEFAULT') and (NEWLEVEL not = LEVEL)) or ((NEWREPORT not = 'D') and (NEWREPORT not = REPORT)) or ((NEWORDER not = 'DEFAULT') and (NEWORDER not = ORDER));
+NOTE: The data set WORK.META_CHANGE has 13 observations and 27 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+25670      proc print data=WORK.META_CHANGE noobs label;
+MPRINT(EM_DIAGRAM):    proc print data=WORK.META_CHANGE noobs label;
+25671      var NAME LEVEL NEWLEVEL ROLE NEWROLE REPORT NEWREPORT ORDER NEWORDER CREATOR LABEL;
+MPRINT(EM_DIAGRAM):   var NAME LEVEL NEWLEVEL ROLE NEWROLE REPORT NEWREPORT ORDER NEWORDER CREATOR LABEL;
+25672      label NAME = "%sysfunc(sasmsg(sashelp.dmine, meta_name_vlabel,      NOQUOTE))" LEVEL = "%sysfunc(sasmsg(sashelp.dmine, meta_level_vlabel,     NOQUOTE))" NEWLEVEL = "%sysfunc(sasmsg(sashelp.dmine, meta_newlevel_vlabel,  NOQUOTE))" ROLE =
+25673         "%sysfunc(sasmsg(sashelp.dmine, meta_role_vlabel,      NOQUOTE))" NEWROLE = "%sysfunc(sasmsg(sashelp.dmine, meta_newrole_vlabel,   NOQUOTE))" REPORT = "%sysfunc(sasmsg(sashelp.dmine, meta_report_vlabel,    NOQUOTE))" NEWREPORT =
+25674         "%sysfunc(sasmsg(sashelp.dmine, meta_newreport_vlabel, NOQUOTE))" ORDER = "%sysfunc(sasmsg(sashelp.dmine, meta_order_vlabel,     NOQUOTE))" NEWORDER = "%sysfunc(sasmsg(sashelp.dmine, meta_neworder_vlabel,  NOQUOTE))" CREATOR =
+25675         "%sysfunc(sasmsg(sashelp.dmine, meta_creator_vlabel,   NOQUOTE))" LABEL = "%sysfunc(sasmsg(sashelp.dmine, meta_label_vlabel,     NOQUOTE))";
+MPRINT(EM_DIAGRAM):   label NAME = "Variable Name" LEVEL = "Measurement Level" NEWLEVEL = "New Level" ROLE = "Role" NEWROLE = "New Role" REPORT = "Report" NEWREPORT = "New Report" ORDER = "Order" NEWORDER = "New Order" CREATOR = "Creator" LABEL = "Label";
+25676      title9 ' ';
+MPRINT(EM_DIAGRAM):   title9 ' ';
+25677      title10 "%sysfunc(sasmsg(sashelp.dmine, rpt_modattributes_title, NOQUOTE, DATA))";
+MPRINT(EM_DIAGRAM):   title10 "Modified Attributes for DATA Port";
+MPRINT(EM_DIAGRAM):   run;
+25678      run;
+
+NOTE: There were 13 observations read from the data set WORK.META_CHANGE.
+NOTE: The PROCEDURE PRINT printed page 2.
+NOTE: PROCEDURE PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+25679      title10;
+MPRINT(EM_DIAGRAM):   title10;
+25680      %let EM_LIB=EMWS5;
+25681      %em_path(NODEID=Meta, OUTDS=META_PREDECESSOR, NODES=PREDECESSOR);
+MPRINT(EM_DIAGRAM):   
+MPRINT(EM_PATH):   proc display c=sashelp.emutil.path.scl;
+MPRINT(EM_PATH):   run;
+
+25682      data META_PREDECESSOR;
+MPRINT(EM_PATH):   data META_PREDECESSOR;
+25683      length nodelabel $32 component $32;
+MPRINT(EM_PATH):   length nodelabel $32 component $32;
+25684      nodelabel="Neural";
+MPRINT(EM_PATH):   nodelabel="Neural";
+25685      component="NeuralNetwork";
+MPRINT(EM_PATH):   component="NeuralNetwork";
+25686      output;
+MPRINT(EM_PATH):   output;
+25687      run;
+MPRINT(EM_PATH):   run;
+
+NOTE: The data set WORK.META_PREDECESSOR has 1 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: PROCEDURE DISPLAY used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(EM_PATH):   
+MPRINT(EM_DIAGRAM):  ;
+
+25688      data EMWS5.Meta_CHOICE(rename=(role=Key dataset=Choice));
+MPRINT(EM_DIAGRAM):    data EMWS5.Meta_CHOICE(rename=(role=Key dataset=Choice));
+25689      retain Variable 'DATASET';
+MPRINT(EM_DIAGRAM):   retain Variable 'DATASET';
+25690      set
+25691      EMWS5.Neural_exportset
+25692      ;
+MPRINT(EM_DIAGRAM):   set EMWS5.Neural_exportset ;
+25693      where ROLE in('RAW', 'TRAIN', 'VALIDATE', 'TEST', 'SCORE', 'TRANSACTION') and export='Y';
+MPRINT(EM_DIAGRAM):   where ROLE in('RAW', 'TRAIN', 'VALIDATE', 'TEST', 'SCORE', 'TRANSACTION') and export='Y';
+25694      if ROLE in('RAW','TRAIN') then ROLE='TRAIN';
+MPRINT(EM_DIAGRAM):   if ROLE in('RAW','TRAIN') then ROLE='TRAIN';
+25695      drop export needupdate importport applydelta applyscore deltacode;
+MPRINT(EM_DIAGRAM):   drop export needupdate importport applydelta applyscore deltacode;
+25696      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: There were 2 observations read from the data set EMWS5.NEURAL_EXPORTSET.
+      WHERE ROLE in ('RAW', 'SCORE', 'TEST', 'TRAIN', 'TRANSACTION', 'VALIDATE') and (export='Y');
+NOTE: The data set EMWS5.META_CHOICE has 2 observations and 13 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+25697      %let hiddenNum=0;
+25698      data _null_;
+MPRINT(EM_DIAGRAM):    data _null_;
+25699      length string $200;
+MPRINT(EM_DIAGRAM):   length string $200;
+25700      set EMWS5.Meta_VariableSet end = eof;
+MPRINT(EM_DIAGRAM):   set EMWS5.Meta_VariableSet end = eof;
+25701      file #LN00354;
+MPRINT(EM_DIAGRAM):   file #LN00354;
+25702      where HIDDEN = 'Y' and HIDE = 'N';
+MPRINT(EM_DIAGRAM):   where HIDDEN = 'Y' and HIDE = 'N';
+25703      if _N_=1 then do;
+MPRINT(EM_DIAGRAM):   if _N_=1 then do;
+25704      put "*------------------------------------------------------------*;";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*;";
+25705      put '* Unhide Variables;';
+MPRINT(EM_DIAGRAM):   put '* Unhide Variables;';
+25706      put "*------------------------------------------------------------*;";
+MPRINT(EM_DIAGRAM):   put "*------------------------------------------------------------*;";
+25707      put 'length NAME $32 ROLE $32 LEVEL $10 ORDER $8 CREATOR $32 REPORT $1 FORMATTYPE $10';
+MPRINT(EM_DIAGRAM):   put 'length NAME $32 ROLE $32 LEVEL $10 ORDER $8 CREATOR $32 REPORT $1 FORMATTYPE $10';
+25708      put '       LABEL $200 FORMAT INFORMAT $36 INDEX $1 INDEXTYPE $9;';
+MPRINT(EM_DIAGRAM):   put '       LABEL $200 FORMAT INFORMAT $36 INDEX $1 INDEXTYPE $9;';
+25709      end;
+MPRINT(EM_DIAGRAM):   end;
+25710      string = 'NAME="'!!strip(NAME)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'NAME="'!!strip(NAME)!!'";';
+25711      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25712      if NEWROLE ne 'DEFAULT' then ROLE = NEWROLE;
+MPRINT(EM_DIAGRAM):   if NEWROLE ne 'DEFAULT' then ROLE = NEWROLE;
+25713      string = 'ROLE="'!!strip(ROLE)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'ROLE="'!!strip(ROLE)!!'";';
+25714      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25715      if NEWLEVEL ne 'DEFAULT' then LEVEL = NEWLEVEL;
+MPRINT(EM_DIAGRAM):   if NEWLEVEL ne 'DEFAULT' then LEVEL = NEWLEVEL;
+25716      string = 'LEVEL="'!!strip(LEVEL)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'LEVEL="'!!strip(LEVEL)!!'";';
+25717      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25718      if NEWREPORT ne 'D' then REPORT = NEWREPORT;
+MPRINT(EM_DIAGRAM):   if NEWREPORT ne 'D' then REPORT = NEWREPORT;
+25719      string = 'REPORT="'!!strip(REPORT)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'REPORT="'!!strip(REPORT)!!'";';
+25720      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25721      if NEWORDER ne 'DEFAULT' then ORDER = NEWORDER;
+MPRINT(EM_DIAGRAM):   if NEWORDER ne 'DEFAULT' then ORDER = NEWORDER;
+25722      string = 'ORDER="'!!strip(ORDER)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'ORDER="'!!strip(ORDER)!!'";';
+25723      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25724      string = 'CREATOR="'!!strip(CREATOR)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'CREATOR="'!!strip(CREATOR)!!'";';
+25725      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25726      string = 'FORMATTYPE="'!!strip(FORMATTYPE)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'FORMATTYPE="'!!strip(FORMATTYPE)!!'";';
+25727      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25728      string = 'TYPE="'!!strip(TYPE)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'TYPE="'!!strip(TYPE)!!'";';
+25729      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25730      string = 'LABEL="'!!strip(LABEL)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'LABEL="'!!strip(LABEL)!!'";';
+25731      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25732      string = 'FORMAT="'!!strip(FORMAT)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'FORMAT="'!!strip(FORMAT)!!'";';
+25733      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25734      string = 'INFORMAT="'!!strip(INFORMAT)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'INFORMAT="'!!strip(INFORMAT)!!'";';
+25735      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25736      string = 'INDEX="'!!strip(INDEX)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'INDEX="'!!strip(INDEX)!!'";';
+25737      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25738      string = 'INDEXTYPE="'!!strip(INDEXTYPE)!!'";';
+MPRINT(EM_DIAGRAM):   string = 'INDEXTYPE="'!!strip(INDEXTYPE)!!'";';
+25739      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25740      string = 'LENGTH='!!strip(put(length, best.))!!';';
+MPRINT(EM_DIAGRAM):   string = 'LENGTH='!!strip(put(length, best.))!!';';
+25741      put string;
+MPRINT(EM_DIAGRAM):   put string;
+25742      put 'output;';
+MPRINT(EM_DIAGRAM):   put 'output;';
+25743      if eof then call symput('hiddenNum', '1');
+MPRINT(EM_DIAGRAM):   if eof then call symput('hiddenNum', '1');
+25744      run;
+MPRINT(EM_DIAGRAM):   run;
+
+NOTE: The file #LN00354 is:
+      Filename=C:\Jose\DM_ang\Workspaces\EMWS5\Meta\UNHIDECODE_DATA.sas,
+      RECFM=V,LRECL=32767,File Size (bytes)=0,
+      Last Modified=28 March 2021 20:54:15,
+      Create Time=28 March 2021 20:54:15
+
+NOTE: 0 records were written to the file #LN00354.
+NOTE: There were 0 observations read from the data set EMWS5.META_VARIABLESET.
+      WHERE (HIDDEN='Y') and (HIDE='N');
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: This SAS session is using a registry in WORK.  All changes will be lost at the end of this session.
+25745      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):    *------------------------------------------------------------*;
+25746      * Meta: Exporting results data sets from predecessor;
+MPRINT(EM_DIAGRAM):   * Meta: Exporting results data sets from predecessor;
+25747      *------------------------------------------------------------*;
+MPRINT(EM_DIAGRAM):   *------------------------------------------------------------*;
+25748      data EMWS5.Meta_EMESTIMATE / view=EMWS5.Meta_EMESTIMATE;
+MPRINT(EM_DIAGRAM):   data EMWS5.Meta_EMESTIMATE / view=EMWS5.Meta_EMESTIMATE;
+25749      set EMWS5.Neural_EMESTIMATE;
+MPRINT(EM_DIAGRAM):   set EMWS5.Neural_EMESTIMATE;
+MPRINT(EM_DIAGRAM):   proc printto;
+MPRINT(EM_DIAGRAM):   run;

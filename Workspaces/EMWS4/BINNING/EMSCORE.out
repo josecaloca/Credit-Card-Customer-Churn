@@ -1,0 +1,14 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+                         Gini       Level for     Calculated      New                                       Gini
+Obs    Variable       Statistic    Interactive       Role        Role       Level           Label         Ordering
+
+ 1     IMP_DELINQ       30.975      NOMINAL        Input        Default    NOMINAL     Imputed DELINQ         1   
+ 2     IMP_NINQ         21.818      NOMINAL        Input        Default    NOMINAL     Imputed NINQ           2   
+ 3     IMP_DEROG        21.444      NOMINAL        Input        Default    NOMINAL     Imputed DEROG          3   
+ 4     IMP_DEBTINC      15.150      INTERVAL       Rejected     Default    INTERVAL    Imputed DEBTINC        4   
+ 5     IMP_JOB          14.289      NOMINAL        Rejected     Default    NOMINAL     Imputed JOB            5   
+ 6     IMP_YOJ          10.543      INTERVAL       Rejected     Default    INTERVAL    Imputed YOJ            6   
+ 7     IMP_MORTDUE       9.288      INTERVAL       Rejected     Default    INTERVAL    Imputed MORTDUE        7   
+ 8     IMP_REASON        2.763      BINARY         Rejected     Default    BINARY      Imputed REASON         8   

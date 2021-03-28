@@ -1,0 +1,20 @@
+ 
+                                                                                                                                                                                                                                                                
+ 
+ 
+
+                               Gini       Level for       New      Calculated                                       Gini
+Obs    Variable             Statistic    Interactive     Role         Role        Level      Label                Ordering
+
+  1    acc_status             41.973      NOMINAL       Default     Input        NOMINAL     acc_status               1   
+  2    credit_history         26.118      NOMINAL       Default     Input        NOMINAL     credit_history           2   
+  3    savings                22.505      NOMINAL       Default     Input        NOMINAL     savings                  3   
+  4    pourpose               21.872      NOMINAL       Default     Input        NOMINAL     pourpose                 4   
+  5    duration               20.859      INTERVAL      Default     Input        INTERVAL    duration                 5   
+  6    employment             16.847      NOMINAL       Default     Rejected     NOMINAL     employment               6   
+  7    age                    14.895      INTERVAL      Default     Rejected     INTERVAL    age                      7   
+  8    other_instalments      11.275      NOMINAL       Default     Rejected     NOMINAL     other_instalments        8   
+  9    personal_status         8.583      NOMINAL       Default     Rejected     NOMINAL     personal_status          9   
+ 10    instalment              7.229      NOMINAL       Default     Rejected     NOMINAL     instalment              10   
+ 11    residence               4.561      NOMINAL       Default     Rejected     NOMINAL     residence               11   
+ 12    job                     3.669      NOMINAL       Default     Rejected     NOMINAL     job                     12   
