@@ -109,9 +109,11 @@ Modify
 
 When using the variable selection method before:
 
+![DM Project (6)](https://user-images.githubusercontent.com/59198442/124362153-a5522900-dc33-11eb-9b00-062633f81db2.png)
 
 When using the variable selection method before:
 
+![DM Project (7)](https://user-images.githubusercontent.com/59198442/124362216-eba78800-dc33-11eb-818d-03e113ceb565.png)
 
 Interactive binning results using Gini Statistic as variable selection method. Group rare levels with cutoff value percentage of 0.5
 
@@ -160,4 +162,70 @@ Without binning, variable selection or clustering.
 &nbsp;Leaf size = 5
 
 
+&nbsp;
+![DM Project (8)](https://user-images.githubusercontent.com/59198442/124362267-2dd0c980-dc34-11eb-883a-b082fd8e77de.png)
+
 The ROC curve above shows a comparison of the three different decision trees. Sensitivity is on the vertical axis and plots the true positive rate while specificity is on the horizontal axis and observes the false positive rate. Performance is greatest when maximizing true positive rate while minimizing false positives. ROC curve sensitivity dips in test set meaning higher false positives. Model is a bit too overtrained.  
+
+![DM Project (9)](https://user-images.githubusercontent.com/59198442/124362265-2c9f9c80-dc34-11eb-8c98-8f84c019f61d.png)
+
+
+### Logistic Regression
+
+![alt text](https://documentation.sas.com/api/docsets/emref/14.3/content/images/regression_icon.png?locale=en)
+
+- Logistic Regression(1): Variable selection & interactive binning. Selection model - stepwise. 
+
+- Logistic Regression(2): Variable selection & stepwise selection model. 
+
+- Logistic Regression(3): Variable selection with no selection model. 
+
+![DM Project (10)](https://user-images.githubusercontent.com/59198442/124362449-25c55980-dc35-11eb-89ea-06be24db20da.png)
+
+The first regression model has the strongest predictive power of the three per the smallest misclassification rate of .081935. 
+
+![DM Project (11)](https://user-images.githubusercontent.com/59198442/124362447-24942c80-dc35-11eb-8132-4fe59aade5fd.png)
+
+Order of importance of grouped variables in the stepwise selection process with a p-value lower than 0.05
+
+
+![DM Project (12)](https://user-images.githubusercontent.com/59198442/124362476-5ad1ac00-dc35-11eb-93ae-30559ff4b8a0.png)
+
+### Gradient Boosting Model 
+
+Since this is a classification problem we decided to use misclassification as our assessment criteria. The misclassification rates are impressively low:
+- Train - .035
+- Valid - .028
+- Test - .030
+
+![DM Project (13)](https://user-images.githubusercontent.com/59198442/124362601-2f02f600-dc36-11eb-9c03-658d98b3df74.png)
+
+
+Results from the gradient boosting model indicate these variables as most important:
+- Total_Trans_Ct
+- Total_Trans_Amt
+- Total_Revolving_Bal
+
+![DM Project (14)](https://user-images.githubusercontent.com/59198442/124362604-30342300-dc36-11eb-81c4-1129bb0c769d.png)
+
+
+Gradient Boosting is tree based algorithm that improves itself by building off the previous tree. By nature prone to overfitting. 
+Lowest misclassification rate around the 200th iteration. 
+
+
+![DM Project (15)](https://user-images.githubusercontent.com/59198442/124362603-30342300-dc36-11eb-91b1-10963f918970.png)
+
+
+### Final Model Assessment
+
+**Sensitivity vs specificity:**
+
+![DM Project (16)](https://user-images.githubusercontent.com/59198442/124362748-24952c00-dc37-11eb-8555-0d5d5e3180c3.png)
+
+
+Gradient boosting was able to most accurately predict customers going to churn and predict customers not going to churn based on the largest AUC. 
+
+![DM Project (17)](https://user-images.githubusercontent.com/59198442/124362751-25c65900-dc37-11eb-91a5-f4883205f902.png)
+Observing the cumulative lift, gradient boosting is able to provide a better prediction rate of the three models up to the first 50% of observations. 
+
+![DM Project (18)](https://user-images.githubusercontent.com/59198442/124362750-25c65900-dc37-11eb-8358-d47e48f32710.png)
