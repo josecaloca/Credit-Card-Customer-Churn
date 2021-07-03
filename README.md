@@ -59,6 +59,8 @@ Explore
 ---
 ![alt text](https://documentation.sas.com/api/docsets/emref/14.3/content/images/graph_explore_icon.png?locale=en)
 
+![DM Project (1)](https://user-images.githubusercontent.com/59198442/124361982-9a4ac900-dc32-11eb-8668-8fbf3b494a4a.png)
+
 Imbalanced target variable.
 
 Most of the customer didn’t churn 8.6% of the total
@@ -75,6 +77,7 @@ We use the Chi-square selection criterion.(Method available only for binary vari
 
 - Minimum Chi-Square: default 3.84
 
+![DM Project (2)](https://user-images.githubusercontent.com/59198442/124362016-d2eaa280-dc32-11eb-9f5a-f777b525dcde.png)
 
 Variables with a Chi-square statistic
 higher than 3.84 will be accepted
@@ -82,6 +85,8 @@ for training the model.Since we
 reject the null hypothesis that our 
 feature is independent from the 
 target variable.
+
+![DM Project (3)](https://user-images.githubusercontent.com/59198442/124362054-0c231280-dc33-11eb-92f8-f4037ce450ad.png)
 
 ![alt text](https://documentation.sas.com/api/docsets/emref/14.3/content/images/varclusico.png?locale=en)
 
@@ -156,4 +161,3 @@ Without binning, variable selection or clustering.
 
 
 The ROC curve above shows a comparison of the three different decision trees. Sensitivity is on the vertical axis and plots the true positive rate while specificity is on the horizontal axis and observes the false positive rate. Performance is greatest when maximizing true positive rate while minimizing false positives. ROC curve sensitivity dips in test set meaning higher false positives. Model is a bit too overtrained.  
-
