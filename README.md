@@ -114,9 +114,9 @@ Interactive binning results using Gini Statistic as variable selection method. G
 Model
 ---
 
-### Decision Trees !
+### Decision Trees 
 
-[alt text](https://documentation.sas.com/api/docsets/emref/14.3/content/images/treeicon.png?locale=en)
+![alt text](https://documentation.sas.com/api/docsets/emref/14.3/content/images/treeicon.png?locale=en)
 
 - **Decision Tree (1)**: 
 
