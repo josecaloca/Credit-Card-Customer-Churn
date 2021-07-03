@@ -114,9 +114,11 @@ Interactive binning results using Gini Statistic as variable selection method. G
 Model
 ---
 
-### Decision Trees ![alt text](https://documentation.sas.com/api/docsets/emref/14.3/content/images/treeicon.png?locale=en)
+### Decision Trees !
 
-- Decision Tree (1): 
+[alt text](https://documentation.sas.com/api/docsets/emref/14.3/content/images/treeicon.png?locale=en)
+
+- **Decision Tree (1)**: 
 
 &nbsp;
 Variable selection & clustering. 
@@ -129,7 +131,7 @@ Leaf size = 5
 
 &nbsp;
 
-Decision Tree (2):
+- **Decision Tree (2):**
 
 &nbsp;
 Interactive Binning without variable selection or clustering.
@@ -143,7 +145,7 @@ Leaf size = 50
 &nbsp;
 
 
-Decision Tree (3):
+- **Decision Tree (3):**
 
 &nbsp;
 Without binning, variable selection or clustering. 
